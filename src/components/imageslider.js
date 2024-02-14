@@ -20,13 +20,7 @@ const ImageSlider = () => {
   );
   };
 
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       nextSlide();
-//     }, 5000); // Change the duration (in milliseconds) as needed for automatic sliding
 
-//     return () => clearInterval(interval);
-//   }, [currentImageIndex]);
 
 
 useEffect(() => {
@@ -37,31 +31,33 @@ useEffect(() => {
   }, [currentImageIndex]);
 
   return (
-    <div className="relative max-w-screen-2xl mx-auto">
+    <div className="relative mx-auto max-w-screen-2xl">
+      <div className='mx-4 md:mx-12'>
       <img
         src={images[currentImageIndex]}
         alt={`Slide ${currentImageIndex + 1}`}
         className="w-full"
       />
  
-      <div className="absolute top-1/2 left-1 transform  -translate-y-1/2">
+      <div className="absolute transform -translate-y-1/2 top-1/2 md:left-12 left-6">
         
         <button
-          className=" text-white bg-indigo-800 p-2 rounded focus:outline-none "
+          className="p-1 text-white bg-indigo-800 rounded md:p-2 focus:outline-none"
           onClick={prevSlide}
         >
           &#8249;
         </button>
       </div>
      
-      <div className=" absolute top-1/2 right-1 transform -translate-y-1/2">
+      <div className="absolute transform -translate-y-1/2 top-1/2 md:right-12 right-6">
        
         <button
-          className="  text-white bg-indigo-800 p-2 rounded focus:outline-none "
+          className="p-1 text-white bg-indigo-800 rounded md:p-2 focus:outline-none"
           onClick={nextSlide}
         >
           &#8250;
         </button>
+      </div>
       </div>
     </div>
   );

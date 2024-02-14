@@ -3,17 +3,16 @@ import React from 'react'
 const Marque = () => {
   return (
 
-    <div className='sticky  left-0 w-full max-w-screen-2xl mx-auto'>
-          <div className='flex p-1 m-2 items-center '> <div className=' bg-green-800 text-xl font-bold text-white'>Notices</div>
-            <marquee  className="border text-2xl bg-slate-100" behavior="scroll" direction="left">
+    <div className='mx-auto max-w-screen-2xl'>
+          <div className='flex items-center md:mx-auto'> <div className='p-1 text-xl font-bold text-white bg-green-800 mb-9'>Notices</div>
+            <marquee  className="mb-10 text-2xl border bg-slate-100" behavior="scroll" direction="left">
                 <ul className='flex'>
-                    <li className=' mr-16 list-disc'>MovingText1</li>
-                    <li className='  mr-16 list-disc'>MovingText2</li>
+                    <li className='mr-16 list-disc '><div className=''>गाउसहर बहुउदेस्यिय सहकारि सस्था लि  पोखरा-८,  कास्कि </div></li>
+                    <li className='mr-16 list-disc '>MovingText2</li>
                     <li className='mr-16 list-disc'>MovingText3</li>
                     <li className='list-disc'>MovingText4</li>
                 </ul></marquee>
             </div>
-          
     </div>
   )
 }

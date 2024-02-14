@@ -1,9 +1,13 @@
 
 import './App.css';
-import Header from './components/header';
-import ImageSlider from './components/imageslider';
-import Marque from './components/marque';
-import Nav from './components/nav';
+
+
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import Home from './routes/home';
+import Services from './routes/services';
+import Contact from './routes/contact';
+
 
 
 
@@ -11,12 +15,15 @@ import Nav from './components/nav';
 function App() {
   return (
        <>
-       <div>
-            <Header/>
-            <Nav/>
-            <Marque/>
-            <ImageSlider/>
-       </div>
+        
+       <Router>
+      <Routes>
+        <Route path="/" element= {<Home/>} />
+        <Route path="/services" element= {<Services/>} />
+        <Route path="/contact" element= {<Contact/>} />
+       
+      </Routes>
+    </Router>
        </>
   )
 }
