@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-
+import React, { useState } from "react";
+import { FaAngleDown } from 'react-icons/fa';
+import { Link } from "react-router-dom";
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -8,39 +9,30 @@ const Header = () => {
   };
 
   return (
-    <div className='mx-auto bg-green-800 max-w-screen-2xl '>
-      <div className='flex flex-row flex-wrap md:justify-center md:mx-auto'>
-      
-        <div className='p-1 m-2 bg-white rounded-md md:mx-auto'>Career</div>
-        <div className='p-1 m-2 bg-white rounded-md md:mx-auto'>News & Event</div>
-
-        <div
-          className='relative p-1 m-2 bg-white rounded-md cursor-pointer md:mx-auto'
-          onClick={toggleDropdown}
-        >
-
-            <div className='flex'>
-          <img
-            src={require('../images/dropdown.png')}
-            alt='Dropdownlogo'
-            className='w-6 h-6 ml-30'
-          />
-          Download My App
-          </div>
-         
+    <div className="flex items-center justify-between p-1 mx-auto bg-green-800 max-w-screen-2xl">
+       <Link to="/"> <img
+            src={require('../images/logosahakari.jpeg')}
+            alt='Sahakarilogo'
+            className='w-12 h-10 mr-2'
+          /> </Link>
+      <div className="flex items-center justify-center space-x-1 cursor-pointer md:space-x-3">
+        <Link to="/careers"><div className="flex items-center justify-center h-10 p-1 ml-1 bg-white rounded-md md:w-full">Career</div></Link>
+        <div className="relative flex items-center justify-center h-10 p-1 bg-white rounded-md md:w-full" onClick={toggleDropdown}> Download my App <FaAngleDown />
+       
+        </div>
           {isDropdownOpen && (
-                <div className='absolute left-0 z-10 mt-2 shadow-md top-full bg-slate-400'>
-            <a href='#' className='block p-2 hover:bg-gray-200 '>
-              Android App
+                <div className='absolute flex flex-col bg-white rounded-md shadow-md top-12'>
+            <a href='#' className='pl-2 border-b-2 hover:bg-gray-200'>
+            Ios App
             </a>
-            <a href='#' className='block p-2 hover:bg-gray-200'>
-              Ios App
+            <a href='#' className='pl-2 hover:bg-gray-200'>
+            Android  App
             </a>
+            
           </div>
           )}
-        </div>
-
-        
+        <div className="flex items-center justify-center h-10 p-1 ml-1 bg-white rounded-md md:w-full">News </div>
+        <div className="flex items-center justify-center h-10 p-1 ml-1 bg-white rounded-md md:w-full">Epaper</div>
       </div>
     </div>
   );

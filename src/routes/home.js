@@ -7,6 +7,8 @@ import Servicesc from '../components/servicesc'
 import Onlineaccountopening from '../components/onlineaccountopening'
 import Footer from '../components/footer'
 import Sidebar from '../components/sidebar'
+import Account from '../components/account'
+import Remittance from '../components/remittance'
 
 
 
@@ -14,15 +16,18 @@ const Home = () => {
   return (
     <div className=''>
       
-      <div className='sticky top-0 left-0 z-20 w-full '>
+      <div className='sticky top-0 left-0 z-20 w-full'>
       <Header/>
       <Nav/>
       <Marque/>
       </div>
       <ImageSlider/>
       <Sidebar/>
+
      <Servicesc/>
      <Onlineaccountopening/>
+     <Account/>
+     <Remittance/>
      <Footer/>
     </div>
   )

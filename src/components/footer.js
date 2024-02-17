@@ -3,7 +3,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="max-w-screen-xl py-8 mx-auto text-white bg-green-800">
+    <footer className="py-8 mx-auto text-white bg-green-800 max-w-screen-2xl">
       <div className="container flex flex-col items-center justify-between mx-auto md:flex-row">
         <div className="mb-4 md:mb-0">
           <h2 className="text-2xl font-bold">गाउसहर बहुउदेस्यिय सहकारि सस्था लि  पोखरा-८,  कास्कि </h2>

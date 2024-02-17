@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import image1 from '../images/slider1.jpg';
-import image2 from '../images/slider2.jpeg';
-import image3 from '../images/slider3.jpg';
+
 import image4 from '../images/slider4.jpeg';
 
+
+
+
+
+
+
+
 const ImageSlider = () => {
-  const images = [image1, image2, image3, image4]; // Import images here
+  const images = [image1,   image4]; // Import images here
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -24,7 +30,7 @@ const ImageSlider = () => {
 
 
 useEffect(() => {
-    const interval = setInterval(nextSlide, 3000);
+    const interval = setInterval(nextSlide, 5000);
 
     // Clear the interval when the component unmounts
     return () => clearInterval(interval);
@@ -32,7 +38,7 @@ useEffect(() => {
 
   return (
     <div className="relative mx-auto max-w-screen-2xl">
-      <div className='mx-4 md:mx-12'>
+      <div className='mx-4 md:mx-20 '>
       <img
         src={images[currentImageIndex]}
         alt={`Slide ${currentImageIndex + 1}`}

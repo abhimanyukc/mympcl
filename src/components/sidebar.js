@@ -1,29 +1,65 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaPercent, FaPhone, FaCalculator } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
+  const [hoveredItem, setHoveredItem] = useState(null);
+
+  const handleMouseEnter = (item) => {
+    setHoveredItem(item);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredItem(null);
+  };
+
   return (
-    <div className="fixed right-0 text-blue-800 transform -translate-y-1/2 top-1/2">
-      <div className="relative mb-2 group">
-        <Link to ="/interestrate">
-        <FaPercent size={16} />
+    <div className="flex flex-col items-end mx-auto max-w-screen-2xl">
+      <div className="fixed flex flex-col space-y-4 text-green-800 transform -translate-y-1/2 top-1/2">
+        <Link
+          to="/interestrate"
+          className=""
+          onMouseEnter={() => handleMouseEnter('Interest Rate')}
+          onMouseLeave={handleMouseLeave}
+        >
+          {hoveredItem === 'Interest Rate' ? (
+            <div className="flex p-1 bg-white border">
+              <FaPercent size={16} className='mx-1' /> Interest Rate
+            </div>
+          ) : (
+            <FaPercent size={16} />
+          )}
         </Link>
-        <div className="absolute hidden p-2 bg-white rounded shadow-md group-hover:block right-4">
-        <FaPercent size={16} /> Interest Rate
-        </div>
-      </div>
-      <div className="relative mb-2 group">
-        <FaPhone size={16} />
-        <div className="absolute hidden p-2 bg-white rounded shadow-md group-hover:block right-4">
-        <FaPhone size={16} />  Contact
-        </div>
-      </div>
-      <div className="relative group">
-        <FaCalculator size={16} />
-        <div className="absolute hidden p-2 bg-white rounded shadow-md group-hover:block right-4">
-        <FaCalculator size={16} /> Calculator
-        </div>
+
+        <Link
+          to="/contact"
+          className=""
+          onMouseEnter={() => handleMouseEnter('Contact')}
+          onMouseLeave={handleMouseLeave}
+        >
+          {hoveredItem === 'Contact' ? (
+            <div className="flex p-1 bg-white border">
+              <FaPhone size={16}  className='mx-1'/> Contact
+            </div>
+          ) : (
+            <FaPhone size={16} />
+          )}
+        </Link>
+
+        <Link
+          to="/emicalculator"
+          className=""
+          onMouseEnter={() => handleMouseEnter('Calculator')}
+          onMouseLeave={handleMouseLeave}
+        >
+          {hoveredItem === 'Calculator' ? (
+            <div className="flex p-1 bg-white border">
+              <FaCalculator size={16} className='mx-1' /> Calculator
+            </div>
+          ) : (
+            <FaCalculator size={16} />
+          )}
+        </Link>
       </div>
     </div>
   );
