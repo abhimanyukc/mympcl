@@ -7,20 +7,43 @@ const InterestRateComponent = () => {
   // Static data for each tab
   const tabData = {
     saving: [
-      { product: 'Saving Product 1', percentage: 5 },
-      { product: 'Saving Product 2', percentage: 7 },
+      { product: 'PERIODIC MONTHLY SAVING', percentage: 9.00 },
+      { product: 'NARIBACHAT SAVING', percentage: 10.00 },
+      { product: 'PERIODIC SAVING-3 MONTH', percentage: 7.00 },
+      { product: 'PERIODIC SAVING-6 MONTH', percentage: 8.00 },
+      { product: 'PERIODIC SAVING-1 YRS', percentage: 8.50 },
+      { product: 'NAWA KOPILA SAVING 16 YRS', percentage: 11.00 },
+      { product: 'SENIOR CITIZEN SAVING', percentage: 8.50 },
+      { product: 'REMITANCE SAVING 1YRS', percentage: 10.50 },
     ],
     current: [
-      { product: 'Current Product 1', percentage: 3 },
-      { product: 'Current Product 2', percentage: 6 },
+      { product: 'GAUSAHAR  BUSINESS PLUS BACHAT', percentage: 7.00 },
+      { product: 'GAUSAHAR SUPER SAVING', percentage: 6.00 },
+      { product: 'ATM SAVING', percentage: 5.00 },
+      
     ],
     products: [
-      { product: 'Product 1', percentage: 8 },
-      { product: 'Product 2', percentage: 10 },
+      { product: 'SPECIAL PERIODIC SAVING 3 MONTH', percentage: 6.00 },
+      { product: 'SPECIAL PERIODIC SAVING 6 MONTH', percentage: 8.50 },
+      { product: 'SPECIAL PERIODIC SAVING 1yrs', percentage: 10.00 },
+      { product: 'SPECIAL PERIODIC SAVING 2YRS', percentage: 10.50 },
+      { product: 'SPECIAL PERIODIC SAVING 3YRS', percentage: 11.00 },
+      
     ],
     loan: [
-      { product: 'Loan Product 1', percentage: 12 },
-      { product: 'Loan Product 2', percentage: 15 },
+      { product: 'Agriculture Loan', percentage: 15.00 },
+      { product: 'Business Loan', percentage: 16.00 },
+      { product: 'Emergency Loan', percentage: 13.00 },
+      { product: 'Educational Loan', percentage: 15.00 },
+      { product: 'Foriegn Employment Loan', percentage: 16.00 },
+      { product: 'Hire Purchase Loan', percentage: 16.00 },
+      { product: 'Home Loan', percentage: 16.00 },
+      { product: 'Land Purchase Loan', percentage: 16.00 },
+      { product: 'Livestock Loan', percentage: 15.00 },
+      { product: 'Miscellaneous Loan', percentage: 15.50 },
+      { product: 'Poultry Farm Loan', percentage: 15.50 },
+      { product: 'Tailoring Loan', percentage: 15.50 },
+      { product: 'Professional Loan', percentage: 15.50 },
     ],
   };
 

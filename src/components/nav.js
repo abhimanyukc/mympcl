@@ -42,19 +42,19 @@ const Nav = () => {
           <FaAngleDown  />
           {isDropdownOpen && (
             <div className='absolute left-0 flex flex-col text-black bg-white shadow-md top-full'>
-              <a href='#' className='block pl-1 border-b-2 hover:bg-gray-400'>
+              <a href='information' className='block pl-1 border-b-2 hover:bg-gray-400'>
                 Information
               </a>
-              <a href='#' className='block pl-1 border-b-2 hover:bg-gray-200'>
+              <a href='membership' className='block pl-1 border-b-2 hover:bg-gray-200'>
                 Organization Director
               </a>
-              <a href='#' className='block pl-1 border-b-2 hover:bg-gray-200'>
+              <a href='membership' className='block pl-1 border-b-2 hover:bg-gray-200'>
                 Team Member
               </a>
-              <a href='#' className='block pl-1 border-b-2 hover:bg-gray-200'>
+              <a href='department' className='block pl-1 border-b-2 hover:bg-gray-200'>
                 Department
               </a>
-              <a href='#' className='block pl-1 border-b-2 hover:bg-gray-200'>
+              <a href='branches' className='block pl-1 border-b-2 hover:bg-gray-200'>
                 Branches
               </a>
             </div>

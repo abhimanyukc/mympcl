@@ -31,8 +31,8 @@ const Header = () => {
             
           </div>
           )}
-        <div className="flex items-center justify-center h-10 p-1 ml-1 bg-white rounded-md md:w-full">News </div>
-        <div className="flex items-center justify-center h-10 p-1 ml-1 bg-white rounded-md md:w-full">Epaper</div>
+        <Link to="/news"><div className="flex items-center justify-center h-10 p-1 ml-1 bg-white rounded-md md:w-full">News </div></Link>
+        <Link to="/epaper"><div className="flex items-center justify-center h-10 p-1 ml-1 bg-white rounded-md md:w-full">Epaper</div></Link>
       </div>
     </div>
   );
