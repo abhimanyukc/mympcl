@@ -16,7 +16,7 @@ const Header = () => {
             className='w-12 h-10 mr-2'
           /> </Link>
       <div className="flex items-center justify-center space-x-1 cursor-pointer md:space-x-3">
-        <Link to="/careers"><div className="flex items-center justify-center h-10 p-1 ml-1 bg-white rounded-md md:w-full">Career</div></Link>
+        <Link to="/career"><div className="flex items-center justify-center h-10 p-1 ml-1 bg-white rounded-md md:w-full">Career</div></Link>
         <div className="relative flex items-center justify-center h-10 p-1 bg-white rounded-md md:w-full" onClick={toggleDropdown}> Download my App <FaAngleDown />
        
         </div>
