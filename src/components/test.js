@@ -1,69 +1,59 @@
+// Import necessary libraries
 import React, { useState } from 'react';
-import { FaPercent, FaPhone, FaCalculator } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 
-const Sidebar = () => {
-  const [hoveredItem, setHoveredItem] = useState(null);
+// Dummy card data
+const cardData = [
+  { id: 1, imageUrl: 'https://placekitten.com/300/200', title: 'Card 1', details: 'Details of Card 1' },
+  { id: 2, imageUrl: 'https://placekitten.com/300/201', title: 'Card 2', details: 'Details of Card 2' },
+  { id: 3, imageUrl: 'https://placekitten.com/300/202', title: 'Card 3', details: 'Details of Card 3' },
+  { id: 4, imageUrl: 'https://placekitten.com/300/203', title: 'Card 4', details: 'Details of Card 4' },
+  { id: 5, imageUrl: 'https://placekitten.com/300/204', title: 'Card 5', details: 'Details of Card 5' },
+  { id: 6, imageUrl: 'https://placekitten.com/300/202', title: 'Card 6', details: 'Details of Card 6' },
+ 
+];
 
-  const handleMouseEnter = (item) => {
-    setHoveredItem(item);
+const News = () => {
+  // State for current page
+  const [currentPage, setCurrentPage] = useState(1);
+  // Cards per page
+  const cardsPerPage = 3;
+  // Calculate the index of the first card to display on the current page
+  const indexOfLastCard = currentPage * cardsPerPage;
+  const indexOfFirstCard = indexOfLastCard - cardsPerPage;
+  // Get the current cards to display
+  const currentCards = cardData.slice(indexOfFirstCard, indexOfLastCard);
+
+  // Handle page change
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
   };
 
-  const handleMouseLeave = () => {
-    setHoveredItem(null);
-  };
-  // fixed top-0 flex justify-end h-full mx-auto right-6 md:right-8 max-w-screen-2xl
   return (
-     
-    <div className="flex flex-col items-end mx-auto max-w-screen-2xl">
-      <div className="fixed flex flex-col space-y-4 text-green-800 transform -translate-y-1/2 top-1/2">
-        <Link
-          to="/interestrate"
-          className=""
-          onMouseEnter={() => handleMouseEnter('Interest Rate')}
-          onMouseLeave={handleMouseLeave}
-        >
-          {hoveredItem === 'Interest Rate' ? (
-            <div className="flex p-1 border ">
-              <FaPercent size={16} className='mx-2' /> Interest Rate
-            </div>
-          ) : (
-            <FaPercent size={16} />
-          )}
-        </Link>
-
-        <Link
-          to="/contact"
-          className=""
-          onMouseEnter={() => handleMouseEnter('Contact')}
-          onMouseLeave={handleMouseLeave}
-        >
-          {hoveredItem === 'Contact' ? (
-            <div className="flex p-1 border ">
-              <FaPhone size={16}  className='mx-2'/> Contact
-            </div>
-          ) : (
-            <FaPhone size={16} />
-          )}
-        </Link>
-
-        <Link
-          to="/calculator"
-          className=""
-          onMouseEnter={() => handleMouseEnter('Calculator')}
-          onMouseLeave={handleMouseLeave}
-        >
-          {hoveredItem === 'Calculator' ? (
-            <div className="flex p-1 border ">
-              <FaCalculator size={16} className='mx-2' /> Calculator
-            </div>
-          ) : (
-            <FaCalculator size={16} />
-          )}
-        </Link>
+    <div className="container mx-auto mt-8">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+        {currentCards.map((card) => (
+          <div key={card.id} className="mb-4">
+            <img src={card.imageUrl} alt={card.title} className="object-cover w-full h-48" />
+            <h3 className="mt-2 text-lg font-semibold">{card.title}</h3>
+            <p className="text-gray-600">{card.details}</p>
+          </div>
+        ))}
+      </div>
+      <div className="flex justify-center mt-4">
+        {Array.from({ length: Math.ceil(cardData.length / cardsPerPage) }, (_, index) => (
+          <button
+            key={index + 1}
+            onClick={() => handlePageChange(index + 1)}
+            className={`mx-2 px-4 py-2 rounded-full ${
+              currentPage === index + 1 ? 'bg-blue-500 text-white' : 'bg-gray-300 text-gray-700'
+            }`}
+          >
+            {index + 1}
+          </button>
+        ))}
       </div>
     </div>
   );
 };
 
-export default Sidebar;
+export default News;
