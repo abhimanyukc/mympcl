@@ -3,62 +3,40 @@ import { FaPercent, FaPhone, FaCalculator } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
-  const [hoveredItem, setHoveredItem] = useState(null);
-
-  const handleMouseEnter = (item) => {
-    setHoveredItem(item);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredItem(null);
-  };
+ 
 
   return (
-    <div className="flex flex-col items-end mx-auto max-w-screen-2xl">
-      <div className="fixed flex flex-col space-y-4 text-green-800 transform -translate-y-1/2 top-1/2">
+    <div className="relative z-10 flex flex-col items-end mx-auto select-none max-w-screen-2xl md:py-2">
+      <div className="fixed flex flex-col space-y-4 text-green-800 transform -translate-y-1/2 top-1/2 ">
         <Link
           to="/interestrate"
-          className=""
-          onMouseEnter={() => handleMouseEnter('Interest Rate')}
-          onMouseLeave={handleMouseLeave}
+          className='p-2 text-white rounded-l-2xl bg-secondary'
         >
-          {hoveredItem === 'Interest Rate' ? (
-            <div className="flex p-1 bg-white border">
-              <FaPercent size={16} className='mx-1' /> Interest Rate
-            </div>
-          ) : (
-            <FaPercent size={16} />
-          )}
+          
+          <div className="flex text-white rounded-l-2xl bg-secondary">
+            <FaPercent size={16} className="mx-1" /> 
+          </div>
         </Link>
 
         <Link
           to="/contact"
-          className=""
-          onMouseEnter={() => handleMouseEnter('Contact')}
-          onMouseLeave={handleMouseLeave}
+          className='p-2 text-white rounded-l-2xl bg-secondary'
+            
         >
-          {hoveredItem === 'Contact' ? (
-            <div className="flex p-1 bg-white border">
-              <FaPhone size={16}  className='mx-1'/> Contact
-            </div>
-          ) : (
-            <FaPhone size={16} />
-          )}
+          <div className="flex text-white rounded-l-2xl bg-secondary">
+            <FaPhone size={16} className="mx-1" />
+          </div>
         </Link>
 
         <Link
           to="/emicalculator"
-          className=""
-          onMouseEnter={() => handleMouseEnter('Calculator')}
-          onMouseLeave={handleMouseLeave}
+          className='p-2 text-white rounded-l-2xl bg-secondary'
+           
+          
         >
-          {hoveredItem === 'Calculator' ? (
-            <div className="flex p-1 bg-white border">
-              <FaCalculator size={16} className='mx-1' /> Calculator
-            </div>
-          ) : (
-            <FaCalculator size={16} />
-          )}
+          <div className="flex text-white rounded-l-2xl bg-secondary">
+            <FaCalculator size={16} className="mx-1" /> 
+          </div>
         </Link>
       </div>
     </div>

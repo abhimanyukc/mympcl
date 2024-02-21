@@ -37,28 +37,28 @@ useEffect(() => {
   }, [currentImageIndex]);
 
   return (
-    <div className="relative mx-auto max-w-screen-2xl">
-      <div className='mx-4 md:mx-20 '>
+    <div className="relative mx-auto select-none max-w-screen-2xl">
+      <div className='mx-4 md:mx-24 '>
       <img
         src={images[currentImageIndex]}
         alt={`Slide ${currentImageIndex + 1}`}
-        className="w-full"
+        className="object-fill w-full h-full md:h-96 "
       />
  
-      <div className="absolute transform -translate-y-1/2 top-1/2 md:left-12 left-6">
+      <div className="absolute transform -translate-y-1/2 top-1/2 md:left-10 left-6 group">
         
         <button
-          className="p-1 text-white bg-indigo-800 rounded md:p-2 focus:outline-none"
+          className="p-1 text-orange-600 border border-orange-600 rounded md:py-2 md:px-3 focus:outline-none group-hover:bg-orange-600 group-hover:text-white"
           onClick={prevSlide}
         >
           &#8249;
         </button>
       </div>
      
-      <div className="absolute transform -translate-y-1/2 top-1/2 md:right-12 right-6">
+      <div className="absolute transform -translate-y-1/2 top-1/2 md:right-10 right-6 group">
        
         <button
-          className="p-1 text-white bg-indigo-800 rounded md:p-2 focus:outline-none"
+          className="p-1 text-orange-600 border border-orange-600 rounded md:py-2 md:px-3 focus:outline-none group-hover:bg-orange-600 group-hover:text-white"
           onClick={nextSlide}
         >
           &#8250;

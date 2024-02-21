@@ -3,7 +3,7 @@ import { FaAngleRight } from 'react-icons/fa'
 
 const Remittance = () => {
   return (
-       <div className='mx-auto font-serif bg-white max-w-screen-2xl'>
+       <div className='mx-auto font-serif bg-white select-none max-w-screen-2xl md:px-24 md:py-2'>
         <div className='mx-4 my-8'>
         
         <div className='flex flex-col md:flex-row md:items-center md:p-8'>

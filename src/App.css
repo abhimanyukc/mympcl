@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap');
+
+.font-times {
+  font-family: 'Times New Roman', serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.bg-secondary{
+     background-color: #2b2f96;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.align-center, .justify-content-between, .flex-grow-1, .bg-primary, .header-responsive {
+    FONT-FAMILY:Inter, sans-serif;
+    FONT-SIZE:16px;
+    LINE-HEIGHT:24px;
+    TEXT-ALIGN:start;
+    LETTER-SPACING:normal;
+    background: #f26f21;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+
+.header, .mb-16{
+    FONT-FAMILY:Inter, sans-serif;
+    FONT-SIZE:16px;
+    LINE-HEIGHT:24px;
+    TEXT-ALIGN:start;
+    LETTER-SPACING:normal;
+    color: #3d3d3d;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.bg-secondary, .flex-between, .align-center, .menu-bar{
+    FONT-FAMILY:Inter, sans-serif;
+    FONT-SIZE:16px;
+    LINE-HEIGHT:24px;
+    TEXT-ALIGN:start;
+    LETTER-SPACING:normal;
+   
+    background-color: #00a552;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+
+
+
+
+div{
+     font-family: Inter,sans-serif;
+     font-size: 16px;
+     line-height: 24px;
+     text-align: start;
+     letter-spacing: normal;
+   
+     
 }
+
+body{
+    font-family:  Inter, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: start;
+    letter-spacing: normal;
+    color:#3d3d3d;
+    background-color: #ffffff;
+} 
+

@@ -35,7 +35,7 @@ const ContactC = () => {
   };
 
   return (
-    <div className="container mx-auto mt-10">
+    <div className="container mx-auto mt-10 select-none md:px-24 md:py-2">
       <div className="mb-6 text-3xl font-semibold text-center">Contact Us</div>
       <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
         {/* ... (input fields) */}

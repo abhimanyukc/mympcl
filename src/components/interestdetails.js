@@ -20,7 +20,6 @@ const InterestRateComponent = () => {
       { product: 'GAUSAHAR  BUSINESS PLUS BACHAT', percentage: 7.00 },
       { product: 'GAUSAHAR SUPER SAVING', percentage: 6.00 },
       { product: 'ATM SAVING', percentage: 5.00 },
-      
     ],
     products: [
       { product: 'SPECIAL PERIODIC SAVING 3 MONTH', percentage: 6.00 },
@@ -56,7 +55,7 @@ const InterestRateComponent = () => {
     const data = tabData[selectedTab];
 
     return (
-      <table className="w-full table-auto">
+      <table className="w-full table-auto select-none">
         <thead>
           <tr>
             <th className="px-4 py-2">Product</th>

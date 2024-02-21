@@ -3,20 +3,25 @@ import Header from '../components/header'
 import Nav from '../components/nav'
 import Marque from '../components/marque'
 import ImageSlider from '../components/imageslider'
+import Sidebar from '../components/sidebar'
 import Servicesc from '../components/servicesc'
 import Onlineaccountopening from '../components/onlineaccountopening'
 import Footer from '../components/footer'
-import Sidebar from '../components/sidebar'
+
 import Account from '../components/account'
 import Remittance from '../components/remittance'
 
 
 
+
 const Home = () => {
   return (
-    <div className=''>
+       
+
+    <div className='font-sans text-base leading-6 tracking-normal bg-white text-3d3d3d text-start '>
+
       
-      <div className='sticky top-0 left-0 z-20 w-full'>
+      <div className='sticky top-0 left-0 z-50 w-full bg-white '>
       <Header/>
       <Nav/>
       <Marque/>

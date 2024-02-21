@@ -2,17 +2,17 @@ import React from 'react'
 
 const Onlineaccountopening = () => {
   return (
-    <div className='mx-auto max-w-screen-2xl'>
+    <div className='mx-auto select-none max-w-screen-2xl md:px-6 md:py-2 md:mt-10'>
          <div className='flex flex-col my-32 ml-1 mr-5 md:flex-row md:m-20'>
 
          <div>  <img
             src={require('../images/onlineacccount.jpeg')}
             alt='Online account service'
-            className='w-full p-1 m-2 md:mt-3 md:mx-0 h-half'
+            className='w-full h-full p-1 m-2 rounded-xl md:mt-3 md:mx-0'
           /></div>
 
-         <div className='flex flex-col justify-center mt-4 ml-2 md:mt-0 md:ml-8'>
-         <div className='mt-2 text-lg font-medium'>Online Account Opening</div>
+         <div className='flex flex-col justify-center mt-4 ml-2 md:mt-0 md:ml-8 '>
+         <div className='mt-2 text-2xl font-bold '>Online Account Opening</div>
          <div className='mt-2 font-sans'>
          We offer multiple online money transfer services, and our service is renowned as the most well-known, secure, and trustworthy option on the internet.
          </div>

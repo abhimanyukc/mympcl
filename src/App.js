@@ -18,6 +18,16 @@ import Notices from './routes/notices';
 import Membership from './routes/membership';
 import Department from './routes/department';
 import Branches from './routes/branches';
+import Bankingservicesr from './routes/bankingservices';
+import Appservice from './routes/appservice';
+import Atmservice from './routes/atmservice';
+import Healthservice from './routes/healthservice';
+import Internetservice from './routes/internetbankingservice';
+import Microfinanceservice from './routes/microfinanceservice';
+import Mobilebankingservice from './routes/mobilebankingservice';
+import Remittanceservice from './routes/remittanceservice';
+import Smsbankingservice from './routes/smsbankingservice';
+import Otherbankingservice from './routes/otherbankingservice';
 
 
 
@@ -31,6 +41,16 @@ function App() {
       <Routes>
         <Route path="/" element= {<Home/>} />
         <Route path="/services" element= {<Services/>} />
+        <Route path="/services/bankingservices" element= {<Bankingservicesr/>} />
+        <Route path="/services/appservices" element= {<Appservice/>} />
+        <Route path="/services/atmservices" element= {<Atmservice/>} />
+        <Route path="/services/healthservices" element= {<Healthservice/>} />
+        <Route path="/services/internetservices" element= {<Internetservice/>} />
+        <Route path="/services/microfinanceservices" element= {<Microfinanceservice/>} />
+        <Route path="/services/mobilebankingservices" element= {<Mobilebankingservice/>} />
+        <Route path="/services/remmittanceservices" element= {<Remittanceservice/>} />
+        <Route path="/services/smsservices" element= {<Smsbankingservice/>} />
+        <Route path="/services/otherbankingservices" element= {<Otherbankingservice/>} />
         <Route path="/contact" element= {<Contact/>} />
         <Route path="/interestrate" element= {<Interestrate/>} />
         <Route path="/emicalculator" element= {<Emicalculator/>} />
