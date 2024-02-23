@@ -6,18 +6,18 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { FaAngleRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-
+import '../App.css';
 const PrevArrow = ({ onClick }) => (
   <FaChevronLeft
     onClick={onClick}
-    className="absolute left-0 z-10 p-1 text-2xl text-orange-500 transform -translate-y-1/2 border border-orange-500 cursor-pointer md:left-12 top-1/2 hover:bg-orange-500"
+    className="absolute left-0 z-10 p-1 text-2xl text-indigo-800 transform -translate-y-1/2 border border-indigo-800 cursor-pointer md:left-12 top-1/2 hover:bg-indigo-800 hover:text-white"
   />
 );
 
 const NextArrow = ({ onClick }) => (
   <FaChevronRight
     onClick={onClick}
-    className="absolute right-0 z-10 p-1 text-2xl text-orange-500 transform -translate-y-1/2 border border-orange-500 cursor-pointer top-1/2 md:right-12 hover:bg-orange-500"
+    className="absolute right-0 z-10 p-1 text-2xl text-indigo-800 transform -translate-y-1/2 border border-indigo-800 cursor-pointer top-1/2 md:right-12 hover:bg-indigo-800 hover:text-white"
   />
 );
 
@@ -55,21 +55,23 @@ const settings = {
 
 const Servicesc = () => {
   return (
-    <div className='z-10 mx-auto font-sans bg-gray-100 select-none max-w-screen-2xl md:px-4 md:pt-2'>
+    <div className='z-10 mx-auto font-sans bg-white select-none max-w-screen-2xl md:px-4 md:pt-2'>
       <div className=' py-11'>
-           <div className='px-24 pt-2 font-sans text-2xl font-semibold tracking-normal '>Services</div>
+           <div className='px-24 pt-2 font-sans text-2xl font-semibold tracking-normal text-center'>Services</div>
       <Slider {...settings}>
-      <div className='px-4 py-20 md:px-20 md:py-20'>
-          <div className='flex flex-col items-center justify-center h-64 bg-white'>
+      <div className='flex flex-col items-center justify-center '>
+          <div className='flex flex-col items-center justify-center w-full px-10 py-8 bg-white h-120 md:h-80 md:px-40 md:py-20'>
           <div>  <img
             src={require('../images/365bankingservice.png')}
             alt='365 banking service'
             className='w-8 h-8 p-1 m-2'
           /></div>
           <div className='font-semibold' >365 Banking Service</div>
-          <div className=''> 365 Banking Service Content</div>
+          <div className=''> The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
+           Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
+           Other Service Center will be closed at public holiday</div>
           <Link to="/services/bankingservices">
-          <div className='flex flex-row items-center text-green-500'>
+          <div className='flex flex-row items-center text-green-800'>
             <div>Learn More</div>
             <div><FaAngleRight/></div>
           </div>

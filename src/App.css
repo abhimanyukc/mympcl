@@ -9,7 +9,15 @@
 .bg-secondary{
      background-color: #2b2f96;
 }
-
+ 
+@media (min-width: 768px) {
+    .md\:h-120 {
+        height: 40rem/* 384px */;
+    }
+    .md\:w-120 {
+        width: 50rem/* 384px */;
+    }
+}
 
 .align-center, .justify-content-between, .flex-grow-1, .bg-primary, .header-responsive {
     FONT-FAMILY:Inter, sans-serif;
@@ -38,8 +46,6 @@
     LINE-HEIGHT:24px;
     TEXT-ALIGN:start;
     LETTER-SPACING:normal;
-   
-    background-color: #00a552;
 }
 
 
@@ -49,7 +55,7 @@
 
 
 div{
-     font-family: Inter,sans-serif;
+     font-family: 'Inter',sans-serif;
      font-size: 16px;
      line-height: 24px;
      text-align: start;
@@ -59,7 +65,7 @@ div{
 }
 
 body{
-    font-family:  Inter, sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 16px;
     line-height: 24px;
     text-align: start;

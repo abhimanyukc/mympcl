@@ -7,7 +7,7 @@ import { faBank } from '@fortawesome/free-solid-svg-icons';
 import {  FaAngleRight } from 'react-icons/fa';
 const Account = () => {
   return (
-    <div className='mx-auto select-none max-w-screen-2xl md:px-24 md:py-2'>
+    <div className='mx-auto font-sans bg-white select-none max-w-screen-2xl md:px-24 md:py-2'>
     <div className='flex flex-col p-2 '>
       
 
@@ -18,31 +18,31 @@ const Account = () => {
         <div className='flex flex-col font-serif md:flex-row'>
        
        <div className='flex flex-col my-8 '>
-        <div className='mb-4 font-serif text-lg font-semibold text-green-700'>Monthly Saving</div>
-        <div className='flex flex-row items-center '><div className='mr-2'><FaAngleRight/></div><div>Monthly Saving starts from RS. 100</div></div>
-        <div className='flex items-center'><div className='mr-2'><FaAngleRight/></div><div>Interest calculation daily basis and interest post quarterly.</div></div>
-        <div className='flex items-center'><div className='mr-2'><FaAngleRight/></div><div>Entitle to the dividend offered by the institute base on the Share Kitta.</div></div>
+        <div className='mb-4 text-lg font-semibold text-green-800'>Monthly Saving</div>
+        <div className='flex flex-row items-center '><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>Monthly Saving starts from RS. 100</div></div>
+        <div className='flex items-center'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>Interest calculation daily basis and interest post quarterly.</div></div>
+        <div className='flex items-center'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>Entitle to the dividend offered by the institute base on the Share Kitta.</div></div>
        </div>
 
        <div className='flex flex-col my-8'>
-        <div className='mb-4 font-serif text-lg font-semibold text-green-700'>Daily Saving(6 Months)</div>
-        <div className='flex items-center'><div className='mr-2'><FaAngleRight/></div><div>You can save a desirable amount from home or the office.</div></div>
-        <div className='flex items-center'><div className='mr-2'><FaAngleRight/></div><div>Minimum Rs. 100-balance needs to maintain all the time.</div></div>
-        <div className='flex items-center'><div className='mr-2'><FaAngleRight/></div><div>Interest calculation daily and post quarterly.</div></div>
+        <div className='mb-4 font-serif text-lg font-semibold text-green-800'>Daily Saving(6 Months)</div>
+        <div className='flex items-center'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>You can save a desirable amount from home or the office.</div></div>
+        <div className='flex items-center'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>Minimum Rs. 100-balance needs to maintain all the time.</div></div>
+        <div className='flex items-center'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>Interest calculation daily and post quarterly.</div></div>
        </div>
        
        <div className='flex flex-col my-8'>
-        <div className='mb-4 font-serif text-lg font-semibold text-green-700'>Nari Saving</div>
-        <div className='flex items-center'><div className='mr-2'><FaAngleRight/></div><div>You can save a desirable amount from home or the office.</div></div>
-        <div className='flex items-center'><div className='mr-2'><FaAngleRight/></div><div>Daily collection through our trusty employees.</div></div>
-        <div className='flex items-center'><div className='mr-2'><FaAngleRight/></div><div>ATM transaction supports banks in Nepal and India.</div></div>
+        <div className='mb-4 font-serif text-lg font-semibold text-green-800'>Nari Saving</div>
+        <div className='flex items-center'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>You can save a desirable amount from home or the office.</div></div>
+        <div className='flex items-center'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>Daily collection through our trusty employees.</div></div>
+        <div className='flex items-center'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>ATM transaction supports banks in Nepal and India.</div></div>
        </div>
 
        <div className='flex flex-col mt-8'>
-        <div className='font-serif text-lg font-semibold text-green-700'>Senior citizenship saving</div>
-        <div className='flex items-center'><div className='mr-2'><FaAngleRight/></div><div>Interest calculation daily basis and post quarterly</div></div>
-        <div className='flex items-center'><div className='mr-2'><FaAngleRight/></div><div>Free ABBS (Any branch banking service)</div></div>
-        <div className='flex items-center'><div className='mr-2'><FaAngleRight/></div><div>Monthly collection from home</div></div>
+        <div className='font-serif text-lg font-semibold text-green-800'>Senior citizenship saving</div>
+        <div className='flex items-center'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>Interest calculation daily basis and post quarterly</div></div>
+        <div className='flex items-center'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>Free ABBS (Any branch banking service)</div></div>
+        <div className='flex items-center'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>Monthly collection from home</div></div>
        </div>
         </div>
         </div>

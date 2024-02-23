@@ -44,7 +44,7 @@ const Careerc = () => {
   }, [message]);
 
   return (
-    <div className="container mx-auto mt-8 select-none max-w-screen-2xl md:px-24 md:py-2">
+    <div className="container mx-auto mt-8 bg-white select-none max-w-screen-2xl md:px-24 md:py-2">
       {message && (
         <div className="p-4 mb-4 text-white bg-green-500">
           {message}

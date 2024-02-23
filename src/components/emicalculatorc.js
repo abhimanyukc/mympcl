@@ -3,7 +3,7 @@ import { BsFillPersonFill } from 'react-icons/bs';
 
 const Emicalculatorc = () => {
   return (
-    <div className='mx-auto bg-green-600 select-none max-w-screen-2xl md:px-24 md:py-2'>
+    <div className='mx-auto bg-white bg-green-800 select-none max-w-screen-2xl md:px-24 md:py-2'>
       <div className='flex flex-col justify-center space-x-8 md:flex-row'>
         <div className='flex flex-col items-center md:items-start'>
           <div className='mt-8 mb-4 text-white'> Get Started With Emi Calculator</div>

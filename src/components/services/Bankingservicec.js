@@ -3,10 +3,10 @@ import { FaAngleRight } from 'react-icons/fa'
 
 const Bankingservices = () => {
   return (
-    <div className='mx-auto cursor-pointer select-none max-w-screen-2xl'>
-        <div className='p-8'>
+    <div className='mx-auto bg-white cursor-pointer select-none max-w-screen-2xl'>
+        <div className='p-8 '>
 
-         <div className='flex items-center justify-center '>
+         <div className='flex items-center md:justify-center '>
           <div><img
             src={require('../../images/365bankingservice.png')}
             alt='365 banking service'
@@ -16,12 +16,15 @@ const Bankingservices = () => {
          </div>
 
          <div>The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
-           Other Service Center will be closed at public holiday.</div>
+           Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
+           Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
+           Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
+           Other Service Center will be closed at public holiday</div>
           <div>Other Services</div>
 
 
           <div className='flex flex-col items-center justify-center md:flex-row '>
-          <div className='px-4 py-20 md:px-20'>
+          <div className='px-4 py-20 md:px-20 '>
           <div className='flex flex-col justify-center h-64 px-20 py-40 bg-white border rounded-md'>
           <div>  <img
             src={require('../../images/sms-banking.png')}

@@ -3,7 +3,7 @@ import { FaAngleRight } from 'react-icons/fa'
 
 const Otherbankingservicec = () => {
   return (
-    <div className='mx-auto cursor-pointer select-none max-w-screen-2xl'>
+    <div className='mx-auto bg-white cursor-pointer select-none max-w-screen-2xl'>
     <div className='p-8'>
 
      <div className='flex items-center justify-center '>

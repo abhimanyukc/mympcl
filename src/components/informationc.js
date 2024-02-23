@@ -2,7 +2,7 @@ import React from 'react'
 
 const informationc = () => {
   return (
-    <div>
+    <div className='mx-auto bg-white max-w-screen-2xl'>
       
     </div>
   )

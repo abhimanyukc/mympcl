@@ -1,46 +1,37 @@
-import React, { useState } from 'react';
-import { FaPercent, FaPhone, FaCalculator } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { FaAngleDown } from 'react-icons/fa';
+import { Link } from "react-router-dom";
+const Header = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-const Sidebar = () => {
- 
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
 
   return (
-    <div className="flex flex-col items-end mx-auto select-none max-w-screen-2xl md:py-2">
-      <div className="fixed flex flex-col space-y-4 text-green-800 transform -translate-y-1/2 top-1/2 ">
-        <Link
-          to="/interestrate"
-          className='p-2 text-white rounded-l-2xl bg-secondary'
-        >
-          
-          <div className="flex text-white rounded-l-2xl bg-secondary">
-            <FaPercent size={16} className="mx-1" /> 
-          </div>
-        </Link>
-
-        <Link
-          to="/contact"
-          className='p-2 text-white rounded-l-2xl bg-secondary'
+    <div className="flex items-center justify-between p-1 mx-auto bg-orange-600 select-none md:px-24 md:py-4 max-w-screen-2xl">
+      
+      <div className="flex items-center justify-center space-x-1 cursor-pointer md:space-x-3">
+        <Link to="/career"><div className="flex items-center justify-center h-10 p-1 ml-1 bg-white rounded-md md:w-full">Career</div></Link>
+        <div className="relative flex items-center justify-center h-10 p-1 bg-white rounded-md md:w-full" onClick={toggleDropdown}> Download my App <FaAngleDown />
+       
+        </div>
+          {isDropdownOpen && (
+                <div className='absolute flex flex-col bg-white rounded-md shadow-md top-12'>
+            <a href='#' className='pl-2 border-b-2 hover:bg-green-500'>
+            Ios App
+            </a>
+            <a href='#' className='pl-2 hover:bg-green-500'>
+            Android  App
+            </a>
             
-        >
-          <div className="flex text-white rounded-l-2xl bg-secondary">
-            <FaPhone size={16} className="mx-1" />
           </div>
-        </Link>
-
-        <Link
-          to="/emicalculator"
-          className='p-2 text-white rounded-l-2xl bg-secondary'
-           
-          
-        >
-          <div className="flex text-white rounded-l-2xl bg-secondary">
-            <FaCalculator size={16} className="mx-1" /> 
-          </div>
-        </Link>
+          )}
+        <Link to="/news"><div className="flex items-center justify-center h-10 p-1 ml-1 bg-white rounded-md md:w-full">News </div></Link>
+        <Link to="/epaper"><div className="flex items-center justify-center h-10 p-1 ml-1 bg-white rounded-md md:w-full">Epaper</div></Link>
       </div>
     </div>
   );
 };
 
-export default Sidebar;
+export default Header;

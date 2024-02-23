@@ -47,7 +47,7 @@ const Newsc = () => {
   };
 
   return (
-    <div className="container mx-auto my-8 mt-8 font-serif select-none max-w-screen-2xl md:px-24 md:py-2">
+    <div className="container mx-auto my-8 mt-8 bg-white select-none max-w-screen-2xl md:px-24 md:py-2">
          <div className='flex justify-center m-2 text-2xl font-bold'>News</div>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {paginatedCards.map((card) => (

@@ -25,6 +25,7 @@ const Home = () => {
       <Header/>
       <Nav/>
       <Marque/>
+     
       </div>
       <ImageSlider/>
       <Sidebar/>

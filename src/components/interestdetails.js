@@ -55,7 +55,7 @@ const InterestRateComponent = () => {
     const data = tabData[selectedTab];
 
     return (
-      <table className="w-full table-auto select-none">
+      <table className="w-full bg-white table-auto select-none">
         <thead>
           <tr>
             <th className="px-4 py-2">Product</th>

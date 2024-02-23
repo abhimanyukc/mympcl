@@ -28,6 +28,9 @@ import Mobilebankingservice from './routes/mobilebankingservice';
 import Remittanceservice from './routes/remittanceservice';
 import Smsbankingservice from './routes/smsbankingservice';
 import Otherbankingservice from './routes/otherbankingservice';
+import LoginC from './components/loginc';
+import Login from './routes/login';
+import Signup from './routes/signup';
 
 
 
@@ -63,6 +66,9 @@ function App() {
         <Route path="/membership" element= {<Membership/>} />
         <Route path="/department" element= {<Department/>} />
         <Route path="/branches" element= {<Branches/>} />
+        <Route path="/login" element= {<Login/>} />
+        <Route path="/signup" element= {<Signup/>} />
+
       </Routes>
     </Router>
        </>

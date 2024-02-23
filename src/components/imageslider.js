@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import image1 from '../images/slider1.jpg';
+import image1 from '../images/bank1.jpg';
 
-import image4 from '../images/slider4.jpeg';
+import image4 from '../images/bank2.jpeg';
 
-
-
-
+import '../App.css';
 
 
 
@@ -37,18 +35,18 @@ useEffect(() => {
   }, [currentImageIndex]);
 
   return (
-    <div className="relative mx-auto select-none max-w-screen-2xl">
+    <div className="relative mx-auto bg-white select-none max-w-screen-2xl">
       <div className='mx-4 md:mx-24 '>
       <img
         src={images[currentImageIndex]}
         alt={`Slide ${currentImageIndex + 1}`}
-        className="object-fill w-full h-full md:h-96 "
+        className="object-fill w-full h-40 md:h-120 "
       />
  
       <div className="absolute transform -translate-y-1/2 top-1/2 md:left-10 left-6 group">
         
         <button
-          className="p-1 text-orange-600 border border-orange-600 rounded md:py-2 md:px-3 focus:outline-none group-hover:bg-orange-600 group-hover:text-white"
+          className="p-1 text-indigo-800 border border-indigo-800 rounded md:py-2 md:px-3 focus:outline-none group-hover:bg-indigo-800 group-hover:text-white"
           onClick={prevSlide}
         >
           &#8249;
@@ -58,7 +56,7 @@ useEffect(() => {
       <div className="absolute transform -translate-y-1/2 top-1/2 md:right-10 right-6 group">
        
         <button
-          className="p-1 text-orange-600 border border-orange-600 rounded md:py-2 md:px-3 focus:outline-none group-hover:bg-orange-600 group-hover:text-white"
+          className="p-1 text-indigo-800 border border-indigo-600 rounded md:py-2 md:px-3 focus:outline-none group-hover:bg-indigo-600 group-hover:text-white"
           onClick={nextSlide}
         >
           &#8250;
