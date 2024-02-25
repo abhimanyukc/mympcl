@@ -10,14 +10,14 @@ import '../App.css';
 const PrevArrow = ({ onClick }) => (
   <FaChevronLeft
     onClick={onClick}
-    className="absolute left-0 z-10 p-1 text-2xl text-indigo-800 transform -translate-y-1/2 border border-indigo-800 cursor-pointer md:left-12 top-1/2 hover:bg-indigo-800 hover:text-white"
+    className="absolute left-0 z-10 invisible p-1 text-2xl text-indigo-800 transform -translate-y-1/2 border border-indigo-800 cursor-pointer md:left-20 md:visible top-1/2 hover:bg-indigo-800 hover:text-white"
   />
 );
 
 const NextArrow = ({ onClick }) => (
   <FaChevronRight
     onClick={onClick}
-    className="absolute right-0 z-10 p-1 text-2xl text-indigo-800 transform -translate-y-1/2 border border-indigo-800 cursor-pointer top-1/2 md:right-12 hover:bg-indigo-800 hover:text-white"
+    className="absolute right-0 z-10 invisible p-1 text-2xl text-indigo-800 transform -translate-y-1/2 border border-indigo-800 cursor-pointer md:visible top-1/2 md:right-20 hover:bg-indigo-800 hover:text-white"
   />
 );
 
@@ -56,15 +56,15 @@ const settings = {
 const Servicesc = () => {
   return (
     <div className='z-10 mx-auto font-sans bg-white select-none max-w-screen-2xl md:px-4 md:pt-2'>
-      <div className=' py-11'>
-           <div className='px-24 pt-2 font-sans text-2xl font-semibold tracking-normal text-center'>Services</div>
+      <div className=''>
+           <div className='px-24 pt-2 font-sans text-2xl font-semibold tracking-normal text-center md:pt-20'> Services</div>
       <Slider {...settings}>
       <div className='flex flex-col items-center justify-center '>
-          <div className='flex flex-col items-center justify-center w-full px-10 py-8 bg-white h-120 md:h-80 md:px-40 md:py-20'>
+          <div className='flex flex-col items-center justify-center w-full px-8 py-2 bg-white md:py-0 h-120 md:h-60 md:px-40'>
           <div>  <img
             src={require('../images/365bankingservice.png')}
             alt='365 banking service'
-            className='w-8 h-8 p-1 m-2'
+            className='w-8 h-8 p-1 m-1'
           /></div>
           <div className='font-semibold' >365 Banking Service</div>
           <div className=''> The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
@@ -80,17 +80,19 @@ const Servicesc = () => {
         </div>
 
 
-      <div className='px-4 py-20 md:px-20'>
-          <div className='flex flex-col items-center justify-center h-64 bg-white'>
+        <div className='flex flex-col items-center justify-center '>
+          <div className='flex flex-col items-center justify-center w-full px-10 py-2 bg-white h-120 md:h-60 md:px-40 md:py-20'>
           <div>  <img
             src={require('../images/sms-banking.png')}
             alt='sms banking service'
             className='w-8 h-8 p-1 m-2'
           /></div>
-          <div className='m-4 font-semibold'>Sms Banking Service</div>
-          <div className='mb-6'> Sms Banking Service Content</div>
+          <div className='font-semibold' >Sms Banking Service</div>
+          <div className=''> The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
+           Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
+           Other Service Center will be closed at public holiday</div>
           <Link to="/services/smsservices">
-          <div className='flex flex-row items-center text-green-500'>
+          <div className='flex flex-row items-center text-green-800'>
             <div>Learn More</div>
             <div><FaAngleRight/></div>
           </div>
@@ -98,18 +100,20 @@ const Servicesc = () => {
           </div>
         </div>
 
-        <div className='px-4 py-20 md:px-20'>
-          <div className='flex flex-col items-center justify-center h-64 bg-white'>
+
+        <div className='flex flex-col items-center justify-center '>
+          <div className='flex flex-col items-center justify-center w-full px-10 py-2 bg-white h-120 md:h-60 md:px-40 md:py-20'>
           <div>  <img
             src={require('../images/mobile-banking.png')}
-            alt='Mobile banking service'
+            alt='mobile banking service'
             className='w-8 h-8 p-1 m-2'
-          />
-          </div>
-          <div className='font-semibold'>Mobile Banking Service</div>
-          <div>Mobile Banking Service Content</div>
+          /></div>
+          <div className='font-semibold' >Mobile Banking Service</div>
+          <div className=''> The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
+           Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
+           Other Service Center will be closed at public holiday</div>
           <Link to="/services/mobilebankingservices">
-          <div className='flex flex-row items-center text-green-500'>
+          <div className='flex flex-row items-center text-green-800'>
             <div>Learn More</div>
             <div><FaAngleRight/></div>
           </div>
@@ -118,17 +122,20 @@ const Servicesc = () => {
         </div>
 
 
-        <div className='px-4 py-20 md:px-20'>
-          <div className='flex flex-col items-center justify-center h-64 bg-white'>
+
+        <div className='flex flex-col items-center justify-center '>
+          <div className='flex flex-col items-center justify-center w-full px-10 py-2 bg-white h-120 md:h-60 md:px-40 md:py-20'>
           <div>  <img
             src={require('../images/internet-banking2.png')}
             alt='internet banking service'
             className='w-8 h-8 p-1 m-2'
           /></div>
-          <div className='font-semibold'>internet Banking Service</div>
-          <div> Internet Banking Service Content</div>
+          <div className='font-semibold' >Internet Banking Service</div>
+          <div className=''> The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
+           Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
+           Other Service Center will be closed at public holiday</div>
           <Link to="/services/internetservices">
-          <div className='flex flex-row items-center text-green-500'>
+          <div className='flex flex-row items-center text-green-800'>
             <div>Learn More</div>
             <div><FaAngleRight/></div>
           </div>
@@ -137,17 +144,20 @@ const Servicesc = () => {
         </div>
 
 
-        <div className='px-4 py-20 md:px-20'>
-          <div className='flex flex-col items-center justify-center h-64 bg-white'>
+
+        <div className='flex flex-col items-center justify-center '>
+          <div className='flex flex-col items-center justify-center w-full px-10 py-2 bg-white h-120 md:h-60 md:px-40 md:py-20'>
           <div>  <img
             src={require('../images/remittance.png')}
-            alt='remittance banking service'
+            alt='Remittance banking service'
             className='w-8 h-8 p-1 m-2'
           /></div>
-          <div className='font-semibold'>Remittance Banking Service</div>
-          <div> Remittance Banking Service Content</div>
+          <div className='font-semibold' >Remittance Service</div>
+          <div className=''> The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
+           Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
+           Other Service Center will be closed at public holiday</div>
           <Link to="/services/remmittanceservices">
-          <div className='flex flex-row items-center text-green-500'>
+          <div className='flex flex-row items-center text-green-800'>
             <div>Learn More</div>
             <div><FaAngleRight/></div>
           </div>
@@ -156,17 +166,20 @@ const Servicesc = () => {
         </div>
 
 
-        <div className='px-4 py-20 md:px-20'>
-          <div className='flex flex-col items-center justify-center h-64 bg-white'>
+
+        <div className='flex flex-col items-center justify-center '>
+          <div className='flex flex-col items-center justify-center w-full px-10 py-2 bg-white h-120 md:h-60 md:px-40 md:py-20'>
           <div>  <img
             src={require('../images/health-services.png')}
             alt='Health service'
             className='w-8 h-8 p-1 m-2'
           /></div>
-          <div className='font-semibold'>Health Service</div>
-          <div>Health Service Content</div>
+          <div className='font-semibold' > Health Service</div>
+          <div className=''> The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
+           Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
+           Other Service Center will be closed at public holiday</div>
           <Link to="/services/healthservices">
-          <div className='flex flex-row items-center text-green-500'>
+          <div className='flex flex-row items-center text-green-800'>
             <div>Learn More</div>
             <div><FaAngleRight/></div>
           </div>
@@ -175,17 +188,19 @@ const Servicesc = () => {
         </div>
 
 
-        <div className='py-20 p-20px-4 md:px-20'>
-          <div className='flex flex-col items-center justify-center h-64 bg-white'>
+        <div className='flex flex-col items-center justify-center '>
+          <div className='flex flex-col items-center justify-center w-full px-10 py-2 bg-white h-120 md:h-60 md:px-40 md:py-20'>
           <div>  <img
             src={require('../images/microfinance.png')}
-            alt='microfinance banking service'
+            alt='microfinance service'
             className='w-8 h-8 p-1 m-2'
           /></div>
-          <div className='font-semibold '>microfinance Banking Service</div>
-          <div> microfinance Banking Service Content</div>
+          <div className='font-semibold' >microfinance Banking Service</div>
+          <div className=''> The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
+           Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
+           Other Service Center will be closed at public holiday</div>
           <Link to="/services/microfinanceservices">
-          <div className='flex flex-row items-center text-green-500'>
+          <div className='flex flex-row items-center text-green-800'>
             <div>Learn More</div>
             <div><FaAngleRight/></div>
           </div>
@@ -197,17 +212,19 @@ const Servicesc = () => {
        
 
 
-        <div className='px-4 py-20 md:px-20'>
-          <div className='flex flex-col items-center justify-center h-64 bg-white'>
+        <div className='flex flex-col items-center justify-center '>
+          <div className='flex flex-col items-center justify-center w-full px-10 py-2 bg-white h-120 md:h-60 md:px-40 md:py-20'>
           <div>  <img
             src={require('../images/appservices.png')}
             alt='App service'
             className='w-8 h-8 p-1 m-2'
           /></div>
-          <div className='font-semibold '>App Service</div>
-          <div>App Service Content</div>
+          <div className='font-semibold' >App Service</div>
+          <div className=''> The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
+           Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
+           Other Service Center will be closed at public holiday</div>
           <Link to="/services/appservices">
-          <div className='flex flex-row items-center text-green-500'>
+          <div className='flex flex-row items-center text-green-800'>
             <div>Learn More</div>
             <div><FaAngleRight/></div>
           </div>
@@ -215,24 +232,26 @@ const Servicesc = () => {
           </div>
         </div>
 
-
-        <div className='px-4 py-20 md:px-20'>
-          <div className='flex flex-col items-center justify-center h-64 bg-white'>
+        <div className='flex flex-col items-center justify-center '>
+          <div className='flex flex-col items-center justify-center w-full px-10 py-2 bg-white h-120 md:h-60 md:px-40 md:py-20'>
           <div>  <img
             src={require('../images/otherservices.png')}
             alt='other banking service'
             className='w-8 h-8 p-1 m-2'
           /></div>
-          <div className='font-semibold'>Other Banking Service</div>
-          <div> Other Banking Service Content</div>
+          <div className='font-semibold' >other Banking Service</div>
+          <div className=''> The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
+           Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
+           Other Service Center will be closed at public holiday</div>
           <Link to="/services/otherbankingservices">
-          <div className='flex flex-row items-center text-green-500'>
+          <div className='flex flex-row items-center text-green-800'>
             <div>Learn More</div>
             <div><FaAngleRight/></div>
           </div>
           </Link>
           </div>
         </div>
+
 
       </Slider>
       </div>

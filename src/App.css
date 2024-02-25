@@ -1,10 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap');
 
+/* marque animation */
+@keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .animate-marquee {
+    white-space: nowrap;
+    animation: marquee 24s linear infinite;
+    width: 100vw;  
+  
+
+    @media (max-width: 767px) {
+        animation-duration: 20s;  
+      }  
+}
+  
+
+
+
 .font-times {
   font-family: 'Times New Roman', serif;
 }
 
 
+.bg-primary{
+     background-color: #00662e;
+}
 
 .bg-secondary{
      background-color: #2b2f96;
@@ -19,14 +46,7 @@
     }
 }
 
-.align-center, .justify-content-between, .flex-grow-1, .bg-primary, .header-responsive {
-    FONT-FAMILY:Inter, sans-serif;
-    FONT-SIZE:16px;
-    LINE-HEIGHT:24px;
-    TEXT-ALIGN:start;
-    LETTER-SPACING:normal;
-    background: #f26f21;
-}
+
 
 
 
@@ -40,13 +60,7 @@
   
 }
 
-.bg-secondary, .flex-between, .align-center, .menu-bar{
-    FONT-FAMILY:Inter, sans-serif;
-    FONT-SIZE:16px;
-    LINE-HEIGHT:24px;
-    TEXT-ALIGN:start;
-    LETTER-SPACING:normal;
-}
+
 
 
 
