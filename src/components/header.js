@@ -33,7 +33,7 @@ const Header = () => {
 
 
   return (
-    <div className="flex flex-wrap items-center justify-center px-8 bg-indigo-800 select-none md:justify-between md:px-24 max-w-screen-2xl">
+    <div className="flex flex-wrap items-center justify-between px-8 bg-indigo-800 select-none md:justify-center md:justify-between md:px-24 max-w-screen-2xl">
        
       <div className="flex items-center justify-center space-x-1 cursor-pointer md:space-x-3">
       

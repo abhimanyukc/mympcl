@@ -10,6 +10,13 @@ import Footer from '../components/footer'
 
 import Account from '../components/account'
 import Remittance from '../components/remittance'
+import InterestRateComponent from '../components/interestdetails'
+import Emicalculatorc from '../components/emicalculatorc'
+import ContactC from '../components/contact'
+import Informationc from '../components/informationc'
+import Membershipc from '../components/membershipc'
+import Departmentc from '../components/departmentc'
+import Branchesc from '../components/branchesc'
 
 
 
@@ -34,6 +41,13 @@ const Home = () => {
      <Onlineaccountopening/>
      <Account/>
      <Remittance/>
+     <InterestRateComponent/>
+      <Emicalculatorc/>
+      <Informationc/>
+      <Membershipc/>
+      <Departmentc/>
+      <Branchesc/>
+      <ContactC/>
      <Footer/>
     </div>
   )

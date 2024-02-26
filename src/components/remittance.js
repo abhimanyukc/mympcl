@@ -9,7 +9,7 @@ const Remittance = () => {
         <div className='flex flex-col md:flex-row md:items-center md:p-8'>
         <div className='md:mt-4'>
         <div className='text-xl font-semibold' >Remittance</div>
-        <div className='mt-1 font-semibold text-green-600'>View More</div>
+        <div className='p-1 mt-1 font-semibold text-green-600 '>View More</div>
         </div>
         <div className='mt-2 md:ml-24'>We provide various services for online money transfers. Our service is the best known,
        most secure and reliable online service. You can send or receive money within minute to from other people around ...</div>

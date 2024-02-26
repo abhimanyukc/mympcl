@@ -3,10 +3,10 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="p-8 mx-auto text-white bg-green-800 select-none md:py-8 bg-secondary max-w-screen-2xl md:px-24">
+    <footer className="p-8 mx-auto text-white bg-green-800 select-none md:mt-8 md:py-8 bg-secondary max-w-screen-2xl md:px-24">
       <div className="container flex flex-col items-center justify-center md:p-0 md:justify-between md:flex-row">
         <div className="mb-4 md:mb-0 ">
-          <h2 className="text-lg ">गाउसहर बहुउदेस्यिय सहकारि सस्था लि  पोखरा-८,  कास्कि </h2>
+          <h2 className="text-lg font-semibold">गाउसहर बहुउदेस्यिय सहकारि सस्था लि  पोखरा-८,  कास्कि </h2>
           <p className="text-sm">Providing diverse services to our community.</p>
         </div>
 

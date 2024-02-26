@@ -57,10 +57,10 @@ const Servicesc = () => {
   return (
     <div className='z-10 mx-auto font-sans bg-white select-none max-w-screen-2xl md:px-4 md:pt-2'>
       <div className=''>
-           <div className='px-24 pt-2 font-sans text-2xl font-semibold tracking-normal text-center md:pt-20'> Services</div>
+           <div className='px-24 pt-2 mb-4 font-sans text-2xl font-semibold tracking-normal text-center md:pt-20'> Services</div>
       <Slider {...settings}>
-      <div className='flex flex-col items-center justify-center '>
-          <div className='flex flex-col items-center justify-center w-full px-8 py-2 bg-white md:py-0 h-120 md:h-60 md:px-40'>
+      <div className='flex flex-col items-center justify-center py-0 md:py-12'>
+          <div className='flex flex-col items-center justify-center w-full px-8 bg-white h-120 md:h-60 md:px-40'>
           <div>  <img
             src={require('../images/365bankingservice.png')}
             alt='365 banking service'

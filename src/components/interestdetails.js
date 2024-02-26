@@ -55,11 +55,11 @@ const InterestRateComponent = () => {
     const data = tabData[selectedTab];
 
     return (
-      <table className="w-full bg-white table-auto select-none">
+      <table className="w-full mt-8 bg-white select-none">
         <thead>
           <tr>
-            <th className="px-4 py-2">Product</th>
-            <th className="px-4 py-2">Percentage</th>
+            <th className="py-2 ">Product</th>
+            <th className="py-2 ">Percentage</th>
           </tr>
         </thead>
         <tbody>
@@ -75,12 +75,12 @@ const InterestRateComponent = () => {
   };
 
   return (
-    <div className="container mx-auto mt-8 max-w-screen-2xl">
-      <div className="flex mb-4">
+    <div className="container px-8 mx-auto mt-8 md:px-24 max-w-screen-2xl">
+      <div className="flex items-center mb-4">
         {Object.keys(tabData).map((tab) => (
           <button
             key={tab}
-            className={`mr-4 p-2 ${selectedTab === tab ? 'bg-green-800 text-white' : 'bg-gray-300'}`}
+            className={` mr-1 md:mr-4 p-1 md:p-2 ${selectedTab === tab ? 'bg-green-800 text-white' : 'bg-gray-300'}`}
             onClick={() => handleTabChange(tab)}
           >
             {tab.charAt(0).toUpperCase() + tab.slice(1)} {/* Capitalize the first letter */}
