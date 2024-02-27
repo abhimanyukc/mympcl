@@ -9,52 +9,60 @@ import React from 'react'
 export default function Departmentc() {
     const posts = [
         {
-            title: "React Tailwind Card with Grid 1",
-            img: "https://cdn.pixabay.com/photo/2019/12/17/14/43/christmas-4701783__340.png",
-            content: "react tailwind css card with image It is a long established fact that a reader will be distracted by the readable content"
+            title: "Savings",
+            img: "https://cdn.pixabay.com/photo/2016/06/01/08/40/money-1428594_1280.jpg",
+            content: "  all the saving related services "
         },
         {
-            title: "React Tailwind Card with Grid 2",
-            img: "https://cdn.pixabay.com/photo/2019/12/17/14/43/christmas-4701783__340.png",
-            content: "react tailwind css card with image It is a long established fact that a reader will be distracted by the readable content"
+            title: "Credit",
+            img: "https://cdn.pixabay.com/photo/2017/06/24/22/33/credit-card-2439141_1280.jpg",
+            content: "  all the credit related services"
         },
         {
-            title: "React Tailwind Card with Grid 3",
-            img: "https://cdn.pixabay.com/photo/2019/12/17/14/43/christmas-4701783__340.png",
-            content: "react tailwind css card with image It is a long established fact that a reader will be distracted by the readable content"
+            title: "Admin/Finance",
+            img: "https://cdn.pixabay.com/photo/2018/02/22/23/06/security-camera-3174223_1280.jpg",
+            content: " all the finance related services"
         },
         {
-            title: "React Tailwind Card with Grid 4",
-            img: "https://cdn.pixabay.com/photo/2019/12/17/14/43/christmas-4701783__340.png",
-            content: "react tailwind css card with image It is a long established fact that a reader will be distracted by the readable content"
+            title: "Marketing and Promotions",
+            img: "https://cdn.pixabay.com/photo/2018/01/06/07/53/social-3064515_1280.jpg",
+            content: "all the marketing related information"
         },
         {
-          title: "React Tailwind Card with Grid 4",
-          img: "https://cdn.pixabay.com/photo/2019/12/17/14/43/christmas-4701783__340.png",
-          content: "react tailwind css card with image It is a long established fact that a reader will be distracted by the readable content"
+          title: "Human Resource",
+          img: "https://cdn.pixabay.com/photo/2022/07/20/03/21/society-7333314_1280.png",
+          content: " all the human resources related information"
       },
+      {
+        title: "Non financial",
+        img: "https://cdn.pixabay.com/photo/2015/10/30/10/04/share-price-1013626_1280.jpg",
+        content: " all the non financial related information"
+    },
     ];
     return (
         <>
         <div className='mx-auto max-w-screen-2xl'>
-            <div className='mt-4 md:mt-8'>
+            <div className='flex-col mt-16 md:mt-24'>
+
+            <div className='flex justify-center mb-6 text-lg font-bold max-w-screen-2xl'> Department</div>
+
             <div className="grid gap-2 px-8 md:px-24 lg:grid-cols-4">
                 {posts.map((items, key) => (
-                    <div className="w-full rounded-lg shadow-md lg:max-w-sm" key={key}>
+                    <div className="w-full mb-8 rounded-lg shadow-md lg:max-w-sm" key={key}>
                         <img
                             className="object-cover w-full h-48"
                             src={items.img}
                             alt="image"
                         />
                         <div className="p-4">
-                            <h4 className="text-xl font-semibold text-blue-600">
+                            <h4 className="text-lg font-semibold ">
                                 
                                 {items.title}
                             </h4>
                             <p className="mb-2 leading-normal">
                             {items.content}
                             </p>
-                            <button className="px-4 py-2 text-sm text-blue-100 bg-blue-500 rounded shadow">
+                            <button className="px-4 py-2 text-sm text-white rounded shadow bg-primary">
                                 Read more
                             </button>
                         </div>
