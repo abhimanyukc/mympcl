@@ -1,11 +1,28 @@
-import React from 'react' 
-import { FaMoneyCheck } from 'react-icons/fa';
-import { FaMoneyBill } from 'react-icons/fa';
-import { FaSave } from 'react-icons/fa';
-import { faPeopleGroup } from '@fortawesome/free-solid-svg-icons';
-import { faBank } from '@fortawesome/free-solid-svg-icons';
+import React, { useEffect, useState, useRef } from 'react';
+import CountUp from 'react-countup';
 import {  FaAngleRight } from 'react-icons/fa';
 const Account = () => {
+
+  const [valuesLoaded, setValuesLoaded] = useState(false);
+  const componentRef = useRef(null);
+
+   const handleScroll = () => {
+    if (componentRef.current) {
+      const { top } = componentRef.current.getBoundingClientRect();
+      if (top <= window.innerHeight * 0.75) {
+        setValuesLoaded(true);
+        window.removeEventListener('scroll', handleScroll);
+      }
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div className='px-5 py-12 mx-auto font-sans bg-white select-none max-w-screen-2xl md:px-20 md:py-8'>
     <div className='flex flex-col p-2 md:px-4'>
@@ -51,7 +68,7 @@ const Account = () => {
 
         <div className='flex w-20 mx-auto mb-12 text-center text-white bg-primary'>View More</div>
 
-        <div className='flex flex-col flex-wrap justify-center w-11/12 py-2 mx-auto text-white rounded-md md:w-full bg-primary md:m-4 md:flex-row'>
+        <div  ref={componentRef} className='flex flex-col flex-wrap justify-center w-11/12 py-2 mx-auto text-white rounded-md md:w-full bg-primary md:m-4 md:flex-row'>
           <div className='flex mx-8 mt-8 md:mt-4'>
         <img
             src={require('../images/Capital.jpg')}
@@ -59,7 +76,11 @@ const Account = () => {
             className='object-fill w-8 h-12 mr-2'
           />
           <div className='flex flex-col ml-2'>
-          <div>70,087,500</div>
+          <div>
+            {valuesLoaded && (
+              <CountUp end={70087500} duration={2} separator="," />
+            )}
+          </div>
           <div>Capital</div>
           </div>
           </div>
@@ -71,7 +92,11 @@ const Account = () => {
             className='object-fill w-8 h-12 mr-2'
           />
           <div className='flex flex-col ml-2'>
-          <div>514,169,286</div>
+          <div>
+            {valuesLoaded && (
+              <CountUp end={514169286} duration={2} separator="," />
+            )}
+          </div>
           <div>Assets</div>
           </div>
           </div>
@@ -84,7 +109,11 @@ const Account = () => {
             className='object-fill w-8 h-12 mr-2'
           />
           <div className='flex flex-col ml-2'>
-          <div>275,015,063</div>
+          <div>
+            {valuesLoaded && (
+              <CountUp end={275015063} duration={2} separator="," />
+            )}
+          </div>
           <div>Deposit</div>
           </div>
           </div>
@@ -97,7 +126,11 @@ const Account = () => {
             className='object-fill w-8 h-12 mr-2'
           />
           <div className='flex flex-col object-fill ml-2'>
-          <div>9967</div>
+          <div>
+            {valuesLoaded && (
+              <CountUp end={9967} duration={2} separator="," />
+            )}
+          </div>
           <div>Members</div>
           </div>
           </div>
@@ -110,7 +143,12 @@ const Account = () => {
             className='object-fill w-8 h-12 mr-2'
           />
           <div className='flex flex-col ml-2'>
-          <div>986,073,515</div>
+          <div>
+            {valuesLoaded && (
+              <CountUp end={986073515} duration={2} separator="," />
+            )}
+          </div>
+          
           <div>Reserve Fund</div>
           </div>
           </div>

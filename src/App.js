@@ -31,6 +31,7 @@ import Otherbankingservice from './routes/otherbankingservice';
 import Login from './routes/login';
 import Signup from './routes/signup';
 import About from './routes/about';
+import Account from './components/test';
 
 
 
@@ -43,6 +44,7 @@ function App() {
        <Router>
       <Routes>
         <Route path="/" element= {<Home/>} />
+        <Route path="/test" element= {<Account/>} />
         <Route path="/about" element= {<About/>} />
         <Route path="/services" element= {<Services/>} />
         <Route path="/services/bankingservices" element= {<Bankingservicesr/>} />
