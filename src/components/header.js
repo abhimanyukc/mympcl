@@ -33,18 +33,18 @@ const Header = () => {
 
 
   return (
-    <div className="flex flex-wrap items-center justify-between px-8 mx-auto bg-indigo-800 select-none md:justify-between md:px-24 max-w-screen-2xl">
+    <div className="flex flex-wrap items-center justify-between px-8 py-2 mx-auto bg-indigo-800 select-none md:justify-between md:px-24 max-w-screen-2xl">
        
-      <div className="flex items-center justify-center space-x-1 cursor-pointer md:space-x-3">
+      <div className="flex items-center justify-center space-x-1 cursor-pointer md:space-x-2">
       
-        <Link to="/career"  className="md:pr-8"><div className="flex items-center justify-center bg-white rounded-md md:w-full ">Career</div></Link>
-        <div className="md:pr-8">
+        <Link to="/career"  className=""><div className="flex items-center justify-center bg-white rounded-md md:w-full ">Career</div></Link>
+        <div className="">
         <div className="relative flex items-center justify-center bg-white rounded-md md:w-full text-nowrap" onClick={toggleDropdown}> Download my App <FaAngleDown />
         </div>
         </div>
         
           {isDropdownOpen && (
-                <div className='absolute z-20 flex flex-col bg-white rounded-md shadow-md top-12'>
+                <div className='absolute z-20 flex flex-col bg-white shadow-md top-12'>
             <a href='#' className='pl-2 border-b-2 hover:bg-green-800 hover:text-white'>
             Ios App
             </a>
@@ -54,7 +54,7 @@ const Header = () => {
             
           </div>
           )}
-        <Link to="/news"><div className="flex items-center justify-center ml-1 bg-white rounded-md md:w-full">News </div></Link>
+        <Link to="/news"><div className="flex items-center justify-center bg-white rounded-md md:w-full">News </div></Link>
         
       
 
@@ -63,7 +63,7 @@ const Header = () => {
         
      
     
-    <div className="flex items-center justify-center hidden md:flex ">
+    <div className="flex items-center justify-center space-x-1 md:flex">
       <div className='relative hidden md:flex' onClick={handleSearchIconClick}> 
           <FaSearch className='w-4 h-4 text-white md:ml-30' />
           </div>
@@ -101,7 +101,7 @@ const Header = () => {
    
      
       {/* <div className="mr-1 text-lg font-normal">{format(currentDate, 'eeee')}</div> */}
-      <div className="text-lg ">{format(currentDate, 'MMM d, yyyy')}</div>
+      <div className="hidden text-lg md:flex">{format(currentDate, 'MMM d, yyyy')}</div>
       </div>
       
       </div>

@@ -31,9 +31,9 @@ const Home = () => {
       <div className='sticky top-0 left-0 z-50 w-full bg-white '>
       <Header/>
       <Nav/>
-      <Marque/>
-     
       </div>
+
+      <Marque/>
       <ImageSlider/>
       <Sidebar/>
 

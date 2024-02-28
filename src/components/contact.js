@@ -106,7 +106,7 @@ const ContactC = () => {
         <div className="flex items-center">
           <button
             type="submit"
-            className="text-white rounded-md  bg-primary hover:bg-green-600"
+            className="text-white rounded-md bg-primary hover:bg-green-600"
           >
             Submit
           </button>
@@ -131,7 +131,7 @@ const ContactC = () => {
                allowfullscreen 
                loading="lazy" 
                referrerpolicy="no-referrer-when-downgrade"
-               className='mt-10 '>
+               className='mt-10 mb-4 '>
   
       </iframe>
 

@@ -50,7 +50,7 @@ export default function Departmentc() {
                 {posts.map((items, key) => (
                     <div className="w-full mb-8 rounded-lg shadow-md lg:max-w-sm" key={key}>
                         <img
-                            className="object-cover w-full h-48"
+                            className="object-fill w-full h-48"
                             src={items.img}
                             alt="image"
                         />

@@ -43,7 +43,7 @@ useEffect(() => {
         className="object-fill w-full h-40 md:h-120 "
       />
  
-      <div className="absolute transform -translate-y-1/2 top-1/2 md:left-10 left-8 group">
+      <div className="absolute transform -translate-y-1/2 top-1/2 md:left-14 left-2 group">
         
         <button
           className="p-1 text-indigo-800 border border-indigo-800 rounded md:py-2 md:px-3 focus:outline-none group-hover:bg-indigo-800 group-hover:text-white"
@@ -53,7 +53,7 @@ useEffect(() => {
         </button>
       </div>
      
-      <div className="absolute transform -translate-y-1/2 top-1/2 md:right-10 right-8 group">
+      <div className="absolute transform -translate-y-1/2 top-1/2 md:right-14 right-2 group">
        
         <button
           className="p-1 text-indigo-800 border border-indigo-600 rounded md:py-2 md:px-3 focus:outline-none group-hover:bg-indigo-600 group-hover:text-white"

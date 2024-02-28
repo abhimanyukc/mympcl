@@ -16,12 +16,12 @@ const Branchesc = () => {
              <div className=' text-primary'>Central Office</div>
              <div className='mt-4 '>Birendranagar - 3, Jumla Road Surkhet</div>
              <div className='flex mt-2 '>
-                <div><BsPhone/></div>
-                <div className='text-sm text-nowrap'>083-525052, 083-525054, 9848113034</div>
+                <div className='text-black '><BsPhone/></div>
+                <div className='ml-2 text-sm text-nowrap'>083-525052, 083-525054, 9848113034</div>
             </div>
              <div className='flex flex-wrap items-center mt-2'>
-                <div><BsMailbox/></div>
-                <div>ganeshjalskt@gmail.com</div>
+                <div className='text-black '><BsMailbox/></div>
+                <div className='ml-2 '>ganeshjalskt@gmail.com</div>
                 </div>
         </div>
 
@@ -29,12 +29,12 @@ const Branchesc = () => {
              <div className=' text-primary'>Central Office</div>
              <div className='mt-4 '>Birendranagar - 3, Jumla Road Surkhet</div>
              <div className='flex mt-2 '>
-                <div><BsPhone/></div>
-                <div className='text-sm text-nowrap'>083-525052, 083-525054, 9848113034</div>
+                <div className='text-black '><BsPhone/></div>
+                <div className='ml-2 text-sm text-nowrap'>083-525052, 083-525054, 9848113034</div>
             </div>
              <div className='flex flex-wrap items-center mt-2'>
-                <div><BsMailbox/></div>
-                <div>ganeshjalskt@gmail.com</div>
+                <div className='text-black '><BsMailbox/></div>
+                <div className='ml-2'>ganeshjalskt@gmail.com</div>
                 </div>
         </div>
 
@@ -42,12 +42,12 @@ const Branchesc = () => {
              <div className=' text-primary'>Central Office</div>
              <div className='mt-4 '>Birendranagar - 3, Jumla Road Surkhet</div>
              <div className='flex mt-2 '>
-                <div><BsPhone/></div>
-                <div className='text-sm text-nowrap'>083-525052, 083-525054, 9848113034</div>
+                <div className='text-black '><BsPhone/></div>
+                <div className='ml-2 text-sm text-nowrap'>083-525052, 083-525054, 9848113034</div>
             </div>
              <div className='flex flex-wrap items-center mt-2'>
-                <div><BsMailbox/></div>
-                <div>ganeshjalskt@gmail.com</div>
+                <div className='text-black '><BsMailbox/></div>
+                <div className='ml-2 '>ganeshjalskt@gmail.com</div>
                 </div>
         </div>
 
@@ -56,12 +56,12 @@ const Branchesc = () => {
              <div className=' text-primary'>Central Office</div>
              <div className='mt-4 '>Birendranagar - 3, Jumla Road Surkhet</div>
              <div className='flex mt-2 '>
-                <div><BsPhone/></div>
-                <div className='text-sm '>083-525052, 083-525054, 9848113034</div>
+                <div className='text-black '><BsPhone/></div>
+                <div className='ml-2 text-sm'>083-525052, 083-525054, 9848113034</div>
             </div>
              <div className='flex flex-wrap items-center mt-2'>
-                <div><BsMailbox/></div>
-                <div>ganeshjalskt@gmail.com</div>
+                <div className='text-black '><BsMailbox/></div>
+                <div className='ml-2'>ganeshjalskt@gmail.com</div>
                 </div>
         </div>
         

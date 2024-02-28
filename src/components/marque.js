@@ -12,13 +12,13 @@ const Marque = () => {
       <div className="">गाउसहर बहुउदेस्यिय सहकारि सस्था लि  पोखरा-८,  कास्कि </div>
     </li>
     <li className="mr-16 list-disc">
-      <div>Text2</div>
+      <div>Notice2</div>
     </li>
     <li className="mr-16 list-disc">
-      <div>Text3</div>
+      <div>Notice3</div>
     </li>
     <li className="list-disc">
-      <div>Text4</div>
+      <div>Notice4</div>
     </li>
   </ul>
 </div>

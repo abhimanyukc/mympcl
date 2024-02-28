@@ -57,7 +57,7 @@ const Servicesc = () => {
   return (
     <div className='z-10 mx-auto font-sans bg-white select-none max-w-screen-2xl md:px-4 md:pt-2'>
       <div className=''>
-           <div className='px-24 pt-2 mb-4 font-sans text-2xl font-semibold tracking-normal text-center md:pt-20'> Services</div>
+           <div className='px-24 pt-16 pb-4 font-sans text-2xl font-semibold tracking-normal text-center md:pt-20'> Services</div>
       <Slider {...settings}>
       <div className='flex flex-col items-center justify-center py-0 md:py-12'>
           <div className='flex flex-col items-center justify-center w-full px-8 bg-white h-120 md:h-60 md:px-40'>
@@ -80,8 +80,8 @@ const Servicesc = () => {
         </div>
 
 
-        <div className='flex flex-col items-center justify-center '>
-          <div className='flex flex-col items-center justify-center w-full px-10 py-2 bg-white h-120 md:h-60 md:px-40 md:py-20'>
+        <div className='flex flex-col items-center justify-center py-0 md:py-12'>
+          <div className='flex flex-col items-center justify-center w-full px-8 bg-white h-120 md:h-60 md:px-40'>
           <div>  <img
             src={require('../images/sms-banking.png')}
             alt='sms banking service'
@@ -101,8 +101,8 @@ const Servicesc = () => {
         </div>
 
 
-        <div className='flex flex-col items-center justify-center '>
-          <div className='flex flex-col items-center justify-center w-full px-10 py-2 bg-white h-120 md:h-60 md:px-40 md:py-20'>
+        <div className='flex flex-col items-center justify-center py-0 md:py-12'>
+          <div className='flex flex-col items-center justify-center w-full px-8 bg-white h-120 md:h-60 md:px-40'>
           <div>  <img
             src={require('../images/mobile-banking.png')}
             alt='mobile banking service'
@@ -123,8 +123,8 @@ const Servicesc = () => {
 
 
 
-        <div className='flex flex-col items-center justify-center '>
-          <div className='flex flex-col items-center justify-center w-full px-10 py-2 bg-white h-120 md:h-60 md:px-40 md:py-20'>
+        <div className='flex flex-col items-center justify-center py-0 md:py-12'>
+          <div className='flex flex-col items-center justify-center w-full px-8 bg-white h-120 md:h-60 md:px-40'>
           <div>  <img
             src={require('../images/internet-banking2.png')}
             alt='internet banking service'
@@ -145,8 +145,8 @@ const Servicesc = () => {
 
 
 
-        <div className='flex flex-col items-center justify-center '>
-          <div className='flex flex-col items-center justify-center w-full px-10 py-2 bg-white h-120 md:h-60 md:px-40 md:py-20'>
+        <div className='flex flex-col items-center justify-center py-0 md:py-12'>
+          <div className='flex flex-col items-center justify-center w-full px-8 bg-white h-120 md:h-60 md:px-40'>
           <div>  <img
             src={require('../images/remittance.png')}
             alt='Remittance banking service'
@@ -167,8 +167,8 @@ const Servicesc = () => {
 
 
 
-        <div className='flex flex-col items-center justify-center '>
-          <div className='flex flex-col items-center justify-center w-full px-10 py-2 bg-white h-120 md:h-60 md:px-40 md:py-20'>
+        <div className='flex flex-col items-center justify-center py-0 md:py-12'>
+          <div className='flex flex-col items-center justify-center w-full px-8 bg-white h-120 md:h-60 md:px-40'>
           <div>  <img
             src={require('../images/health-services.png')}
             alt='Health service'
@@ -188,8 +188,8 @@ const Servicesc = () => {
         </div>
 
 
-        <div className='flex flex-col items-center justify-center '>
-          <div className='flex flex-col items-center justify-center w-full px-10 py-2 bg-white h-120 md:h-60 md:px-40 md:py-20'>
+        <div className='flex flex-col items-center justify-center py-0 md:py-12'>
+          <div className='flex flex-col items-center justify-center w-full px-8 bg-white h-120 md:h-60 md:px-40'>
           <div>  <img
             src={require('../images/microfinance.png')}
             alt='microfinance service'
@@ -212,8 +212,8 @@ const Servicesc = () => {
        
 
 
-        <div className='flex flex-col items-center justify-center '>
-          <div className='flex flex-col items-center justify-center w-full px-10 py-2 bg-white h-120 md:h-60 md:px-40 md:py-20'>
+        <div className='flex flex-col items-center justify-center py-0 md:py-12'>
+          <div className='flex flex-col items-center justify-center w-full px-8 bg-white h-120 md:h-60 md:px-40'>
           <div>  <img
             src={require('../images/appservices.png')}
             alt='App service'
@@ -232,8 +232,8 @@ const Servicesc = () => {
           </div>
         </div>
 
-        <div className='flex flex-col items-center justify-center '>
-          <div className='flex flex-col items-center justify-center w-full px-10 py-2 bg-white h-120 md:h-60 md:px-40 md:py-20'>
+        <div className='flex flex-col items-center justify-center py-0 md:py-12'>
+          <div className='flex flex-col items-center justify-center w-full px-8 bg-white h-120 md:h-60 md:px-40'>
           <div>  <img
             src={require('../images/otherservices.png')}
             alt='other banking service'

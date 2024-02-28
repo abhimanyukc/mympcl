@@ -86,7 +86,7 @@ const Nav = () => {
 
 
 <div className='relative flex p-1 my-2 md:hidden' onClick={handleSearchIconClick}> 
-          <FaSearch className='w-8 h-6 text-white ml-30' />
+          <FaSearch className='w-4 h-4 text-white ml-30' />
           </div>
          
            {/* Main div with white background */}
@@ -133,17 +133,17 @@ const Nav = () => {
         className={`flex  flex-col md:flex-row  sm:flex-row ${showLinks ? 'flex' : 'hidden'} md:flex cursor-pointer  md:pl-3  `}
       > 
       
-      <div className='p-2 md:pr-16 hover:border-b-2'>
+      <div className='p-1 md:p-2 md:mr-4 hover:border-b-2 '>
       <Link to="/" className=""> <img
             src={require('../images/logosahakari.jpeg')}
             alt='Sahakarilogo'
-            className='w-8 h-8 '
+            className='object-fill w-8 h-6 '
           /> </Link>
       </div>
        
 
         <div
-          className='relative flex items-center p-1 text-white md:p-3 hover:border-b-2 md:pr-8'
+          className='relative flex items-center px-1 py-2 text-white md:p-2 md:mr-4 hover:border-b-2 '
           onClick={toggleDropdown}
         >
           About Us
@@ -169,12 +169,12 @@ const Nav = () => {
           )}
         </div>
 
-        <div className='p-1 text-white md:p-3 md:ml-4 hover:border-b-2 md:pr-8'>
+        <div className='p-1 text-white md:p-2 hover:border-b-2 md:mr-4 '>
           <Link to="/services">Services</Link>
         </div>
        
-        <div className='p-1 text-white md:p-3 md:ml-4 hover:border-b-2'>
-          <Link to="/contact">Contact US</Link>
+        <div className='p-1 text-white md:p-2 md:mr-4 hover:border-b-2'>
+          <Link to="/contact">Contact Us</Link>
         </div>
       </nav>
       </div>
@@ -195,7 +195,7 @@ const Nav = () => {
               className='w-8 h-6 p-1 ml-30'
             />
             {isDropdownOpen2 && (
-              <div className='absolute left-0 z-40 bg-white border rounded-md shadow-md top-full hover:bg-green-800 hover:text-white'>
+              <div className='absolute left-0 z-40 bg-white border shadow-md top-full hover:bg-green-800 hover:text-white'>
                 <a href='#' className='block pr-7'>
                   नेपा
                 </a>
