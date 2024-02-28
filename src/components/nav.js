@@ -3,6 +3,14 @@ import { FaBars, FaAngleDown, FaSearch, FaTimes } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Nav = () => {
+
+  const [activeLink, setActiveLink] = useState('');
+
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+  };
+
+  
   const [showLinks, setShowLinks] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isDropdownOpen2, setIsDropdownOpen2] = useState(false);
@@ -133,8 +141,10 @@ const Nav = () => {
         className={`flex  flex-col md:flex-row  sm:flex-row ${showLinks ? 'flex' : 'hidden'} md:flex cursor-pointer  md:pl-3  `}
       > 
       
-      <div className='p-1 md:p-2 md:mr-4 hover:border-b-2 '>
-      <Link to="/" className=""> <img
+      <div className='p-1 md:p-2 md:mr-4 hover:border-b-2 ' 
+      // onClick={() => handleLinkClick('Home')}   style={{ backgroundColor: activeLink === 'Home' ? 'black  ' : '' }}
+      >
+      <Link to="/" className="" > <img
             src={require('../images/logosahakari.jpeg')}
             alt='Sahakarilogo'
             className='object-fill w-8 h-6 '
@@ -144,10 +154,13 @@ const Nav = () => {
 
         <div
           className='relative flex items-center px-1 py-2 text-white md:p-2 md:mr-4 hover:border-b-2 '
-          onClick={toggleDropdown}
+         
+          onClick={() => handleLinkClick('About')}   style={{ backgroundColor: activeLink === 'About' ? 'black  ' : '' }}
         >
+          <Link to="/about">
           About Us
-          <FaAngleDown  />
+          </Link>
+          <FaAngleDown  onClick={toggleDropdown}  />
           {isDropdownOpen && (
             <div className='absolute left-0 z-20 text-black bg-white shadow-md top-full'>
               <a href='information' className='block pl-1 border-b-2 hover:bg-green-800 hover:text-white'>
@@ -169,12 +182,12 @@ const Nav = () => {
           )}
         </div>
 
-        <div className='p-1 text-white md:p-2 hover:border-b-2 md:mr-4 '>
+        <div className='p-1 text-white md:p-2 hover:border-b-2 md:mr-4 ' onClick={() => handleLinkClick('Services')}   style={{ backgroundColor: activeLink === 'Services' ? 'black  ' : '' }}>
           <Link to="/services">Services</Link>
         </div>
        
-        <div className='p-1 text-white md:p-2 md:mr-4 hover:border-b-2'>
-          <Link to="/contact">Contact Us</Link>
+        <div className='p-1 text-white md:p-2 md:mr-4 hover:border-b-2'  onClick={() => handleLinkClick('Contact')}   style={{ backgroundColor: activeLink === 'Contact' ? 'black  ' : '' }}>
+        <Link to="/contact" >Contact Us</Link>
         </div>
       </nav>
       </div>

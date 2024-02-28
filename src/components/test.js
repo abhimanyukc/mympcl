@@ -1,33 +1,51 @@
-// CardContainer.js
-import React from 'react';
-import { Card, CardContent, Typography } from '@material-ui/core';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FaAngleDown } from 'react-icons/fa';
 
-const Branchesc = () => {
-  const cardsData = [
-    { title: 'Card 1', content: 'Content for Card 1' },
-    { title: 'Card 2', content: 'Content for Card 2' },
-    { title: 'Card 3', content: 'Content for Card 3' },
-    { title: 'Card 4', content: 'Content for Card 4' },
-    { title: 'Card 5', content: 'Content for Card 5' },
-    { title: 'Card 6', content: 'Content for Card 6' },
-  ];
+const Navbar = () => {
+  const [activeElement, setActiveElement] = useState(null);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const handleNavItemClick = (element) => {
+    setActiveElement(element);
+    setIsDropdownOpen(false); // Close the dropdown if open
+  };
 
   return (
-    <div className="flex flex-wrap mx-auto max-w-screen-2xl ">
-      {cardsData.map((card, index) => (
-        <Card key={index} className="">
-          <CardContent>
-            <Typography variant="h5" component="div">
-              {card.title}
-            </Typography>
-            <Typography variant="body2" color="textSecondary">
-              {card.content}
-            </Typography>
-          </CardContent>
-        </Card>
-      ))}
-    </div>
+    <nav
+      className={`flex flex-col md:flex-row sm:flex-row ${showLinks ? 'flex' : 'hidden'} md:flex cursor-pointer md:pl-3`}
+    >
+      <div className='p-1 md:p-2 md:mr-4 hover:border-b-2'>
+        <Link to="/" className={`${activeElement === 'home' ? 'bg-black text-white' : ''}`}>
+          <img
+            src={require('../images/logosahakari.jpeg')}
+            alt='Sahakarilogo'
+            className='object-fill w-8 h-6'
+            onClick={() => handleNavItemClick('home')}
+          />
+        </Link>
+      </div>
+
+      <div
+        className='relative flex items-center px-1 py-2 text-white md:p-2 md:mr-4 hover:border-b-2'
+        onClick={toggleDropdown}
+      >
+        About Us
+        <FaAngleDown />
+        {isDropdownOpen && (
+          <div className='absolute left-0 z-20 text-black bg-white shadow-md top-full'>
+            {/* ... dropdown content ... */}
+          </div>
+        )}
+      </div>
+
+      {/* ... other navigation items ... */}
+    </nav>
   );
 };
 
-export default Branchesc;
+export default Navbar;
