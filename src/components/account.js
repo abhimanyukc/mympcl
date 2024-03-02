@@ -1,72 +1,102 @@
 import React, { useEffect, useState, useRef } from 'react';
 import CountUp from 'react-countup';
 import {  FaAngleRight } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
+
+//nepali no animation not possible
+
 const Account = () => {
-
+  const [t, i18n] = useTranslation("global");
   const [valuesLoaded, setValuesLoaded] = useState(false);
+  const [countValue, setCountValue] = useState(0);
   const componentRef = useRef(null);
+  const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
 
-   const handleScroll = () => {
+  const handleScroll = () => {
     if (componentRef.current) {
       const { top } = componentRef.current.getBoundingClientRect();
       if (top <= window.innerHeight * 0.75) {
         setValuesLoaded(true);
         window.removeEventListener('scroll', handleScroll);
+        startCountAnimation();
       }
     }
   };
-
+  
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
+
+    // Cleanup scroll event listener when component unmounts
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
+  const startCountAnimation = () => {
+    const targetValue = parseFloat(t('acc22.message').replace(/,/g, '')); // Parse the number string
+    const duration = 2000; // milliseconds
+    const interval = 16; // milliseconds
+    const steps = duration / interval;
+    const increment = targetValue / steps;
+
+    let currentStep = 0;
+    const animationInterval = setInterval(() => {
+      setCountValue((prevValue) => {
+        currentStep++;
+        if (currentStep >= steps) {
+          clearInterval(animationInterval);
+          return targetValue;
+        }
+        return prevValue + increment * (currentStep + 1);
+      });
+    }, interval);
+  };
+
+
+
   return (
     <div className='px-5 py-12 mx-auto font-sans bg-white select-none max-w-screen-2xl md:px-20 md:py-8'>
     <div className='flex flex-col p-2 md:px-4'>
-      
 
-      <div className='mb-2 text-2xl font-bold'>Account</div>
-      <div className='font-serif '>Ganeshjal Multipurpose Cooperative offers a variety of deposit options to fulfill the growing demands of its members.
-        We provide a competitive interest rate on each deposit product  and operate the following plan to encourage for the participation of communities members.</div>
+
+      <div className='mb-2 text-2xl font-bold'>{t('acc.message')}</div>
+      <div className='font-serif '>{t('acc1.message')}</div>
         
         <div className='flex flex-col font-serif md:flex-row'>
        
        <div className='flex flex-col my-8 '>
-        <div className='mb-4 text-lg font-semibold text-green-800'>Monthly Saving</div>
-        <div className='flex flex-row items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div className=''>Monthly Saving starts from RS. 100</div></div>
-        <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div className=''>Interest calculation daily basis and interest post quarterly.</div></div>
-        <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>Entitle to the dividend offered by the institute base on the Share Kitta.</div></div>
+        <div className='mb-4 text-lg font-semibold text-green-800'>{t('acc2.message')}</div>
+        <div className='flex flex-row items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div className=''>{t('acc12.message')} </div></div>
+        <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div className=''>{t('acc13.message')}</div></div>
+        <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div className=''>{t('acc14.message')}</div></div>
        </div>
 
        <div className='flex flex-col my-8'>
-        <div className='mb-4 font-serif text-lg font-semibold text-green-800'>Daily Saving(6 Months)</div>
-        <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>You can save a desirable amount from home or the office.</div></div>
-        <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>Minimum Rs. 100-balance needs to maintain all the time.</div></div>
-        <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>Interest calculation daily and post quarterly.</div></div>
+        <div className='mb-4 font-serif text-lg font-semibold text-green-800'>{t('acc3.message')}</div>
+        <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>{t('acc15.message')}</div></div>
+        <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>{t('acc16.message')}</div></div>
+        <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>{t('acc17.message')}</div></div>
        </div>
        
        <div className='flex flex-col my-8'>
-        <div className='mb-4 font-serif text-lg font-semibold text-green-800'>Nari Saving</div>
-        <div className='flex items-start '><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>You can save a desirable amount from home or the office.</div></div>
-        <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>Daily collection through our trusty employees.</div></div>
-        <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>ATM transaction supports banks in Nepal and India.</div></div>
+        <div className='mb-4 font-serif text-lg font-semibold text-green-800'>{t('acc4.message')}</div>
+        <div className='flex items-start '><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>{t('acc15.message')}</div></div>
+        <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>{t('acc16.message')}</div></div>
+        <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>{t('acc17.message')}</div></div>
        </div>
 
        <div className='flex flex-col mt-8'>
-        <div className='font-serif text-lg font-semibold text-green-800'>Senior citizenship saving</div>
-        <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>Interest calculation daily basis and post quarterly</div></div>
-        <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>Free ABBS (Any branch banking service)</div></div>
-        <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>Monthly collection from home</div></div>
+        <div className='font-serif text-lg font-semibold text-green-800'>{t('acc5.message')}</div>
+        <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>{t('acc18.message')}</div></div>
+        <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>{t('acc19.message')}</div></div>
+        <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>{t('acc20.message')}</div></div>
        </div>
         </div>
         </div>
 
         <div className='flex flex-col '>
 
-        <div className='flex w-20 mx-auto mb-12 text-center text-white bg-primary'>View More</div>
+        <div className='flex w-20 mx-auto mb-12 text-center text-white bg-primary'>{t('acc6.message')}</div>
 
         <div  ref={componentRef} className='flex flex-col flex-wrap justify-center w-11/12 py-2 mx-auto text-white rounded-md md:w-full bg-primary md:m-4 md:flex-row'>
           <div className='flex mx-8 mt-8 md:mt-4'>
@@ -77,11 +107,9 @@ const Account = () => {
           />
           <div className='flex flex-col ml-2'>
           <div>
-            {valuesLoaded && (
-              <CountUp end={70087500} duration={2} separator="," />
-            )}
-          </div>
-          <div>Capital</div>
+                {valuesLoaded && <span>{Math.floor(countValue).toLocaleString()}</span>}
+              </div>
+          <div>{t('acc7.message')}</div>
           </div>
           </div>
 
@@ -97,7 +125,7 @@ const Account = () => {
               <CountUp end={514169286} duration={2} separator="," />
             )}
           </div>
-          <div>Assets</div>
+          <div>{t('acc8.message')}</div>
           </div>
           </div>
 
@@ -114,7 +142,7 @@ const Account = () => {
               <CountUp end={275015063} duration={2} separator="," />
             )}
           </div>
-          <div>Deposit</div>
+          <div>{t('acc9.message')}</div>
           </div>
           </div>
 
@@ -131,7 +159,7 @@ const Account = () => {
               <CountUp end={9967} duration={2} separator="," />
             )}
           </div>
-          <div>Members</div>
+          <div>{t('acc10.message')}</div>
           </div>
           </div>
 
@@ -149,7 +177,7 @@ const Account = () => {
             )}
           </div>
           
-          <div>Reserve Fund</div>
+          <div>{t('acc11.message')}</div>
           </div>
           </div>
 

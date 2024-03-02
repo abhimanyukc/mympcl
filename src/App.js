@@ -37,12 +37,14 @@ import Account from './components/test';
 
 
 
+
 function App() {
   return (
        <>
         
        <Router>
       <Routes>
+    
         <Route path="/" element= {<Home/>} />
         <Route path="/test" element= {<Account/>} />
         <Route path="/about" element= {<About/>} />

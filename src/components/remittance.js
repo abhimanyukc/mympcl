@@ -1,18 +1,18 @@
 import React from 'react'
 import { FaAngleRight } from 'react-icons/fa'
-
+import { useTranslation } from 'react-i18next'
 const Remittance = () => {
+  const [t, ii8n] = useTranslation("global")
   return (
        <div className='mx-auto bg-white select-none max-w-screen-2xl'>
         <div className='mt-8 md:mt-16'>
         
         <div className='flex flex-col px-8 md:px-24 md:flex-row md:items-center '>
         <div className='md:mt-4'>
-        <div className='text-xl font-semibold' >Remittance</div>
-        <div className='p-1 mt-1 font-semibold text-green-600 '>View More</div>
+        <div className='text-xl font-semibold' >{t("rem.message")}</div>
+        <div className='p-1 mt-1 font-semibold text-green-600 '>{t("rem1.message")}</div>
         </div>
-        <div className='mt-2 md:ml-24'>We provide various services for online money transfers. Our service is the best known,
-       most secure and reliable online service. You can send or receive money within minute to from other people around ...</div>
+        <div className='mt-2 md:ml-24'>{t("rem2.message")}</div>
        </div>
 
         <div className='flex flex-col flex-wrap mt-4 md:mt-0 md:flex-row md:px-16'>

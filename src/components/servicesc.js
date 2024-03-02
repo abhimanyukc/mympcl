@@ -6,7 +6,9 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { FaAngleRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import '../App.css';
+
 const PrevArrow = ({ onClick }) => (
   <FaChevronLeft
     onClick={onClick}
@@ -54,10 +56,12 @@ const settings = {
 };
 
 const Servicesc = () => {
+
+   const [t, i18n] = useTranslation("global");
   return (
     <div className='z-10 mx-auto font-sans bg-white select-none max-w-screen-2xl md:px-4 md:pt-2'>
       <div className=''>
-           <div className='px-24 pt-16 pb-4 font-sans text-2xl font-semibold tracking-normal text-center md:pt-20'> Services</div>
+           <div className='px-24 pt-16 pb-4 font-sans text-2xl font-semibold tracking-normal text-center md:pt-20'> {t("services.message")}</div>
       <Slider {...settings}>
       <div className='flex flex-col items-center justify-center py-0 md:py-12'>
           <div className='flex flex-col items-center justify-center w-full px-8 bg-white h-120 md:h-60 md:px-40'>
@@ -66,13 +70,11 @@ const Servicesc = () => {
             alt='365 banking service'
             className='w-8 h-8 p-1 m-1'
           /></div>
-          <div className='font-semibold' >365 Banking Service</div>
-          <div className=''> The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
-           Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
-           Other Service Center will be closed at public holiday</div>
+          <div className='font-semibold' > {t("services1.message")}</div>
+          <div className=''>  {t("services11.message")} </div>
           <Link to="/services/bankingservices">
           <div className='flex flex-row items-center text-green-800'>
-            <div>Learn More</div>
+            <div>{t("services10.message")}</div>
             <div><FaAngleRight/></div>
           </div>
           </Link>
@@ -87,13 +89,13 @@ const Servicesc = () => {
             alt='sms banking service'
             className='w-8 h-8 p-1 m-2'
           /></div>
-          <div className='font-semibold' >Sms Banking Service</div>
-          <div className=''> The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
-           Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
+          <div className='font-semibold' > {t("services2.message")}</div>
+          <div className=''> The The GauSahar Multipurpose cooperation limited has been providing sms banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
+           Other Service Center will be closed at public holiday.The The GauSahar Multipurpose cooperation limited has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
            Other Service Center will be closed at public holiday</div>
           <Link to="/services/smsservices">
           <div className='flex flex-row items-center text-green-800'>
-            <div>Learn More</div>
+            <div>{t("services10.message")}</div>
             <div><FaAngleRight/></div>
           </div>
           </Link>
@@ -108,13 +110,13 @@ const Servicesc = () => {
             alt='mobile banking service'
             className='w-8 h-8 p-1 m-2'
           /></div>
-          <div className='font-semibold' >Mobile Banking Service</div>
+          <div className='font-semibold' > {t("services3.message")}</div>
           <div className=''> The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
            Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
            Other Service Center will be closed at public holiday</div>
           <Link to="/services/mobilebankingservices">
           <div className='flex flex-row items-center text-green-800'>
-            <div>Learn More</div>
+            <div>{t("services10.message")}</div>
             <div><FaAngleRight/></div>
           </div>
           </Link>
@@ -130,13 +132,13 @@ const Servicesc = () => {
             alt='internet banking service'
             className='w-8 h-8 p-1 m-2'
           /></div>
-          <div className='font-semibold' >Internet Banking Service</div>
+          <div className='font-semibold' > {t("services4.message")}</div>
           <div className=''> The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
            Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
            Other Service Center will be closed at public holiday</div>
           <Link to="/services/internetservices">
           <div className='flex flex-row items-center text-green-800'>
-            <div>Learn More</div>
+            <div>{t("services10.message")}</div>
             <div><FaAngleRight/></div>
           </div>
           </Link>
@@ -152,13 +154,13 @@ const Servicesc = () => {
             alt='Remittance banking service'
             className='w-8 h-8 p-1 m-2'
           /></div>
-          <div className='font-semibold' >Remittance Service</div>
+          <div className='font-semibold' > {t("services5.message")}</div>
           <div className=''> The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
            Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
            Other Service Center will be closed at public holiday</div>
           <Link to="/services/remmittanceservices">
           <div className='flex flex-row items-center text-green-800'>
-            <div>Learn More</div>
+            <div>{t("services10.message")}</div>
             <div><FaAngleRight/></div>
           </div>
           </Link>
@@ -174,13 +176,13 @@ const Servicesc = () => {
             alt='Health service'
             className='w-8 h-8 p-1 m-2'
           /></div>
-          <div className='font-semibold' > Health Service</div>
+          <div className='font-semibold' >  {t("services6.message")}</div>
           <div className=''> The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
            Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
            Other Service Center will be closed at public holiday</div>
           <Link to="/services/healthservices">
           <div className='flex flex-row items-center text-green-800'>
-            <div>Learn More</div>
+            <div>{t("services10.message")}</div>
             <div><FaAngleRight/></div>
           </div>
           </Link>
@@ -195,13 +197,13 @@ const Servicesc = () => {
             alt='microfinance service'
             className='w-8 h-8 p-1 m-2'
           /></div>
-          <div className='font-semibold' >microfinance Banking Service</div>
+          <div className='font-semibold' > {t("services7.message")}</div>
           <div className=''> The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
            Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
            Other Service Center will be closed at public holiday</div>
           <Link to="/services/microfinanceservices">
           <div className='flex flex-row items-center text-green-800'>
-            <div>Learn More</div>
+            <div>{t("services10.message")}</div>
             <div><FaAngleRight/></div>
           </div>
           </Link>
@@ -219,13 +221,13 @@ const Servicesc = () => {
             alt='App service'
             className='w-8 h-8 p-1 m-2'
           /></div>
-          <div className='font-semibold' >App Service</div>
+          <div className='font-semibold' > {t("services8.message")}</div>
           <div className=''> The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
            Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
            Other Service Center will be closed at public holiday</div>
           <Link to="/services/appservices">
           <div className='flex flex-row items-center text-green-800'>
-            <div>Learn More</div>
+            <div>{t("services10.message")}</div>
             <div><FaAngleRight/></div>
           </div>
           </Link>
@@ -239,13 +241,13 @@ const Servicesc = () => {
             alt='other banking service'
             className='w-8 h-8 p-1 m-2'
           /></div>
-          <div className='font-semibold' >other Banking Service</div>
+          <div className='font-semibold' > {t("services9.message")}</div>
           <div className=''> The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
            Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
            Other Service Center will be closed at public holiday</div>
           <Link to="/services/otherbankingservices">
           <div className='flex flex-row items-center text-green-800'>
-            <div>Learn More</div>
+            <div> {t("services10.message")}</div>
             <div><FaAngleRight/></div>
           </div>
           </Link>

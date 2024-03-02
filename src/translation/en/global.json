@@ -1,0 +1,287 @@
+{
+    "header": {
+        "message": "Career"
+    },
+    "header1": {
+        "message": "Download my App"
+    },
+    "header2": {
+        "message": "Ios App"
+    },
+    "header3": {
+        "message": "Android App"
+    },
+    "header4": {
+        "message": "News"
+    },
+    "header5": {
+        "message": "Search"
+    },
+    "nav": {
+        "message": "About Us"
+    }, 
+    "nav1": {
+        "message": "EN"
+    },
+    "nav2": {
+        "message": "Information"
+    },
+    "nav3": {
+        "message": "Organization"
+    },
+    "nav4": {
+        "message": "Team Member"
+    },
+    "nav5": {
+        "message": "Department"
+    },
+    "nav6": {
+        "message": "Branches"
+    },
+    "nav7": {
+        "message": "Services"
+    },
+    "nav8": {
+        "message": "Contact Us"
+    },
+    "nav9": {
+        "message": "Search"
+    },
+    "marque": {
+        "message": "Notices"
+    },
+    "marque1": {
+        "message": "Notice2"
+    },
+    "marque2": {
+        "message": "Notice3"
+    },
+    "marque3": {
+        "message": "Notice4"
+    },
+    "services": {
+        "message": "Services"
+    },
+    "services1": {
+        "message": "365 Banking Service"
+    },
+    "services2": {
+        "message": "Sms Banking Service"
+    },
+    "services3": {
+        "message": "Mobile Banking Service"
+    },
+    "services4": {
+        "message": "Internet Banking Service"
+    },
+    "services5": {
+        "message": "Remittance Service"
+    },
+    "services6": {
+        "message": "Health Service"
+    },
+    "services7": {
+        "message": "Microfinance Banking Service"
+    },
+    "services8": {
+        "message": "App Service"
+    },
+    "services9": {
+        "message": "other Banking Service"
+    },
+    "services10": {
+        "message": "Learn More"
+    },
+    "services11": {
+        "message": " lorem ipsum"
+    },
+    "services12": {
+        "message": "The GauSahar Multipurpose cooperation limited has been providing 365 days banking facilities. In public holiday the  it  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office"
+    },
+    "onlineacc": {
+        "message": "We offer multiple online money transfer services, and our service is renowned as the most well-known, secure, and trustworthy option on the internet."
+    },
+    "onlineacc1": {
+        "message": "Get Started"
+    },
+    "acc": {
+        "message": "Account"
+    },
+    "acc1": {
+        "message": "Gausahar Multipurpose Cooperative offers a variety of deposit options to fulfill the growing demands of its members. We provide a competitive interest rate on each deposit product  and operate the following plan to encourage for the participation of communities members."
+    },
+    "acc2": {
+        "message":  "Monthly Saving"
+    },
+    "acc3": {
+        "message": "Daily Saving(6 Months)"
+    },
+    "acc4": {
+       "message": "Nari Saving"
+    },
+    "acc5": {
+        "message": "Senior Citizenship saving"
+    },
+    "acc6": {
+        "message": "View More"
+    },
+    "acc7": {
+        "message": "Capital"
+    },
+    "acc8": {
+        "message": "Assets"
+    },
+    "acc9": {
+        "message": "Deposit"
+    },
+    "acc10": {
+        "message": "Members"
+    },
+    "acc11": {
+        "message": "Reserve Fund"
+    },
+    "acc12": {
+        "message": "Monthly Saving starts from RS. 100"
+    },
+    "acc13": {
+        "message": "Interest calculation daily basis and interest post quarterly."
+    },
+    "acc14": {
+        "message": "Entitle to the dividend offered by the institute base on the Share Kitta."
+    },
+    "acc15": {
+        "message": "You can save a desirable amount from home or the office."
+    },
+    "acc16": {
+        "message": "Minimum Rs. 100-balance needs to maintain all the time."
+    },
+    "acc17": {
+        "message": "Atm transaction supports bank in Nepal and India"
+    },
+    "acc18": {
+        "message": "Interest calculation daily and post quarterly."
+    },
+    "acc19": {
+        "message": "Free ABBS (Any branch banking service)"
+    },
+    "acc20": {
+        "message": "Monthly collection from home"
+    },
+    "acc22":{
+        "message": "70087500"
+    },
+    "rem": {
+        "message": "Remmitance"
+    },
+    "rem1": {
+        "message": "View More"
+    },
+    "rem2": {
+        "message": "We provide various services for online money transfers. Our service is the best known, most secure and reliable online service. You can send or receive money within minute to from other people around ..."
+    },
+      "intdet": {
+        "message": "PERIODIC MONTHLY SAVING"
+    },
+    "intdet2": {
+        "message": "NARIBACHAT SAVING"
+    },
+    "intde3":{
+        "message": "PERIODIC SAVING-3 MONTH"
+    },
+    "intdet4":{
+        "message": "PERIODIC SAVING-6 MONTH"
+    },
+    "intdet5":{
+        "message": "PERIODIC SAVING-1 YRS"
+    },
+    "intdet6":{
+        "message": "NAWA KOPILA SAVING 16 YRS"
+    },
+    "intdet7":{
+        "message": "SENIOR CITIZEN SAVING"
+    },
+    "intdet8":{
+        "message": "REMITANCE SAVING 1YRS"
+    },
+    "intdet9":{
+        "message": "GAUSAHAR  BUSINESS PLUS BACHAT"
+    },
+     "intdet10":{
+        "message": "GAUSAHAR SUPER SAVING"
+    },
+    "intdet11":{
+        "message": "SPECIAL PERIODIC SAVING 3 MONTH"
+    },
+    "intdet12":{
+        "message": "SPECIAL PERIODIC SAVING 6 MONTH"
+    },
+    "intdet13":{
+        "message": "SPECIAL PERIODIC SAVING 1yrs"
+    },
+    "intdet14":{
+        "message": "SPECIAL PERIODIC SAVING 2YRS"
+    },
+     "intdet15":{
+        "message": "SPECIAL PERIODIC SAVING 3YRS"
+    },
+    "intdet16": {
+        "message": "Agriculture Loan"
+    },
+    "intdet17":{
+        "message": "Business Loan"
+    },
+    "intdet18":{
+        "message": "Emergency Loan"
+    },
+    "intdet19":{
+        "message": "Educational Loan"
+    },
+    "intdet20":{
+        "message": "Foriegn Employment Loan"
+    },
+    "intdet21":{
+        "message": "Hire Purchase Loan"
+    },
+    "intdet22":{
+        "message": "Home Loan"
+    },
+    "intdet23":{
+        "message": "Land Purchase Loan"
+    },
+     "intdet24":{
+        "message": "Livestock Loan"
+    },
+    "intdet25":{
+        "message": "Miscellaneous Loan"
+    },
+    "intdet26":{
+        "message": "Poultry Farm Loan"
+    },
+    "intdet27":{
+        "message": "Tailoring Loan"
+    },
+    "intdet28":{
+        "message": "Professional Loan"
+    },
+     "intdet29":{
+        "message": "Product"
+    },
+     "intdet30":{
+        "message": "Percentage"
+    },
+    "intdet31":{
+        "message": "saving"
+    },
+    "intdet32":{
+        "message": "current"
+    },
+     "intdet33":{
+        "message": "products"
+    },
+     "intdet34":{
+        "message": "loan"
+    },
+    "intdet35":{
+        "message": "Details"
+    }
+}

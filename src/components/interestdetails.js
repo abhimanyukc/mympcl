@@ -1,48 +1,48 @@
 // InterestRateComponent.js
 import React, { useState } from 'react';
-
+import { useTranslation } from 'react-i18next'
 const InterestRateComponent = () => {
-  const [selectedTab, setSelectedTab] = useState('saving');
-
+  const [selectedTab, setSelectedTab] = useState('intdet31');
+  const [t] = useTranslation("global")
   // Static data for each tab
   const tabData = {
-    saving: [
-      { product: 'PERIODIC MONTHLY SAVING', percentage: 9.00 },
-      { product: 'NARIBACHAT SAVING', percentage: 10.00 },
-      { product: 'PERIODIC SAVING-3 MONTH', percentage: 7.00 },
-      { product: 'PERIODIC SAVING-6 MONTH', percentage: 8.00 },
-      { product: 'PERIODIC SAVING-1 YRS', percentage: 8.50 },
-      { product: 'NAWA KOPILA SAVING 16 YRS', percentage: 11.00 },
-      { product: 'SENIOR CITIZEN SAVING', percentage: 8.50 },
-      { product: 'REMITANCE SAVING 1YRS', percentage: 10.50 },
+    intdet31: [
+      { product: 'intdet.message', percentage: 9.00 },
+      { product: 'intdet2.message', percentage: 10.00 },
+      { product: 'intdet3.message', percentage: 7.00 },
+      { product: 'intdet4.message', percentage: 8.00 },
+      { product: 'intdet5.message', percentage: 8.50 },
+      { product: 'intdet6.message', percentage: 11.00 },
+      { product: 'intdet7.message', percentage: 8.50 },
+      { product: 'intdet8.message', percentage: 10.50 },
     ],
-    current: [
-      { product: 'GAUSAHAR  BUSINESS PLUS BACHAT', percentage: 7.00 },
-      { product: 'GAUSAHAR SUPER SAVING', percentage: 6.00 },
-      { product: 'ATM SAVING', percentage: 5.00 },
+    intdet32: [
+      { product: 'intdet9.message', percentage: 7.00 },
+      { product: 'intdet10.message', percentage: 6.00 },
+      { product: 'intdet11.message', percentage: 5.00 },
     ],
-    products: [
-      { product: 'SPECIAL PERIODIC SAVING 3 MONTH', percentage: 6.00 },
-      { product: 'SPECIAL PERIODIC SAVING 6 MONTH', percentage: 8.50 },
-      { product: 'SPECIAL PERIODIC SAVING 1yrs', percentage: 10.00 },
-      { product: 'SPECIAL PERIODIC SAVING 2YRS', percentage: 10.50 },
-      { product: 'SPECIAL PERIODIC SAVING 3YRS', percentage: 11.00 },
+    intdet33: [
+      { product: 'intdet12.message', percentage: 6.00 },
+      { product: 'intdet13.message', percentage: 8.50 },
+      { product: 'intdet14.message', percentage: 10.00 },
+      { product: 'intdet15.message', percentage: 10.50 },
+      { product: 'intdet15.message', percentage: 11.00 },
       
     ],
-    loan: [
-      { product: 'Agriculture Loan', percentage: 15.00 },
-      { product: 'Business Loan', percentage: 16.00 },
-      { product: 'Emergency Loan', percentage: 13.00 },
-      { product: 'Educational Loan', percentage: 15.00 },
-      { product: 'Foriegn Employment Loan', percentage: 16.00 },
-      { product: 'Hire Purchase Loan', percentage: 16.00 },
-      { product: 'Home Loan', percentage: 16.00 },
-      { product: 'Land Purchase Loan', percentage: 16.00 },
-      { product: 'Livestock Loan', percentage: 15.00 },
-      { product: 'Miscellaneous Loan', percentage: 15.50 },
-      { product: 'Poultry Farm Loan', percentage: 15.50 },
-      { product: 'Tailoring Loan', percentage: 15.50 },
-      { product: 'Professional Loan', percentage: 15.50 },
+    intdet34: [
+      { product: 'intdet16.message', percentage: 15.00 },
+      { product: 'intdet17.message', percentage: 16.00 },
+      { product: 'intdet18.message', percentage: 13.00 },
+      { product: 'intdet19.message', percentage: 15.00 },
+      { product: 'intdet20.message', percentage: 16.00 },
+      { product: 'intdet22.message', percentage: 16.00 },
+      { product: 'intdet23.message', percentage: 16.00 },
+      { product: 'intdet24.message', percentage: 16.00 },
+      { product: 'intdet25.message', percentage: 15.00 },
+      { product: 'intdet26.message', percentage: 15.50 },
+      { product: 'intdet27.message', percentage: 15.50 },
+      { product: 'intdet28.message', percentage: 15.50 },
+      { product: 'intdet21.message', percentage: 15.50 },
     ],
   };
 
@@ -58,14 +58,14 @@ const InterestRateComponent = () => {
       <table className="w-full mt-8 bg-white select-none">
         <thead>
           <tr>
-            <th className="py-2 ">Product</th>
-            <th className="py-2 ">Percentage</th>
+            <th className="py-2 "> {t("intdet29.message")}</th>
+            <th className="py-2 ">{t("intdet30.message")}</th>
           </tr>
         </thead>
         <tbody>
           {data.map((item, index) => (
             <tr key={index}>
-              <td className="px-4 py-2 border">{item.product}</td>
+              <td className="px-4 py-2 border">{t(item.product)}</td>
               <td className="px-4 py-2 border">{item.percentage}%</td>
             </tr>
           ))}
@@ -83,13 +83,14 @@ const InterestRateComponent = () => {
             className={` mr-1 md:mr-4 p-1 md:p-2 ${selectedTab === tab ? 'bg-green-800 text-white' : 'bg-gray-300'}`}
             onClick={() => handleTabChange(tab)}
           >
-            {tab.charAt(0).toUpperCase() + tab.slice(1)} {/* Capitalize the first letter */}
+          
+            {t(`${tab}.message`)}
           </button>
         ))}
       </div>
 
       <div className="mb-8">
-        <h2 className="mb-4 text-xl font-bold">{selectedTab.charAt(0).toUpperCase() + selectedTab.slice(1)} Details</h2>
+      <h2 className="mb-4 text-xl font-bold">{t(`${selectedTab}.message`)} {t("intdet35.message")}</h2>
         {renderTable()}
       </div>
     </div>
