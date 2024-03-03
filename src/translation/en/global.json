@@ -531,6 +531,18 @@
     "career4":{
         "message": "Submit"
     },
+    "career5":{
+        "message": "Choose File"
+    },
+    "career6":{
+        "message": "No File Choosen"
+    },
+    "career7":{
+        "message": "Your details has been sent!!!"
+    },
+    "career8":{
+        "message": ""
+    },
     "news":{
        "message": "News"
     },

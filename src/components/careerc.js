@@ -12,7 +12,7 @@ const Careerc = () => {
   });
 
   const handleInputChange = (e) => {
-    const { name, value, files } = e.target;
+    const {  name, value, files } = e.target;
     setFormData((prevData) => ({
       ...prevData,
       [name]: name === 'cv' || name === 'coverLetter' ? files[0] : value,
@@ -24,7 +24,7 @@ const Careerc = () => {
     // Perform your submission logic here, for example, send data to a server.
 
     // Assuming your submission is successful, show a success message
-    setMessage('Your details has been sent!!!');
+    setMessage(t('career7.message'));
     // Clear the form data
     setFormData({
       message: '',

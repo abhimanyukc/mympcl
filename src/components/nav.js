@@ -9,18 +9,18 @@ const languages = [
 ];
 
 const Nav = ({ setLanguage, setTimeFormat }) => {
-  const dropdownRef = useRef(null);
+  // const dropdownRef = useRef(null);
   const dropdownRef2 = useRef(null);
 
   
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
-        (dropdownRef.current && !dropdownRef.current.contains(event.target)) &&
+        // (dropdownRef.current && !dropdownRef.current.contains(event.target)) &&
         (dropdownRef2.current && !dropdownRef2.current.contains(event.target))
       ) {
         // Clicked outside either of the dropdowns, close them
-        setIsDropdownOpen(false);
+        // setIsDropdownOpen(false);
         setIsDropdownOpen2(false);
       }
     };
@@ -39,7 +39,8 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('mousedown', handleMouseDown);
     };
-  }, [dropdownRef, dropdownRef2]);
+  }, [dropdownRef2]);
+  // }, [dropdownRef, dropdownRef2]);
 
 
   const [t, i18n] = useTranslation("global");
@@ -51,14 +52,8 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
     localStorage.setItem('language' , lang);
     i18n.changeLanguage(lang);
   }
-  const [activeLink, setActiveLink] = useState('');
-
-  const handleLinkClick = (link) => {
-    setActiveLink(link);
-  };
-  const handleLogoClick = () => {
-    handleLinkClick('Home');
-  };
+ 
+ 
 
   
   const [showLinks, setShowLinks] = useState(false);
@@ -123,23 +118,28 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
             
           >
              {t("nav1.message")}
-            <img
+            {/* <img
               src={require('../images/dropdown2.jpeg')}
               alt='Dropdownlogo2'
+              className='w-8 h-6 p-1 ml-30'
+              onClick={toggleDropdown2}
+            /> */}
+             <FaAngleDown
+                alt='Dropdownlogo2'
               className='w-8 h-6 p-1 ml-30'
               onClick={toggleDropdown2}
             />
             {isDropdownOpen2 && (
                <div className='absolute left-0 z-40 bg-white border shadow-md top-full'>
                {languages.map((lang) => (
-                 <a
+                 <Link
                    key={lang.code}
-                   href='#'
+                   to='#'
                    onClick={() => handleChangeLanguage(lang.code)}
                    className='block pr-7 hover:bg-green-800 hover:text-white'
                  >
                    {lang.label}
-                 </a>
+                 </Link>
                ))}
              </div>
             )}
@@ -200,23 +200,19 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
       <nav
         className={`flex  flex-col md:flex-row  sm:flex-row ${showLinks ? 'flex' : 'hidden'} md:flex cursor-pointer  md:pl-3  `}
       > 
-      
-      <div className='p-1 md:p-2 md:mr-4 hover:border-b-2'
-    onClick={handleLogoClick}
-    style={{ backgroundColor: activeLink === 'Home' ? 'black' : '' }}
-  >
-      <Link to="/" className="" > <img
+      <Link to="/" className="" >
+      <div className='p-1 md:p-2 md:mr-4 hover:border-b-2' >
+       <img
             src={require('../images/logosahakari.jpeg')}
             alt='Sahakarilogo'
             className='object-fill w-8 h-6 '
-          /> </Link>
+          /> 
       </div>
+      </Link>
        
 
         <div
           className='relative flex items-center px-1 py-2 text-white md:p-2 md:mr-4 hover:border-b-2 '
-          ref={dropdownRef}
-          onClick={() => handleLinkClick('About')}   style={{ backgroundColor: activeLink === 'About' ? 'black  ' : '' }}
         >
          
           <p>
@@ -245,13 +241,15 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
           )}
         </div>
 
-        <div className='p-1 text-white md:p-2 hover:border-b-2 md:mr-4 ' onClick={() => handleLinkClick('Services')}   style={{ backgroundColor: activeLink === 'Services' ? 'black  ' : '' }}>
-          <Link to="/services"> {t("nav7.message")}</Link>
+        <Link to="/services"> <div className='p-1 text-white md:p-2 hover:border-b-2 md:mr-4 '  >
+          {t("nav7.message")}
         </div>
-       
-        <div className='p-1 text-white md:p-2 md:mr-4 hover:border-b-2'  onClick={() => handleLinkClick('Contact')}   style={{ backgroundColor: activeLink === 'Contact' ? 'black  ' : '' }}>
-        <Link to="/contact" > {t("nav8.message")}</Link>
+        </Link>
+        <Link to="/contact" >
+        <div className='p-1 text-white md:p-2 md:mr-4 hover:border-b-2'  >
+        {t("nav8.message")}
         </div>
+        </Link>
       </nav>
       </div>
 
@@ -262,12 +260,17 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
           <div
             className='relative flex items-center ml-1 bg-white rounded-md md:mx-auto'
            
-            ref={dropdownRef}
+             ref={dropdownRef2}
           >
            
             <div > {t("nav1.message")}</div>
-            <img
+            {/* <img
               src={require('../images/dropdown2.jpeg')}
+              alt='Dropdownlogo2'
+              className='w-8 h-6 p-1 ml-30'
+              onClick={toggleDropdown2}
+            /> */}
+              <FaAngleDown
               alt='Dropdownlogo2'
               className='w-8 h-6 p-1 ml-30'
               onClick={toggleDropdown2}
@@ -276,14 +279,14 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
               
               <div className='absolute left-0 z-40 bg-white border shadow-md top-full'>
             {languages.map((lang) => (
-              <a
+              <Link
                 key={lang.code}
-                href='#'
+                to='#'
                 onClick={() => handleChangeLanguage(lang.code)}
                 className='block pr-7 hover:bg-green-800 hover:text-white'
               >
                 {lang.label}
-              </a>
+              </Link>
             ))}
           </div>
               
