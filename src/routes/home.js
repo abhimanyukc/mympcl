@@ -1,7 +1,4 @@
 import React from 'react'
-import Header from '../components/header'
-import Nav from '../components/nav'
-import Marque from '../components/marque'
 import ImageSlider from '../components/imageslider'
 import Sidebar from '../components/sidebar'
 import Servicesc from '../components/servicesc'
@@ -18,6 +15,10 @@ import Membershipc from '../components/membershipc'
 import Departmentc from '../components/departmentc'
 import Branchesc from '../components/branchesc'
 import Combo from '../components/combo'
+import Newsc from '../components/news'
+import Careerc from '../components/careerc'
+import Marque from '../components/marque'
+
 
 
 
@@ -30,11 +31,9 @@ const Home = () => {
 
       
      <Combo/>
-
-     
       <ImageSlider/>
       <Sidebar/>
-
+     
      <Servicesc/>
      <Onlineaccountopening/>
      <Account/>
@@ -46,6 +45,8 @@ const Home = () => {
       <Departmentc/>
       <Branchesc/>
       <ContactC/>
+      <Newsc/>
+      <Careerc/>
      <Footer/>
     </div>
   )

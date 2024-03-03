@@ -283,5 +283,327 @@
     },
     "intdet35":{
         "message": "Details"
-    }
+    },
+    "emi":{
+        "message": "Get Started With Emi Calculator"
+    },
+    "emi1":{
+        "message": "Agriculture Loan"
+    },
+    "emi2":{
+        "message": "Business Loan"
+    },
+    
+    "emi3":{
+        "message": "Emergency Loan"
+    },
+    "emi4":{
+        "message": "Educational Loan"
+    },
+    "emi5":{
+        "message": "Foreign Employment Loan"
+    },
+    "emi6":{
+        "message": "Hire Purchase Loan"
+    },
+    "emi7":{
+        "message": "View All Loans"
+    },
+    "emi8":{
+        "message": "Loan Type"
+    },
+    "emi9":{
+        "message": "Select Loan Type"
+    },
+    "emi10":{
+        "message": "Loan Amount (NPR)"
+    },
+    "emi11":{
+        "message": "Interest Rate (%)"
+    },
+    "emi12":{
+        "message": "Duration (in month)"
+    },
+    "emi13":{
+        "message": "Monthly Payment (EMI)"
+    },
+    "info":{
+        "message": "Introduction"
+    },
+    "info1":{
+        "message": "The GauSahar Multipurpose Cooperative was established in Bs. 02/07/2064. It was registered in District Cooperative Office in Pokhara by 4 people in Srijana chowk.The cooperative had been working in the agricultural sector since it was founded but the services diversified from 2073 when the functional committee was changed and headed by present Chairperson Mr. Prem Kumar BC."
+    },
+    "info2":{
+        "message": "The Organization initiated its savings and credit services in 2073 with the inauguration of the Head Office situated on Mahendrapool , pokhara. In the following year, 2074, the organization pioneered ATM services, marking a significant milestone as the first ATM service provider in the cooperative history of the western region of Nepal.Moreover, in the same year (BS 2074), the cooperative introduced GauSahar smart banking, QR code payment, and eBanking services. By BS 207"
+    },
+    "info3":{
+        "message": "Vision"
+    },
+    "info4":{
+        "message": "To emerge as the most forward-thinking cooperative within the Gandaki Province and across Nepal."
+    },
+    "info5":{
+        "message": "Mission"
+    },
+    "info6":{
+        "message": "To maintain and strengthen our status as the foremost cooperative in the Gandaki Province  by delivering exceptional customer service, fostering creativity, promoting growth, and actively engaging our employees."
+    },
+    "mem1":{
+        "message": "Board of Directors "
+    },
+    "mem2":{
+        "message": "saroj "
+    },
+    "mem3":{
+        "message": "anish"
+    },
+    "mem4":{
+        "message": "sagar"
+    },
+    "mem5":{
+        "message": "rikesh"
+    },
+    "mem6":{
+        "message": "abhi"
+    },
+    "mem7":{
+        "message": "sital"
+    },
+    "mem8":{
+        "message": "jacklin"
+    },
+    "mem9":{
+        "message": "rohit"
+    },
+    "mem10":{
+        "message": "roshan"
+    },
+    "mem11":{
+        "message": "Chairperson"
+    },
+    "mem12":{
+        "message": "Vice Chairperson"
+    },
+    "mem13":{
+        "message": "Member"
+    },
+    "mem14":{
+        "message": "Secretary"
+    },
+    "mem15":{
+        "message": "Treasurer"
+    },
+    "mem16":{
+        "message": "Susil"
+    },
+    "dep":{
+        "message": "Savings"
+    },
+    "dep1":{
+        "message": "all the saving related services"
+    },
+    "dep2":{
+        "message": "Credit"
+    },
+    "dep3":{
+        "message": "all the credit related services"
+    },
+    "dep4":{
+        "message": "Admin/Finance"
+    },
+    "dep5":{
+        "message": "all the finance related services"
+    },
+    "dep6":{
+        "message": "Marketing and Promotions"
+    },
+    "dep7":{
+        "message": "all the marketing related information"
+    },
+    "dep8":{
+        "message": "Human Resource"
+    },
+    "dep9":{
+        "message": "all the human resources related information"
+    },
+    "dep10":{
+        "message": "Non financial"
+    },
+    "dep11":{
+        "message": "all the non financial related information"
+    },
+    "dep12":{
+        "message": "Department"
+    },
+    "dep13":{
+        "message": "Read more"
+    },
+    "brnch":{
+        "message": "Our Branches"
+    },
+    "brnch1":{
+        "message": "Central Office"
+    },
+    "brnch2":{
+        "message": "Mahendrapul, Pokhara"
+    },
+    "brnch3":{
+        "message": "083-525052, 083-525054, 9848113034"
+    },
+    "brnch4":{
+        "message": "gausahar@gmail.com"
+    },
+    "brnch5":{
+        "message": "Lamachaur, Pokhara"
+    },
+    "brnch6":{
+        "message": "083-525052, 083-525054, 9848113034"
+    },
+    "brnch7":{
+        "message": "gausahar1@gmail.com"
+    },
+    "brnch8":{
+        "message": "Lekhnath, Pokhara"
+    },
+    "brnch9":{
+        "message": "083-525052, 083-525054, 9848113034"
+    },
+    "brnch10":{
+        "message": "gausahar2@gmail.com"
+    },
+    "brnch11":{
+        "message": "Amarsingh Chowk, Pokhara"
+    },
+    "brnch12":{
+        "message": "083-525052, 083-525054, 9848113034"
+    },
+    "brnch13":{
+        "message": "gausahar3@gmail.com"
+    },
+    "con":{
+        "message": "Name"
+    },
+    "con1":{
+        "message": "Email"
+    },
+    "con2":{
+        "message": "Subject"
+    },
+    "con3":{
+        "message": "Message"
+    },
+    "con4":{
+        "message": "Submit"
+    },
+    "con5":{
+        "message": "Contact Us"
+    },
+    "fo":{
+        "message":  "Contact Us"
+    },
+    "fo1":{
+        "message":  "Providing diverse services to our community"
+    },
+    "fo2":{
+        "message":  "Email: GausaharSahakari@gmail.com"
+    },
+    "fo3":{
+        "message":  "Phone: 061556802"
+    },
+    "fo4":{
+        "message":  "Address"
+    },
+    "fo5":{
+        "message":  "Srijana Chowk"
+    },
+    "career":{
+        "message": "Send Message"
+    },
+    "career1":{
+        "message": "Email"
+    },
+    "career2":{
+        "message": "Upload CV"
+    },
+    "career3":{
+        "message": "Upload Cover Letter"
+    },
+    "career4":{
+        "message": "Submit"
+    },
+    "news":{
+       "message": "News"
+    },
+    "news1":{
+        "message": "jan 20,2024"
+     },
+     "news2":{
+        "message": "Bank Anniversary"
+     },
+     "news3":{
+        "message": "feb 1, 2024"
+     },
+     "news4":{
+        "message": "Fast Banking with swift"
+     },
+       "news5":{
+        "message": "feb 6, 2024"
+     },
+     "news6":{
+        "message": "Bank of the year award 2023"
+     },
+     "news7":{
+        "message": "feb 19, 2024"
+     },
+     "news8":{
+        "message": "highest taX payer in banking sector"
+     },
+     "news9":{
+        "message": "feb 21, 2024"
+     },
+     "news10":{
+        "message": "Inaugration of newly constructed building of bank"
+     },
+     "news11":{
+        "message": "feb 21, 2024"
+     },
+     "news12":{
+        "message": "Chandra Dhakal re-elected as chairman of bank"
+     },
+     "news13":{
+        "message": "oct 28 ,2023"
+     },
+     "news14":{
+        "message": "Digital Banking service"
+     },
+     "news15":{
+        "message": "oct 28 ,2023"
+     },
+     "news16":{
+        "message": "Remmittance inflow"
+     },
+     "news17":{
+        "message": "dec 20, 2024"
+     },
+     "news18":{
+        "message": "News 3"
+     },
+     "news19":{
+        "message": "dec 29, 2023"
+     },
+     "news20":{
+        "message": "Interest rate deduction"
+     },
+     "news21":{
+        "message": "jan 5, 2024"
+     },
+     "news22":{
+        "message": "Thapa stresses on broader commitment for effectiveness of health insurance"
+     },
+     "news23":{
+        "message": "jan 5, 2024"
+     },
+     "news24":{
+        "message": "News 6"
+     }
 }

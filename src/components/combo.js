@@ -3,7 +3,8 @@ import Header from './header'
 import Nav from './nav';
 import React, { useState, useEffect} from 'react'
 import { format } from 'date-fns';
-import Marque from './marque'
+import Marque from './marque';
+
 
 const Combo = () => {
   const storedLanguage = localStorage.getItem('selectedLanguage') || 'en';
@@ -36,6 +37,7 @@ const Combo = () => {
      <Header lang={lang} timeFormat={timeFormat} />
       <Nav setLanguage={setLanguage} setTimeFormat={setTimeFormat} />
       <Marque/>
+      
       </div>
     </div>
   )

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Careerc = () => {
+  const {t} = useTranslation("global")
   const [message, setMessage] = useState('');
   const [formData, setFormData] = useState({
     message: '',
@@ -53,7 +55,7 @@ const Careerc = () => {
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label className="block mb-2 text-sm font-bold text-gray-700">
-            Send Message
+            {t('career.message')}
           </label>
           <textarea
             name="message"
@@ -66,7 +68,7 @@ const Careerc = () => {
 
         <div className="mb-4">
           <label className="block mb-2 text-sm font-bold text-gray-700">
-            Email
+          {t('career1.message')}
           </label>
           <input
             type="email"
@@ -80,7 +82,7 @@ const Careerc = () => {
 
         <div className="mb-4">
           <label className="block mb-2 text-sm font-bold text-gray-700">
-            Upload CV
+          {t('career2.message')}
           </label>
           <input
             type="file"
@@ -93,7 +95,7 @@ const Careerc = () => {
 
         <div className="mb-4">
           <label className="block mb-2 text-sm font-bold text-gray-700">
-            Upload Cover Letter
+          {t('career3.message')}
           </label>
           <input
             type="file"
@@ -109,7 +111,7 @@ const Careerc = () => {
             type="submit"
             className="p-2 text-white bg-blue-500 rounded hover:bg-blue-700"
           >
-            Submit
+           {t('career4.message')}
           </button>
         </div>
       </form>

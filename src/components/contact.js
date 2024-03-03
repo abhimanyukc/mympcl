@@ -1,6 +1,10 @@
+
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+
 
 const ContactC = () => {
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -34,9 +38,11 @@ const ContactC = () => {
     // Add your logic for submitting the form data to the server or any other action
   };
 
+  const {t} = useTranslation("global")
+
   return (
     <div className="container px-8 mx-auto mt-10 bg-white select-none md:px-24 md:py-2">
-      <div className="mb-6 text-3xl font-semibold text-center">Contact Us</div>
+      <div className="mb-6 text-3xl font-semibold text-center">{t('con5.message')}</div>
 
       <div className='flex flex-col md:items-center md:flex-row '>
       <form onSubmit={handleSubmit} className="w-full md:mr-4">
@@ -44,7 +50,7 @@ const ContactC = () => {
         <div className="mb-4">
 
           <label htmlFor="name" className="block text-sm font-medium text-gray-600">
-            Name
+          {t('con.message')}
           </label>
           <input
             type="text"
@@ -59,7 +65,7 @@ const ContactC = () => {
 
         <div className="mb-4">
           <label htmlFor="email" className="block text-sm font-medium text-gray-600">
-            Email
+          {t('con1.message')}
           </label>
           <input
             type="email"
@@ -74,7 +80,7 @@ const ContactC = () => {
 
         <div className="mb-4">
           <label htmlFor="subject" className="block text-sm font-medium text-gray-600">
-            Subject
+          {t('con2.message')}
           </label>
           <input
             type="text"
@@ -89,7 +95,7 @@ const ContactC = () => {
 
         <div className="mb-4">
           <label htmlFor="message" className="block text-sm font-medium text-gray-600">
-            Message
+          {t('con3.message')}
           </label>
           <textarea
             id="message"
@@ -108,7 +114,7 @@ const ContactC = () => {
             type="submit"
             className="text-white rounded-md bg-primary hover:bg-green-600"
           >
-            Submit
+           {t('con4.message')}
           </button>
         </div>
       </form>

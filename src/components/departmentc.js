@@ -1,42 +1,39 @@
 
-
-
-
 import React from 'react'
-
-
+import { useTranslation } from 'react-i18next';
 
 export default function Departmentc() {
+    const { t } = useTranslation('global');
     const posts = [
         {
-            title: "Savings",
+            title: "dep.message",
             img: "https://cdn.pixabay.com/photo/2016/06/01/08/40/money-1428594_1280.jpg",
-            content: "  all the saving related services "
+            content: "dep1.message"
         },
         {
-            title: "Credit",
+            title: "dep2.message",
             img: "https://cdn.pixabay.com/photo/2017/06/24/22/33/credit-card-2439141_1280.jpg",
-            content: "  all the credit related services"
+            content: "dep3.message"
         },
         {
-            title: "Admin/Finance",
+            title: "dep4.message",
             img: "https://cdn.pixabay.com/photo/2018/02/22/23/06/security-camera-3174223_1280.jpg",
-            content: " all the finance related services"
+            content: "dep5.message"
         },
         {
-            title: "Marketing and Promotions",
+            title: "dep6.message",
             img: "https://cdn.pixabay.com/photo/2018/01/06/07/53/social-3064515_1280.jpg",
-            content: "all the marketing related information"
+            content: "dep7.message"
         },
         {
-          title: "Human Resource",
+          title: "dep8.message",
           img: "https://cdn.pixabay.com/photo/2022/07/20/03/21/society-7333314_1280.png",
-          content: " all the human resources related information"
+          content: "dep9.message"
       },
       {
-        title: "Non financial",
+        title: "dep10.message",
         img: "https://cdn.pixabay.com/photo/2015/10/30/10/04/share-price-1013626_1280.jpg",
-        content: " all the non financial related information"
+        content: "dep11.message"
     },
     ];
     return (
@@ -44,7 +41,7 @@ export default function Departmentc() {
         <div className='mx-auto max-w-screen-2xl'>
             <div className='flex-col mt-16 md:mt-24'>
 
-            <div className='flex justify-center mb-6 text-lg font-bold max-w-screen-2xl'> Department</div>
+            <div className='flex justify-center mb-6 text-lg font-bold max-w-screen-2xl'> {t('dep12.message')}</div>
 
             <div className="grid gap-2 px-8 md:px-24 lg:grid-cols-4">
                 {posts.map((items, key) => (
@@ -57,13 +54,13 @@ export default function Departmentc() {
                         <div className="p-4">
                             <h4 className="text-lg font-semibold ">
                                 
-                                {items.title}
+                                {t(items.title)}
                             </h4>
                             <p className="mb-2 leading-normal">
-                            {items.content}
+                            {t(items.content)}
                             </p>
                             <button className="px-4 py-2 text-sm text-white rounded shadow bg-primary">
-                                Read more
+                               {t('dep13.message')}
                             </button>
                         </div>
                     </div>

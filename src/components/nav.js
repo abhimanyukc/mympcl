@@ -218,29 +218,29 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
           ref={dropdownRef}
           onClick={() => handleLinkClick('About')}   style={{ backgroundColor: activeLink === 'About' ? 'black  ' : '' }}
         >
-          <Link to="/about">
+         
           <p>
         {t("nav.message")}
       </p>
-          </Link>
+         
           <FaAngleDown  onClick={toggleDropdown}  />
           {isDropdownOpen && (
             <div className='absolute left-0 z-20 text-black bg-white shadow-md top-full'>
-              <a href='information' className='block pl-1 border-b-2 hover:bg-green-800 hover:text-white'>
+           <Link to='/information' className='block pl-1 border-b-2 hover:bg-green-800 hover:text-white'>
               {t("nav2.message")}
-              </a>
-              <a href='membership' className='block pl-1 border-b-2 text-nowrap hover:bg-green-800 hover:text-white'>
+              </Link>
+              <Link to='/membership' className='block pl-1 border-b-2 text-nowrap hover:bg-green-800 hover:text-white'>
               {t("nav3.message")}
-              </a>
-              <a href='membership' className='block pl-1 border-b-2 text-nowrap hover:bg-green-800 hover:text-white'>
+              </Link>
+              <Link to='/membership' className='block pl-1 border-b-2 text-nowrap hover:bg-green-800 hover:text-white'>
               {t("nav4.message")}
-              </a>
-              <a href='department' className='block pl-1 border-b-2 text-nowrap hover:bg-green-800 hover:text-white'>
+              </Link>
+              <Link to='/department' className='block pl-1 border-b-2 text-nowrap hover:bg-green-800 hover:text-white'>
               {t("nav5.message")}
-              </a>
-              <a href='branches' className='block pl-1 border-b-2 hover:bg-green-800 hover:text-white'>
+              </Link>
+              <Link to='/branches' className='block pl-1 border-b-2 hover:bg-green-800 hover:text-white'>
               {t("nav6.message")}
-              </a>
+              </Link>
             </div>
           )}
         </div>
