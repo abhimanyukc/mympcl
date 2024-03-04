@@ -60,11 +60,11 @@ const Header = ({ lang }) => {
        
       <div className="flex items-center justify-center space-x-1 cursor-pointer md:space-x-2">
       
-        <Link to="/career"  className=""><div className="flex items-center justify-center bg-white rounded-md md:w-full "> {t("header.message")}</div></Link>
+        <Link to="/career"  className=""><div className="flex items-center justify-center text-white md:w-full "> {t("header.message")}</div></Link>
         <div className="">
         <div
             ref={dropdownRef}
-            className="relative flex items-center justify-center bg-white rounded-md md:w-full text-nowrap"
+            className="relative flex items-center justify-center text-white md:w-full text-nowrap"
             onClick={toggleDropdown}
           >
            {t("header1.message")} <FaAngleDown />
@@ -83,7 +83,7 @@ const Header = ({ lang }) => {
             
           </div>
           )}
-        <Link to="/news"><div className="flex items-center justify-center bg-white rounded-md md:w-full"> {t("header4.message")} </div></Link>
+        <Link to="/news"><div className="flex items-center justify-center text-white md:w-full"> {t("header4.message")} </div></Link>
         
       
 
