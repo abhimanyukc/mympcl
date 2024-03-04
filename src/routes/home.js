@@ -17,7 +17,7 @@ import Branchesc from '../components/branchesc'
 import Combo from '../components/combo'
 import Newsc from '../components/news'
 import Careerc from '../components/careerc'
-import Marque from '../components/marque'
+
 
 
 
