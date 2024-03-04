@@ -48,7 +48,7 @@ const Careerc = () => {
   return (
     <div className="container px-8 mx-auto mt-8 bg-white select-none max-w-screen-2xl md:px-24 md:py-2">
       {message && (
-        <div className="p-4 mb-4 text-white bg-green-500">
+        <div className="p-4 mb-4 text-white bg-primary">
           {message}
         </div>
       )}
@@ -109,7 +109,7 @@ const Careerc = () => {
         <div className="mb-4">
           <button
             type="submit"
-            className="p-2 text-white bg-blue-500 rounded hover:bg-blue-700"
+            className="p-2 text-white rounded bg-primary hover:bg-green-700"
           >
            {t('career4.message')}
           </button>
