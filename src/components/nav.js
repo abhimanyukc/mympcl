@@ -162,7 +162,7 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
     
           <div className='absolute  top-12  z-40 flex    md:mx-auto transform -translate-x-1/2 bg-white border rounded-md left-1/2  md:top-[40px]' >
             <div className='flex flex-col '>
-                 <div className='flex items-center justify-between hidden border-b-2 md:justify-between md:flex'>
+                 <div className='flex items-center justify-between border-b-2 md:justify-between md:flex'>
                         <div className=''> {t("nav1.message")}</div>
                         <div className=''><FaTimes
                         onClick={handleCloseIconClick}

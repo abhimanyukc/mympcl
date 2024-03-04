@@ -73,7 +73,7 @@ function App() {
         <Route path="/branches" element= {<Branches/>} />
         <Route path="/login" element= {<Login/>} />
         <Route path="/signup" element= {<Signup/>} />
-
+        
       </Routes>
     </Router>
        </>
