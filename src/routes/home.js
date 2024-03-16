@@ -32,7 +32,7 @@ const Home = () => {
       
      <Combo/>
       <ImageSlider/>
-      <Sidebar/>
+      <Sidebar className=""/>
      
      <Servicesc/>
      <Onlineaccountopening/>

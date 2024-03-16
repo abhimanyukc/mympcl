@@ -99,7 +99,7 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
   
 
   return (
-    <div className='flex items-center justify-between px-8 mx-auto bg-green-800 select-none md:flex-row max-w-screen-2xl md:px-20'>
+    <div className='flex items-center justify-between px-8 mx-auto bg-green-800 select-none md:flex-row max-w-screen-2xl md:pl-20 md:pr-24'>
 
       <div className='flex flex-col'>
       <div className='flex '>
@@ -109,21 +109,17 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
           <FaBars alt='SearchIcon' className='w-8 h-8 ' onClick={toggleLinks} />
         </div>
   
-        <div className='flex items-center ml-40 select-none md:hidden'>
+        <div className='flex items-center p-2 ml-40 select-none md:p-0 md:hidden'>
         
-        <div className='flex items-center mr-2 select-none'>
+        <div className='flex items-center select-none'>
           <div
-            className='relative flex items-center pr-4 ml-1 bg-white rounded-md md:pr-0 md:mx-auto'
+            className='relative flex items-center ml-1 bg-white rounded-md md:pr-0 md:mx-auto'
             ref={dropdownRef2}
             
           >
              {t("nav1.message")}
-            {/* <img
-              src={require('../images/dropdown2.jpeg')}
-              alt='Dropdownlogo2'
-              className='w-8 h-6 p-1 ml-30'
-              onClick={toggleDropdown2}
-            /> */}
+           
+         
              <FaAngleDown
                 alt='Dropdownlogo2'
               className='w-8 h-6 p-1 ml-30'
@@ -154,7 +150,7 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
 
 
 <div className='relative flex p-1 my-2 md:hidden' onClick={handleSearchIconClick}> 
-          <FaSearch className='w-4 h-4 text-white ml-30' />
+          <FaSearch className='w-5 h-5 text-white ml-30' />
           </div>
          
            {/* Main div with white background */}
@@ -198,21 +194,21 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
       
 
       <nav
-        className={`flex  flex-col md:flex-row  sm:flex-row ${showLinks ? 'flex' : 'hidden'} md:flex cursor-pointer  md:pl-3  `}
+        className={`flex  p-2 flex-col items-center  md:flex-row    sm:flex-row ${showLinks ? 'flex' : 'hidden'} md:flex cursor-pointer  md:pl-3  `}
       > 
       <Link to="/" className="" >
-      <div className='p-1 md:p-2 md:mr-4 hover:border-b-2' >
+      <div className='p-1 transition duration-300 md:p-2 md:mr-4 ' >
        <img
             src={require('../images/logosahakari.jpeg')}
             alt='Sahakarilogo'
-            className='object-fill w-8 h-6 '
+            className='object-fill w-12 h-10 '
           /> 
       </div>
       </Link>
        
 
         <div
-          className='relative flex items-center px-1 py-2 text-white md:p-2 md:mr-4 hover:border-b-2 '
+          className='relative flex items-center px-1 py-2 text-white md:p-2 md:mr-4 '
         >
          
           <p>
@@ -241,12 +237,12 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
           )}
         </div>
 
-        <Link to="/services"> <div className='p-1 text-white md:p-2 hover:border-b-2 md:mr-4 '  >
+        <Link to="/services"> <div className='p-1 text-white md:p-2 md:mr-4 '  >
           {t("nav7.message")}
         </div>
         </Link>
         <Link to="/contact" >
-        <div className='p-1 text-white md:p-2 md:mr-4 hover:border-b-2'  >
+        <div className='p-1 text-white md:p-2 md:mr-4'  >
         {t("nav8.message")}
         </div>
         </Link>
@@ -256,9 +252,9 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
 
       <div className='items-center hidden select-none md:flex '>
         
-        <div className='flex items-center mr-2 select-none'>
+        <div className='flex items-center select-none'>
           <div
-            className='relative flex items-center ml-1 bg-white rounded-md md:mx-auto'
+            className='relative flex items-center bg-white rounded-md md:mx-auto'
            
              ref={dropdownRef2}
           >
@@ -272,7 +268,7 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
             /> */}
               <FaAngleDown
               alt='Dropdownlogo2'
-              className='w-8 h-6 p-1 ml-30'
+              className='w-6 h-6 '
               onClick={toggleDropdown2}
             />
             {isDropdownOpen2 && (
@@ -283,7 +279,7 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
                 key={lang.code}
                 to='#'
                 onClick={() => handleChangeLanguage(lang.code)}
-                className='block pr-7 hover:bg-green-800 hover:text-white'
+                className='block pr-2 hover:bg-green-800 hover:text-white'
               >
                 {lang.label}
               </Link>
@@ -310,7 +306,7 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
     
           <div className='absolute  top-12  z-40 flex    md:mx-auto transform -translate-x-1/2 bg-white border rounded-md left-1/2  md:top-[40px]' >
             <div className='flex flex-col '>
-                 <div className='flex items-center justify-between hidden border-b-2 md:justify-between md:flex'>
+                 <div className='flex items-center justify-between border-b-2 md:justify-between md:flex'>
                         <div className=''>{t("nav9.message")}</div>
                         <div className=''><FaTimes
                         onClick={handleCloseIconClick}

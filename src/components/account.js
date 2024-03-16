@@ -71,14 +71,14 @@ const Account = () => {
         <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div className=''>{t('acc14.message')}</div></div>
        </div>
 
-       <div className='flex flex-col my-8'>
+       <div className='flex flex-col mx-2 my-8'>
         <div className='mb-4 font-serif text-lg font-semibold text-green-800'>{t('acc3.message')}</div>
         <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>{t('acc15.message')}</div></div>
         <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>{t('acc16.message')}</div></div>
         <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>{t('acc17.message')}</div></div>
        </div>
        
-       <div className='flex flex-col my-8'>
+       <div className='flex flex-col mx-2 my-8'>
         <div className='mb-4 font-serif text-lg font-semibold text-green-800'>{t('acc4.message')}</div>
         <div className='flex items-start '><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>{t('acc15.message')}</div></div>
         <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>{t('acc16.message')}</div></div>
@@ -86,7 +86,7 @@ const Account = () => {
        </div>
 
        <div className='flex flex-col mt-8'>
-        <div className='font-serif text-lg font-semibold text-green-800'>{t('acc5.message')}</div>
+        <div className='mb-4 font-serif text-lg font-semibold text-green-800'>{t('acc5.message')}</div>
         <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>{t('acc18.message')}</div></div>
         <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>{t('acc19.message')}</div></div>
         <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>{t('acc20.message')}</div></div>

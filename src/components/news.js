@@ -38,7 +38,7 @@ const Newsc = () => {
 
   const {t} = useTranslation('global')
   return (
-    <div className="container mx-auto my-8 mt-8 bg-white select-none max-w-screen-2xl md:px-24 md:py-2">
+    <div className="container mx-auto my-8 mt-8 bg-white select-none max-w-screen-2xl md:px-24 md:py-24">
          <div className='flex justify-center m-2 text-2xl font-bold'>{t('news.message')}</div>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {paginatedCards.map((card) => (
@@ -54,7 +54,7 @@ const Newsc = () => {
           <button
             key={page}
             className={`mx-1 px-2 py-2 rounded-full ${
-              page === currentPage ? 'bg-green-500 text-white' : 'bg-gray-300'
+              page === currentPage ? 'bg-green-800 text-white' : 'bg-gray-300'
             }`}
             onClick={() => handlePageChange(page)}
           >

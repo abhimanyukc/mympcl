@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaAngleRight } from 'react-icons/fa'
+
 import { useTranslation } from 'react-i18next'
 const Remittance = () => {
   const [t, ii8n] = useTranslation("global")
@@ -10,7 +10,7 @@ const Remittance = () => {
         <div className='flex flex-col px-8 md:px-24 md:flex-row md:items-center '>
         <div className='md:mt-4'>
         <div className='text-xl font-semibold' >{t("rem.message")}</div>
-        <div className='p-1 mt-1 font-semibold text-green-600 '>{t("rem1.message")}</div>
+        <div className='p-1 mt-1 font-semibold text-green-600 text-nowrap'>{t("rem1.message")}</div>
         </div>
         <div className='mt-2 md:ml-24'>{t("rem2.message")}</div>
        </div>

@@ -51,13 +51,13 @@
         "message": "Notices"
     },
     "marque1": {
-        "message": "Notice2"
+        "message": "Inaugration of newly constucted building of bank"
     },
     "marque2": {
-        "message": "Notice3"
+        "message": "Chandraman Dhakal relelected as chairman of bank"
     },
     "marque3": {
-        "message": "Notice4"
+        "message": "Fast Banking with Swift"
     },
     "services": {
         "message": "Services"
@@ -327,6 +327,16 @@
     "emi13":{
         "message": "Monthly Payment (EMI)"
     },
+    "emi14":{
+        "message": "Calculate"
+    },
+    "emi15":{
+        "message": "Monthly EMI: RS"
+    },
+    "emi16":{
+        "message": "value2"
+    },
+
     "info":{
         "message": "Introduction"
     },
@@ -379,13 +389,16 @@
         "message": "roshan"
     },
     "mem11":{
-        "message": "Chairperson"
+        "message": "Rohit"
     },
     "mem12":{
         "message": "Vice Chairperson"
     },
+    "mem17":{
+        "message": "Chairperson"
+    },
     "mem13":{
-        "message": "Member"
+        "message": "Assistant Officer"
     },
     "mem14":{
         "message": "Secretary"

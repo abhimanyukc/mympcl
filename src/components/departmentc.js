@@ -45,11 +45,11 @@ export default function Departmentc() {
 
             <div className="grid gap-2 px-8 md:px-24 lg:grid-cols-4">
                 {posts.map((items, key) => (
-                    <div className="w-full mb-8 rounded-lg shadow-md lg:max-w-sm" key={key}>
+                    <div className="w-full mb-8 transition transform rounded-lg shadow-md lg:max-w-sm hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none" key={key}>
                         <img
                             className="object-fill w-full h-48"
                             src={items.img}
-                            alt="image"
+                            alt="logo"
                         />
                         <div className="p-4">
                             <h4 className="text-lg font-semibold ">

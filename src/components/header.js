@@ -56,9 +56,9 @@ const Header = ({ lang }) => {
   };
 
   return (
-    <div className="flex flex-wrap items-center justify-between px-8 py-2 mx-auto bg-indigo-800 select-none md:justify-between md:px-24 max-w-screen-2xl">
+    <div className="flex flex-wrap items-center justify-between py-2 mx-auto bg-indigo-800 select-none px-7 md:justify-between md:px-24 max-w-screen-2xl">
        
-      <div className="flex items-center justify-center space-x-1 cursor-pointer md:space-x-2">
+      <div className="flex items-center justify-center py-1 pr-1 space-x-2 cursor-pointer md:p-1 md:space-x-4">
       
         <Link to="/career"  className=""><div className="flex items-center justify-center text-white md:w-full "> {t("header.message")}</div></Link>
         <div className="">
@@ -85,14 +85,15 @@ const Header = ({ lang }) => {
           )}
         <Link to="/news"><div className="flex items-center justify-center text-white md:w-full"> {t("header4.message")} </div></Link>
         
-      
+            
+
 
       </div>
      
         
      
     
-    <div className="flex items-center justify-center space-x-1 md:flex">
+    <div className="flex items-center justify-center space-x-4 md:flex">
       <div className='relative hidden md:flex' onClick={handleSearchIconClick}> 
           <FaSearch className='w-4 h-4 text-white md:ml-30' />
           </div>
@@ -129,7 +130,7 @@ const Header = ({ lang }) => {
        <div className="flex items-center text-white md:ml-2">
    
      
-      {/* <div className="mr-1 text-lg font-normal">{format(currentDate, 'eeee')}</div> */}
+      <div className="hidden mr-1 text-lg font-normal">{format(currentDate, 'eee,')}</div>
       <div className="hidden text-lg md:flex">{formatDate(currentDate)}</div>
       </div>
       

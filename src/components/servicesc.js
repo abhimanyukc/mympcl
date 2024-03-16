@@ -12,14 +12,14 @@ import '../App.css';
 const PrevArrow = ({ onClick }) => (
   <FaChevronLeft
     onClick={onClick}
-    className="absolute left-0 z-10 invisible p-1 text-2xl text-indigo-800 transform -translate-y-1/2 border border-indigo-800 cursor-pointer md:left-20 md:visible top-1/2 hover:bg-indigo-800 hover:text-white"
+    className="absolute left-0 z-10 invisible p-1 text-2xl text-indigo-800 transform -translate-y-1/2 border border-indigo-800 cursor-pointer md:left-20 top-1/2 hover:bg-indigo-800 hover:text-white"
   />
 );
 
 const NextArrow = ({ onClick }) => (
   <FaChevronRight
     onClick={onClick}
-    className="absolute right-0 z-10 invisible p-1 text-2xl text-indigo-800 transform -translate-y-1/2 border border-indigo-800 cursor-pointer md:visible top-1/2 md:right-20 hover:bg-indigo-800 hover:text-white"
+    className="absolute right-0 z-10 invisible p-1 text-2xl text-indigo-800 transform -translate-y-1/2 border border-indigo-800 cursor-pointer top-1/2 md:right-20 hover:bg-indigo-800 hover:text-white"
   />
 );
 
@@ -59,18 +59,18 @@ const Servicesc = () => {
 
    const [t, i18n] = useTranslation("global");
   return (
-    <div className='z-10 mx-auto font-sans bg-white select-none max-w-screen-2xl md:px-4 md:pt-2'>
+    <div className='z-10 pt-4 pb-8 mx-auto font-sans bg-white select-none max-w-screen-2xl md:px-4 md:pt-2'>
       <div className=''>
-           <div className='px-24 pt-16 pb-4 font-sans text-2xl font-semibold tracking-normal text-center md:pt-20'> {t("services.message")}</div>
+           <div className='px-24 pt-6 pb-2 font-sans text-2xl font-semibold tracking-normal text-center md:pt-8'> {t("services.message")}</div>
       <Slider {...settings}>
-      <div className='flex flex-col items-center justify-center py-0 md:py-12'>
-          <div className='flex flex-col items-center justify-center w-full px-8 bg-white h-120 md:h-60 md:px-40'>
-          <div>  <img
+      <div className='flex flex-col items-center justify-center '>
+          <div className='flex flex-col items-center justify-center w-full px-8 bg-white h-80 md:h-60 md:px-40'>
+          <div className=''>  <img
             src={require('../images/365bankingservice.png')}
             alt='365 banking service'
-            className='w-8 h-8 p-1 m-1'
+            className='object-cover w-8 h-8 '
           /></div>
-          <div className='font-semibold' > {t("services1.message")}</div>
+          <div className='mt-1 font-semibold' > {t("services1.message")}</div>
           <div className=''>  {t("services11.message")} </div>
           <Link to="/services/bankingservices">
           <div className='flex flex-row items-center text-green-800'>
