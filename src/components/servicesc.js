@@ -59,19 +59,28 @@ const Servicesc = () => {
 
    const [t, i18n] = useTranslation("global");
   return (
-    <div className='z-10 pt-4 pb-8 mx-auto font-sans bg-white select-none max-w-screen-2xl md:px-4 md:pt-2'>
+
+
+    
+
+
+    <div className='z-10 mx-auto font-sans bg-white select-none pt-44 max-w-screen-2xl md:px-4 md:pt-40'>
       <div className=''>
-           <div className='px-24 pt-6 pb-2 font-sans text-2xl font-semibold tracking-normal text-center md:pt-8'> {t("services.message")}</div>
+           <div className='px-24 font-sans text-2xl font-semibold tracking-normal text-center md:pb-2 md:pt-8'> {t("services.message")}</div>
       <Slider {...settings}>
-      <div className='flex flex-col items-center justify-center '>
-          <div className='flex flex-col items-center justify-center w-full px-8 bg-white h-80 md:h-60 md:px-40'>
-          <div className=''>  <img
+
+        
+
+        
+        <div className='flex flex-col items-center justify-center py-0 mb-8 md:py-12 md:mb-0'>
+          <div className='flex flex-col items-center justify-center w-full px-8 bg-white h-120 md:h-60 md:px-40'>
+          <div>  <img
             src={require('../images/365bankingservice.png')}
             alt='365 banking service'
-            className='object-cover w-8 h-8 '
+            className='object-cover w-8 h-8 p-1 m-2'
           /></div>
-          <div className='mt-1 font-semibold' > {t("services1.message")}</div>
-          <div className=''>  {t("services11.message")} </div>
+          <div className='font-semibold' > {t("services1.message")}</div>
+          <div className=''> {t("services11.message")}</div>
           <Link to="/services/bankingservices">
           <div className='flex flex-row items-center text-green-800'>
             <div>{t("services10.message")}</div>
@@ -80,7 +89,6 @@ const Servicesc = () => {
           </Link>
           </div>
         </div>
-
 
         <div className='flex flex-col items-center justify-center py-0 md:py-12'>
           <div className='flex flex-col items-center justify-center w-full px-8 bg-white h-120 md:h-60 md:px-40'>

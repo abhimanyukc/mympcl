@@ -185,7 +185,7 @@
     "intdet2": {
         "message": "NARIBACHAT SAVING"
     },
-    "intde3":{
+    "intdet3":{
         "message": "PERIODIC SAVING-3 MONTH"
     },
     "intdet4":{
@@ -325,13 +325,13 @@
         "message": "Duration (in month)"
     },
     "emi13":{
-        "message": "Monthly Payment (EMI)"
+        "message": "Yearly Payment (EMI)"
     },
     "emi14":{
         "message": "Calculate"
     },
     "emi15":{
-        "message": "Monthly EMI: RS"
+        "message": "Yearly interest: RS"
     },
     "emi16":{
         "message": "value2"

@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { format } from 'date-fns';
-import { FaAngleDown, FaSearch, FaTimes } from 'react-icons/fa';
+import { FaApple, FaAndroid, FaAngleDown, FaSearch, FaTimes } from 'react-icons/fa';
 import { Link } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import NepaliDate from 'nepali-date-converter';
+
 
 const Header = ({ lang }) => {
   const [t, i18n] = useTranslation("global");
@@ -72,13 +73,15 @@ const Header = ({ lang }) => {
         </div>
         
           {isDropdownOpen && (
-                <div className='absolute z-20 flex flex-col bg-white shadow-md top-12'>
-            <a href='#' className='pl-2 border-b-2 hover:bg-green-800 hover:text-white'>
+                <div className='absolute z-20 flex flex-col w-16 p-1 bg-white shadow-md left-40 top-12'>
+            {/* <a href='#' className='p-2 pl-2 text-white border-b-2 '>
              {t("header2.message")}
-            </a>
-            <a href='#' className='pl-2 hover:bg-green-800 hover:text-white'>
+            </a> */}
+            <Link to="#" className="flex justify-center px-2 pt-2 text-green-800 border-b-2 hover:text-green-500"> <FaAndroid  className="w-8 h-8"/></Link>
+            <Link to="#" className="flex justify-center px-2 pt-2 text-green-800 hover:text-green-500">  <FaApple className="w-8 h-8"/> </Link>
+            {/* <a href='#' className='p-2 pl-2 text-white '>
              {t("header3.message")}
-            </a>
+            </a> */}
 
             
           </div>

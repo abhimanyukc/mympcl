@@ -41,10 +41,15 @@ const ContactC = () => {
   const {t} = useTranslation("global")
 
   return (
-    <div className="container px-8 mx-auto mt-10 bg-white select-none md:px-24 md:py-2">
+    <div className="container px-8 mx-auto mt-40 bg-white select-none md:mt-48 md:px-24 md:py-2">
       <div className="mb-6 text-3xl font-semibold text-center">{t('con5.message')}</div>
-
+      {submitMessage && (
+        <div className="mb-6 text-center text-green-600 ">
+          {submitMessage}
+        </div>
+      )}
       <div className='flex flex-col md:items-center md:flex-row '>
+    
       <form onSubmit={handleSubmit} className="w-full md:mr-4">
         {/* ... (input fields) */}
         <div className="mb-4">
@@ -118,11 +123,7 @@ const ContactC = () => {
           </button>
         </div>
       </form>
-      {submitMessage && (
-        <div className="mb-1 text-center text-green-600 ">
-          {submitMessage}
-        </div>
-      )}
+    
 
 
 

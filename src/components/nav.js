@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FaBars, FaAngleDown, FaSearch, FaTimes } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 const languages = [
@@ -9,18 +9,20 @@ const languages = [
 ];
 
 const Nav = ({ setLanguage, setTimeFormat }) => {
-  // const dropdownRef = useRef(null);
+   const dropdownRef = useRef(null);
   const dropdownRef2 = useRef(null);
+
+  const location = useLocation();
 
   
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
-        // (dropdownRef.current && !dropdownRef.current.contains(event.target)) &&
+         (dropdownRef.current && !dropdownRef.current.contains(event.target)) &&
         (dropdownRef2.current && !dropdownRef2.current.contains(event.target))
       ) {
         // Clicked outside either of the dropdowns, close them
-        // setIsDropdownOpen(false);
+         setIsDropdownOpen(false);
         setIsDropdownOpen2(false);
       }
     };
@@ -39,11 +41,12 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('mousedown', handleMouseDown);
     };
-  }, [dropdownRef2]);
+  }, [dropdownRef, dropdownRef2]);
   // }, [dropdownRef, dropdownRef2]);
 
 
   const [t, i18n] = useTranslation("global");
+
   const handleChangeLanguage = (lang ) => {
     setLanguage(lang);
     setTimeFormat(lang === 'नेपा' ? 'नेपा' : 'en');
@@ -89,7 +92,7 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
     setIsSearchOpen(false);
   };
 
-
+// console.log(useLocation().pathname);
 
 
 
@@ -115,7 +118,7 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
           <div
             className='relative flex items-center ml-1 bg-white rounded-md md:pr-0 md:mx-auto'
             ref={dropdownRef2}
-            
+            onClick={toggleDropdown2}
           >
              {t("nav1.message")}
            
@@ -123,7 +126,6 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
              <FaAngleDown
                 alt='Dropdownlogo2'
               className='w-8 h-6 p-1 ml-30'
-              onClick={toggleDropdown2}
             />
             {isDropdownOpen2 && (
                <div className='absolute left-0 z-40 bg-white border shadow-md top-full'>
@@ -209,40 +211,47 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
 
         <div
           className='relative flex items-center px-1 py-2 text-white md:p-2 md:mr-4 '
+          onClick={toggleDropdown} 
+          ref={dropdownRef}
         >
          
           <p>
         {t("nav.message")}
       </p>
          
-          <FaAngleDown  onClick={toggleDropdown}  />
+          <FaAngleDown  />
           {isDropdownOpen && (
-            <div className='absolute left-0 z-20 text-black bg-white shadow-md top-full'>
-           <Link to='/information' className='block pl-1 border-b-2 hover:bg-green-800 hover:text-white'>
+            <div className='absolute left-0 z-20 text-black bg-white shadow-md top-full' >
+           <Link to='/information' className='block p-2 pl-1 border-b-2 hover:bg-green-800 hover:text-white'>
               {t("nav2.message")}
               </Link>
-              <Link to='/membership' className='block pl-1 border-b-2 text-nowrap hover:bg-green-800 hover:text-white'>
+              <Link to='/membership' className='block p-2 pl-1 border-b-2 text-nowrap hover:bg-green-800 hover:text-white'>
               {t("nav3.message")}
               </Link>
-              <Link to='/membership' className='block pl-1 border-b-2 text-nowrap hover:bg-green-800 hover:text-white'>
+              <Link to='/membership' className='block p-2 pl-1 border-b-2 text-nowrap hover:bg-green-800 hover:text-white'>
               {t("nav4.message")}
               </Link>
-              <Link to='/department' className='block pl-1 border-b-2 text-nowrap hover:bg-green-800 hover:text-white'>
+              <Link to='/department' className='block p-2 pl-1 border-b-2 text-nowrap hover:bg-green-800 hover:text-white'>
               {t("nav5.message")}
               </Link>
-              <Link to='/branches' className='block pl-1 border-b-2 hover:bg-green-800 hover:text-white'>
+              <Link to='/branches' className='block p-2 pl-1 border-b-2 hover:bg-green-800 hover:text-white'>
               {t("nav6.message")}
               </Link>
             </div>
           )}
         </div>
 
-        <Link to="/services"> <div className='p-1 text-white md:p-2 md:mr-4 '  >
+      <Link to="/services"> <div className={`m-2 ${location.pathname === '/services'||location.pathname==='/services/' ? 'text-gray' :'text-white'} `}
+        
+        // 'p-1 text-white md:p-2 md:mr-4 {useLocation().pathname == }
+         >
           {t("nav7.message")}
         </div>
         </Link>
         <Link to="/contact" >
-        <div className='p-1 text-white md:p-2 md:mr-4'  >
+        <div className={`m-2 ${location.pathname === '/contact' || location.pathname === '/contact/' ? 'text-gray' : 'text-white'} `}
+        // 'p-1 text-white md:p-2 md:mr-4'
+          >
         {t("nav8.message")}
         </div>
         </Link>
@@ -254,12 +263,13 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
         
         <div className='flex items-center select-none'>
           <div
-            className='relative flex items-center bg-white rounded-md md:mx-auto'
+            className='relative flex items-center p-1 bg-white rounded-md md:mx-auto'
            
              ref={dropdownRef2}
+             onClick={toggleDropdown2}
           >
            
-            <div > {t("nav1.message")}</div>
+            <div >{t("nav1.message")}</div>
             {/* <img
               src={require('../images/dropdown2.jpeg')}
               alt='Dropdownlogo2'
@@ -269,7 +279,7 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
               <FaAngleDown
               alt='Dropdownlogo2'
               className='w-6 h-6 '
-              onClick={toggleDropdown2}
+             
             />
             {isDropdownOpen2 && (
               
@@ -279,7 +289,7 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
                 key={lang.code}
                 to='#'
                 onClick={() => handleChangeLanguage(lang.code)}
-                className='block pr-2 hover:bg-green-800 hover:text-white'
+                className='block px-4 hover:bg-green-800 hover:text-white'
               >
                 {lang.label}
               </Link>
