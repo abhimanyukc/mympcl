@@ -11,7 +11,6 @@ const ContactC = () => {
     subject: '',
     message: '',
   });
-
   const [submitMessage, setSubmitMessage] = useState(null);
 
   const handleChange = (e) => {
@@ -67,7 +66,6 @@ const ContactC = () => {
             required
           />
         </div>
-
         <div className="mb-4">
           <label htmlFor="email" className="block text-sm font-medium text-gray-600">
           {t('con1.message')}
@@ -139,7 +137,6 @@ const ContactC = () => {
                loading="lazy" 
                referrerpolicy="no-referrer-when-downgrade"
                className='mt-10 mb-4 '>
-  
       </iframe>
 
       </div>

@@ -6,11 +6,13 @@ import Combo from '../components/combo'
 
 
 
+
 const Emicalculator = () => {
   return (
     <div className=''>
       
     <Combo/> 
+
       <Sidebar/>
        <Emicalculatorc/>
      <Footer/>

@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 
 /* marque animation */
 @keyframes marquee {
@@ -37,11 +39,28 @@
 .bg-secondary{
      background-color: #2b2f96;
 }
+.text-hover{
+  color: #d0d534;
+}
+.text-active{
+  color: #d0d534;
+}
 .text-primary{
      color:#00662e
 }
 .text-secondary{
       color:#2b2f96
+}
+
+.text-danger{
+  color:red;
+}
+
+.w-192{
+     width:48rem;
+}
+.w-120{
+  width:32rem;
 }
  
 @media (min-width: 768px) {
@@ -92,6 +111,6 @@ body{
     text-align: start;
     letter-spacing: normal;
     color:#3d3d3d;
-    background-color: #ffffff;
+   
 } 
 

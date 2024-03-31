@@ -35,6 +35,7 @@ const Combo = () => {
   return (
     <div>
      <div className='fixed top-0 left-0 z-50 w-full bg-white '>
+    
      <Header lang={lang} timeFormat={timeFormat} />
       <Nav setLanguage={setLanguage} setTimeFormat={setTimeFormat} />
       <Marque/>

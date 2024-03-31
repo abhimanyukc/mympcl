@@ -4,8 +4,8 @@ const Marque = () => {
   const [t, i18n] = useTranslation("global");
   return (
     
-    <div className='p-1 px-8 mx-auto bg-white select-none max-w-screen-2xl md:px-24 md:pb-4'>
-          <div className='flex items-center '> <div className='p-1 font-serif text-xl font-bold text-white bg-indigo-800 cursor-text'>{t("marque.message")}</div>
+    <div className='p-1 px-8 mx-auto bg-white select-none max-w-screen-2xl md:px-24 '>
+          <div className='flex items-center '> <div className='p-1 font-serif text-xl font-bold text-white bg-green-800 cursor-text'>{t("marque.message")}</div>
         
           <div className="overflow-hidden text-2xl text-black border cursor-pointer">
   <ul className="flex animate-marquee">

@@ -17,6 +17,11 @@ import Branchesc from '../components/branchesc'
 import Combo from '../components/combo'
 import Newsc from '../components/news'
 import Careerc from '../components/careerc'
+import Headerinfo from '../components/headerinfo'
+import Careertest from '../components/career'
+import Careercategory from '../components/careercategory'
+import Softwareengineerc from '../components/Softwareengineer'
+
 
 
 
@@ -25,13 +30,17 @@ import Careerc from '../components/careerc'
 
 const Home = () => {
   return (
-       
 
     <div className='font-sans text-base leading-6 tracking-normal bg-white text-3d3d3d text-start '>
 
       
      <Combo/>
+       <Careertest/>
+       <Careercategory/>
+       
       <ImageSlider/>
+      <Softwareengineerc/>
+      <Headerinfo/>
       <Sidebar className=""/>
      
      <Servicesc/>

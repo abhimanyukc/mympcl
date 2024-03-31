@@ -8,6 +8,7 @@ const Contact = () => {
     return (
         <div>
            <Combo/>
+
             <Sidebar/>
             <ContactC/>
             <Footer/>

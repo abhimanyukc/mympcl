@@ -29,6 +29,16 @@ import Smsbankingservice from './routes/smsbankingservice';
 import Otherbankingservice from './routes/otherbankingservice';
 import About from './routes/about';
 import Account from './components/test';
+import Headerinfo from './components/headerinfo';
+import Organization from './routes/organization';
+import Downloads from './routes/downloads';
+import Dynamiccomponentc from './components/dynamiccomponent';
+import Careertest from './components/career';
+import Careerstest from './routes/careertest';
+import Careercategoryr from './routes/careercategory';
+import Softwareengineer from './routes/softwareengineer';
+import Gallery from './routes/gallery';
+import Kyc from './routes/Kyc';
 
 
 
@@ -41,10 +51,42 @@ function App() {
        <>
         
        <Router>
+       <Routes>
+          <Route path="/information" element={ <Dynamiccomponentc title="Information" />} />
+          <Route path="/about" element={ <Dynamiccomponentc title="About" />} />
+          <Route path="/contact" element={ <Dynamiccomponentc title="Contact" />} />
+          <Route path="/services" element={ <Dynamiccomponentc title="Services" />} />
+          <Route path="/downloads" element={ <Dynamiccomponentc title="Downloads" />} />
+          <Route path="/services/bankingservices" element={ <Dynamiccomponentc title="Services / Banking Service" />} />
+          <Route path="/services/appservices" element={ <Dynamiccomponentc title="Services / App Service" />} />
+          <Route path="/atmservices" element={ <Dynamiccomponentc title="Services / Atm Service" />} />
+          <Route path="/healthservices" element={ <Dynamiccomponentc title="Services / Health Service" />} />
+          <Route path="/internetservices" element={ <Dynamiccomponentc title="Services / Internet Service" />} />
+          <Route path="/microfinanceservices" element={ <Dynamiccomponentc title="Services / Microfinance Service" />} />
+          <Route path="/mobilebankingservices" element={ <Dynamiccomponentc title="Services / Mobilebanking Service" />} />
+          <Route path="/remmittanceservices" element={ <Dynamiccomponentc title="Services / Remmittance Service" />} />
+          <Route path="/smsservices" element={ <Dynamiccomponentc title="Services / smsservices" />} />
+          <Route path="/otherbankingservices" element={ <Dynamiccomponentc title="Services / otherbankingservices" />} />
+          <Route path="/contact" element={ <Dynamiccomponentc title="Contact" />} />
+          <Route path="/interestrate" element={ <Dynamiccomponentc title="Interestrate" />} />
+          <Route path="/emicalculator" element={ <Dynamiccomponentc title="Emicalculator" />} />
+          <Route path="/career" element={ <Dynamiccomponentc title="Career" />} />
+          <Route path="/news" element={ <Dynamiccomponentc title="News" />} />
+          <Route path="/reports" element={ <Dynamiccomponentc title="Reports" />} />
+          <Route path="/notices" element={ <Dynamiccomponentc title="Notices" />} />
+          <Route path="/membership" element={ <Dynamiccomponentc title="Membership" />} />
+          <Route path="/organization" element={ <Dynamiccomponentc title="Organization" />} />
+          <Route path="/department" element={ <Dynamiccomponentc title="Department" />} />
+          <Route path="/branches" element={ <Dynamiccomponentc title="Branches" />} />
+          <Route path="/gallery" element={ <Dynamiccomponentc title="gallery" />} />
+          <Route path="/kyc" element={ <Dynamiccomponentc title="KYC Form" />} />
+        </Routes>
+
       <Routes>
     
         <Route path="/" element= {<Home/>} />
-
+        <Route path="/dynamiccomponent" element= {<Dynamiccomponentc/>} />
+        <Route path="/downloads" element= {<Downloads/>} />
         <Route path="/test" element= {<Account/>} />
         <Route path="/about" element= {<About/>} />
         <Route path="/services" element= {<Services/>} />
@@ -63,13 +105,19 @@ function App() {
         <Route path="/emicalculator" element= {<Emicalculator/>} />
         <Route path="/information" element= {<Information/>} />
         <Route path="/career" element= {<Careers/>} />
+        <Route path="/careertest" element= {<Careerstest/>} />
+        <Route path="/careercategory" element= {<Careercategoryr/>} />
+        <Route path="/SoftwareEngineer" element= {<Softwareengineer/>} />
         <Route path="/news" element= {<News/>} />
         <Route path="/reports" element= {<Reports/>} />
         <Route path="/notices" element= {<Notices/>} />
         <Route path="/membership" element= {<Membership/>} />
+        <Route path="/organization" element= {<Organization/>} />
         <Route path="/department" element= {<Department/>} />
         <Route path="/branches" element= {<Branches/>} />
-  
+        <Route path="/headerinfo" element = {<Headerinfo/>}/>
+        <Route path="/gallery" element = {<Gallery/>}/>
+        <Route path="/kyc" element = {<Kyc/>}/>
         
       </Routes>
     </Router>

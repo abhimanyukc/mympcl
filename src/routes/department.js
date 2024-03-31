@@ -3,6 +3,7 @@ import Departmentc from '../components/departmentc'
 import Footer from '../components/footer'
 import Combo from '../components/combo'
 
+
 const department = () => {
   return (
     <div>
@@ -10,6 +11,7 @@ const department = () => {
 
       
     <Combo/>
+
 <Departmentc/>
 <Footer/>
 </div>

@@ -17,6 +17,12 @@
     "header5": {
         "message": "Search"
     },
+    "header6": {
+        "message": "Our location"
+    },
+    "header7": {
+       "message": "Download Forms"
+    },
     "nav": {
         "message": "About Us"
     }, 

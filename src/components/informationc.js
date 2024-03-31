@@ -3,10 +3,10 @@
  const Informationc = () => {
   const [t, i18n] = useTranslation('global')
    return (
-     <div className='mx-auto max-w-screen-2xl'>
+     <div className='mx-auto max-w-screen-2xl '>
 
        
-       <div className='flex flex-col px-8 mt-4 md:mt-28 md:flex-row md:px-24'>
+       <div className='flex flex-col px-8 mt-4 pt-80 md:mt-28 md:flex-row md:px-24'>
 
        <div className='flex flex-col w-full pb-4 md:w-3/4 md:mr-8 md:h-1/2'>
         <div className='mb-4 font-bold'>{t("info.message")}</div>
@@ -60,4 +60,4 @@
  }
  
  export default Informationc
- 
+

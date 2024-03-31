@@ -8,15 +8,16 @@ import { FaAngleRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import '../App.css';
+import axios from 'axios';
 
-const PrevArrow = ({ onClick }) => (
+const PrevArrow = ({ onClick}) => (
   <FaChevronLeft
     onClick={onClick}
     className="absolute left-0 z-10 invisible p-1 text-2xl text-indigo-800 transform -translate-y-1/2 border border-indigo-800 cursor-pointer md:left-20 top-1/2 hover:bg-indigo-800 hover:text-white"
   />
 );
 
-const NextArrow = ({ onClick }) => (
+const NextArrow = ({ onClick}) => (
   <FaChevronRight
     onClick={onClick}
     className="absolute right-0 z-10 invisible p-1 text-2xl text-indigo-800 transform -translate-y-1/2 border border-indigo-800 cursor-pointer top-1/2 md:right-20 hover:bg-indigo-800 hover:text-white"
@@ -55,6 +56,18 @@ const settings = {
   ],
 };
 
+console.log('hello world');
+
+axios.get('http://192.168.1.76:8000/api/carousel')
+  .then(function (response) {
+    // Handle success
+    console.log('Response data:', response.data);
+  })
+  .catch(function (error) {
+    // Handle error
+    console.error('Error fetching data:', error);
+  });
+
 const Servicesc = () => {
 
    const [t, i18n] = useTranslation("global");
@@ -64,9 +77,9 @@ const Servicesc = () => {
     
 
 
-    <div className='z-10 mx-auto font-sans bg-white select-none pt-44 max-w-screen-2xl md:px-4 md:pt-40'>
+    <div className='z-10 mx-auto font-sans bg-white select-none pt-44 max-w-screen-2xl md:px-4 md:pt-48'>
       <div className=''>
-           <div className='px-24 font-sans text-2xl font-semibold tracking-normal text-center md:pb-2 md:pt-8'> {t("services.message")}</div>
+           <div className='px-24 font-sans text-2xl font-semibold tracking-normal text-center md:pb-2 '> {t("services.message")}</div>
       <Slider {...settings}>
 
         
