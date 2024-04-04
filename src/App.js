@@ -39,6 +39,10 @@ import Careercategoryr from './routes/careercategory';
 import Softwareengineer from './routes/softwareengineer';
 import Gallery from './routes/gallery';
 import Kyc from './routes/Kyc';
+import Loans from './routes/loans';
+import Educationalloan from './routes/Educationalloan';
+import Realestateloan from './routes/realestateloan';
+import Businessloan from './routes/businessloan';
 
 
 
@@ -47,6 +51,7 @@ import Kyc from './routes/Kyc';
 
 
 function App() {
+ 
   return (
        <>
         
@@ -73,13 +78,17 @@ function App() {
           <Route path="/career" element={ <Dynamiccomponentc title="Career" />} />
           <Route path="/news" element={ <Dynamiccomponentc title="News" />} />
           <Route path="/reports" element={ <Dynamiccomponentc title="Reports" />} />
-          <Route path="/notices" element={ <Dynamiccomponentc title="Notices" />} />
+          <Route path="/notice" element={ <Dynamiccomponentc title="Notices" />} />
           <Route path="/membership" element={ <Dynamiccomponentc title="Membership" />} />
           <Route path="/organization" element={ <Dynamiccomponentc title="Organization" />} />
           <Route path="/department" element={ <Dynamiccomponentc title="Department" />} />
           <Route path="/branches" element={ <Dynamiccomponentc title="Branches" />} />
           <Route path="/gallery" element={ <Dynamiccomponentc title="gallery" />} />
           <Route path="/kyc" element={ <Dynamiccomponentc title="KYC Form" />} />
+          <Route path="/loan" element={ <Dynamiccomponentc title="loans" />} />
+          <Route path="/loan/educationalloan" element = { <Dynamiccomponentc title="Educational Loan" />} />
+              <Route path="/loan/realestateloan" element = { <Dynamiccomponentc title="Real Estate Loan" />} />
+              <Route path="/loan/businessloan" element = { <Dynamiccomponentc title="Business Loan" />} />
         </Routes>
 
       <Routes>
@@ -89,6 +98,7 @@ function App() {
         <Route path="/downloads" element= {<Downloads/>} />
         <Route path="/test" element= {<Account/>} />
         <Route path="/about" element= {<About/>} />
+        <Route path="/loan" element={ <Loans/>} />
         <Route path="/services" element= {<Services/>} />
         <Route path="/services/bankingservices" element= {<Bankingservicesr/>} />
         <Route path="/services/appservices" element= {<Appservice/>} />
@@ -110,7 +120,7 @@ function App() {
         <Route path="/SoftwareEngineer" element= {<Softwareengineer/>} />
         <Route path="/news" element= {<News/>} />
         <Route path="/reports" element= {<Reports/>} />
-        <Route path="/notices" element= {<Notices/>} />
+        <Route path="/notice" element= {<Notices/>} />
         <Route path="/membership" element= {<Membership/>} />
         <Route path="/organization" element= {<Organization/>} />
         <Route path="/department" element= {<Department/>} />
@@ -118,7 +128,9 @@ function App() {
         <Route path="/headerinfo" element = {<Headerinfo/>}/>
         <Route path="/gallery" element = {<Gallery/>}/>
         <Route path="/kyc" element = {<Kyc/>}/>
-        
+        <Route path="/loan/educationalloan" element = {<Educationalloan/>}/>
+              <Route path="/loan/realestateloan" element = {<Realestateloan/>}/>
+              <Route path="/loan/businessloan" element = {<Businessloan/>}/>
       </Routes>
     </Router>
        </>
