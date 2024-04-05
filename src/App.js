@@ -40,9 +40,9 @@ import Softwareengineer from './routes/softwareengineer';
 import Gallery from './routes/gallery';
 import Kyc from './routes/Kyc';
 import Loans from './routes/loans';
-import Educationalloan from './routes/Educationalloan';
-import Realestateloan from './routes/realestateloan';
-import Businessloan from './routes/businessloan';
+import BusinessLoan from './routes/businessloan';
+import EducationalLoan from './routes/Educationalloan';
+import RealestateLoan from './routes/realestateloan';
 
 
 
@@ -128,9 +128,9 @@ function App() {
         <Route path="/headerinfo" element = {<Headerinfo/>}/>
         <Route path="/gallery" element = {<Gallery/>}/>
         <Route path="/kyc" element = {<Kyc/>}/>
-        <Route path="/loan/educationalloan" element = {<Educationalloan/>}/>
-              <Route path="/loan/realestateloan" element = {<Realestateloan/>}/>
-              <Route path="/loan/businessloan" element = {<Businessloan/>}/>
+        <Route path="/loan/educationalloan" element = {<EducationalLoan/>}/>
+              <Route path="/loan/realestateloan" element = {<RealestateLoan/>}/>
+              <Route path="/loan/businessloan" element = {<BusinessLoan/>}/>
       </Routes>
     </Router>
        </>
