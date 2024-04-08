@@ -13,7 +13,7 @@ const languages = [
 const Nav = ({ setLanguage, setTimeFormat }) => {
    const dropdownRef = useRef(null);
   const dropdownRef2 = useRef(null);
-
+  const dropdownRef3 = useRef(null);
   const location = useLocation();
 
   
@@ -21,11 +21,13 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
     const handleClickOutside = (event) => {
       if (
          (dropdownRef.current && !dropdownRef.current.contains(event.target)) &&
-        (dropdownRef2.current && !dropdownRef2.current.contains(event.target))
+        (dropdownRef2.current && !dropdownRef2.current.contains(event.target)) && 
+        (dropdownRef3.current && !dropdownRef3.current.contains(event.target))
       ) {
         // Clicked outside either of the dropdowns, close them
          setIsDropdownOpen(false);
         setIsDropdownOpen2(false);
+        setIsDropdownOpen3(false);
       }
     };
 
@@ -64,7 +66,7 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
   const [showLinks, setShowLinks] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isDropdownOpen2, setIsDropdownOpen2] = useState(false);
-
+  const [isDropdownOpen3, setIsDropdownOpen3] = useState(false);
   const toggleLinks = () => {
     setShowLinks(!showLinks);
   };
@@ -81,6 +83,9 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
 
   
 
+  const toggleDropdown3 = () => {
+    setIsDropdownOpen3(!isDropdownOpen3);
+  };
 
 
 
@@ -189,13 +194,72 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
           )}
         </div>
 
-      <Link to="/services"> <div className={`m-2 hover:text-customHover ${location.pathname === '/services'||location.pathname==='/services/' ? 'text-active' :'text-white'} `}
+      {/* <Link to="/services"> <div className={`m-2 hover:text-customHover ${location.pathname === '/services'||location.pathname==='/services/' ? 'text-active' :'text-white'} `}
         
         // 'p-1 text-white md:p-2 md:mr-4 {useLocation().pathname == }
          >
           {t("nav7.message")}
         </div>
-        </Link>
+        </Link> */}
+
+       <div> <div className='relative flex items-center px-1 py-2 text-white hover:text-customHover md:p-2 md:mr-4'
+        
+        // 'p-1 text-white md:p-2 md:mr-4 {useLocation().pathname == }
+           onClick={toggleDropdown3}
+           ref={dropdownRef3}
+        >
+          <div className='flex'>
+          {t("nav7.message")}
+          <FaAngleDown/>
+          </div>
+          
+           {isDropdownOpen3 && (
+            <div className='absolute left-0 z-20 text-black bg-white shadow-md top-full' >
+           <Link to='/debit-card-atm-service/product/service/detail' >
+           
+            <div className={`block p-2 py-3 border-b-2 hover:text-customGreen
+             ${location.pathname === '/debit-card-atm-service/product/service/detail'||location.pathname==='/debit-card-atm-service/product/service/detail/' ? 'text-primary' : 'text-black' } `}>
+              Debit Card (ATM Service)
+              </div>
+              </Link>
+
+              <Link to='/free-mobile-banking-service/product/service/detail'>
+                <div className={`block p-2 py-3 border-b-2 text-nowrap hover:text-customGreen
+                ${location.pathname === '/free-mobile-banking-service/product/service/detail'||location.pathname==='/free-mobile-banking-service/product/service/detail/' ? 'text-primary' : 'text-black'} `}>
+               Free Mobile Banking Service
+              </div>
+              </Link>
+              <Link to='/sms-service/product/service/detail'>
+              <div className={`block p-2 py-3 border-b-2 text-nowrap hover:text-customGreen
+                ${location.pathname === '/sms-service/product/service/detail'||location.pathname==='/sms-service/product/service/detail/' ? 'text-primary' : 'text-black'} `}>
+                SMS Service
+              </div>
+              </Link>
+
+              <Link to='/abbs-service/product/service/detail'>
+              <div className={`block p-2 py-3 border-b-2 text-nowrap hover:text-customGreen
+                ${location.pathname === '/abbs-service/product/service/detail'||location.pathname==='/abbs-service/product/service/detail/' ? 'text-primary' : 'text-black'} `}>
+                 ABBS Service
+              </div>
+              </Link>
+              <Link to='/kramik-bachat/product/service/detail'>
+              <div className={`block p-2 py-3 border-b-2 text-nowrap hover:text-customGreen
+                ${location.pathname === '/kramik-bachat/product/service/detail'||location.pathname==='/kramik-bachat/product/service/detail/' ? 'text-primary' : 'text-black'} `}>
+                  Karmik BACHAT
+              </div>
+              </Link>
+
+              <Link to='Gausahar-Double-Dhamaka-Bachat/product/service/detail'>
+              <div className={`block p-2 py-3 border-b-2 text-nowrap hover:text-customGreen
+                ${location.pathname === '/kramik-bachat/product/service/detail/'||location.pathname==='/kramik-bachat/product/service/detail/' ? 'text-primary' : 'text-black'} `}>
+                  GauSahar Double Dhamak Bachat
+              </div>
+              </Link>
+            </div>
+          )}
+        </div>
+        </div>
+      
       
         <Link to="/gallery" >
         <div className={`m-2 hover:text-customHover ${location.pathname === '/gallery' || location.pathname === '/gallery/' ? 'text-active' : 'text-white'} `}

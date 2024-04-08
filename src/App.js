@@ -43,6 +43,18 @@ import Loans from './routes/loans';
 import BusinessLoan from './routes/businessloan';
 import EducationalLoan from './routes/Educationalloan';
 import RealestateLoan from './routes/realestateloan';
+import Healthprogram from './routes/healthprogram';
+import Hospitalaffiliation from './routes/hospitalaffiliation';
+import SeniorCitizenHealthCare from './routes/seniorcitizenhealthcare';
+import LifeBlessingProgram from './routes/LifeBlessingProgram';
+import FemaleNutrition from './routes/FemaleNutrition';
+import Debitcardatmservice from './routes/debitcardatmservice';
+import Freemobilebankingservice from './routes/freemobilebankingservice';
+import Smsservice from './routes/smsservice';
+import Abbsservice from './routes/abbsservice';
+import Kramikbachatc from './components/kramikbachatc';
+import Gausahardoubledhamakabachat from './routes/gausahardoubledhamakabachat';
+
 
 
 
@@ -87,8 +99,19 @@ function App() {
           <Route path="/kyc" element={ <Dynamiccomponentc title="KYC Form" />} />
           <Route path="/loan" element={ <Dynamiccomponentc title="loans" />} />
           <Route path="/loan/educationalloan" element = { <Dynamiccomponentc title="Educational Loan" />} />
-              <Route path="/loan/realestateloan" element = { <Dynamiccomponentc title="Real Estate Loan" />} />
-              <Route path="/loan/businessloan" element = { <Dynamiccomponentc title="Business Loan" />} />
+          <Route path="/loan/realestateloan" element = { <Dynamiccomponentc title="Real Estate Loan" />} />
+          <Route path="/loan/businessloan" element = { <Dynamiccomponentc title="Business Loan" />} />
+          <Route path="/healthprogram" element = { <Dynamiccomponentc title="Health Program" />} />
+          <Route path="/healthprogram/hospitalaffiliation/detail" element = { <Dynamiccomponentc title="Hospital Affiliation" />} />
+         <Route path="/healthprogram/seniorcitizenhealthcare/detail" element={<Dynamiccomponentc title="Senior Citizen Health Care"/>}/>
+         <Route path="/healthprogram/femaleNutrition/detail" element = { <Dynamiccomponentc title="Female Nutrition" />} />
+         <Route path="/healthprogram/lifeBlessingProgram/detail" element={<Dynamiccomponentc title="Life Blessing Program"/>}/>
+         <Route path="/debit-card-atm-service/product/service/detail" element={<Dynamiccomponentc title="Debit Card Atm Service"/>} />
+         <Route path="/free-mobile-banking-service/product/service/detail" element={<Dynamiccomponentc title="Free Mobile Banking Service"/>} />
+         <Route path="/sms-service/product/service/detail" element={<Dynamiccomponentc title="Sms Service"/>} />
+         <Route path="/abbs-service/product/service/detail" element={<Dynamiccomponentc title="Abbs Service"/>} />
+         <Route path="kramik-bachat/product/service/detail" element={<Dynamiccomponentc title="Kramik Bachat "/>} />
+         <Route path="/Gausahar-Double-Dhamaka-Bachat/product/service/detail" element={<Dynamiccomponentc title="Gausahar Double Dhamaka Bachat"/>} />
         </Routes>
 
       <Routes>
@@ -100,6 +123,7 @@ function App() {
         <Route path="/about" element= {<About/>} />
         <Route path="/loan" element={ <Loans/>} />
         <Route path="/services" element= {<Services/>} />
+        <Route path="/healthprogram" element = { <Healthprogram/>} />
         <Route path="/services/bankingservices" element= {<Bankingservicesr/>} />
         <Route path="/services/appservices" element= {<Appservice/>} />
         <Route path="/services/atmservices" element= {<Atmservice/>} />
@@ -129,8 +153,19 @@ function App() {
         <Route path="/gallery" element = {<Gallery/>}/>
         <Route path="/kyc" element = {<Kyc/>}/>
         <Route path="/loan/educationalloan" element = {<EducationalLoan/>}/>
-              <Route path="/loan/realestateloan" element = {<RealestateLoan/>}/>
-              <Route path="/loan/businessloan" element = {<BusinessLoan/>}/>
+        <Route path="/loan/realestateloan" element = {<RealestateLoan/>}/>
+         <Route path="/loan/businessloan" element = {<BusinessLoan/>}/>
+         <Route path="/healthprogram/hospitalaffiliation/detail" element={<Hospitalaffiliation/>}/>
+         <Route path="/healthprogram/seniorcitizenhealthcare/detail" element={<SeniorCitizenHealthCare/>}/>
+         <Route path="/healthprogram/femaleNutrition/detail" element={<FemaleNutrition/>}/>
+         <Route path="/healthprogram/lifeBlessingProgram/detail" element={<LifeBlessingProgram/>}/>
+         <Route path="/debit-card-atm-service/product/service/detail" element={<Debitcardatmservice/>} />
+         <Route path="/free-mobile-banking-service/product/service/detail" element={<Freemobilebankingservice/>} />
+         <Route path="/sms-service/product/service/detail" element={<Smsservice/>} />
+         <Route path="/abbs-service/product/service/detail" element={<Abbsservice/>} />
+         <Route path="kramik-bachat/product/service/detail" element={<Kramikbachatc/>} />
+         <Route path="/Gausahar-Double-Dhamaka-Bachat/product/service/detail" element={<Gausahardoubledhamakabachat/>} />
+       
       </Routes>
     </Router>
        </>

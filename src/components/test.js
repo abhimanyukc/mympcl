@@ -1,30 +1,27 @@
-import React, { useState } from "react";
+import React from 'react';
 
-const Kycc = () => {
-//   const [dob, setDob] = useState("");
-
-//   const handleDateChange = (e) => {
-//     setDob(e.target.value);
-//   };
-
-
+// ChildComponent that receives title and description as props
+const ChildComponent = ({ title, description }) => {
   return (
-    <div className="mx-auto px-7 max-w-screen-2xl md:px-8">
-      <div className="flex flex-col ">
-        <form className="p-2 mt-4 border">
-          <div className="mt-4">Date of Birth</div>
-          <input
-            type="date"
-            id="dob"
-            name="dob"
-            // value={dob}
-            // onChange={handleDateChange}
-            className="w-full mt-1 border rounded-sm"
-          />
-        </form>
-      </div>
+    <div>
+      <h2>{title}</h2>
+      <p>{description}</p>
     </div>
   );
 };
 
-export default Kycc;
+// ParentComponent where title and description are defined
+const ParentComponent = () => {
+  // Define title and description
+  const title = 'Title from Parent Component';
+  const description = 'Description from Parent Component';
+
+  return (
+    <div>
+      {/* Render ChildComponent and pass title and description as props */}
+      <ChildComponent title={title} description={description} />
+    </div>
+  );
+};
+
+export default ParentComponent;

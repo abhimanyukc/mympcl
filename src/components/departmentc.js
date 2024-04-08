@@ -41,7 +41,7 @@ export default function Departmentc() {
         <div className='mx-auto max-w-screen-2xl'>
             <div className='flex-col mt-16 md:mt-24'>
 
-            <div className='flex justify-center mb-6 text-lg font-bold max-w-screen-2xl'> {t('dep12.message')}</div>
+            <div className='flex justify-center mb-6 text-lg font-bold '> {t('dep12.message')}</div>
 
             <div className="grid gap-2 px-8 md:px-24 lg:grid-cols-4">
                 {posts.map((items, key) => (

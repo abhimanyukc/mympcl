@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import ImageSlider from '../components/imageslider'
 import Sidebar from '../components/sidebar'
 import Servicesc from '../components/servicesc'
@@ -21,6 +21,8 @@ import Headerinfo from '../components/headerinfo'
 import Careertest from '../components/career'
 import Careercategory from '../components/careercategory'
 import Softwareengineerc from '../components/Softwareengineer'
+import NoticePage from '../modal/noticepage'
+
 
 
 
@@ -29,10 +31,20 @@ import Softwareengineerc from '../components/Softwareengineer'
 
 
 const Home = () => {
+   
+  const [showNotice, setShowNotice] = useState(true);
+
+  const closeNotice = () => {
+    setShowNotice(false);
+  };
+
   return (
-
+     
+    <div className={showNotice ? "opacity-60" : ""}>
+    {showNotice && <NoticePage 
+     onClose={closeNotice}
+     />}
     <div className='font-sans text-base leading-6 tracking-normal bg-white text-3d3d3d text-start '>
-
       
      <Combo/>
        <Careertest/>
@@ -57,6 +69,7 @@ const Home = () => {
       <Newsc/>
       <Careerc/>
      <Footer/>
+    </div>
     </div>
   )
 }
