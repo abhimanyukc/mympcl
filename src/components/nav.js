@@ -194,7 +194,7 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
       </div>
       </Link> */}
           <Link to="/" className="">
-            <div className="py-1 text-white transition duration-300 md:pl-5 md:p-2">
+            <div className="py-1 text-white transition duration-300 md:pl-0 md:p-2">
               <div className="hover:text-customHover">Home</div>
             </div>
           </Link>
@@ -504,7 +504,7 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
             <div className="text-white">{t("nav1.message")}</div>
             <FaAngleDown alt="Dropdownlogo2" className="w-6 h-6 text-white" />
             {isDropdownOpen2 && (
-              <div className="absolute left-0 z-40 bg-white border shadow-md top-full">
+              <div className="absolute left-0 z-40 hidden bg-white border shadow-md md:flex top-full">
                 {languages.map((lang) => (
                   <Link
                     key={lang.code}
