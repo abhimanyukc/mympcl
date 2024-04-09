@@ -38,7 +38,7 @@ export default function Departmentc() {
     ];
     return (
         <>
-        <div className='mx-auto max-w-screen-2xl'>
+        <div className='mx-auto max-w-screen-2xl '>
             <div className='flex-col mt-16 md:mt-24'>
 
             <div className='flex justify-center mb-6 text-lg font-bold '> {t('dep12.message')}</div>

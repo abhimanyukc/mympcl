@@ -13,14 +13,14 @@ import axios from 'axios';
 const PrevArrow = ({ onClick}) => (
   <FaChevronLeft
     onClick={onClick}
-    className="absolute left-0 z-10 invisible p-1 text-2xl text-indigo-800 transform -translate-y-1/2 border border-indigo-800 cursor-pointer md:left-20 top-1/2 hover:bg-indigo-800 hover:text-white"
+    className="absolute left-0 invisible p-1 text-2xl text-indigo-800 transform -translate-y-1/2 border border-indigo-800 cursor-pointer z-5 md:left-20 top-1/2 hover:bg-indigo-800 hover:text-white"
   />
 );
 
 const NextArrow = ({ onClick}) => (
   <FaChevronRight
     onClick={onClick}
-    className="absolute right-0 z-10 invisible p-1 text-2xl text-indigo-800 transform -translate-y-1/2 border border-indigo-800 cursor-pointer top-1/2 md:right-20 hover:bg-indigo-800 hover:text-white"
+    className="absolute right-0 invisible p-1 text-2xl text-indigo-800 transform -translate-y-1/2 border border-indigo-800 cursor-pointer z-5 top-1/2 md:right-20 hover:bg-indigo-800 hover:text-white"
   />
 );
 
@@ -77,7 +77,7 @@ const Servicesc = () => {
     
 
 
-    <div className='z-10 mx-auto font-sans bg-white select-none pt-44 max-w-screen-2xl md:px-4 md:pt-48'>
+    <div className='mx-auto font-sans bg-white select-none z-5 pt-44 max-w-screen-2xl md:px-4 md:pt-48'>
       <div className=''>
            <div className='px-24 font-sans text-2xl font-semibold tracking-normal text-center md:pb-2 '> {t("services.message")}</div>
       <Slider {...settings}>

@@ -52,7 +52,6 @@ const Home = () => {
        
       <ImageSlider/>
       <Softwareengineerc/>
-      <Headerinfo/>
       <Sidebar className=""/>
      
      <Servicesc/>

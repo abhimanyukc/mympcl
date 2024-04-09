@@ -4,6 +4,7 @@ import Nav from './nav';
 import React, { useState, useEffect} from 'react'
 import { format } from 'date-fns';
 import Marque from './marque';
+import Headerinfo from './headerinfo';
 
 
 
@@ -34,10 +35,12 @@ const Combo = () => {
 
   return (
     <div>
-     <div className='fixed top-0 left-0 z-45 w-full bg-white '>
-    
+     <div className='w-full bg-white '>
      <Header lang={lang} timeFormat={timeFormat} />
-      <Nav setLanguage={setLanguage} setTimeFormat={setTimeFormat} />
+     <Headerinfo/>
+  
+     <Nav setLanguage={setLanguage} setTimeFormat={setTimeFormat} />
+
       <Marque/>
       
       </div>

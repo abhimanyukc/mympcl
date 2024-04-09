@@ -67,7 +67,7 @@ const Header = ({ lang }) => {
     <div className="flex flex-wrap items-center justify-between py-1 px-7 mx-auto bg-gradient-to-r from-indigo-800 from-10% via-sky-800 via-30% to-blue-800 to-90% select-none  md:justify-between md:px-20 max-w-screen-2xl">
       <div className="flex flex-wrap items-center py-1 pr-1 space-x-2 cursor-pointer md:justify-center md:p-1 md:space-x-4">
         <Link to="/career" className="">
-          <div className="flex items-center justify-center text-white md:pl-2 md:w-full ">
+          <div className="flex items-center justify-center pl-2 text-white md:pl-3 md:w-full ">
             {" "}
             {t("header.message")}
           </div>
@@ -123,6 +123,9 @@ const Header = ({ lang }) => {
             {" "}
             {t("header7.message")}
           </div>
+        </Link>
+          <Link to="/login" className=''>
+        <div className='text-white '>Login</div>
         </Link>
       </div>
 
