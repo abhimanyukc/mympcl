@@ -75,28 +75,11 @@ const Headerinfo = () => {
            <div className='mr-1 text-primary'> &#9742; </div> <div className=' text-primary text-nowrap'>01-4512842</div>
            </div>
            </div>
-{/* 
-           <div className='flex flex-wrap '>
-           <div className='flex items-center '>
-            <FaHome className='mr-1 text-primary'/> <div className=' text-primary text-nowrap'>Amarsingh chowk, pokhara</div>
-           </div>
-           <div className='flex ml-4'>
-           <div className='mr-1 text-primary'> &#9742; </div>  <div className=' text-primary text-nowrap'>01-4512842</div>
-           </div>
-           </div> */}
-           
-           {/* <div className='flex flex-wrap '>
-           <div className='flex items-center '>
-            <FaHome className='mr-1 text-primary'/> <div className=' text-primary text-nowrap'>Mahendrapul, pokhara</div>
-           </div>
-           <div className='flex ml-4'>
-           <div className='mr-1 text-primary'> &#9742; </div>  <div className=' text-primary text-nowrap'>01-4512842</div>
-           </div>
-           </div>  */}
+
 
         </div>
 
-        <div className='pl-4 mt-2 md:mt-2'>
+        {/* <div className='pl-4 mt-2 md:mt-2'>
           <div>
            <div className='flex mb-1 md:flex-col'>
                  <div className='flex ml-4 md:ml-0'>
@@ -113,11 +96,8 @@ const Headerinfo = () => {
               
            
             </div>
-            {/* <div className=''>
-                <img  src="https://i.pinimg.com/564x/3d/ed/25/3ded252a6f1722342b596375a0858eec.jpg"  alt="imagedisplay" width={280} height={200}  className='md:w-28 md:h-24' />    
-            </div> */}
-           
-        </div>
+              
+        </div> */}
 
 
       </header>
