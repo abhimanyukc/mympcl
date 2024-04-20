@@ -4,7 +4,7 @@ const Careercategory = () => {
   return (
     <div className='px-8 mx-auto max-w-screen-2xl md:px-24'>
       
-      <div className='mt-8 '>
+      <div className='mt-8 mb-8 '>
       <div className='text-lg font-bold md:text-4xl '>
         Engineering Jobs at Gausahar Sahakari
       </div>

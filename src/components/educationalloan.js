@@ -11,19 +11,19 @@ const EducationalLoanCard = ({ image, title, description}) => {
 }
 const EducationalLoanc = ({ educationalLoans }) => {
   return (
-    <div className='px-6 mx-auto max-w-screen-2xl md:px-20'>
+    <div className='px-6 mx-auto max-w-screen-2xl md:px-24'>
 
        <div>
          
-         <div>
+         <div className='flex flex-col items-center justify-center'>
          <img src='https://i.pinimg.com/564x/3d/ad/b2/3dadb2c797b6a4563c7bb0f0c37c1bbb.jpg' alt='Educational loan' className="w-32 h-32 mb-4 rounded-full " />
          <div className='font-semibold'>Educational Loan</div>
          <div className='text-xs '>Content not available</div>
-         </div>
+        
 
          <div className='font-semibold '>Follow Us On Facebook</div>
          <div className='font-semibold '>Recent Loans</div> 
-
+         </div>
          {/*  getting 3 cards form props */}
                  <div className='grid grid-cols-1 gap-4 mt-8 md:grid-cols-2 lg:grid-cols-3'>
                     {educationalLoans.map((loan, index) =>(

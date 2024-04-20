@@ -15,14 +15,15 @@ const RealestateLoanc = ({realEstateLoans}) => {
 
     <div>
       
-      <div>
+      <div className='flex flex-col items-center '>
       <img src='https://i.pinimg.com/564x/f4/87/06/f487066a47c350e4913507c291e6c2cd.jpg' alt='Real Estate loan' className="w-32 h-32 mb-4 rounded-full " />
       <div className='font-semibold'>Real Estate Loan</div>
       <div className='text-xs '>Content not available</div>
-      </div>
-
       <div className='font-semibold '>Follow Us On Facebook</div>
       <div className='font-semibold '>Recent Loans</div> 
+      </div>
+
+     
 
       {/*  getting 3 cards form props */}
               <div className='grid grid-cols-1 gap-4 mt-8 md:grid-cols-2 lg:grid-cols-3'>

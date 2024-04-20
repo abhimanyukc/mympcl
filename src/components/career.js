@@ -4,7 +4,7 @@ import { FaArrowRight, FaUser   } from 'react-icons/fa'
 const Careertest = () => {
   return (
     <div  className='px-8 mx-auto max-w-screen-2xl md:px-24'>
-        <div className='mb-4 mt-60'>
+        <div className='mt-8 mb-4'>
         <div className='flex font-bold text-black '><div className='mr-2 text-2xl border-b-2 border-red-500 md:text-4xl'>Current</div> <div className='text-2xl md:text-4xl'>Vacancies</div></div>
         </div>
 

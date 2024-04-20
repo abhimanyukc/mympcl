@@ -9,7 +9,7 @@ const Branchesc = () => {
   return (
     <div className="mx-auto max-w-screen-2xl">
        
-       <div className='mx-8 mt-40 md:mt-52 md:mx-24 '>
+       <div className='mx-8 mt-10 md:mt-20 md:mx-24 '>
        <div className='flex justify-center mb-8 text-2xl font-bold md:justify-start max-w-screen-2xl'>{t('brnch.message')}</div>
          
          <div className='flex flex-col flex-wrap justify-center md:justify-start '>

@@ -1,7 +1,8 @@
 import React from 'react'
 import Branchesc from '../components/branchesc'
 import Footer from '../components/footer'
-import Combo from '../components/combo'
+
+import Nav from '../components/nav'
 
 
 const Branches = () => {
@@ -10,7 +11,7 @@ const Branches = () => {
 
       
     <div className='sticky top-0 left-0 z-50 w-full bg-white '>
-    <Combo/>
+    <Nav/>
     </div>
     <Branchesc/>
    <Footer/>

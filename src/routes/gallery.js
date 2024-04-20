@@ -4,7 +4,6 @@ import Gallaryc from '../components/gallaryc'
 
 
 import Footer from '../components/footer'
-import Combo from '../components/combo'
 import Nav from '../components/nav'
 const Gallery = () => {
   return (

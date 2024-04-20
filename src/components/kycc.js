@@ -55,12 +55,12 @@ const Kycc = () => {
 
   const handleInputChange = (e) => {
     const { id, value } = e.target;
-    console.log("Input changed:", id, value); // Add logging
+    // console.log("Input changed:", id, value); // Add logging
     setFormData({
       ...formData,
       [id]: value
     });
-    console.log("Updated formData:", formData); // Add logging
+    // console.log("Updated formData:", formData); // Add logging
   };
   
 
@@ -179,8 +179,8 @@ const Kycc = () => {
                 }`}
                 onClick={() => setActiveTab(tabItem.tab)}
               >
-                <div className="text-center rounded-lg">{tabItem.tab}</div>
-                <div className="w-12 mt-2 truncate">{tabItem.name}</div>
+                <div className="flex items-start text-center rounded-lg md:ml-4">{tabItem.tab}</div>
+                <div className="w-12 mt-2 truncate md:w-40 md:mr-4">{tabItem.name}</div>
               </div>
             ))}
           </div>

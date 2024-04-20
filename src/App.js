@@ -52,8 +52,12 @@ import Debitcardatmservice from './routes/debitcardatmservice';
 import Freemobilebankingservice from './routes/freemobilebankingservice';
 import Smsservice from './routes/smsservice';
 import Abbsservice from './routes/abbsservice';
-import Kramikbachatc from './components/kramikbachatc';
 import Gausahardoubledhamakabachat from './routes/gausahardoubledhamakabachat';
+import Kramikbachat from './routes/kramikbachat';
+import Gallery1 from './routes/gallery1';
+import Gallery2 from './routes/gallery2';
+import Gallery3 from './routes/gallery3';
+import Gallery4 from './routes/gallery4';
 
 
 
@@ -96,6 +100,10 @@ function App() {
           <Route path="/department" element={ <Dynamiccomponentc title="Department" />} />
           <Route path="/branches" element={ <Dynamiccomponentc title="Branches" />} />
           <Route path="/gallery" element={ <Dynamiccomponentc title="gallery" />} />
+          <Route path="/gallery/albumi" element={ <Dynamiccomponentc title="gallery / album" />} />
+        <Route path="/gallery/albumii" element={ <Dynamiccomponentc title="gallery / album" />} />
+        <Route path="/gallery/albumiii" element={ <Dynamiccomponentc title="gallery / album" />} />
+        <Route path="/gallery/albumiv" element={ <Dynamiccomponentc title="gallery / album" />} />
           <Route path="/kyc" element={ <Dynamiccomponentc title="KYC Form" />} />
           <Route path="/loan" element={ <Dynamiccomponentc title="loans" />} />
           <Route path="/loan/educationalloan" element = { <Dynamiccomponentc title="Educational Loan" />} />
@@ -110,7 +118,7 @@ function App() {
          <Route path="/free-mobile-banking-service/product/service/detail" element={<Dynamiccomponentc title="Free Mobile Banking Service"/>} />
          <Route path="/sms-service/product/service/detail" element={<Dynamiccomponentc title="Sms Service"/>} />
          <Route path="/abbs-service/product/service/detail" element={<Dynamiccomponentc title="Abbs Service"/>} />
-         <Route path="kramik-bachat/product/service/detail" element={<Dynamiccomponentc title="Kramik Bachat "/>} />
+         <Route path="/kramik-bachat/product/service/detail" element={<Dynamiccomponentc title="Kramik Bachat "/>} />
          <Route path="/Gausahar-Double-Dhamaka-Bachat/product/service/detail" element={<Dynamiccomponentc title="Gausahar Double Dhamaka Bachat"/>} />
         </Routes>
 
@@ -151,6 +159,10 @@ function App() {
         <Route path="/branches" element= {<Branches/>} />
         <Route path="/headerinfo" element = {<Headerinfo/>}/>
         <Route path="/gallery" element = {<Gallery/>}/>
+        <Route path="/gallery/albumi" element = {<Gallery1/>}/>
+        <Route path="/gallery/albumii" element = {<Gallery2/>}/>
+        <Route path="/gallery/albumiii" element = {<Gallery3/>}/>
+        <Route path="/gallery/albumiv" element = {<Gallery4/>}/>
         <Route path="/kyc" element = {<Kyc/>}/>
         <Route path="/loan/educationalloan" element = {<EducationalLoan/>}/>
         <Route path="/loan/realestateloan" element = {<RealestateLoan/>}/>
@@ -163,7 +175,7 @@ function App() {
          <Route path="/free-mobile-banking-service/product/service/detail" element={<Freemobilebankingservice/>} />
          <Route path="/sms-service/product/service/detail" element={<Smsservice/>} />
          <Route path="/abbs-service/product/service/detail" element={<Abbsservice/>} />
-         <Route path="kramik-bachat/product/service/detail" element={<Kramikbachatc/>} />
+         <Route path="/kramik-bachat/product/service/detail" element={<Kramikbachat/>} />
          <Route path="/Gausahar-Double-Dhamaka-Bachat/product/service/detail" element={<Gausahardoubledhamakabachat/>} />
        
       </Routes>

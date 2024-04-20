@@ -8,8 +8,8 @@ const Abbsservicec = ({title, subtopics}) => {
             <div  className='md:w-4/5'>
               <div>
                 <img
-                  src="https://i.pinimg.com/736x/b6/75/cd/b675cd4ce031e6d6784038dbbb24f464.jpg"
-                  alt="smsservice"
+                  src="https://i.pinimg.com/564x/2a/30/27/2a30274cf6bee5e6661d79063e178a8b.jpg"
+                  alt="anybranchbankingservice"
                   className="object-contain w-full rounded-md"
                 />
               </div>

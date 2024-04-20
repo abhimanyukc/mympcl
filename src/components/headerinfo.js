@@ -38,7 +38,7 @@ const Headerinfo = () => {
         <div className='md:mt-1 md:mr-4 '>
          
           
-            <div className='w-full pl-8 text-sm font-normal truncate md:pl-1 md:mt-2 text-wrap md:w-80 md:text-primary text-secondary'>Head Office: GAUSHAR MULTIPURPOSE COOPERATIVE Building, Srijana chowk, Pokhara Nepal
+            <div className='w-full pl-8 text-sm font-normal truncate md:pl-0 md:mt-2 text-wrap md:w-80 md:text-primary text-secondary'>Head Office: GAUSHAR Sahakari, Srijana chowk, Pokhara Nepal
              Tel:- 01-4478006, 01-4465102, 01-4465104</div>
              <div className='w-full text-active md:bg-secondary'>
               {isVisible && (

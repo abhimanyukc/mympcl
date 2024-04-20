@@ -8,14 +8,14 @@ const Gausahardoubledhamakabachatc = ( {title, subtopics}) => {
         <div  className='md:w-4/5'>
           <div>
             <img
-              src="https://i.pinimg.com/736x/b6/75/cd/b675cd4ce031e6d6784038dbbb24f464.jpg"
-              alt="smsservice"
+              src="https://i.pinimg.com/564x/b7/12/74/b712744993e40f42add5c01b979e4c70.jpg"
+              alt="doubledhamakapackagw"
               className="object-contain w-full rounded-md"
             />
           </div>
 
           <div className="my-6 ">
-            <h1 className="mt-4 font-normal"> Any Branch Banking Service is one of our services ,which our members are highly benefited thorough out all our service centers. We provide ABBS service to our account holders throughout our branch network.</h1>
+            <h1 className="mt-4 font-normal"> Gausahardoubledhamakais one of our services ,which our members are highly benefited thorough out all our service centers. We provide ABBS service to our account holders throughout our branch network.</h1>
             
           </div>
         </div>

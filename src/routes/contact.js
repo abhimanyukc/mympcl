@@ -2,12 +2,13 @@ import React from 'react'
 import ContactC from '../components/contact'
 import Footer from '../components/footer'
 import Sidebar from '../components/sidebar'
-import Combo from '../components/combo'
+import Nav from '../components/nav'
 
 const Contact = () => {
     return (
         <div>
-           <Combo/>
+           
+           <Nav/>
 
             <Sidebar/>
             <ContactC/>

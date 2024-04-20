@@ -4,14 +4,13 @@ import React from 'react'
 import Sidebar from '../components/sidebar'
 import Footer from '../components/footer'
 import Newsc from '../components/news'
-import Combo from '../components/combo'
+import Nav from '../components/nav'
 
 
 const News = () => {
   return (
     <div>
-       <Combo/>
-
+        <Nav/>
       <Sidebar/>
        <Newsc/>
      <Footer/>

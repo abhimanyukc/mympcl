@@ -49,7 +49,6 @@ const Home = () => {
      <Combo/>
        <Careertest/>
        <Careercategory/>
-       
       <ImageSlider/>
       <Softwareengineerc/>
       <Sidebar className=""/>
