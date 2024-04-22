@@ -58,6 +58,19 @@ import Gallery1 from './routes/gallery1';
 import Gallery2 from './routes/gallery2';
 import Gallery3 from './routes/gallery3';
 import Gallery4 from './routes/gallery4';
+import Careerc from './components/careerc';
+import Careercategory from './components/careercategory';
+import BankTellerRoute from './routes/banktellerroute';
+import CustomerServiceRepresentativeRoute from './routes/customerservicerepresentative';
+import LoanOfficerRoute from './routes/loanofficer';
+import FinancialAnalystRoute from './routes/financeanalyst';
+import RiskAnalystRoute from './routes/riskanalyst';
+import ComplianceOfficerRoute from './routes/complianceofficer';
+import Branchmanager from './routes/branchmanager';
+import InvestmentAdvisorRoute from './routes/investmentmanager';
+import MortgageSpecialist from './routes/mortgagespecialist';
+import TechnologySpecialistRoute from './routes/technologyspecialist';
+import MortgageSpecialistRoute from './routes/mortgagespecialist';
 
 
 
@@ -120,6 +133,7 @@ function App() {
          <Route path="/abbs-service/product/service/detail" element={<Dynamiccomponentc title="Abbs Service"/>} />
          <Route path="/kramik-bachat/product/service/detail" element={<Dynamiccomponentc title="Kramik Bachat "/>} />
          <Route path="/Gausahar-Double-Dhamaka-Bachat/product/service/detail" element={<Dynamiccomponentc title="Gausahar Double Dhamaka Bachat"/>} />
+         <Route path="/career/softwareEngineer" element={<Dynamiccomponentc title="Career / Software Engineer "/>} />
         </Routes>
 
       <Routes>
@@ -146,10 +160,21 @@ function App() {
         <Route path="/interestrate" element= {<Interestrate/>} />
         <Route path="/emicalculator" element= {<Emicalculator/>} />
         <Route path="/information" element= {<Information/>} />
-        <Route path="/career" element= {<Careers/>} />
-        <Route path="/careertest" element= {<Careerstest/>} />
-        <Route path="/careercategory" element= {<Careercategoryr/>} />
-        <Route path="/SoftwareEngineer" element= {<Softwareengineer/>} />
+        <Route path="/career" element= {<Careerstest/>} />
+        <Route path="/careertest" element= {<Careers/>} />
+        <Route path="/careercategory" element= {<Careercategory/>} />
+        <Route path="/career/softwareEngineer" element= {<Softwareengineer/>} />
+        <Route path="/career/applicationForm" element= {<Careers/>} />
+        <Route path="/career/bankTeller" element= {<BankTellerRoute/>} />
+        <Route path="/career/customerServiceRepresentative" element= {<CustomerServiceRepresentativeRoute/>} />
+        <Route path="/career/loanOfficer" element= {<LoanOfficerRoute/>} />
+        <Route path="/career/financialAnalyst" element= {<FinancialAnalystRoute/>} />
+        <Route path="/career/riskAnalyst" element= {<RiskAnalystRoute/>} />
+        <Route path="/career/complianceOfficer" element= {<ComplianceOfficerRoute/>} />
+        <Route path="/career/branchManager" element= {<Branchmanager/>} />
+        <Route path="/career/investmentAdvisor" element= {<InvestmentAdvisorRoute/>} />
+        <Route path="/career/mortgageSpecialist" element= {<MortgageSpecialistRoute/>} />
+        <Route path="/career/technologySpecialist" element= {<TechnologySpecialistRoute/>} />
         <Route path="/news" element= {<News/>} />
         <Route path="/reports" element= {<Reports/>} />
         <Route path="/notice" element= {<Notices/>} />

@@ -3,6 +3,7 @@ import React from 'react'
  import { FaMap  ,   FaUser ,   FaMoneyCheck ,   FaHome, FaClock} from 'react-icons/fa'
 
 import { FaMailBulk } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 const Softwareengineerc = () => {
   return (
     <div className='px-8 mx-auto max-w-screen-2xl md:px-20'>
@@ -103,10 +104,10 @@ const Softwareengineerc = () => {
                 <li className='mt-2 '>Has great communication and social skills</li>
             </ul>
 
-            <div className='flex items-center justify-center px-4 py-2 rounded-md w-36 md:mt-2 bg-secondary '>
+            <Link to = '/career/applicationForm' className='flex items-center justify-center px-4 py-2 rounded-md w-36 md:mt-2 bg-secondary '>
                 <FaMailBulk className='ml-1 text-white'/>
                <div className='ml-2 text-white '>Apply Now</div> 
-                </div>
+                </Link>
          </div>
 
          <div className='mt-6 '>We are always looking for nice people to join our team. Even if you don’t find a role that suits your experience,
