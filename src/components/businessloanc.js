@@ -67,7 +67,7 @@ const BusinessLoanCard = ({ image, title, description}) => {
   }
 const BusinessLoanc = ({businessLoans}) => {
   return (
-    <div className='px-6 mx-auto max-w-screen-2xl md:px-20'>
+    <div className='px-6 mx-auto max-w-screen-2xl md:px-8'>
 
     <div>
       

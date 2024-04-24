@@ -5,7 +5,7 @@ const Onlineaccountopening = () => {
 
   return (
     <div className='mx-auto bg-white select-none max-w-screen-2xl'>
-         <div className='flex flex-col w-full px-8 pt-20 md:flex-row md:px-24 md:pt-32'>
+         <div className='flex flex-col w-full px-8 pt-20 md:flex-row md:pt-32'>
 
          <div className='w-full md:w-1/2 md:mr-8'>  <img
             src={require('../images/bank1.jpg')}

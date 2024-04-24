@@ -15,7 +15,7 @@ const InternetBankingServicec = () => {
       <div className='font-semibold '>Internet Banking Service</div>
      </div>
 
-     <div className='md:px-16 '>गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing banking Internet Banking related related services.
+     <div className='md:px-8 '>गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing banking Internet Banking related related services.
          गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing banking Internet Banking related related services.
          गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing banking Internet Banking related related services.
          गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing banking Internet Banking related related services.

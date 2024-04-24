@@ -48,7 +48,7 @@ const Healthprogramc = ( {healthServices}) => {
     </div>
 
     <div>
-        <div className='mx-8 mt-8 text-2xl font-bold md:mx-20'>Health Services</div>
+        <div className='mx-8 mt-8 text-2xl font-bold '>Health Services</div>
         <div className="grid grid-cols-1 gap-4 mt-8 md:grid-cols-2 lg:grid-cols-3">
         {healthServices.map((health, index) => (
           <LoanCard

@@ -75,7 +75,7 @@ const InterestRateComponent = () => {
   };
 
   return (
-    <div className="container px-8 mx-auto mt-8 md:px-24 max-w-screen-2xl">
+    <div className="container px-8 mx-auto mt-8 max-w-screen-2xl">
       <div className="flex items-center mb-4">
         {Object.keys(tabData).map((tab) => (
           <button

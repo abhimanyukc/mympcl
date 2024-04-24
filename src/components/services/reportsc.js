@@ -2,7 +2,7 @@ import React from 'react';
 
 const Reportsc = () => {
   return (
-    <div className='px-4 mx-auto max-w-screen-2xl md:px-20'>
+    <div className='px-4 mx-auto max-w-screen-2xl md:px-8'>
       <div className='flex flex-wrap '>
         {/* Card 1 */}
         <div className='flex flex-col object-fill p-4 mt-4 bg-gray-200 border rounded-md shadow-md md:w-1/2 lg:w-1/4 md:mt-8 md:mr-4'>

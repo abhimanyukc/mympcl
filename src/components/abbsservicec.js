@@ -3,7 +3,7 @@ import { MdDateRange } from 'react-icons/md'
 
 const Abbsservicec = ({title, subtopics}) => {
     return (
-        <div className="px-4 mx-auto max-w-screen-2xl md:px-24">
+        <div className="px-4 mx-auto max-w-screen-2xl md:px-8">
           <div className='flex flex-col md:flex-row'>
             <div  className='md:w-4/5'>
               <div>

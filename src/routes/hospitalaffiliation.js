@@ -1,7 +1,9 @@
 import React from 'react';
 import Hospitalaffiliationc from '../components/hospitalaffiliationc';
 
+
 const Hospitalaffiliation = () => {
+ 
     const subtopics = [
         { date: '2024-04-07', text: 'Hospital Affiliation' },
         { date: '2024-04-08', text: 'सुत्केरी पोषण' },
@@ -9,6 +11,7 @@ const Hospitalaffiliation = () => {
     ];
 
     return (
+       
         <div className='container mx-auto mt-8'>
             <Hospitalaffiliationc title="Related Health Service" subtopics={subtopics} />
         </div>

@@ -3,7 +3,7 @@ import { MdDateRange } from 'react-icons/md'; // Importing MdDateRange icon from
 
 const FemaleNutritionComponent = ({ title, subtopics }) => {
   return (
-    <div className="mx-auto max-w-screen-2xl md:mx-20">
+    <div className="mx-auto max-w-screen-2xl md:mx-8">
       <div>
         <div>
           <div>

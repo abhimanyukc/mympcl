@@ -17,6 +17,7 @@ const Header = ({ lang }) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [currentDate, setCurrentDate] = useState(new Date());
   const dropdownRef = useRef(null);
+  
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -64,7 +65,7 @@ const Header = ({ lang }) => {
   };
 
   return (
-    <div className="flex flex-wrap items-center justify-between py-1 px-7 mx-auto bg-gradient-to-r from-indigo-800 from-10% via-sky-800 via-30% to-blue-800 to-90% select-none  md:justify-between md:px-20 max-w-screen-2xl">
+    <div className="flex flex-wrap items-center justify-between py-2 px-4 mx-auto bg-gradient-to-r from-indigo-800 from-10% via-sky-800 via-30% to-blue-800 to-90% select-none  md:justify-between md:px-6 max-w-screen-2xl">
       <div className="flex flex-wrap items-center py-1 pr-1 space-x-2 cursor-pointer md:justify-center md:p-1 md:space-x-4">
         <Link to="/career" className="" >
           <div className="flex items-center justify-center pl-2 text-white md:pl-3 md:w-full ">
@@ -110,18 +111,19 @@ const Header = ({ lang }) => {
             </a> */}
           </div>
         )}
-        <Link to="/branches">
-          <div className="flex items-center justify-center text-white md:w-full">
-            {" "}
-            {t("header6.message")}
-          </div>
-        </Link>
         <Link to="/news">
           <div className="flex items-center justify-center text-white md:w-full">
             {" "}
             {t("header4.message")}{" "}
           </div>
         </Link>
+        <Link to="/branches">
+          <div className="flex items-center justify-center text-white md:w-full">
+            {" "}
+            {t("header6.message")}
+          </div>
+        </Link>
+        
         <Link to="/downloads">
           <div className="flex items-center justify-center text-white md:w-full">
             {" "}
@@ -133,9 +135,9 @@ const Header = ({ lang }) => {
         </Link>
       </div>
 
-      <div className="flex items-center justify-center space-x-4 md:flex">
+      <div className="flex items-center justify-center px-2 space-x-4 md:flex">
         <div
-          className="relative hidden md:flex"
+          className="relative flex "
           onClick={handleSearchIconClick}
         >
           <FaSearch className="w-4 h-4 text-white md:ml-4" />

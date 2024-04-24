@@ -1,7 +1,8 @@
-import React from 'react'
+import React  from 'react'
 import Smsservicec from '../components/smsservicec'
 
 const Smsservice = () => {
+  
   const subtopics = [
     { date: '2024-04-07', text: 'Debit Card(Atm Service)' },
     { date: '2024-04-08', text: 'Free Mobile Banking Service' },

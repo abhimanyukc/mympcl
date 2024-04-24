@@ -3,7 +3,7 @@ import { MdDateRange } from 'react-icons/md';
 
 const LifeBlessingProgramComponent = ({ title, subtopics }) => {
   return (
-    <div className="mx-auto max-w-screen-2xl md:mx-20">
+    <div className="mx-auto max-w-screen-2xl md:mx-8">
       <div>
         <div>
           <div>

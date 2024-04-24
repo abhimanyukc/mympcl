@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 
 import Sidebar from '../components/sidebar'
@@ -9,12 +9,12 @@ import Nav from '../components/nav'
 
 const News = () => {
   return (
+    
     <div>
         <Nav/>
       <Sidebar/>
        <Newsc/>
-     <Footer/>
-       
+     <Footer/> 
     </div>
   )
 }

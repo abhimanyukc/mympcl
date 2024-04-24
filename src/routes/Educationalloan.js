@@ -1,8 +1,11 @@
 //passing value using props from parent component
-import React from 'react'
+import React  from 'react';
 import EducationalLoanc from '../components/educationalloan'
 
+
 const EducationalLoan = () => {
+
+
         //sample data for loans
         const educationalLoans = [
             {
@@ -26,10 +29,12 @@ const EducationalLoan = () => {
             }
            ]
   return (
+  
     <div>
            {/* Pass educationalLoans data as prop to educationalLoans component */}
         <EducationalLoanc educationalLoans={educationalLoans}/>
     </div>
+
   )
 }
 

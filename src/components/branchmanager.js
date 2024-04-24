@@ -6,7 +6,7 @@ import { FaMailBulk } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 const BranchManager = () => {
   return (
-    <div className='px-8 mx-auto max-w-screen-2xl md:px-20'>
+    <div className='px-8 mx-auto max-w-screen-2xl '>
       <div className='md:px-20 '>
       <h1 className='mt-10 text-xl font-bold md:text-4xl '>Branch Manager -1  Openings</h1>
       <div className='mt-4 '> This is a  full-time position for a  BranchManager with 3+ years of Experience in banking  quality assurance.

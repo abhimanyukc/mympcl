@@ -77,7 +77,7 @@ const Servicesc = () => {
     
 
 
-    <div className='mx-auto font-sans bg-white select-none z-5 pt-44 max-w-screen-2xl md:px-4 md:pt-48'>
+    <div className='mx-auto font-sans bg-white select-none z-5 pt-44 max-w-screen-2xl md:px-8 md:pt-48'>
       <div className=''>
            <div className='px-24 font-sans text-2xl font-semibold tracking-normal text-center md:pb-2 '> {t("services.message")}</div>
       <Slider {...settings}>

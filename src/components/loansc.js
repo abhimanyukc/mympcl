@@ -14,7 +14,7 @@ const LoanCard = ({ image, title, description , route}) => {
 
 const Loansc = ({ loans }) => {
   return (
-    <div className="px-6 mx-auto max-w-screen-2xl md:px-20">
+    <div className="px-6 mx-auto max-w-screen-2xl md:px-8">
       <div className="grid grid-cols-1 gap-4 mt-8 md:grid-cols-2 lg:grid-cols-3">
         {loans.map((loan, index) => (
           <LoanCard

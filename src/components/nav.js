@@ -3,7 +3,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { FaBars, FaAngleDown, FaSearch, FaTimes } from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
- 
+import { BookOpenIcon, Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid'
+
 
 const languages = [
   { code: 'en', label: 'EN' },
@@ -62,7 +63,7 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
  
  
 
-  
+  const [showNavbar, setShowNavbar] = useState(false);
   const [showLinks, setShowLinks] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isDropdownOpen2, setIsDropdownOpen2] = useState(false);
@@ -105,42 +106,55 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
 // console.log(useLocation().pathname);
 
 
-
+const handleToggleNavbar = () => {
+  setShowNavbar(!showNavbar);
+  setShowLinks(false);
+};
 
 
   
   
 
   return (
-    <div className='flex items-center justify-between px-8 py-2 mx-auto bg-green-800 select-none md:flex-row max-w-screen-2xl md:pl-16 md:pr-24'>
+    <div className='flex items-center justify-between px-4 py-2 mx-auto bg-green-800 shadow-lg select-none md:flex-row max-w-screen-2xl '>
            
            
       <div className='flex flex-col '>
-      <div className='flex '>
-      <div className='flex items-center select-none md:hidden'>
-          <FaBars alt='SearchIcon' className='w-8 h-8 text-white' onClick={toggleLinks} />
+      <div className="flex">
+          <div className="flex items-center px-6 cursor-pointer select-none md:hidden">
+            {showNavbar ? (
+              <XMarkIcon
+                alt="CloseIcon"
+                className="w-8 h-8 text-white"
+                onClick={handleToggleNavbar}
+              />
+            ) : (
+              <Bars3BottomRightIcon
+                alt="SearchIcon"
+                className="w-8 h-8 text-white"
+                onClick={handleToggleNavbar}
+              />
+            )}
+          </div>
         </div>
-  
-      
-         
-        
-      </div>
 
       
 
-      <nav
-        className={`flex   flex-col  items-center  md:flex-row    sm:flex-row ${showLinks ? 'flex' : 'hidden'} md:flex cursor-pointer  md:pl-3  `}
-      > 
+        <nav
+          className={`flex flex-col items-center flex-wrap md:flex-row sm:flex-row ${
+            showNavbar ? 'flex' : 'hidden'
+          } md:flex cursor-pointer md:pl-3`}
+        >
     
       <Link to="/" className="" >
-      <div className='py-1 text-white transition duration-300 md:pl-5 md:p-2' >
+      <div className='py-1 text-white transition duration-300 md:pl-3 md:p-2' >
          <div className='hover:text-customHover'>Home</div>
       </div>
       </Link>
        
 
         <div
-          className='relative flex items-center py-2 text-white pl-9 hover:text-customHover md:p-2 '
+          className='relative flex items-center py-2 text-white text-nowrap pl-9 hover:text-customHover md:p-2 md:pl-12 '
           onClick={toggleDropdown} 
           ref={dropdownRef}
         >
@@ -197,7 +211,7 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
         </div>
         </Link> */}
 
-       <div> <div className='relative flex items-center py-2 pl-8 text-white hover:text-customHover md:p-2 '
+       <div> <div className='relative flex items-center py-2 text-white pl-9 hover:text-customHover md:p-2 md:pl-12'
         
         // 'p-1 text-white md:p-2 md:mr-4 {useLocation().pathname == }
            onClick={toggleDropdown3}
@@ -257,7 +271,7 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
       
       
         <Link to="/gallery" >
-        <div className={`m-2 md:p-1 pl-2 hover:text-customHover ${location.pathname === '/gallery' || location.pathname === '/gallery/' ? 'text-active' : 'text-white'} `}
+        <div className={`m-2 md:pl-12 md:p-1 pl-2 hover:text-customHover ${location.pathname === '/gallery' || location.pathname === '/gallery/' ? 'text-active' : 'text-white'} `}
         // 'p-1 text-white md:p-2 md:mr-4'
           >
              Gallery
@@ -265,7 +279,7 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
         </Link>
 
         <Link to="/reports" >
-        <div className={`m-2 md:p-1 pl-4 hover:text-customHover ${location.pathname === '/reports' || location.pathname === '/reports/' ? 'text-active' : 'text-white'} `}
+        <div className={`m-2 md:p-1  pl-4 md:pl-12 hover:text-customHover ${location.pathname === '/reports' || location.pathname === '/reports/' ? 'text-active' : 'text-white'} `}
         // 'p-1 text-white md:p-2 md:mr-4'
           >
              Reports
@@ -273,7 +287,7 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
         </Link>
 
         <Link to="/loan" >
-        <div className={`m-2 ml-3 md:ml-0 md:p-1  pl-14 hover:text-customHover ${location.pathname === '/loan' || location.pathname === '/loan/' ? 'text-active' : 'text-white'} `}
+        <div className={`m-2 ml-3 md:pl-12 md:ml-0 md:p-1 text-nowrap  pl-14 hover:text-customHover ${location.pathname === '/loan' || location.pathname === '/loan/' ? 'text-active' : 'text-white'} `}
         // 'p-1 text-white md:p-2 md:mr-4'
           >
               Loan Scheme
@@ -281,7 +295,7 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
         </Link>
 
         <Link to="/healthprogram" >
-        <div className={`m-2 ml-1 md:ml-0 md:p-1    pl-16 hover:text-customHover ${location.pathname === '/healthprogram' || location.pathname === '/healthprogram/' ? 'text-active' : 'text-white'} `}
+        <div className={`m-2 ml-5 md:pl-12 md:ml-0 md:p-1  text-nowrap   pl-14 hover:text-customHover ${location.pathname === '/healthprogram' || location.pathname === '/healthprogram/' ? 'text-active' : 'text-white'} `}
         // 'p-1 text-white md:p-2 md:mr-4'
           >
              Health Program
@@ -289,7 +303,7 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
         </Link>
 
         <Link to="/notice" >
-        <div className={`md:m-2 ml-3 my-2 hover:text-customHover ${location.pathname === '/notice' || location.pathname === '/notice/' ? 'text-active' : 'text-white'} `}
+        <div className={`md:m-2 md:pl-12 ml-3 my-2 hover:text-customHover ${location.pathname === '/notice' || location.pathname === '/notice/' ? 'text-active' : 'text-white'} `}
         // 'p-1 text-white md:p-2 md:mr-4'
           >
              Notices
@@ -297,7 +311,7 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
         </Link>
 
         <Link to="/kyc" >
-        <div className={`md:m-2 mr-2 my-2 hover:text-customHover ${location.pathname === '/kyc' || location.pathname === '/kyc/' ? 'text-active' : 'text-white'} `}
+        <div className={`md:m-2 md:pl-12 mr-2 my-2 hover:text-customHover ${location.pathname === '/kyc' || location.pathname === '/kyc/' ? 'text-active' : 'text-white'} `}
         // 'p-1 text-white md:p-2 md:mr-4'
           >
              KYC
@@ -305,21 +319,18 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
         </Link>
 
         <Link to="/contact" >
-        <div className={`md:m-2 ml-9 my-2 hover:text-customHover ${location.pathname === '/contact' || location.pathname === '/contact/' ? 'text-active' : 'text-white'} `}
+        <div className={`md:m-2 md:pl-12 ml-9 my-2 text-nowrap hover:text-customHover ${location.pathname === '/contact' || location.pathname === '/contact/' ? 'text-active' : 'text-white'} `}
         // 'p-1 text-white md:p-2 md:mr-4'
           >
         {t("nav8.message")}
         </div>
         </Link>
-      </nav>
-      </div>
 
-
-      <div className='flex items-center select-none '>
+        <div className='flex items-center select-none '>
         
         <div className='flex items-center select-none'>
           <div
-            className='relative flex items-center p-1 rounded-md md:mx-auto'
+            className='relative flex items-center p-1 rounded-md md:pl-12 md:mx-auto'
            
              ref={dropdownRef2}
              onClick={toggleDropdown2}
@@ -328,7 +339,7 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
             <div className='text-white' >{t("nav1.message")}</div>
               <FaAngleDown
               alt='Dropdownlogo2'
-              className='w-6 h-6 text-white'
+              className='w-6 h-6 text-white '
              
             />
             {isDropdownOpen2 && (
@@ -359,44 +370,14 @@ const Nav = ({ setLanguage, setTimeFormat }) => {
         </Link> */}
 
 
-<div className='relative flex p-1 my-2 md:hidden' onClick={handleSearchIconClick}> 
-          <FaSearch className='w-4 h-4 text-white md:w-8 md:h-6 ' />
-          </div>
-         
-           {/* Main div with white background */}
-        {isSearchOpen && (
-    
-          <div className='absolute  top-12  z-40 flex   mx-12   md:mx-auto transform  -translate-x-1/2 bg-white border rounded-md left-1/2   md:top-[40px]' >
-            <div className='flex flex-col '>
-                 {/* <div className='flex items-center justify-between border-b-2 md:justify-between md:flex'>
-                        <div className=''>{t("nav9.message")}</div>
-                        <div className=''><FaTimes
-                        onClick={handleCloseIconClick}
-                        /></div>
-                 </div> */}
-  
-  
-                
-  
-                 <div className='flex items-center px-2 m-1 rounded-lg md:justify-between '>
-                  <button>
-                 <input
-              type="text"
-               placeholder="Search..."
-              className="w-20 border md:w-full"
-             /> 
-             </button>
-             <FaSearch className=""/>
-                  </div>
-                 
-            </div>
-          </div>
-        )}
-
-
 
        
         </div>
+      
+      </nav>
+      </div>
+
+
       
 
 

@@ -1,5 +1,6 @@
-import React from 'react'
+import React  from 'react';
 import Abbsservicec from '../components/abbsservicec'
+
 
 const Abbsservice = () => {
     const subtopics = [
@@ -10,6 +11,7 @@ const Abbsservice = () => {
         { date: '2024-04-09', text: 'SAHARA DOUBLE DHAMAKA BACHAT' },
     ];
       return (
+       
          <div className='container mx-auto mt-8'>
         <Abbsservicec title="Related Services" subtopics={subtopics} />
     </div>

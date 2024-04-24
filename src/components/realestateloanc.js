@@ -11,7 +11,7 @@ const RealEstateLoanCard = ({ image, title, description}) => {
   }
 const RealestateLoanc = ({realEstateLoans}) => {
   return (
-    <div className='px-6 mx-auto max-w-screen-2xl md:px-20'>
+    <div className='px-6 mx-auto max-w-screen-2xl md:px-8'>
 
     <div>
       

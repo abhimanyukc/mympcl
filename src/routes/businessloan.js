@@ -1,8 +1,10 @@
-import React from 'react'
+import React from 'react';
 import BusinessLoanc from '../components/businessloanc'
 
+
 const BusinessLoan = () => {
-       //sample data for loans
+   
+
        const businessLoans = [
         {
             image:'https://i.pinimg.com/564x/b8/70/39/b8703970871f0b2a88adb098a5732154.jpg',
@@ -24,6 +26,7 @@ const BusinessLoan = () => {
         }
        ]
   return (
+
      <div>
            {/* Pass businessloans data as prop to Businessloansc component */}
         <BusinessLoanc businessLoans={businessLoans}/>

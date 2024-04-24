@@ -1,13 +1,15 @@
-import React from 'react'
+import React  from 'react';
 
 import Informationc from '../components/informationc'
 import Footer from '../components/footer'
-import Combo from '../components/combo'
 import Nav from '../components/nav'
 
 
+
 const Information = () => {
+
   return (
+  
     <div className='font-sans text-base leading-6 tracking-normal bg-white text-3d3d3d text-start '>
 
       
@@ -16,6 +18,7 @@ const Information = () => {
     <Informationc/>
    <Footer/>
   </div>
+
   )
 }
 

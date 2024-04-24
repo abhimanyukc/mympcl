@@ -11,7 +11,7 @@ const EducationalLoanCard = ({ image, title, description}) => {
 }
 const EducationalLoanc = ({ educationalLoans }) => {
   return (
-    <div className='px-6 mx-auto max-w-screen-2xl md:px-24'>
+    <div className='px-6 mx-auto max-w-screen-2xl md:px-8'>
 
        <div>
          

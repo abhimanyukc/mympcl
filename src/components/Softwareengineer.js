@@ -6,8 +6,8 @@ import { FaMailBulk } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 const Softwareengineerc = () => {
   return (
-    <div className='px-8 mx-auto max-w-screen-2xl md:px-20'>
-      <div className='md:px-20 '>
+    <div className='px-8 mx-auto max-w-screen-2xl'>
+      <div className=''>
       <h1 className='mt-10 text-xl font-bold md:text-4xl '>Senior QA Engineer-2  Openings</h1>
       <div className='mt-4 '> This is a  full-time position for a Senior Quality Assurance Engineer with 3+ years of Experience in mobile apps  quality assurance.
         Salary ranges from Rs. 70,000 to 1,30,000.

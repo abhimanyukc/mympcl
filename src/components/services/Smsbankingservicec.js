@@ -15,7 +15,7 @@ const Smsbankingservicec = () => {
       <div className='font-semibold '>Sms Service</div>
      </div>
 
-     <div className='md:px-16 '>गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing Sms Banking related services.
+     <div className='md:px-8 '>गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing Sms Banking related services.
          गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing Sms Banking related services.
          गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing Sms Banking related services.
          गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing Sms Banking related services.

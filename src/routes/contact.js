@@ -1,13 +1,15 @@
-import React from 'react'
+import React from 'react';
 import ContactC from '../components/contact'
 import Footer from '../components/footer'
 import Sidebar from '../components/sidebar'
 import Nav from '../components/nav'
 
+
 const Contact = () => {
+ 
     return (
-        <div>
-           
+      
+        <div> 
            <Nav/>
 
             <Sidebar/>

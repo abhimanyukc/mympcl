@@ -1,7 +1,9 @@
 import React from 'react';
  import Loansc from '../components/loansc';
 
+
 const Loans = () => {
+ 
   // Sample data for loans
   const loans = [
     {
@@ -28,7 +30,7 @@ const Loans = () => {
   ];
 
   return (
-
+  
     <div>
       {/* Pass loans data as prop to Loansc component */}
       <Loansc loans={loans} />

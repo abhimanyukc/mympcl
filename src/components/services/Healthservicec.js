@@ -15,7 +15,7 @@ const Healthservicec = () => {
       <div className='font-semibold '>Health Service</div>
      </div>
 
-     <div className='md:px-16 '>गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing banking Health related services.
+     <div className='md:px-8 '>गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing banking Health related services.
          गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing banking Health related services.
          गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing banking Health related services.
          गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing banking Health related services.

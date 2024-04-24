@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 const Footer = () => {
   const [t]  = useTranslation('global')
   return (
-    <footer className="p-8 mx-auto text-white bg-indigo-800 select-none md:mt-8 md:py-8 max-w-screen-2xl md:px-24">
+    <footer className="p-8 mx-auto text-white bg-indigo-800 select-none md:mt-8 md:py-8 max-w-screen-2xl ">
       <div className="container flex flex-col items-center justify-center md:p-0 md:justify-between md:flex-row">
         <div className="mb-4 md:mb-0 ">
           <h2 className="text-lg font-semibold">गाउसहर बहुउदेस्यिय सहकारि सस्था लि  पोखरा-८,  कास्कि </h2>

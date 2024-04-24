@@ -15,7 +15,7 @@ const RemittanceServicec = () => {
       <div className='font-semibold '>Remmitance Service</div>
      </div>
 
-     <div className='md:px-16 '>गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing remittance related services.
+     <div className='md:px-8 '>गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing remittance related services.
          गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing remittance related services.
          गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing remittance related services.
          गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing remittance related services.

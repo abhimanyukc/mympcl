@@ -17,7 +17,7 @@ const Headerinfo = () => {
     return () => clearInterval(interval); // Cleanup interval on component unmount
   }, []);
   return (
-    <div className='pr-8 mx-auto max-w-screen-2xl md:px-20'>
+    <div className='pr-8 mx-auto max-w-screen-2xl md:px-8'>
       
       <header className='flex flex-wrap mb-2 '>
         <div className='md:flex'>
@@ -71,7 +71,7 @@ const Headerinfo = () => {
            <div className='flex items-center'>
             <FaHome className='mr-1 text-primary'/> <div className=' text-primary'>Newroad, pokhara</div>
            </div>
-           <div className='flex ml-4'>
+           <div className='flex ml-6'>
            <div className='mr-1 text-primary'> &#9742; </div> <div className=' text-primary text-nowrap'>01-4512842</div>
            </div>
            </div>

@@ -15,7 +15,7 @@ const Otherbankingservicec = () => {
           <div className='font-semibold '>other Banking Service</div>
          </div>
 
-         <div className='md:px-16 '>गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing other banking  related services.
+         <div className='md:px-8'>गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing other banking  related services.
          गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing other banking  related services.
          गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing other banking  related services.
          गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing other banking  related services.

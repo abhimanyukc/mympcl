@@ -7,7 +7,7 @@ const Remittance = () => {
        <div className='mx-auto bg-white select-none max-w-screen-2xl'>
         <div className='mt-8 md:mt-16'>
         
-        <div className='flex flex-col px-8 md:px-24 md:flex-row md:items-center '>
+        <div className='flex flex-col px-8 md:flex-row md:items-center '>
         <div className='md:mt-4'>
         <div className='text-xl font-semibold' >{t("rem.message")}</div>
         <div className='p-1 mt-1 font-semibold text-green-600 text-nowrap'>{t("rem1.message")}</div>

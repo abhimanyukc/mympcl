@@ -1,6 +1,6 @@
 
 import './App.css';
-
+import React, { useState, useEffect } from 'react';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -71,6 +71,7 @@ import InvestmentAdvisorRoute from './routes/investmentmanager';
 import MortgageSpecialist from './routes/mortgagespecialist';
 import TechnologySpecialistRoute from './routes/technologyspecialist';
 import MortgageSpecialistRoute from './routes/mortgagespecialist';
+import Loader from './components/loader';
 
 
 
@@ -80,10 +81,19 @@ import MortgageSpecialistRoute from './routes/mortgagespecialist';
 
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true); // Set initial loading state
+  useEffect(() => {
+      // Simulate loading data (replace with your actual data fetching logic)
+      setTimeout(() => {
+        setIsLoading(false); // Set loading state to false after 5 seconds (adjust as needed)
+      }, 5000);
+    }, []);
  
   return (
        <>
-        
+         {isLoading ? (
+      <Loader /> // Show the loader while loading
+    ) : (
        <Router>
        <Routes>
           <Route path="/information" element={ <Dynamiccomponentc title="Information" />} />
@@ -202,9 +212,10 @@ function App() {
          <Route path="/abbs-service/product/service/detail" element={<Abbsservice/>} />
          <Route path="/kramik-bachat/product/service/detail" element={<Kramikbachat/>} />
          <Route path="/Gausahar-Double-Dhamaka-Bachat/product/service/detail" element={<Gausahardoubledhamakabachat/>} />
-       
+      
       </Routes>
     </Router>
+    )}
        </>
   )
 }

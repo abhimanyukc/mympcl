@@ -1,8 +1,7 @@
-import React from 'react'
+import React  from 'react';
 import Healthprogramc from '../components/healthprogramc'
-
-
 const Healthprogram = () => {
+
    
     const healthServices = [
         {
@@ -36,9 +35,11 @@ const Healthprogram = () => {
         },
     ]
   return (
+
     <div>
         <Healthprogramc healthServices={healthServices}/>
     </div>
+  
   )
 }
 

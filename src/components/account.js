@@ -55,7 +55,7 @@ const Account = () => {
 
 
   return (
-    <div className='px-5 py-12 mx-auto font-sans bg-white select-none max-w-screen-2xl md:px-20 md:py-8'>
+    <div className='px-5 py-12 mx-auto font-sans bg-white select-none max-w-screen-2xl md:px-8 md:py-8'>
     <div className='flex flex-col p-2 md:px-4'>
 
 

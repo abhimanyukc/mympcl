@@ -2,7 +2,7 @@ import React from 'react'
 
 const Noticec = () => {
   return (
-    <div className='flex items-center justify-start px-8 mx-auto md:px-20 max-w-screen-2xl'>
+    <div className='flex items-center justify-start px-8 mx-auto max-w-screen-2xl'>
            
            <div className='flex flex-col w-40 p-4 m-1 mt-4 border md:w-64'>
                 <div className='text-sm text-primary'>शिल्बन्दी दरभाउ पेश गर्ने सुचना २०८०/१०/११</div>

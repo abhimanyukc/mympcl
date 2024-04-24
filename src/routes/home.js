@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react';
 import ImageSlider from '../components/imageslider'
 import Sidebar from '../components/sidebar'
 import Servicesc from '../components/servicesc'
@@ -30,7 +30,9 @@ import NoticePage from '../modal/noticepage'
 
 
 
+
 const Home = () => {
+ 
    
   const [showNotice, setShowNotice] = useState(true);
 
@@ -39,6 +41,7 @@ const Home = () => {
   };
 
   return (
+  
      
     <div className={showNotice ? "opacity-60" : ""}>
     {showNotice && <NoticePage 
@@ -69,6 +72,7 @@ const Home = () => {
      <Footer/>
     </div>
     </div>
+   
   )
 }
 

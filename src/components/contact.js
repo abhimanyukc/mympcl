@@ -40,7 +40,7 @@ const ContactC = () => {
   const {t} = useTranslation("global")
 
   return (
-    <div className="container px-8 mx-auto mt-40 bg-white select-none md:mt-48 md:px-24 md:py-2">
+    <div className="container px-8 mx-auto mt-40 bg-white select-none md:mt-48 md:py-2">
       <div className="mb-6 text-3xl font-semibold text-center">{t('con5.message')}</div>
       {submitMessage && (
         <div className="mb-6 text-center text-green-600 ">

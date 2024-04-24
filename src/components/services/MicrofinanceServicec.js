@@ -16,7 +16,7 @@ const MicrofinanceServicec = () => {
       <div className='font-semibold '>Microfinance Banking Service</div>
      </div>
 
-     <div className='md:px-16 '>गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing banking Microfinance related services.
+     <div className='md:px-8 '>गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing banking Microfinance related services.
          गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing banking Microfinance related services.
          गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing banking Microfinance related services.
          गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing banking Microfinance related services.
