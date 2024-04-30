@@ -1,5 +1,7 @@
 import React from 'react';
  import Loansc from '../components/loansc';
+import Combo from '../components/combo';
+import Footer from '../components/footer';
 
 
 const Loans = () => {
@@ -32,8 +34,10 @@ const Loans = () => {
   return (
   
     <div>
+      <Combo/>
       {/* Pass loans data as prop to Loansc component */}
       <Loansc loans={loans} />
+      <Footer/>
     </div>
  
   );

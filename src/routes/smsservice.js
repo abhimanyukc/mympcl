@@ -1,5 +1,7 @@
 import React  from 'react'
 import Smsservicec from '../components/smsservicec'
+import Combo from '../components/combo';
+import Footer from '../components/footer';
 
 const Smsservice = () => {
   
@@ -12,7 +14,9 @@ const Smsservice = () => {
 ];
   return (
      <div className='container mx-auto mt-8'>
+      <Combo/>
     <Smsservicec title="Related Services" subtopics={subtopics} />
+     <Footer/>
 </div>
   )
 }

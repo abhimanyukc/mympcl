@@ -35,15 +35,12 @@ const Combo = () => {
 
   return (
     <div>
-     <div className='w-full bg-white '>
-     <Header lang={lang} timeFormat={timeFormat} />
+        <Header lang={lang} timeFormat={timeFormat} />
      <Headerinfo/>
-  
-     <Nav setLanguage={setLanguage} setTimeFormat={setTimeFormat} />
-
-      <Marque/>
+     <div className='sticky top-0 left-0 z-40 w-full bg-white '>
       
-      </div>
+     <Nav setLanguage={setLanguage} setTimeFormat={setTimeFormat} />
+     </div>
     </div>
   )
 }

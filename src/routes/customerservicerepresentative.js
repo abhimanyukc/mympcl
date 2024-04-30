@@ -1,7 +1,7 @@
 import React from 'react';
-import Nav from '../components/nav'
 import Footer from '../components/footer'
 import CustomerServiceRepresentative from '../components/customerservicerepresentativec'
+import Combo from '../components/combo';
 
 
 
@@ -10,7 +10,7 @@ const CustomerServiceRepresentativeRoute = () => {
   return (
    
     <div>
-         <Nav/>
+         <Combo/>
         <CustomerServiceRepresentative/>
         <Footer/>
     </div>

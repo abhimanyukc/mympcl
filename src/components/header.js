@@ -17,7 +17,7 @@ const Header = ({ lang }) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [currentDate, setCurrentDate] = useState(new Date());
   const dropdownRef = useRef(null);
-  
+  const searchRef = useRef(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -25,6 +25,24 @@ const Header = ({ lang }) => {
     }, 1000);
 
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        searchRef.current &&
+        !searchRef.current.contains(event.target) &&
+        !event.target.classList.contains("search-icon")
+      ) {
+        setIsSearchOpen(false);
+      }
+    };
+
+    window.addEventListener("click", handleClickOutside);
+
+    return () => {
+      window.removeEventListener("click", handleClickOutside);
+    };
   }, []);
 
   const formatDate = (date) => {
@@ -37,20 +55,6 @@ const Header = ({ lang }) => {
       return format(date, "MMM d, yyyy");
     }
   };
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsDropdownOpen(false);
-      }
-    };
-
-    window.addEventListener("click", handleClickOutside);
-
-    return () => {
-      window.removeEventListener("click", handleClickOutside);
-    };
-  }, []);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -65,9 +69,9 @@ const Header = ({ lang }) => {
   };
 
   return (
-    <div className="flex flex-wrap items-center justify-between py-2 px-4 mx-auto bg-gradient-to-r from-indigo-800 from-10% via-sky-800 via-30% to-blue-800 to-90% select-none  md:justify-between md:px-6 max-w-screen-2xl">
+    <div className="flex flex-wrap items-center justify-between py-2 px-4 mx-auto bg-gradient-to-r from-indigo-800 from-10% via-sky-800 via-30% to-blue-800 to-90% select-none  md:justify-between md:px-5 max-w-screen-2xl">
       <div className="flex flex-wrap items-center py-1 pr-1 space-x-2 cursor-pointer md:justify-center md:p-1 md:space-x-4">
-        <Link to="/career" className="" >
+        <Link to="/career" className="">
           <div className="flex items-center justify-center pl-2 text-white md:pl-3 md:w-full ">
             {" "}
             {t("header.message")}
@@ -85,9 +89,6 @@ const Header = ({ lang }) => {
 
         {isDropdownOpen && (
           <div className="absolute z-20 flex flex-col w-16 bg-white shadow-md md:left-36 left-20 top-10">
-            {/* <a href='#' className='p-2 pl-2 text-white border-b-2 '>
-             {t("header2.message")}
-            </a> */}
             <Link
               to="https://play.google.com/store/apps?hl=en&gl=US&pli=1"
               className="flex justify-center px-2 pt-2 text-blue-800 border-b-2 hover:text-customBlue"
@@ -106,9 +107,6 @@ const Header = ({ lang }) => {
               {" "}
               <FaApple className="w-8 h-8" />{" "}
             </Link>
-            {/* <a href='#' className='p-2 pl-2 text-white '>
-             {t("header3.message")}
-            </a> */}
           </div>
         )}
         <Link to="/news">
@@ -123,58 +121,46 @@ const Header = ({ lang }) => {
             {t("header6.message")}
           </div>
         </Link>
-        
+
         <Link to="/downloads">
           <div className="flex items-center justify-center text-white md:w-full">
             {" "}
             {t("header7.message")}
           </div>
         </Link>
-          <Link to="/login" className=''>
-        <div className='text-white '>Login</div>
+        <Link to="/login" className="">
+          <div className="text-white ">{t('header8.message')}</div>
         </Link>
       </div>
 
-      <div className="flex items-center justify-center px-2 space-x-4 md:flex">
-        <div
-          className="relative flex "
-          onClick={handleSearchIconClick}
-        >
-          <FaSearch className="w-4 h-4 text-white md:ml-4" />
-        </div>
+      <div className="flex items-center justify-center space-x-4 md:flex">
+      <div className='relative hidden md:flex' onClick={handleSearchIconClick}> 
+          <FaSearch className='w-4 h-4 text-white md:ml-30' />
+          </div>
+         
+            {/* Main div with white background */}
+            {isSearchOpen && (
+    
+    <div className='absolute  top-12  z-40 flex    md:mx-auto transform -translate-x-1/2 bg-white border rounded-md left-1/2  md:top-[40px]' >
 
-        {/* Main div with white background */}
-        {isSearchOpen && (
-          <div className="absolute p-1  top-12  z-40 flex    md:mx-auto transform -translate-x-1/2 bg-white border rounded-md   right-36 md:top-[2px]">
-            <div className="flex flex-col ">
-              {/* <div className='items-center justify-between hidden border-b-2 md:justify-between md:flex'>
-                        <div className=''> {t("header5.message")}</div>
-                        <div className=''><FaTimes
-                        onClick={handleCloseIconClick}
-                        /></div>
-                 </div> */}
-
-              <div className="flex items-center mt-1 rounded-lg md:justify-between">
-                <button>
-                  <input
-                    type="text"
-                    placeholder="Search..."
-                    className="w-20 border border-transparent md:w-full "
-                  />
-                </button>
-                <FaSearch className="text-gray-400 " />
-              </div>
+           <div className='flex items-center p-1 mt-1 rounded-lg md:p-2 md:justify-between'>
+           <input
+        type="text"
+         placeholder="Search..."
+        className="w-20 md:w-full"
+       /> 
+       <FaSearch className=""/>
             </div>
-          </div>
-        )}
-        <div className="flex items-center text-white md:ml-2">
-          <div className="hidden mr-1 text-lg font-normal">
-            {format(currentDate, "eee,")}
-          </div>
-          <div className="hidden text-lg md:flex">
-            {formatDate(currentDate)}
-          </div>
-        </div>
+           
+      </div>
+  )}
+       <div className="flex items-center text-white md:ml-2">
+   
+     
+      <div className="hidden mr-1 text-lg font-normal">{format(currentDate, 'eee,')}</div>
+      <div className="hidden text-lg md:flex">{formatDate(currentDate)}</div>
+      </div>
+      
       </div>
     </div>
   );

@@ -1,5 +1,7 @@
 import React from 'react';
 import BusinessLoanc from '../components/businessloanc'
+import Combo from '../components/combo';
+import Footer from '../components/footer';
 
 
 const BusinessLoan = () => {
@@ -28,8 +30,10 @@ const BusinessLoan = () => {
   return (
 
      <div>
+        <Combo/>
            {/* Pass businessloans data as prop to Businessloansc component */}
         <BusinessLoanc businessLoans={businessLoans}/>
+        <Footer/>
     </div>
   )
 }

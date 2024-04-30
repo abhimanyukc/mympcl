@@ -14,7 +14,7 @@ const Branchesc = () => {
          
          <div className='flex flex-col flex-wrap justify-center md:justify-start '>
             <div className='flex flex-col md:flex-row'>
-        <div className='flex flex-col justify-center p-2 mb-0 mr-8 text-green-800 border rounded-lg md:mt-4 md:mb-16 md:w-1/3'>
+        <div className='flex flex-col justify-center p-2 mb-0 mr-8 text-green-800 border rounded-lg md:mt-4 md:mb-16 md:w-1/2'>
              <div className=' text-primary'>{t('brnch1.message')}</div>
              <div className='mt-4 '>{t('brnch2.message')}</div>
              <div className='flex mt-2 '>
@@ -44,7 +44,7 @@ const Branchesc = () => {
 
         
          <div className='flex flex-col md:flex-row'>
-           <div className='flex flex-col justify-center p-2 mb-0 mr-8 text-green-800 border rounded-lg md:mt-4 md:mb-16 md:w-1/3'>
+           <div className='flex flex-col justify-center p-2 mb-0 mr-8 text-green-800 border rounded-lg md:mt-4 md:mb-16 md:w-1/2'>
              <div className=' text-primary'>{t('brnch1.message')}</div>
              <div className='mt-4 '>{t('brnch5.message')}</div>
              <div className='flex mt-2 '>
@@ -71,7 +71,7 @@ const Branchesc = () => {
         </div>
 
           <div className='flex flex-col md:flex-row'>
-           <div className='flex flex-col justify-center p-2 mb-0 mr-8 text-green-800 border rounded-lg md:mt-4 md:mb-16 md:w-1/3'>
+           <div className='flex flex-col justify-center p-2 mb-0 mr-8 text-green-800 border rounded-lg md:mt-4 md:mb-16 md:w-1/2'>
              <div className=' text-primary'>{t('brnch1.message')}</div>
              <div className='mt-4 '>{t('brnch8.message')}</div>
              <div className='flex mt-2 '>
@@ -99,7 +99,7 @@ const Branchesc = () => {
 
         
         <div className='flex flex-col md:flex-row'>
-           <div className='flex flex-col justify-center p-2 mb-0 mr-8 text-green-800 border rounded-lg md:mt-4 md:mb-16 md:w-1/3'>
+           <div className='flex flex-col justify-center p-2 mb-0 mr-8 text-green-800 border rounded-lg md:mt-4 md:mb-16 md:w-1/2'>
              <div className=' text-primary'>{t('brnch1.message')}</div>
              <div className='mt-4 '>{t('brnch11.message')}</div>
              <div className='flex mt-2 '>

@@ -55,10 +55,10 @@ const InterestRateComponent = () => {
     const data = tabData[selectedTab];
 
     return (
-      <table className="w-full mt-8 bg-white select-none">
+      <table className="w-full mt-2 bg-white select-none ">
         <thead>
           <tr>
-            <th className="py-2 "> {t("intdet29.message")}</th>
+            <th className="flex items-start py-2 md:px-4 "> {t("intdet29.message")}</th>
             <th className="py-2 ">{t("intdet30.message")}</th>
           </tr>
         </thead>
@@ -75,12 +75,13 @@ const InterestRateComponent = () => {
   };
 
   return (
-    <div className="container px-8 mx-auto mt-8 max-w-screen-2xl">
+    <div className="container px-8 mx-auto mt-16 max-w-screen-2xl">
+        <div className='mb-4 text-2xl font-semibold'>Interest Details</div>
       <div className="flex items-center mb-4">
         {Object.keys(tabData).map((tab) => (
           <button
             key={tab}
-            className={` mr-1 md:mr-4 p-1 md:p-2 ${selectedTab === tab ? 'bg-green-800 text-white' : 'bg-gray-300'}`}
+            className={` mr-1 md:mr-4 p-1 md:p-2  w-20 ${selectedTab === tab ? 'bg-green-800 text-white' : 'bg-gray-300'}`}
             onClick={() => handleTabChange(tab)}
           >
           
@@ -89,8 +90,8 @@ const InterestRateComponent = () => {
         ))}
       </div>
 
-      <div className="mb-8">
-      <h2 className="mb-4 text-xl font-bold">{t(`${selectedTab}.message`)} {t("intdet35.message")}</h2>
+      <div className="mb-4 ">
+      <h2 className="mb-2 text-2xl font-bold md:ml-4">{t(`${selectedTab}.message`)} {t("intdet35.message")}</h2>
         {renderTable()}
       </div>
     </div>

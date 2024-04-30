@@ -2,7 +2,7 @@ import React from 'react';
 import ContactC from '../components/contact'
 import Footer from '../components/footer'
 import Sidebar from '../components/sidebar'
-import Nav from '../components/nav'
+import Combo from '../components/combo';
 
 
 const Contact = () => {
@@ -10,8 +10,8 @@ const Contact = () => {
     return (
       
         <div> 
-           <Nav/>
-
+          
+            <Combo/>
             <Sidebar/>
             <ContactC/>
             <Footer/>

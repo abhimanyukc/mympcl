@@ -18,11 +18,78 @@
         "message": "Search"
     },
     "header6": {
-        "message": "Our location"
+        "message": "Our Location"
     },
     "header7": {
        "message": "Download Forms"
     },
+    "header8":{
+        "message": "Login"
+    },
+    "header9":{
+        "message": "Search"
+    },
+    "header10": {
+        "message": " फारमहरू डाउनलोड"
+     },
+   
+        "headerInfo1": {
+            "message": "GauSahar Multipurpose Cooperative Society Limited"
+        },
+        "headerInfo2": {
+            "message": "Head Office"
+        },
+        "headerInfo3": {
+            "message": "Srijana Chowk"
+        },
+        "headerInfo4": {
+            "message": "Pokhara"
+        },
+        "headerInfo5": {
+            "message": "Nepal"
+        },
+        "headerInfo6": {
+            "message": "Tel"
+        },
+        "headerInfo7": {
+            "message": "Branches"
+        },
+        "headerInfo8": {
+           "message": "Lamachaur"
+        },
+        "headerInfo9":{
+            "message": "Pokhara"
+        },
+        "headerInfo10":{
+            "message": "061780067"
+        },
+        "headerInfo11":{
+            "message": "061556702"
+        },
+        "headerInfo12":{
+            "message": "061534560"
+        },
+        "headerInfo13":{
+            "message": "Open"
+        },
+        "headerInfo14":{
+            "message": "Sun"
+        },
+        "headerInfo15":{
+            "message": "Fri"
+        },
+        "headerInfo16":{
+            "message": "(9:30 to 5:00)"
+        },
+        "headerInfo17":{
+            "message": "061556802"
+        },
+        "headerInfo18":{
+            "message": "GAUSAHAR SAHAKARI"
+        },
+        "headerInfo19":{
+            "message": "Newroad"
+        },
     "nav": {
         "message": "About Us"
     }, 
@@ -53,17 +120,47 @@
     "nav9": {
         "message": "Search"
     },
+    "nav10": {
+        "message": "Home"
+    },
+    "nav11": {
+        "message": "Gallery"
+    },
+    "nav12": {
+        "message": "Reports"
+    },
+    "nav13": {
+        "message": "Loan Scheme"
+    },
+    "nav14": {
+        "message": "Health Program"
+    },
+    "nav15": {
+        "message": "Notices"
+    },
+    "nav16": {
+        "message": "KYC"
+    },
+    "nav17": {
+        "message": "Emi"
+    },
+    "nav18": {
+        "message": "Remittance"
+    },
+    "nav19": {
+        "message": "Interest Rate"
+    },
     "marque": {
         "message": "Notices"
     },
     "marque1": {
-        "message": "Inaugration of newly constucted building of bank"
+        "message": "Inaugration Of Newly Constucted Building Of Bank"
     },
     "marque2": {
-        "message": "Chandraman Dhakal relelected as chairman of bank"
+        "message": "Chandraman Dhakal relelected as Chairman of Bank"
     },
     "marque3": {
-        "message": "Fast Banking with Swift"
+        "message": "Fast Banking With Swift"
     },
     "services": {
         "message": "Services"
@@ -93,19 +190,19 @@
         "message": "App Service"
     },
     "services9": {
-        "message": "other Banking Service"
+        "message": "Other Banking Service"
     },
     "services10": {
         "message": "Learn More"
     },
     "services11": {
-        "message": " The GauSahar Multipurpose cooperation limited has been providing 365 banking facilities. In public holiday the Gausahar  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,  Other Service Center will be closed at public holiday.The The GauSahar Multipurpose cooperation limited has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center, Other Service Center will be closed at public holiday"
+        "message": " The GauSahar Multipurpose Cooperation Limited has been providing 365 banking facilities. In public holiday the Gausahar  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,  Other Service Center will be closed at public holiday.The The GauSahar Multipurpose Cooperation Limited has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center, Other Service Center will be closed at public holiday"
     },
     "services12": {
         "message": "The GauSahar Multipurpose cooperation limited has been providing 365 days banking facilities. In public holiday the  it  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office"
     },
     "onlineacc": {
-        "message": "We offer multiple online money transfer services, and our service is renowned as the most well-known, secure, and trustworthy option on the internet."
+        "message": "We Offer multiple Online Money Transfer Services, And Our Service Is Renowned as the Most Well-known, Secure, and Trustworthy Option On The Internet."
     },
     "onlineacc1": {
         "message": "Get Started"
@@ -636,5 +733,555 @@
      },
      "news24":{
         "message": "News 6"
+     },
+     "noticePage":{
+        "message": "Notice"
+     },
+     "noticePage1":{
+        "message": "GauSahar Sahakari Notice"
+     },
+     "absService":{
+        "message": "Any Branch Banking Service is one of our services ,which our members are highly benefited thorough out all our service centers. We provide ABBS service to our account holders throughout our branch network."
+     },
+     "bankTeller":{
+        "message": "Bank Teller -1  Openings"
+     },
+     "bankTeller1":{
+        "message": " This is a  full-time position for a Senior Loan Officer with 3+ years of Experience in banking  quality assurance."
+     },
+     "bankTeller2":{
+        "message": " Salary ranges from Rs. 20,000 to 30,000."
+     },
+     "bankTeller3":{
+        "message": "Job location"
+     },
+     "bankTeller4":{
+        "message": "Kathmandu and Pokhara"
+     },
+     "bankTeller5":{
+        "message": "Type:"
+     },
+     "bankTeller6":{
+        "message": "Full Time"
+     },
+     "bankTeller7":{
+        "message": "Vacancy:"
+     },
+     "bankTeller8":{
+        "message": "2 Positions"
+     },
+     "bankTeller9":{
+        "message": "Salary"
+     },
+     "bankTeller10":{
+        "message": "NPR 10,000 - 20,000"
+     },
+     "bankTeller11":{
+        "message": "Required Skills"
+     },
+     "bankTeller12":{
+        "message": "Cash Handling"
+     },
+     "bankTeller13":{
+        "message": "Customer Service"
+     },
+     "bankTeller14":{
+        "message": "Attention to detail"
+     },
+     "bankTeller15":{
+        "message": "Mathematical Aptitude"
+     },
+     "bankTeller16":{
+        "message": "Communication Skills"
+     },
+     "bankTeller17":{
+        "message": " We are looking for few senior Loan Officer to join our team."
+     },
+     "bankTeller18":{
+        "message": " We are looking for self-managed people who can work without constant supervision."
+     },
+     "bankTeller19":{
+        "message": " As a Bank teller  to efficiently and accurately process customer transactions, provide excellent customer service, and promote banking products and services to meet the financial needs of customers."
+     },
+     "bankTeller20":{
+        "message": "Responsibilities"
+     },
+     "bankTeller21":{
+        "message": "You will be responsible for one or more of the following tasks depending on your skills and prior experience."
+     },
+     "bankTeller22":{
+        "message": "Processing customer transactions such as deposits, withdrawals, and transfers accurately and efficiently. "
+     },
+     "bankTeller23":{
+        "message": "Providing excellent customer service by addressing inquiries, resolving issues, and assisting with banking needs."
+     },
+     "bankTeller24":{
+        "message": "Balancing cash drawers and maintaining accurate records of transactions to ensure financial accuracy and security."
+     },
+     "bankTeller25":{
+        "message": " Promoting banking products and services to customers and identifying opportunities for cross-selling or upselling"
+     },
+     "bankTeller26":{
+        "message": "Adhering to banking regulations, policies, and procedures to ensure compliance and mitigate risks."
+     },
+     "bankTeller27":{
+        "message": "Assisting with administrative tasks such as filing paperwork, updating customer information, and completing documentation."
+     },
+     "bankTeller28":{
+        "message": "Collaborating with colleagues and other departments to address customer needs, resolve problems, and ensure smooth operations."
+     },
+     "bankTeller29":{
+        "message": "Handling currency exchanges, cashier's checks, money orders, and other financial instruments according to established guidelines."
+     },
+     "bankTeller30":{
+        "message": "Providing guidance and support to customers on using banking technology, such as ATMs, online banking, and mobile apps."
+     },
+     "bankTeller31":{
+        "message": "Minimum Requirements"
+     },
+     "bankTeller32":{
+        "message": "If you have at least a few of the following skills, you can apply for this position. You will be assigned the best role based on your prior experience."
+     },
+     "bankTeller33":{
+        "message": "Ability to analyze financial statements, credit reports, tax returns, and other financial documents to assess the creditworthiness of loan applicants."
+     },
+     "bankTeller34":{
+        "message": "Proficiency in evaluating the level of risk associated with different loan applications based on factors such as credit history, income stability, debt-to-income ratio, and collateral."
+     },
+     "bankTeller35":{
+        "message": "Excellent customer service skills to build rapport with clients, understand their financial needs, explain loan options, and guide them through the loan application process."
+     },
+     "bankTeller36":{
+        "message": " Strong verbal and written communication skills to effectively convey loan terms, requirements, and decisions to clients, as well as collaborate with internal teams and external partners."
+     },
+     "bankTeller37":{
+        "message": "Ability to negotiate loan terms, interest rates, and fees with clients to reach mutually beneficial agreements while safeguarding the institution's interests and profitability."
+     },
+     "bankTeller38":{
+        "message": "Aptitude for identifying potential challenges or obstacles in the loan approval process and proactively finding solutions to address them while maintaining customer satisfaction and regulatory compliance."
+     },
+     "bankTeller39":{
+        "message": "Effective time management skills to prioritize tasks, manage a pipeline of loan applications, meet deadlines, and provide timely updates to clients throughout the loan process."
+     },
+     "bankTeller40":{
+        "message": "Knowledge of relevant laws, regulations, and compliance requirements governing lending practices, including the Fair Lending Act, Truth in Lending Act, and Equal Credit Opportunity Act."
+     },
+     "bankTeller41":{
+        "message": "Preferred Qualities"
+     },
+     "bankTeller42":{
+        "message": "If you possess one or more of the following qualities, you are more likely to be selected for the position."
+     },
+     "bankTeller43":{
+        "message": "Loan officers need to effectively communicate with clients, colleagues, and stakeholders. They should be able to explain complex financial terms and processes in a clear and understandable manner."
+     },
+     "bankTeller44":{
+        "message": "Having empathy towards clients' financial situations can help loan officers understand their needs better and provide personalized assistance and guidance."
+     },
+     "bankTeller45":{
+        "message": "While not always a requirement, having some sales and marketing skills can help loan officers identify opportunities, build relationships, and promote loan products effectively."
+     },
+     "bankTeller46":{
+        "message": "Loan officers handle sensitive financial information and play a crucial role in clients' financial well-being. Integrity and adherence to ethical standards are paramount in this role."
+     },
+
+     "bankTeller47":{
+        "message": "We are always looking for nice people to join our team. Even if you don’t find a role that suits your experience"
+     },
+     "bankTeller48":{
+        "message": "Apply Now"
+     },
+     "bankTeller49":{
+        "message": "you can "
+     },
+     "bankTeller50":{
+        "message": "Send an application"
+     },
+     "bankTeller51":{
+        "message": "for a position that you are interested in. When we have a vacancy, we will contact you."
+     },
+     "branchManager":{
+        "message": "Branch Manager -1  Openings"
+     },
+     "branchManager1":{
+        "message": " This is a  full-time position for a  BranchManager with 3+ years of Experience in banking  quality assurance."
+     },
+     "branchManager2":{
+        "message": "  Salary ranges from Rs. 20,000 to 30,000."
+     },
+     "branchManager3":{
+        "message": "Job location:"
+     },
+     "branchManager4":{
+        "message": "Kathmandu and Pokhara"
+     },
+     "branchManager5":{
+        "message": "Type:"
+     },
+     "branchManager6":{
+        "message": "Full Time"
+     },
+     "branchManager7":{
+        "message": "Vacancy:"
+     },
+     "branchManager8":{
+        "message": "1 Positions"
+     },
+     "branchManager9":{
+        "message": "Salary:"
+     },
+     "branchManager10":{
+        "message": "NPR 10,000 - 20,000"
+     },
+     "branchManager11":{
+        "message": "Required Skills:"
+     },
+     "branchManager12":{
+        "message": "Leadership"
+     },
+     "branchManager13":{
+        "message": "Team Management"
+     },
+     "branchManager14":{
+        "message": "Customer Service"
+     },
+     "branchManager15":{
+        "message": "Sales and Business Development"
+     },
+     "branchManager16":{
+        "message": "Financial Management"
+     },
+     "branchManager17":{
+        "message": "Risk Management"
+     },
+     "branchManager18":{
+        "message": "Operations Management"
+     },
+     "branchManager19":{
+        "message": "Problem Solving Abilities"
+     },
+     "branchManager20":{
+        "message": "Communication Skills"
+     },
+     "branchManager21":{
+        "message": "Analytical Skills"
+     },
+     "branchManager22":{
+        "message": "We are looking for few  branch manager to join our team."
+     },
+     "branchManager23":{
+        "message": " We are looking for self-managed people who can work without constant supervision."
+     },
+     "branchManager24":{
+        "message": "As a  branch manager  to oversees all aspects of branch operations, including customer service, sales, staff management, and financial performance, to ensure the branch meets its objectives and provides excellent service to customers."
+     },
+     "branchManager25":{
+        "message": "You will be responsible for one or more of the following tasks depending on your skills and prior experience."
+     },
+     "branchManager26":{
+        "message": "Overseeing all aspects of branch operations, including customer service, cash management, transaction processing, and compliance with banking regulations. "
+     },
+     "branchManager27":{
+        "message": "Managing and leading a team of banking professionals, including hiring, training, coaching, and performance management, to ensure high levels of employee engagement and productivity."
+     },
+     "branchManager28":{
+        "message": "Building and maintaining relationships with customers to understand their financial needs, address inquiries or concerns, and promote banking products and services."
+     },
+     "branchManager29":{
+        "message": "Developing and implementing strategies to drive branch revenue growth, meet sales targets, and increase market share through effective sales and marketing initiatives."
+     },
+     "branchManager30":{
+        "message": "Monitoring branch financial performance, analyzing financial data, and implementing measures to optimize profitability, control expenses, and achieve budgetary goals."
+     },
+     "branchManager31":{
+        "message": "Ensuring compliance with banking regulations, policies, and procedures, as well as identifying and mitigating risks related to fraud, operational errors, and compliance breaches."
+     },
+     "branchManager32":{
+        "message": "Developing and executing branch strategies and action plans that align with organizational goals and objectives, as well as adapting strategies in response to market trends and competitive pressures."
+     },
+     "branchManager33":{
+        "message": "Conducting regular performance evaluations of branch staff, providing feedback and coaching to support professional development and improve performance."
+     },
+     "branchManager34":{
+        "message": " Building and maintaining relationships within the local community to enhance brand awareness, generate leads, and support community initiatives that contribute to the branch's success."
+     },
+     "branchManager35":{
+        "message": "Minimum Requirements"
+     },
+     "branchManager36":{
+        "message": " If you have at least a few of the following skills, you can apply for this position. You will be assigned the best role based on your prior experience."
+     },
+     "branchManager37":{
+        "message": " A bachelor's degree in business administration, finance, accounting, economics, or a related field is often required."
+     },
+     "branchManager38":{
+        "message": "Previous experience in banking, financial services, or a related industry is usually required"
+     },
+     "branchManager39":{
+        "message": "Strong leadership abilities, including the ability to motivate, inspire, and lead a team of banking professionals to achieve branch goals and objectives."
+     },
+     "branchManager40":{
+        "message": " Excellent customer service skills to build and maintain relationships with customers, address inquiries or concerns, and ensure a positive customer experience."
+     },
+     "branchManager41":{
+        "message": "Demonstrated experience in sales and business development to drive branch revenue growth, meet sales targets, and promote banking products and services to customers."
+     },
+     "branchManager42":{
+        "message": "Understanding of financial principles, including banking products and services, financial statements, budgeting, and profitability analysis."
+     },
+     "branchManager43":{
+        "message": " Knowledge of risk management principles and regulatory compliance requirements to ensure adherence to banking regulations, policies, and procedures."
+     },
+     "branchManager44":{
+        "message": "Strong analytical skills to analyze financial data, identify trends, and make informed decisions to improve branch performance and optimize processes."
+     },
+     "branchManager45":{
+        "message": "Preferred Qualities"
+     },
+     "branchManager46":{
+        "message": "If you possess one or more of the following qualities, you are more likely to be selected for the position."
+     },
+
+     "branchManager47":{
+        "message": "A bachelor's degree in business administration, finance, accounting, economics, or a related field is often required"
+     },
+     "branchManager48":{
+        "message": "Previous experience in banking, financial services, or a related industry is usually required."
+     },
+     "branchManager49":{
+        "message": "Strong leadership abilities, including the ability to motivate, inspire, and lead a team of banking professionals to achieve branch goals and objectives."
+     },
+     "branchManager50":{
+        "message": " Excellent customer service skills to build and maintain relationships with customers, address inquiries or concerns, and ensure a positive customer experience."
+     },
+     "branchManager51":{
+        "message": "Apply Now"
+     },
+     "branchManager52":{
+        "message": "We are always looking for nice people to join our team. Even if you don’t find a role that suits your experience,"
+     },
+     "branchManager53":{
+        "message": "you can"
+     },
+     "branchManager54":{
+        "message": "Send an application"
+     },
+     "branchManager55":{
+        "message": "for a position that you are interested in. When we have a vacancy, we will contact you."
+     },
+     "businessLoan":{
+        "message": "Business Loan"
+     },
+     "businessLoan1":{
+        "message": "Content Not Available"
+     },
+     "businessLoan2":{
+        "message": "Follow Us On Facebook"
+     },
+     "businessLoan3":{
+        "message": "Recent Loans"
+     },
+     "careerTest":{
+        "message": "Current"
+     },
+     "careerTest1":{
+        "message": "Vacancies"
+     },
+     "careerTest2":{
+        "message": "Software Engineer"
+     },
+     "careerTest3":{
+        "message": "Dec 1, 2024"
+     },
+     "careerTest4":{
+        "message": "1"
+     },
+     "careerTest5":{
+        "message": "Opening"
+     },
+     "careerTest6":{
+        "message": "Apply"
+     },
+     "careerTest7":{
+        "message": "Bank Teller"
+     },
+     "careerTest8":{
+        "message": "Expire on:"
+     },
+     "careerTest9":{
+        "message": "Dec 1, 2024"
+     },
+     "careerTest10":{
+        "message": "2"
+     },
+     "careerTest11":{
+        "message": "Opening"
+     },
+     "careerTest12":{
+        "message": "Apply"
+     },
+     "careerTest13":{
+        "message": "Customer Service Representative" 
+     },
+     "careerTest14":{
+        "message": "Expire on:"
+     },
+     "careerTest15":{
+        "message": "Dec 1, 2024"
+     },
+     "careerTest16":{
+        "message": "2"
+     },
+     "careerTest17":{
+        "message": "Opening"
+     },
+     "careerTest18":{
+        "message": "Apply" 
+     },
+     "careerTest19":{
+        "message": "Loan Officer"
+     },
+     "careerTest20":{
+        "message": "Expire on:"
+     },
+     "careerTest21":{
+        "message": "Dec 1 , 2024"
+     },
+     "careerTest22":{
+        "message": "1"
+     },
+     "careerTest23":{
+        "message": "Opening"
+     },
+     "careerTest24":{
+        "message": "Apply"
+     },
+     "careerTest25":{
+        "message": "Financial  Analyst" 
+     },
+     "careerTest26":{
+        "message": "Expire on:"
+     },
+     "careerTest27":{
+        "message": "Dec 1 , 2024"
+     },
+     "careerTest28":{
+        "message": "1"
+     },
+     "careerTest29":{
+        "message": "Opening"
+     },
+     "careerTest30":{
+        "message": "Apply"
+     },
+     "careerTest31":{
+        "message": "Risk Analyst"
+     },
+     "careerTest32":{
+        "message": "Expire on:"
+     },
+     "careerTest33":{
+        "message": "Dec 1 , 2024"
+     },
+     "careerTest34":{
+        "message": "1"
+     },
+     "careerTest35":{
+        "message": "Opening"
+     },
+     "careerTest36":{
+        "message": "Apply"
+     },
+     "careerTest37":{
+        "message": "Compliance Officer"
+     },
+     "careerTest38":{
+        "message": "Expire on:"
+     },
+     "careerTest39":{
+        "message": "Dec 1 , 2024"
+     },
+     "careerTest40":{
+        "message": "1"
+     },
+     "careerTest41":{
+        "message": "Opening"
+     },
+     "careerTest42":{
+        "message": "Apply"
+     },
+     "careerTest43":{
+        "message": "Branch Manager "
+     },
+     "careerTest44":{
+        "message": "Expire on:"
+     },
+     "careerTest45":{
+        "message": "Dec 1 , 2024"
+     },
+     "careerTest46":{
+        "message": "1"
+     },
+     "careerTest47":{
+        "message": "Opening"
+     },
+     "careerTest48":{
+        "message": "Apply"
+     },
+     "careerTest49":{
+        "message": "Investment Advisor"
+     },
+     "careerTest50":{
+        "message": "Expire on:"
+     },
+     "careerTest51":{
+        "message": "Dec 1 , 2024"
+     },
+     "careerTest52":{
+        "message": "1"
+     },
+     "careerTest53":{
+        "message": "Opening"
+     },
+     "careerTest54":{
+        "message": "Apply"
+     },
+     "careerTest55":{
+        "message": "Mortgage Specialist"
+     },
+     "careerTest56":{
+        "message": "Expire on:"
+     },
+     "careerTest57":{
+        "message": "Dec 1 , 2024"
+     },
+     "careerTest58":{
+        "message": "1"
+     },
+     "careerTest59":{
+        "message": "Opening"
+     },
+     "careerTest60":{
+        "message": "Apply"
+     },
+     "careerTest61":{
+        "message": "Technology Specialist"
+     },
+     "careerTest62":{
+        "message": "Expire on:"
+     },
+     "careerTest63":{
+        "message": "Dec 1 , 2024"
+     },
+     "careerTest64":{
+        "message": "1"
+     },
+     "careerTest65":{
+        "message": "Opening"
+     },
+     "careerTest66":{
+        "message": "Apply"
      }
+
+
 }

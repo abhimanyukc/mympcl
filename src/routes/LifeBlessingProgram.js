@@ -1,5 +1,7 @@
 import React from 'react';
 import LifeBlessingProgramComponent from '../components/LifeBlessingProgramComponent'
+import Combo from '../components/combo';
+import Footer from '../components/footer';
 
 
 const LifeBlessingProgram = () => {
@@ -12,7 +14,9 @@ const LifeBlessingProgram = () => {
   return (
    
      <div className='container mx-auto mt-8'>
+      <Combo/>
     <LifeBlessingProgramComponent title="Life Blessing Program" subtopics={subtopics} />
+      <Footer/>
 </div>
   )    
 }

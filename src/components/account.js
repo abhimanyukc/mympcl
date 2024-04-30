@@ -55,7 +55,7 @@ const Account = () => {
 
 
   return (
-    <div className='px-5 py-12 mx-auto font-sans bg-white select-none max-w-screen-2xl md:px-8 md:py-8'>
+    <div className='px-5 py-4 mx-auto font-sans bg-white select-none max-w-screen-2xl md:px-4 md:py-8'>
     <div className='flex flex-col p-2 md:px-4'>
 
 
@@ -64,29 +64,29 @@ const Account = () => {
         
         <div className='flex flex-col font-serif md:flex-row'>
        
-       <div className='flex flex-col my-8 '>
-        <div className='mb-4 text-lg font-semibold text-green-800'>{t('acc2.message')}</div>
+       <div className='flex flex-col my-4 ml-2'>
+        <div className='mb-4 text-lg font-semibold text-green-800 text-nowrap'>{t('acc2.message')}</div>
         <div className='flex flex-row items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div className=''>{t('acc12.message')} </div></div>
         <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div className=''>{t('acc13.message')}</div></div>
         <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div className=''>{t('acc14.message')}</div></div>
        </div>
 
-       <div className='flex flex-col mx-2 my-8'>
-        <div className='mb-4 font-serif text-lg font-semibold text-green-800'>{t('acc3.message')}</div>
+       <div className='flex flex-col my-4 ml-2'>
+        <div className='mb-4 font-serif text-lg font-semibold text-green-800 text-nowrap'>{t('acc3.message')}</div>
         <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>{t('acc15.message')}</div></div>
         <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>{t('acc16.message')}</div></div>
         <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>{t('acc17.message')}</div></div>
        </div>
        
-       <div className='flex flex-col mx-2 my-8'>
-        <div className='mb-4 font-serif text-lg font-semibold text-green-800'>{t('acc4.message')}</div>
+       <div className='flex flex-col my-4 ml-2'>
+        <div className='mb-4 font-serif text-lg font-semibold text-green-800 text-nowrap'>{t('acc4.message')}</div>
         <div className='flex items-start '><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>{t('acc15.message')}</div></div>
         <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>{t('acc16.message')}</div></div>
         <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>{t('acc17.message')}</div></div>
        </div>
 
-       <div className='flex flex-col mt-8'>
-        <div className='mb-4 font-serif text-lg font-semibold text-green-800'>{t('acc5.message')}</div>
+       <div className='flex flex-col mt-4 ml-2'>
+        <div className='mb-4 font-serif text-lg font-semibold text-green-800 text-nowrap'>{t('acc5.message')}</div>
         <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>{t('acc18.message')}</div></div>
         <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>{t('acc19.message')}</div></div>
         <div className='flex items-start'><div className='mr-2 text-white bg-indigo-800'><FaAngleRight/></div><div>{t('acc20.message')}</div></div>
@@ -96,14 +96,14 @@ const Account = () => {
 
         <div className='flex flex-col '>
 
-        <div className='flex w-20 mx-auto mb-12 text-center text-white bg-primary'>{t('acc6.message')}</div>
+        <div className='flex w-20 mx-auto mb-4 text-center text-white bg-primary'>{t('acc6.message')}</div>
 
-        <div  ref={componentRef} className='flex flex-col flex-wrap justify-center w-11/12 py-2 mx-auto text-white rounded-md md:w-full bg-primary md:m-4 md:flex-row'>
-          <div className='flex mx-8 mt-8 md:mt-4'>
+        <div  ref={componentRef} className='flex flex-col flex-wrap justify-center w-11/12 py-2 mx-auto text-white rounded-md md:py-4 md:w-full md:justify-start bg-primary md:m-4 md:flex-row'>
+          <div className='flex items-center mx-8 mt-8 md:mx-12 md:mt-4'>
         <img
             src={require('../images/Capital.jpg')}
             alt='Sahakarilogo'
-            className='object-fill w-8 h-12 mr-2'
+            className='object-fill w-8 h-8 mr-2 md:w-20 md:h-12'
           />
           <div className='flex flex-col ml-2'>
           <div>
@@ -113,11 +113,11 @@ const Account = () => {
           </div>
           </div>
 
-          <div className='flex mx-8 mt-4'>
+          <div className='flex items-center mx-8 mt-4 md:mx-12'>
         <img
             src={require('../images/asst.jpeg')}
             alt='Sahakarilogo'
-            className='object-fill w-8 h-12 mr-2'
+            className='object-fill w-8 h-8 mr-2 md:w-20 md:h-12'
           />
           <div className='flex flex-col ml-2'>
           <div>
@@ -130,11 +130,11 @@ const Account = () => {
           </div>
 
           
-          <div className='flex mx-8 mt-4'>
+          <div className='flex items-center mx-8 mt-4 md:mx-12'>
         <img
             src={require('../images/deposit.jpeg')}
             alt='Sahakarilogo'
-            className='object-fill w-8 h-12 mr-2'
+            className='object-fill w-8 h-8 mr-2 md:w-20 md:h-12'
           />
           <div className='flex flex-col ml-2'>
           <div>
@@ -147,11 +147,11 @@ const Account = () => {
           </div>
 
          
-          <div className='flex mx-8 mt-4'>
+          <div className='flex items-center mx-8 mt-4 md:mx-12'>
         <img
             src={require('../images/members.jpg')}
             alt='Sahakarilogo'
-            className='object-fill w-8 h-12 mr-2'
+            className='object-fill w-8 h-8 mr-2 md:w-20 md:h-12'
           />
           <div className='flex flex-col object-fill ml-2'>
           <div>
@@ -164,11 +164,11 @@ const Account = () => {
           </div>
 
          
-          <div className='flex mx-8 mt-4'>
+          <div className='flex items-center mx-8 mt-4 md:mx-12'>
         <img
             src={require('../images/reserve.jpeg')}
             alt='Sahakarilogo'
-            className='object-fill w-8 h-12 mr-2'
+            className='object-fill w-8 h-8 mr-2 md:w-20 md:h-12'
           />
           <div className='flex flex-col ml-2'>
           <div>

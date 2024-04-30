@@ -1,6 +1,8 @@
 import React from 'react';
 import SeniorCitizenHealthCareComponent from '../components/seniorcitizenhealthcarec'
 import Seniorcitizenhealthcarecb from '../components/seniorcitizenhealthcarecb';
+import Combo from '../components/combo';
+import Footer from '../components/footer';
 
 const SeniorCitizenHealthCare = () => {
   
@@ -13,6 +15,7 @@ const SeniorCitizenHealthCare = () => {
   return (
     <div className='px-8 mx-auto mt-4 max-w-screen-2xl md:px-20'>
         <div className='flex flex-col md:flex-row'>
+          <Combo/>
         <div>
         <SeniorCitizenHealthCareComponent
          imageUrl="https://i.pinimg.com/564x/13/ed/4e/13ed4ef0380b52ac16fdfe92da57b54d.jpg"
@@ -26,6 +29,7 @@ const SeniorCitizenHealthCare = () => {
                    title="Related Health Service" subtopics={subtopics} 
              />
         </div>
+        <Footer/>
 
         </div>
     </div>

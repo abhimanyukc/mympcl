@@ -8,7 +8,7 @@ const ImageCard = ({ name, position, imageUrl }) => {
 
   return (
     <div className="w-full p-4 md:w-1/3 lg:w-1/4">
-      <div className="overflow-hidden bg-white rounded-lg shadow-md ">
+      <div className="p-4 overflow-hidden bg-white rounded-lg shadow-md md:p-0">
         <img src={imageUrl} alt={name} className="object-cover w-full h-48 transition duration-300 hover:scale-105" />
         <div className="p-4">
           <p className="mb-2 text-xl font-semibold">{t(name)}</p>
@@ -22,7 +22,7 @@ const ImageCard = ({ name, position, imageUrl }) => {
 const   Organizationc = () => {
    const [t, i18n] = useTranslation("global")
   const imageCardsi  = [
-    { name: 'mem17.message',position:'mem11.message', imageUrl: 'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' }
+    { name: 'mem11.message',position:'mem17.message', imageUrl: 'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' }
 
   ]
   
@@ -34,8 +34,8 @@ const   Organizationc = () => {
     { name: 'mem7.message',position:'mem15.message', imageUrl: 'https://images.unsplash.com/photo-1542206395-9feb3edaa68d?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
     { name: 'mem8.message',position:'mem13.message', imageUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
     { name: 'mem9.message',position:'mem13.message', imageUrl: 'https://images.unsplash.com/photo-1506633541287-7c7544a7a706?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
-    { name: 'mem10.message',position:'mem13.message', imageUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
-    { name: 'mem11.message',position:'mem13.message', imageUrl: 'https://cdn.stocksnap.io/img-thumbs/960w/man-reading_NEJC2MVDAZ.jpg' },
+    { name: 'mem10.message',position:'mem13.message',imageUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+    { name: 'mem11.message',position:'mem13.message',imageUrl: 'https://cdn.stocksnap.io/img-thumbs/960w/man-reading_NEJC2MVDAZ.jpg' },
   ];
 
 
@@ -50,14 +50,14 @@ const   Organizationc = () => {
 
       <div className='flex justify-center w-5/6 mx-4 my-8 font-bold md:mx-16'>{t('mem1.message')}</div>
       
-      <div className="flex flex-wrap justify-center">
+      <div className="flex flex-wrap justify-center p-1 text-nowrap">
       {imageCardsi.map((card, index) => 
         <ImageCard key={index} {...card} />
       )}
     </div>
 
 
-    <div className="flex flex-wrap justify-center ">
+    <div className="flex flex-wrap justify-center p-1 text-nowrap ">
           {imageCards.map((card, index) => <ImageCard key={index} {...card} />)}
         </div>
 

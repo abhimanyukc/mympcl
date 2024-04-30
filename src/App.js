@@ -72,6 +72,12 @@ import MortgageSpecialist from './routes/mortgagespecialist';
 import TechnologySpecialistRoute from './routes/technologyspecialist';
 import MortgageSpecialistRoute from './routes/mortgagespecialist';
 import Loader from './components/loader';
+import Login from './routes/login';
+import Signup from './routes/signup';
+import Resetpasswordc from './components/resetpasswordc';
+import Recoveryconfirmation from './routes/recoveryconfirmation';
+import Forgetpassword from './routes/forgetpassword';
+import Remittance from './routes/remittance';
 
 
 
@@ -86,7 +92,7 @@ function App() {
       // Simulate loading data (replace with your actual data fetching logic)
       setTimeout(() => {
         setIsLoading(false); // Set loading state to false after 5 seconds (adjust as needed)
-      }, 5000);
+      }, 2000);
     }, []);
  
   return (
@@ -95,7 +101,7 @@ function App() {
       <Loader /> // Show the loader while loading
     ) : (
        <Router>
-       <Routes>
+       {/* <Routes>
           <Route path="/information" element={ <Dynamiccomponentc title="Information" />} />
           <Route path="/about" element={ <Dynamiccomponentc title="About" />} />
           <Route path="/contact" element={ <Dynamiccomponentc title="Contact" />} />
@@ -144,7 +150,7 @@ function App() {
          <Route path="/kramik-bachat/product/service/detail" element={<Dynamiccomponentc title="Kramik Bachat "/>} />
          <Route path="/Gausahar-Double-Dhamaka-Bachat/product/service/detail" element={<Dynamiccomponentc title="Gausahar Double Dhamaka Bachat"/>} />
          <Route path="/career/softwareEngineer" element={<Dynamiccomponentc title="Career / Software Engineer "/>} />
-        </Routes>
+        </Routes> */}
 
       <Routes>
     
@@ -212,7 +218,12 @@ function App() {
          <Route path="/abbs-service/product/service/detail" element={<Abbsservice/>} />
          <Route path="/kramik-bachat/product/service/detail" element={<Kramikbachat/>} />
          <Route path="/Gausahar-Double-Dhamaka-Bachat/product/service/detail" element={<Gausahardoubledhamakabachat/>} />
-      
+         <Route path="/login" element= {<Login/>} />
+        <Route path="/signup" element= {<Signup/>} />
+        <Route path="/reset-password" element= {<Resetpasswordc/>} />
+        <Route path="/recovery-confirmation" element= {<Recoveryconfirmation/>} />
+        <Route path="/forgot-password" element= {<Forgetpassword/>} />
+        <Route path="/remittance" element= {<Remittance/>} />
       </Routes>
     </Router>
     )}

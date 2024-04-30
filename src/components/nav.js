@@ -147,14 +147,14 @@ const handleToggleNavbar = () => {
         >
     
       <Link to="/" className="" >
-      <div className='py-1 text-white transition duration-300 md:pl-3 md:p-2' >
-         <div className='hover:text-customHover'>Home</div>
+      <div className='py-1 text-white transition duration-300 md:pl-1 md:p-2' >
+         <div className='hover:text-customHover'>{t('nav10.message')}</div>
       </div>
       </Link>
        
 
         <div
-          className='relative flex items-center py-2 text-white text-nowrap pl-9 hover:text-customHover md:p-2 md:pl-12 '
+          className='relative flex items-center py-2 text-white text-nowrap pl-9 hover:text-customHover md:p-2 md:pl-4 '
           onClick={toggleDropdown} 
           ref={dropdownRef}
         >
@@ -211,7 +211,7 @@ const handleToggleNavbar = () => {
         </div>
         </Link> */}
 
-       <div> <div className='relative flex items-center py-2 text-white pl-9 hover:text-customHover md:p-2 md:pl-12'
+       <div> <div className='relative flex items-center py-2 pl-8 text-white hover:text-customHover md:p-2 md:pl-4'
         
         // 'p-1 text-white md:p-2 md:mr-4 {useLocation().pathname == }
            onClick={toggleDropdown3}
@@ -271,55 +271,79 @@ const handleToggleNavbar = () => {
       
       
         <Link to="/gallery" >
-        <div className={`m-2 md:pl-12 md:p-1 pl-2 hover:text-customHover ${location.pathname === '/gallery' || location.pathname === '/gallery/' ? 'text-active' : 'text-white'} `}
+        <div className={`m-2 md:pl-4 md:p-1 pl-2 hover:text-customHover ${location.pathname === '/gallery' || location.pathname === '/gallery/' ? 'text-active' : 'text-white'} `}
         // 'p-1 text-white md:p-2 md:mr-4'
           >
-             Gallery
+              {t('nav11.message')}
         </div>
         </Link>
 
         <Link to="/reports" >
-        <div className={`m-2 md:p-1  pl-4 md:pl-12 hover:text-customHover ${location.pathname === '/reports' || location.pathname === '/reports/' ? 'text-active' : 'text-white'} `}
+        <div className={`m-2 md:p-1  pl-4 md:pl-4 hover:text-customHover ${location.pathname === '/reports' || location.pathname === '/reports/' ? 'text-active' : 'text-white'} `}
         // 'p-1 text-white md:p-2 md:mr-4'
           >
-             Reports
+               {t('nav12.message')}
         </div>
         </Link>
 
         <Link to="/loan" >
-        <div className={`m-2 ml-3 md:pl-12 md:ml-0 md:p-1 text-nowrap  pl-14 hover:text-customHover ${location.pathname === '/loan' || location.pathname === '/loan/' ? 'text-active' : 'text-white'} `}
+        <div className={`m-2 ml-3 md:pl-4 md:ml-0 md:p-1 text-nowrap  pl-14 hover:text-customHover ${location.pathname === '/loan' || location.pathname === '/loan/' ? 'text-active' : 'text-white'} `}
         // 'p-1 text-white md:p-2 md:mr-4'
           >
-              Loan Scheme
+                {t('nav13.message')}
         </div>
         </Link>
 
         <Link to="/healthprogram" >
-        <div className={`m-2 ml-5 md:pl-12 md:ml-0 md:p-1  text-nowrap   pl-14 hover:text-customHover ${location.pathname === '/healthprogram' || location.pathname === '/healthprogram/' ? 'text-active' : 'text-white'} `}
+        <div className={`m-2 ml-5 md:pl-4 md:ml-0 md:p-1  text-nowrap   pl-14 hover:text-customHover ${location.pathname === '/healthprogram' || location.pathname === '/healthprogram/' ? 'text-active' : 'text-white'} `}
         // 'p-1 text-white md:p-2 md:mr-4'
           >
-             Health Program
+               {t('nav14.message')}
         </div>
         </Link>
 
         <Link to="/notice" >
-        <div className={`md:m-2 md:pl-12 ml-3 my-2 hover:text-customHover ${location.pathname === '/notice' || location.pathname === '/notice/' ? 'text-active' : 'text-white'} `}
+        <div className={`md:m-2 md:pl-4 ml-3 my-2 hover:text-customHover ${location.pathname === '/notice' || location.pathname === '/notice/' ? 'text-active' : 'text-white'} `}
         // 'p-1 text-white md:p-2 md:mr-4'
           >
-             Notices
+               {t('nav15.message')}
         </div>
         </Link>
 
         <Link to="/kyc" >
-        <div className={`md:m-2 md:pl-12 mr-2 my-2 hover:text-customHover ${location.pathname === '/kyc' || location.pathname === '/kyc/' ? 'text-active' : 'text-white'} `}
+        <div className={`md:m-2 md:pl-4 mr-2 my-2 hover:text-customHover ${location.pathname === '/kyc' || location.pathname === '/kyc/' ? 'text-active' : 'text-white'} `}
         // 'p-1 text-white md:p-2 md:mr-4'
           >
-             KYC
+               {t('nav16.message')}
+        </div>
+        </Link>
+
+        <Link to="/emicalculator" >
+        <div className={`md:m-2 md:pl-4 mr-2 my-2   hover:text-customHover ${location.pathname === '/emi' || location.pathname === '/emi/' ? 'text-active' : 'text-white'} `}
+        // 'p-1 text-white md:p-2 md:mr-4'
+          >
+             {t('nav17.message')}
+        </div>
+        </Link>
+
+        <Link to="/remittance" >
+        <div className={`md:m-2 md:pl-4 mr-2 pl-12 my-2 hover:text-customHover ${location.pathname === '/remittance' || location.pathname === '/remittance/' ? 'text-active' : 'text-white'} `}
+        // 'p-1 text-white md:p-2 md:mr-4'
+          >
+             {t('nav18.message')}
+        </div>
+        </Link>
+
+        <Link to="/interestrate" >
+        <div className={`md:m-2 md:pl-4 pl-14 ml-1 mr-2 my-2 hover:text-customHover ${location.pathname === '/interestrate' || location.pathname === '/interestrate/' ? 'text-active' : 'text-white'} `}
+        // 'p-1 text-white md:p-2 md:mr-4'
+          >
+              {t('nav19.message')}
         </div>
         </Link>
 
         <Link to="/contact" >
-        <div className={`md:m-2 md:pl-12 ml-9 my-2 text-nowrap hover:text-customHover ${location.pathname === '/contact' || location.pathname === '/contact/' ? 'text-active' : 'text-white'} `}
+        <div className={`md:m-2 md:pl-4 ml-9 my-2 text-nowrap hover:text-customHover ${location.pathname === '/contact' || location.pathname === '/contact/' ? 'text-active' : 'text-white'} `}
         // 'p-1 text-white md:p-2 md:mr-4'
           >
         {t("nav8.message")}
@@ -330,7 +354,7 @@ const handleToggleNavbar = () => {
         
         <div className='flex items-center select-none'>
           <div
-            className='relative flex items-center p-1 rounded-md md:pl-12 md:mx-auto'
+            className='relative flex items-center py-1 pl-2 rounded-md md:pl-4 md:mx-auto'
            
              ref={dropdownRef2}
              onClick={toggleDropdown2}

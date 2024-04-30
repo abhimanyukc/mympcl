@@ -3,6 +3,7 @@ import Nav from '../components/nav'
 
 import Footer from '../components/footer'
 import InvestmentAdvisor from '../components/investmentadvisor'
+import Combo from '../components/combo';
 
 
 const InvestmentAdvisorRoute = () => {
@@ -10,7 +11,7 @@ const InvestmentAdvisorRoute = () => {
   return (
   
     <div>
-      <Nav/>
+         <Combo/>
           <InvestmentAdvisor/>
         <Footer/>
     </div>

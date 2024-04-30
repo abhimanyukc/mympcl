@@ -1,5 +1,7 @@
 import React  from 'react';
 import Freemobilebankingservicec from '../components/freemobilebankingservicec'
+import Combo from '../components/combo';
+import Footer from '../components/footer';
 
 
 const Freemobilebankingservice = () => {
@@ -14,7 +16,9 @@ const Freemobilebankingservice = () => {
   return (
 
      <div className='container mx-auto mt-8'>
+      <Combo/>
     <Freemobilebankingservicec title="Related Services" subtopics={subtopics} />
+      <Footer/>
 </div>
   )
 }

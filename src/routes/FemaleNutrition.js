@@ -1,5 +1,7 @@
 import React  from 'react';
 import FemaleNutritionComponent from '../components/FemaleNutritionC'
+import Combo from '../components/combo';
+import Footer from '../components/footer';
 
 
 const FemaleNutrition = () => {
@@ -12,7 +14,9 @@ const FemaleNutrition = () => {
   return (
   
     <div className='container mx-auto mt-8'>
+      <Combo/>
             <FemaleNutritionComponent title="Female Nutrition Service" subtopics={subtopics} />
+        <Footer/>
         </div>
 
   )

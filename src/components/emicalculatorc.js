@@ -64,35 +64,35 @@ const Emicalculatorc = () => {
 
   return (
     <div className='mx-auto bg-white select-none max-w-screen-2xl '>
-      <div className='flex flex-col justify-center md:space-x-8 md:flex-row md:px-8 md:py-40'>
+      <div className='flex flex-col justify-center md:space-x-8 md:flex-row md:px-8 md:py-10'>
         <div className='flex flex-col items-center px-8 md:px-0 md:items-start'>
-          <div className='mt-8 mb-4 text-black'> {t('emi.message')}</div>
-          <div className="flex flex-col items-center justify-center w-full p-5 bg-green-800 border md:flex-row md:flex-wrap ">
-            <div className='flex flex-col items-center justify-center object-cover w-40 p-4 border md:my-8 md:mx-8 h-half'>
-              <BsFillPersonFill size={30} className='text-green-400' />
+          <div className='mt-8 mb-4 text-3xl font-semibold text-black'> {t('emi.message')}</div>
+          <div className="flex flex-col items-center w-full p-5 bg-green-800 border md:flex-row md:flex-wrap ">
+            <div className='flex flex-col items-center justify-center object-cover w-40 h-32 p-4 border md:my-8 md:mx-8'>
+              <BsFillPersonFill size={30} className='text-green-400 ' />
               <div className='text-white'>{t('emi1.message')}</div>
             </div>
-            <div className='flex flex-col items-center justify-center object-cover w-40 p-4 border md:my-8 md:mx-8 h-half'>
+            <div className='flex flex-col items-center justify-center object-cover w-40 h-32 p-4 border md:my-8 md:mx-8'>
             <BsFillPersonFill size={30} className='text-green-400' />
               <div className='text-white'>{t('emi2.message')}</div>
             </div>
 
-            <div className='flex flex-col items-center justify-center object-cover w-40 p-4 border md:my-8 md:mx-8 h-half'>
+            <div className='flex flex-col items-center justify-center object-cover w-40 h-32 p-4 border md:my-8 md:mx-8'>
             <BsFillPersonFill size={30} className='text-green-400' />
               <div className='text-white'>{t('emi3.message')}</div>
             </div>
 
-            <div className='flex flex-col items-center justify-center object-cover w-40 p-4 border md:my-8 md:mx-8 h-half'>
+            <div className='flex flex-col items-center justify-center object-cover w-40 h-32 p-4 border md:my-8 md:mx-8'>
             <BsFillPersonFill size={30} className='text-green-400' />
               <div className='text-white'>{t('emi4.message')}</div>
             </div>
 
-            <div className='flex flex-col items-center justify-center object-cover w-40 p-4 border md:my-8 md:mx-8 h-half '>
+            <div className='flex flex-col items-center justify-center object-cover w-40 h-32 p-4 border md:my-8 md:mx-8 '>
             <BsFillPersonFill size={30} className='text-green-400' />
               <div className='text-center text-white'>{t('emi5.message')}</div>
             </div>
 
-            <div className='flex flex-col items-center justify-center object-cover w-40 p-4 border md:my-8 md:mx-8 h-half'>
+            <div className='flex flex-col items-center justify-center object-cover w-40 h-32 p-4 border md:my-8 md:mx-8'>
             <BsFillPersonFill size={30} className='text-green-400' />
               <div className='text-center text-white'>{t('emi6.message')}</div>
             </div>
@@ -100,7 +100,7 @@ const Emicalculatorc = () => {
         </div>
 
         <div className='flex flex-col justify-center my-8 md:items-center'>
-          <div className='mb-2 text-center text-black'>{t('emi7.message')}</div>
+          <div className='mb-2 text-xl font-normal text-center text-black'>{t('emi7.message')}</div>
           <div className="flex items-center p-6 mx-auto bg-green-800 w-half md:h-full md:mt-4 md:px-20">
             <div className='flex flex-col md:flex-col'>
               <div className='text-white ' >{t('emi8.message')}</div>

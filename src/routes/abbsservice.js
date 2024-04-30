@@ -1,5 +1,7 @@
 import React  from 'react';
 import Abbsservicec from '../components/abbsservicec'
+import Combo from '../components/combo';
+import Footer from '../components/footer';
 
 
 const Abbsservice = () => {
@@ -13,7 +15,9 @@ const Abbsservice = () => {
       return (
        
          <div className='container mx-auto mt-8'>
+          <Combo/>
         <Abbsservicec title="Related Services" subtopics={subtopics} />
+        <Footer/>
     </div>
       )
 }

@@ -4,7 +4,7 @@ import Gallaryc from '../components/gallaryc'
 
 
 import Footer from '../components/footer'
-import Nav from '../components/nav'
+import Combo from '../components/combo';
 
 const Gallery = () => {
 
@@ -13,7 +13,7 @@ const Gallery = () => {
     <div>
       
       <div className='text-base leading-6 tracking-normal bg-white text-3d3d3d text-start'>    
-     <Nav/>
+        <Combo/>
      <Gallaryc/>
      <Footer/>
     </div>

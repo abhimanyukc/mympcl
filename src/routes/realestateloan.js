@@ -1,5 +1,7 @@
 import React from 'react'
 import RealestateLoanc from '../components/realestateloanc'
+import Combo from '../components/combo'
+import Footer from '../components/footer'
 
 const RealestateLoan = () => {
       //sample data for loans
@@ -27,7 +29,9 @@ const RealestateLoan = () => {
        ]
   return (
     <div>
+      <Combo/>
          <RealestateLoanc realEstateLoans={realEstateLoans}/>
+      <Footer/>
     </div>
   )
 }

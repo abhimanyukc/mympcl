@@ -12,7 +12,7 @@ const Careercategoryr = () => {
   return (
 
     <div>
-      <div className='sticky top-0 left-0 z-20 w-full '>
+      <div className='w-full '>
       <Combo/>
       </div>
 

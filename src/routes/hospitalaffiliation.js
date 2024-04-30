@@ -1,5 +1,7 @@
 import React from 'react';
 import Hospitalaffiliationc from '../components/hospitalaffiliationc';
+import Combo from '../components/combo';
+import Footer from '../components/footer';
 
 
 const Hospitalaffiliation = () => {
@@ -13,7 +15,9 @@ const Hospitalaffiliation = () => {
     return (
        
         <div className='container mx-auto mt-8'>
+            <Combo/>
             <Hospitalaffiliationc title="Related Health Service" subtopics={subtopics} />
+            <Footer/>
         </div>
     );
 }

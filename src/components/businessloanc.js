@@ -55,6 +55,7 @@
 // export default BusinessLoanc
 
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 const BusinessLoanCard = ({ image, title, description}) => {
     return(
@@ -66,6 +67,8 @@ const BusinessLoanCard = ({ image, title, description}) => {
     )
   }
 const BusinessLoanc = ({businessLoans}) => {
+
+  const [t, i18n]  = useTranslation('global')
   return (
     <div className='px-6 mx-auto max-w-screen-2xl md:px-8'>
 
@@ -73,10 +76,10 @@ const BusinessLoanc = ({businessLoans}) => {
       
       <div className='flex flex-col items-center '>
       <img src='https://i.pinimg.com/564x/f4/87/06/f487066a47c350e4913507c291e6c2cd.jpg' alt='Real Estate loan' className="w-32 h-32 mb-4 rounded-full " />
-      <div className='font-semibold'>Business Loan</div>
-      <div className='text-xs '>Content not available</div>
-      <div className='font-semibold '>Follow Us On Facebook</div>
-      <div className='font-semibold '>Recent Loans</div> 
+      <div className='font-semibold'>{t('businessLoan.message')}</div>
+      <div className='text-xs '>{t('businessLoan1.message')}</div>
+      <div className='font-semibold '>{t('businessLoan2.message')}</div>
+      <div className='font-semibold '>{t('businessLoan3.message')}</div> 
       </div>
 
      

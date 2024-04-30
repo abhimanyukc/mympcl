@@ -1,7 +1,7 @@
 import React from 'react';
-import Nav from '../components/nav'
 import Footer from '../components/footer'
 import MortgageSpecialist from '../components/mortgagespecialist'
+import Combo from '../components/combo';
 
 
 
@@ -10,7 +10,7 @@ const MortgageSpecialistRoute = () => {
   return (
   
     <div>
-      <Nav/>
+         <Combo/>
          <MortgageSpecialist/>
         <Footer/>
        </div>

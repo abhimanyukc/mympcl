@@ -1,6 +1,8 @@
 //passing value using props from parent component
 import React  from 'react';
 import EducationalLoanc from '../components/educationalloan'
+import Combo from '../components/combo';
+import Footer from '../components/footer';
 
 
 const EducationalLoan = () => {
@@ -31,8 +33,10 @@ const EducationalLoan = () => {
   return (
   
     <div>
+        <Combo/>
            {/* Pass educationalLoans data as prop to educationalLoans component */}
         <EducationalLoanc educationalLoans={educationalLoans}/>
+        <Footer/>
     </div>
 
   )

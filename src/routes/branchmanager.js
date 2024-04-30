@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Nav from '../components/nav'
 import BranchManager from '../components/branchmanager'
 import Footer from '../components/footer'
+import Combo from '../components/combo';
 
 
 const Branchmanager = () => {
@@ -9,7 +10,7 @@ const Branchmanager = () => {
   return (
  
     <div>
-      <Nav/>
+      <Combo/>
           <BranchManager/>
         <Footer/>
     </div>

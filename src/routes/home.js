@@ -22,6 +22,8 @@ import Careertest from '../components/career'
 import Careercategory from '../components/careercategory'
 import Softwareengineerc from '../components/Softwareengineer'
 import NoticePage from '../modal/noticepage'
+import Marque from '../components/marque';
+
 
 
 
@@ -49,26 +51,16 @@ const Home = () => {
      />}
     <div className='font-sans text-base leading-6 tracking-normal bg-white text-3d3d3d text-start '>
       
-     <Combo/>
-       <Careertest/>
-       <Careercategory/>
+      <Combo/>
+      <Marque/>
       <ImageSlider/>
-      <Softwareengineerc/>
       <Sidebar className=""/>
-     
-     <Servicesc/>
-     <Onlineaccountopening/>
+  
      <Account/>
      <Remittance/>
      <InterestRateComponent/>
       <Emicalculatorc/>
-      <Informationc/>
-      <Membershipc/>
-      <Departmentc/>
-      <Branchesc/>
       <ContactC/>
-      <Newsc/>
-      <Careerc/>
      <Footer/>
     </div>
     </div>

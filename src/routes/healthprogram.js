@@ -1,5 +1,7 @@
 import React  from 'react';
 import Healthprogramc from '../components/healthprogramc'
+import Combo from '../components/combo';
+import Footer from '../components/footer';
 const Healthprogram = () => {
 
    
@@ -37,7 +39,9 @@ const Healthprogram = () => {
   return (
 
     <div>
+      <Combo/>
         <Healthprogramc healthServices={healthServices}/>
+        <Footer/>
     </div>
   
   )

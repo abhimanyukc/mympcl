@@ -1,7 +1,7 @@
 
-import Nav from '../components/nav'
 import Footer from '../components/footer'
 import RiskAnalyst from '../components/riskanalystc'
+import Combo from '../components/combo'
 
 
 const RiskAnalystRoute = () => {
@@ -9,7 +9,7 @@ const RiskAnalystRoute = () => {
   return (
     
     <div>
-         <Nav/>
+         <Combo/>
         <RiskAnalyst/>
         <Footer/>
     </div>

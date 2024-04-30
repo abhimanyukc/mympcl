@@ -1,12 +1,14 @@
 import React, {useState, useEffect} from 'react'
+import { useTranslation } from 'react-i18next';
 import {
      FaMailBulk,
      FaHome,
   } from "react-icons/fa";
 
-import EnglishIcon from '../images/united-kingdom.png'; // Import English icon
-import NepaliIcon from '../images/nepali.png'; // Import Nepali icon
+
 const Headerinfo = () => {
+
+  const [t, i18n] = useTranslation("global");
   const [isVisible , setIsVisible] = useState(true);
 
   useEffect(() => {
@@ -32,17 +34,17 @@ const Headerinfo = () => {
 
       <div className='flex flex-col mt-2 md:mt-2'>
       <div className='font-semibold text-green-500 md:mt-0'>गाउसहर बहुउदेस्यिय सहकारि सस्था लि.</div>
-      <div className='w-full text-lg font-extrabold truncate md:text-2xl md:w-96 text-wrap text-secondary'>GAUSHAR MULTIPURPOSE COOPERATIVE SOCIETY LTD</div>
+      <div className='w-full text-lg font-extrabold truncate md:text-2xl md:w-96 text-wrap text-secondary'>{t('headerInfo1.message')}</div>
       </div>
       </div>
         <div className='md:mt-1 md:mr-4 '>
          
           
-            <div className='w-full pl-8 text-sm font-normal truncate md:pl-0 md:mt-2 text-wrap md:w-80 md:text-primary text-secondary'>Head Office: GAUSHAR Sahakari, Srijana chowk, Pokhara Nepal
-             Tel:- 01-4478006, 01-4465102, 01-4465104</div>
+            <div className='w-full pl-8 text-sm font-normal truncate md:pl-0 md:mt-2 text-wrap md:w-80 md:text-primary text-secondary'>{t('headerInfo2.message')}: {t("headerInfo18.message")}, Srijana chowk, Pokhara Nepal
+             {t('headerInfo6.message')}:- {t('headerInfo10.message')}, {t('headerInfo11.message')}, {t('headerInfo12.message')}</div>
              <div className='w-full text-active md:bg-secondary'>
               {isVisible && (
-                <p className='hidden font-bold animate-blink md:flex'>Open:Sun - Fri(9:30 to 5:00)</p> 
+                <p className='hidden font-bold animate-blink md:flex'>{t('headerInfo13.message')}:{t('headerInfo14.message')} - {t('headerInfo15.message')}{t('headerInfo16.message')}</p> 
               )}
              
               </div>
@@ -57,47 +59,29 @@ const Headerinfo = () => {
                 <div className='flex items-center text-2xl font-medium text-secondary'>G<span className='text-xl font-medium '>ausahar@gmail.com</span></div>
             </div>
 
-           <div className=' text-secondary'>Branches:-</div>
+           <div className=' text-secondary'>{t('headerInfo7.message')}:-</div>
            <div className='flex '>
            <div className='flex items-center '>
-            <FaHome className='mr-1 text-primary'/> <div className=' text-primary text-nowrap'>Lamchaur, pokhara</div>
+            <FaHome className='mr-1 text-primary'/> <div className=' text-primary text-nowrap'>{t('headerInfo8.message')}, {t('headerInfo9.message')}</div>
            </div>
            <div className='flex ml-4'>
-          <div className='mr-1 text-primary'> &#9742; {/* Unicode character for phone icon */}</div> <div  className=' text-primary text-nowrap'>01-4512842</div>
+          <div className='mr-1 text-primary'> &#9742; {/* Unicode character for phone icon */}</div> <div  className=' text-primary text-nowrap'>{t('headerInfo17.message')}</div>
            </div>
            </div>
 
            <div className='flex '>
            <div className='flex items-center'>
-            <FaHome className='mr-1 text-primary'/> <div className=' text-primary'>Newroad, pokhara</div>
+            <FaHome className='mr-1 text-primary'/> <div className=' text-primary'>{t('headerInfo19.message')},{t('headerInfo9.message')}</div>
            </div>
            <div className='flex ml-6'>
-           <div className='mr-1 text-primary'> &#9742; </div> <div className=' text-primary text-nowrap'>01-4512842</div>
+           <div className='mr-1 text-primary'> &#9742; </div> <div className=' text-primary text-nowrap'>{t('headerInfo17.message')}</div>
            </div>
            </div>
 
 
         </div>
 
-        {/* <div className='pl-4 mt-2 md:mt-2'>
-          <div>
-           <div className='flex mb-1 md:flex-col'>
-                 <div className='flex ml-4 md:ml-0'>
-                      <img src={EnglishIcon} width={24} height={12} alt="English" className='object-cover ' />
-                      <div className='mr-2 '>English</div>
-                 </div>
-          
-            
-            <div className='flex md:ml-0 '>
-               <img src={NepaliIcon} width={16} height={8} alt="Nepali" className='' />
-               <div className=''>Nepali</div>
-            </div>
-            </div>
-              
-           
-            </div>
-              
-        </div> */}
+  
 
 
       </header>

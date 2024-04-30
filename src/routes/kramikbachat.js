@@ -1,5 +1,7 @@
 import React from 'react';
 import Kramikbachatc from '../components/kramikbachatc';
+import Combo from '../components/combo';
+import Footer from '../components/footer';
 
 
 const Kramikbachat = () => {
@@ -14,7 +16,9 @@ const Kramikbachat = () => {
       return (
       
          <div className='container mx-auto mt-8'>
+          <Combo/>
         <Kramikbachatc title="Related Services" subtopics={subtopics} />
+        <Footer/>
     </div>
       )
 }

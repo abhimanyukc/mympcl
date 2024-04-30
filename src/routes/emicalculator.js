@@ -14,8 +14,7 @@ const Emicalculator = () => {
     
     <div className=''>
       
-    <Combo/> 
-
+    <Combo/>
       <Sidebar/>
        <Emicalculatorc/>
      <Footer/>

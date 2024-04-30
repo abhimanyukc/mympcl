@@ -1,7 +1,10 @@
 import React from 'react'
 import { MdDateRange } from 'react-icons/md'
+import { useTranslation } from 'react-i18next'
 
 const Abbsservicec = ({title, subtopics}) => {
+      const [t, i18n] = useTranslation("global");
+      
     return (
         <div className="px-4 mx-auto max-w-screen-2xl md:px-8">
           <div className='flex flex-col md:flex-row'>
@@ -13,13 +16,11 @@ const Abbsservicec = ({title, subtopics}) => {
                   className="object-contain w-full rounded-md"
                 />
               </div>
-    
+              
               <div className="my-6 ">
-                <h1 className="mt-4 font-normal"> Any Branch Banking Service is one of our services ,which our members are highly benefited thorough out all our service centers. We provide ABBS service to our account holders throughout our branch network.</h1>
-                
+                <h1 className="mt-4 font-normal"> {t('absService.message')}</h1>
               </div>
             </div>
-    
             <div >
               <div className="w-full py-8 pl-2 pr-8 bg-gray-100 rounded-lg shadow-md md:ml-8 md:mt-4 md:pr-24 md:pl-2 md:py-12">
                 <h2 className="mb-4 text-xl font-semibold">{title}</h2>

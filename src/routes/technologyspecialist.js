@@ -1,12 +1,12 @@
 import React from 'react'
-import Nav from '../components/nav'
 import Footer from '../components/footer'
 import TechnologySpecialist from '../components/technologyspecialist'
+import Combo from '../components/combo'
 
 const TechnologySpecialistRoute = () => {
   return (
     <div>
-      <Nav/>
+      <Combo/>
         <TechnologySpecialist/>
         <Footer/>
     </div>

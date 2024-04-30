@@ -1,5 +1,7 @@
 import React from 'react';
 import Debitcardatmservicec from '../components/debitcardatmservicec'
+import Combo from '../components/combo';
+import Footer from '../components/footer';
 
 
 const Debitcardatmservice = () => {
@@ -12,7 +14,9 @@ const Debitcardatmservice = () => {
       return (
   
          <div className='container mx-auto mt-8'>
+          <Combo/>
         <Debitcardatmservicec title="Related Services" subtopics={subtopics} />
+        <Footer/>
     </div>
   
       )

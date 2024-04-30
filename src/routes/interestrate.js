@@ -11,12 +11,9 @@ const Interestrate = () => {
   
     <div>
       <Combo/>
-
       <Sidebar/>
       <Interestrates/>
-   
      <Footer/>
-       
     </div>
   )
 }

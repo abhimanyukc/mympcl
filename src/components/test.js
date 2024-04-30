@@ -1,40 +1,48 @@
-import React, { useState, useEffect } from 'react';
 
-import Footer from '../components/footer'
+import Header from './header'
+import Nav from './nav';
+import React, { useState, useEffect} from 'react'
+import { format } from 'date-fns';
+import Marque from './marque';
+import Headerinfo from './headerinfo';
 
-import Careertest from '../components/career'
-import Nav from '../components/nav'
-import LoaderR from './loader';
 
 
-const Careerstest = () => {
-  const [isLoading, setIsLoading] = useState(true); // Set initial loading state
+const Combo = () => {
+  const storedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+  const [lang, setLanguage] = useState(storedLanguage);
+
+
+  const storedTimeFormat = localStorage.getItem('selectedTimeFormat') || 'en';
+  const [timeFormat, setTimeFormat] = useState(storedTimeFormat);
+
+  const formatDate = (date) => {
+    if (timeFormat === 'नेपा') {
+      // Implement Nepali date formatting logic here
+      // For now, just return the English format
+      return format(date, 'MMM d, yyyy');
+    } else {
+      return format(date, 'MMM d, yyyy');
+    }
+  };
+
   useEffect(() => {
-    // Simulate loading data (replace with your actual data fetching logic)
-    setTimeout(() => {
-      setIsLoading(false); // Set loading state to false after 5 seconds (adjust as needed)
-    }, 5000);
-  }, []);
+    localStorage.setItem('selectedLanguage', lang);
+    localStorage.setItem('selectedTimeFormat', timeFormat);
+  }, [lang, timeFormat]);
+
+
+
   return (
     <div>
-    {isLoading ? (
-      <LoaderR /> // Show the loader while loading
-    ) : (
-      // Your actual career route content
-    <div>
-      <div className='sticky top-0 left-0 z-20 w-full '>
-      <Nav/>
+     <div className='fixed top-0 left-0 z-50 w-full bg-white '>
+     <Header lang={lang} timeFormat={timeFormat} />
+     <Headerinfo/>
+      <Nav setLanguage={setLanguage} setTimeFormat={setTimeFormat} />
+      <Marque/>
       </div>
-
-      
-
-     <Careertest/>
-     <Footer/>
-       
-    </div>
-    )}
     </div>
   )
 }
 
-export default Careerstest
+export default Combo

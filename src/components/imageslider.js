@@ -36,7 +36,7 @@ useEffect(() => {
 
   return (
     <div className="relative mx-auto bg-white select-none max-w-screen-2xl">
-      <div className='mx-8 mt-20 md:mt-0'>
+      <div className='mx-8 mt-2 md:mt-0'>
       <img
         src={images[currentImageIndex]}
         alt={`Slide ${currentImageIndex + 1}`}

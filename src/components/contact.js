@@ -40,7 +40,7 @@ const ContactC = () => {
   const {t} = useTranslation("global")
 
   return (
-    <div className="container px-8 mx-auto mt-40 bg-white select-none md:mt-48 md:py-2">
+    <div className="container px-8 mx-auto mt-8 bg-white select-none md:mt-8 md:py-2">
       <div className="mb-6 text-3xl font-semibold text-center">{t('con5.message')}</div>
       {submitMessage && (
         <div className="mb-6 text-center text-green-600 ">
@@ -112,10 +112,10 @@ const ContactC = () => {
         </div>
 
 
-        <div className="flex items-center">
+        <div className="flex items-center py-1">
           <button
             type="submit"
-            className="text-white rounded-md bg-primary hover:bg-green-600"
+            className="px-2 text-white rounded-md bg-primary hover:bg-green-600"
           >
            {t('con4.message')}
           </button>
