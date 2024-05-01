@@ -30,6 +30,13 @@ const Header = ({ lang }) => {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target)
+      ) {
+        setIsDropdownOpen(false);
+      }
+
+      if (
         searchRef.current &&
         !searchRef.current.contains(event.target) &&
         !event.target.classList.contains("search-icon")
@@ -38,10 +45,10 @@ const Header = ({ lang }) => {
       }
     };
 
-    window.addEventListener("click", handleClickOutside);
+    document.addEventListener("click", handleClickOutside);
 
     return () => {
-      window.removeEventListener("click", handleClickOutside);
+      document.removeEventListener("click", handleClickOutside);
     };
   }, []);
 
