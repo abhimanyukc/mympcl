@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import SeniorCitizenHealthCareComponent from '../components/seniorcitizenhealthcarec'
 import Seniorcitizenhealthcarecb from '../components/seniorcitizenhealthcarecb';
 import Combo from '../components/combo';
 import Footer from '../components/footer';
-
+import LoaderAnimate from '../components/loader';
 const SeniorCitizenHealthCare = () => {
   
      
@@ -12,7 +12,19 @@ const SeniorCitizenHealthCare = () => {
         { date: '2024-04-08', icon: 'M4 6h16M4 12h16M4 18h16', text: 'सुत्केरी पोषण' },
         { date: '2024-04-09', icon: 'M6 18L18 6M6 6l12 12', text: 'जीवन बरदान कार्यक्रम' }
       ];
+
+      const [isLoading, setIsLoading] = useState(true); // Set initial loading state
+      useEffect(() => {
+          // Simulate loading data (replace with your actual data fetching logic)
+          setTimeout(() => {
+            setIsLoading(false); // Set loading state to false after 5 seconds (adjust as needed)
+          }, 2000);
+        }, []);
   return (
+    <div>
+    {isLoading ? (
+ <LoaderAnimate /> // Show the loader while loading
+) : (
     <div className='px-8 mx-auto mt-4 max-w-screen-2xl md:px-20'>
         <div className='flex flex-col md:flex-row'>
           <Combo/>
@@ -33,6 +45,8 @@ const SeniorCitizenHealthCare = () => {
 
         </div>
     </div>
+)}
+</div>
   )
 }
 

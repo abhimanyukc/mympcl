@@ -32,12 +32,12 @@ const Headerinfo = () => {
           /> 
       </div>
 
-      <div className='flex flex-col mt-2 md:mt-2'>
+      <div className='flex flex-col mt-2 md:mt-2 '>
       <div className='font-semibold text-green-500 md:mt-0'>गाउसहर बहुउदेस्यिय सहकारि सस्था लि.</div>
       <div className='w-full text-lg font-extrabold truncate md:text-2xl md:w-96 text-wrap text-secondary'>{t('headerInfo1.message')}</div>
       </div>
       </div>
-        <div className='md:mt-1 md:mr-4 '>
+        <div className='md:mt-1 md:mr-4 md:ml-12 '>
          
           
             <div className='w-full pl-8 text-sm font-normal truncate md:pl-0 md:mt-2 text-wrap md:w-80 md:text-primary text-secondary'>{t('headerInfo2.message')}: {t("headerInfo18.message")}, Srijana chowk, Pokhara Nepal
@@ -52,7 +52,7 @@ const Headerinfo = () => {
         </div>
         </div>
 
-        <div className='pl-8 md:mt-0 md:pl-0'>
+        <div className='pl-8 md:mt-0 md:ml-12'>
 
         <div className='flex items-center '>
                 <FaMailBulk className='mr-1 text-secondary'/>

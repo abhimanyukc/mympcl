@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import LifeBlessingProgramComponent from '../components/LifeBlessingProgramComponent'
 import Combo from '../components/combo';
 import Footer from '../components/footer';
+import LoaderAnimate from '../components/loader';
 
 
 const LifeBlessingProgram = () => {
@@ -11,12 +12,25 @@ const LifeBlessingProgram = () => {
     { date: '2024-04-08', text: 'सुत्केरी पोषण' },
     { date: '2024-04-09', text: 'Senior Citizen Health Care' }
 ];
+
+const [isLoading, setIsLoading] = useState(true); // Set initial loading state
+useEffect(() => {
+    // Simulate loading data (replace with your actual data fetching logic)
+    setTimeout(() => {
+      setIsLoading(false); // Set loading state to false after 5 seconds (adjust as needed)
+    }, 2000);
+  }, []);
   return (
-   
-     <div className='container mx-auto mt-8'>
+    <div>
+    {isLoading ? (
+ <LoaderAnimate /> // Show the loader while loading
+) : (
+     <div className=''>
       <Combo/>
     <LifeBlessingProgramComponent title="Life Blessing Program" subtopics={subtopics} />
       <Footer/>
+</div>
+)}
 </div>
   )    
 }

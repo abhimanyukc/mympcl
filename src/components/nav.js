@@ -146,7 +146,7 @@ const handleToggleNavbar = () => {
           } md:flex cursor-pointer md:pl-3`}
         >
     
-      <Link to="/" className="" >
+      <Link to="/home" className="" >
       <div className='py-1 text-white transition duration-300 md:pl-1 md:p-2' >
          <div className='hover:text-customHover'>{t('nav10.message')}</div>
       </div>

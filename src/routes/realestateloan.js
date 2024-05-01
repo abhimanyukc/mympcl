@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import RealestateLoanc from '../components/realestateloanc'
 import Combo from '../components/combo'
 import Footer from '../components/footer'
+import LoaderAnimate from '../components/loader';
 
 const RealestateLoan = () => {
+  
       //sample data for loans
       const realEstateLoans = [
         
@@ -27,12 +29,26 @@ const RealestateLoan = () => {
         },
        
        ]
+
+       const [isLoading, setIsLoading] = useState(true); // Set initial loading state
+       useEffect(() => {
+           // Simulate loading data (replace with your actual data fetching logic)
+           setTimeout(() => {
+             setIsLoading(false); // Set loading state to false after 5 seconds (adjust as needed)
+           }, 2000);
+         }, []);
   return (
+    <div>
+    {isLoading ? (
+ <LoaderAnimate /> // Show the loader while loading
+) : (
     <div>
       <Combo/>
          <RealestateLoanc realEstateLoans={realEstateLoans}/>
       <Footer/>
     </div>
+)}
+</div>
   )
 }
 

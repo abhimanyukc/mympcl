@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import { useTranslation } from 'react-i18next';
 
 
@@ -37,7 +37,11 @@ const Newsc = () => {
   };
 
   const {t} = useTranslation('global')
+
+
+
   return (
+
     <div className="container mx-auto my-8 mt-8 bg-white select-none max-w-screen-2xl md:py-24">
          <div className='flex justify-center m-2 text-2xl font-bold'>{t('news.message')}</div>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">

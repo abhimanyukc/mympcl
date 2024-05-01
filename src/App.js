@@ -78,6 +78,8 @@ import Resetpasswordc from './components/resetpasswordc';
 import Recoveryconfirmation from './routes/recoveryconfirmation';
 import Forgetpassword from './routes/forgetpassword';
 import Remittance from './routes/remittance';
+import LoaderAnimate from './components/loader';
+import Homee from './routes/homee';
 
 
 
@@ -98,7 +100,7 @@ function App() {
   return (
        <>
          {isLoading ? (
-      <Loader /> // Show the loader while loading
+      <LoaderAnimate /> // Show the loader while loading
     ) : (
        <Router>
        {/* <Routes>
@@ -155,6 +157,7 @@ function App() {
       <Routes>
     
         <Route path="/" element= {<Home/>} />
+        <Route path="/home" element= {<Homee/>} />
         <Route path="/dynamiccomponent" element= {<Dynamiccomponentc/>} />
         <Route path="/downloads" element= {<Downloads/>} />
         <Route path="/test" element= {<Account/>} />

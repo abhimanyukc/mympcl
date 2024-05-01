@@ -1,8 +1,9 @@
 //passing value using props from parent component
-import React  from 'react';
+import React, { useState, useEffect } from 'react';
 import EducationalLoanc from '../components/educationalloan'
 import Combo from '../components/combo';
 import Footer from '../components/footer';
+import LoaderAnimate from '../components/loader';
 
 
 const EducationalLoan = () => {
@@ -30,15 +31,27 @@ const EducationalLoan = () => {
                 route: 'loan/realestateloan'
             }
            ]
+
+           const [isLoading, setIsLoading] = useState(true); // Set initial loading state
+           useEffect(() => {
+               // Simulate loading data (replace with your actual data fetching logic)
+               setTimeout(() => {
+                 setIsLoading(false); // Set loading state to false after 5 seconds (adjust as needed)
+               }, 2000);
+             }, []);
   return (
-  
+    <div>
+    {isLoading ? (
+ <LoaderAnimate /> // Show the loader while loading
+) : (
     <div>
         <Combo/>
            {/* Pass educationalLoans data as prop to educationalLoans component */}
         <EducationalLoanc educationalLoans={educationalLoans}/>
         <Footer/>
     </div>
-
+)}
+</div>
   )
 }
 

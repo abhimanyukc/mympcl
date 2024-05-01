@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import BusinessLoanc from '../components/businessloanc'
 import Combo from '../components/combo';
 import Footer from '../components/footer';
+import LoaderAnimate from '../components/loader';
 
 
 const BusinessLoan = () => {
@@ -27,14 +28,26 @@ const BusinessLoan = () => {
             route: 'loan/realestateloan'
         }
        ]
+       const [isLoading, setIsLoading] = useState(true); // Set initial loading state
+       useEffect(() => {
+           // Simulate loading data (replace with your actual data fetching logic)
+           setTimeout(() => {
+             setIsLoading(false); // Set loading state to false after 5 seconds (adjust as needed)
+           }, 2000);
+         }, []);
   return (
-
+    <div>
+    {isLoading ? (
+ <LoaderAnimate /> // Show the loader while loading
+) : (
      <div>
         <Combo/>
            {/* Pass businessloans data as prop to Businessloansc component */}
         <BusinessLoanc businessLoans={businessLoans}/>
         <Footer/>
     </div>
+)}
+</div>
   )
 }
 

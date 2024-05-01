@@ -5,6 +5,7 @@ import Footer from '../components/footer'
 import Careertest from '../components/career'
 
 import Combo from '../components/combo';
+import LoaderAnimate from '../components/loader';
 
 
 
@@ -12,17 +13,16 @@ import Combo from '../components/combo';
 const Careerstest = () => {
 
   return (
+      
 
     <div>
        
        <Combo/>
-
-      
-
      <Careertest/>
      <Footer/>
        
     </div>
+
   )
 }
 

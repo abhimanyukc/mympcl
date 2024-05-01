@@ -1,7 +1,8 @@
-import React  from 'react';
+import React, { useState, useEffect } from 'react';
 import Abbsservicec from '../components/abbsservicec'
 import Combo from '../components/combo';
 import Footer from '../components/footer';
+import LoaderAnimate from '../components/loader';
 
 
 const Abbsservice = () => {
@@ -12,13 +13,27 @@ const Abbsservice = () => {
         { date: '2024-04-09', text: 'KRAMIK BACHAT' },
         { date: '2024-04-09', text: 'SAHARA DOUBLE DHAMAKA BACHAT' },
     ];
+
+    const [isLoading, setIsLoading] = useState(true); // Set initial loading state
+    useEffect(() => {
+        // Simulate loading data (replace with your actual data fetching logic)
+        setTimeout(() => {
+          setIsLoading(false); // Set loading state to false after 5 seconds (adjust as needed)
+        }, 2000);
+      }, []);
       return (
        
-         <div className='container mx-auto mt-8'>
+        <div>
+        {isLoading ? (
+     <LoaderAnimate /> // Show the loader while loading
+   ) : (
+         <div className=''>
           <Combo/>
         <Abbsservicec title="Related Services" subtopics={subtopics} />
         <Footer/>
     </div>
+   )}
+   </div>
       )
 }
 export default Abbsservice
