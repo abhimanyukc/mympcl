@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { format } from "date-fns";
+import { useLocation } from 'react-router-dom';
 import {
   FaApple,
   FaAndroid,
@@ -18,6 +19,7 @@ const Header = ({ lang }) => {
   const [currentDate, setCurrentDate] = useState(new Date());
   const dropdownRef = useRef(null);
   const searchRef = useRef(null);
+  const location = useLocation();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -79,7 +81,8 @@ const Header = ({ lang }) => {
     <div className="flex flex-wrap items-center justify-between py-2 px-4 mx-auto bg-gradient-to-r from-indigo-800 from-10% via-sky-800 via-30% to-blue-800 to-90% select-none  md:justify-between md:px-5 max-w-screen-2xl">
       <div className="flex flex-wrap items-center py-1 pr-1 space-x-2 cursor-pointer md:justify-center md:p-1 md:space-x-4">
         <Link to="/career" className="">
-          <div className="flex items-center justify-center pl-2 text-white md:pl-3 md:w-full ">
+          <div className={`flex items-center justify-center hover:text-customHover pl-2 text-white md:pl-3 md:w-full 
+            ${location.pathname === '/career'||location.pathname==='/career/' ? 'text-active' : 'text-white' }`} >
             {" "}
             {t("header.message")}
           </div>
@@ -87,7 +90,7 @@ const Header = ({ lang }) => {
         <div className="">
           <div
             ref={dropdownRef}
-            className="relative flex items-center justify-center text-white md:w-full text-nowrap"
+            className="relative flex items-center justify-center text-white hover:text-customHover md:w-full text-nowrap"
             onClick={toggleDropdown}
           >
             {t("header1.message")} <FaAngleDown />
@@ -117,26 +120,32 @@ const Header = ({ lang }) => {
           </div>
         )}
         <Link to="/news">
-          <div className="flex items-center justify-center text-white md:w-full">
+          <div className={`flex items-center justify-center text-white hover:text-customHover md:w-full 
+            ${location.pathname === '/news' || location.pathname === '/news/' ? 'text-active' : 'text-white'}
+            `}>
             {" "}
             {t("header4.message")}{" "}
           </div>
         </Link>
         <Link to="/branches">
-          <div className="flex items-center justify-center text-white md:w-full">
+          <div className={`flex items-center hover:text-customHover justify-center text-white md:w-full
+           ${location.pathname === '/branches' || location.pathname === '/branches/' ? 'text-active' : 'text-white'}
+          `}>
             {" "}
             {t("header6.message")}
           </div>
         </Link>
 
         <Link to="/downloads">
-          <div className="flex items-center justify-center text-white md:w-full">
+          <div className={`flex items-center hover:text-customHover justify-center text-white md:w-full
+           ${location.pathname === '/downloads' || location.pathname === '/downloads/' ? 'text-active' : 'text-white'}
+          `}>
             {" "}
             {t("header7.message")}
           </div>
         </Link>
         <Link to="/login" className="">
-          <div className="text-white ">{t('header8.message')}</div>
+          <div className="text-white hover:text-customHover ">{t('header8.message')}</div>
         </Link>
       </div>
 
