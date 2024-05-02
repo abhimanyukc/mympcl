@@ -1,8 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import fedexLogo from '../images/fedex.png';
+import fedexLogo from '../images/fedex2.png';
 import fonepayLogo from '../images/fonepay.png';
-import esewaLogo from '../images/esewa.jpg';
+import esewaLogo from '../images/esewaface.jpg';
 import imepayLogo from '../images/imepay.png';
 
 const Remittancec = () => {
@@ -12,7 +12,7 @@ const Remittancec = () => {
     { name: 'FedEx', image: fedexLogo, alt: 'fedexlogo' },
     { name: 'Fonepay', image: fonepayLogo, alt: 'fonepaylogo' },
     { name: 'eSewa', image: esewaLogo, alt: 'esewalogo' },
-    { name: 'IME Pay', image: imepayLogo, alt: 'imepaylogo' }
+    { name: 'IME Pay', image: imepayLogo, alt: 'imepaylogo'  }
   ];
 
   return (

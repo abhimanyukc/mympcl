@@ -28,13 +28,13 @@ const Headerinfo = () => {
        <img
             src={require('../images/logosahakari.jpeg')}
             alt='Sahakarilogo'
-            className='object-fill h-48 w-96 md:w-28 md:h-28'
+            className='object-fill w-50 h-50 md:w-28 md:h-28'
           /> 
       </div>
 
-      <div className='flex flex-col mt-4 md:mt-2 '>
-      <div className='font-semibold text-green-500 md:mt-0'>गाउसहर बहुउदेस्यिय सहकारि सस्था लि.</div>
-      <div className='w-full font-extrabold truncate text-md md:text-2xl md:w-96 text-wrap text-secondary'>{t('headerInfo1.message')}</div>
+      <div className='flex flex-col mt-8 md:mt-2 '>
+      <div className='text-xl font-semibold text-green-500 md:mt-0'>गाउसहर बहुउदेस्यिय सहकारि सस्था लि.</div>
+      <div className='hidden w-full font-extrabold truncate md:flex text-md md:text-2xl md:w-96 text-wrap text-secondary'>{t('headerInfo1.message')}</div>
       </div>
       </div>
         <div className='md:mt-1 md:mr-4 md:ml-12 '>
