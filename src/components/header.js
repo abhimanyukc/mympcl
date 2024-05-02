@@ -155,7 +155,8 @@ const Header = ({ lang }) => {
             {/* Main div with white background */}
             {isSearchOpen && (
     
-    <div className='absolute  top-12  z-40 flex    md:mx-auto transform -translate-x-1/2 bg-white border rounded-md left-1/2  md:top-[40px]' >
+    // <div className='absolute hidden  top-4  z-40 md:flex    md:mx-auto transform -translate-x-2/3  2xl:translate-x-1/2 2xl:left-2/3 xl:-translate-x-1/3 bg-white border rounded-md left-2/3   lg:left-3/4  md:top-[6px]' >
+    <div className='absolute hidden  top-2   z-40 md:flex    md:mx-auto transform md:-translate-x-2/3   bg-white border rounded-md md:left-2/3  lg:left-3/4  xl:-translate-x-1/3  xl:left-2/3 md:top-[2px]' >
 
            <div className='flex items-center p-1 mt-1 rounded-lg md:p-2 md:justify-between'>
            <input
