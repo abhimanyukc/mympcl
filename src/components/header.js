@@ -18,7 +18,7 @@ const Header = ({ lang }) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [currentDate, setCurrentDate] = useState(new Date());
   const dropdownRef = useRef(null);
-  const searchRef = useRef(null);
+ 
   const location = useLocation();
 
   useEffect(() => {
@@ -26,31 +26,29 @@ const Header = ({ lang }) => {
       setCurrentDate(new Date());
     }, 1000);
 
+    // Cleanup interval
     return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
+    // Function to close dropdown and search when clicked outside
     const handleClickOutside = (event) => {
       if (
         dropdownRef.current &&
-        !dropdownRef.current.contains(event.target)
-      ) {
-        setIsDropdownOpen(false);
-      }
-
-      if (
-        searchRef.current &&
-        !searchRef.current.contains(event.target) &&
+        !dropdownRef.current.contains(event.target) &&
         !event.target.classList.contains("search-icon")
       ) {
+        setIsDropdownOpen(false);
         setIsSearchOpen(false);
       }
     };
 
-    document.addEventListener("click", handleClickOutside);
+    // Add event listener to document
+    document.addEventListener("mousedown", handleClickOutside);
 
+    // Cleanup event listener
     return () => {
-      document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
@@ -78,7 +76,7 @@ const Header = ({ lang }) => {
   };
 
   return (
-    <div className="flex flex-wrap items-center justify-between py-2 px-4 mx-auto bg-gradient-to-r from-indigo-800 from-10% via-sky-800 via-30% to-blue-800 to-90% select-none  md:justify-between md:px-5 max-w-screen-2xl">
+    <div className="flex flex-wrap items-center justify-between py-2 px-4 mx-auto bg-gradient-to-r from-indigo-800 from-10% via-sky-800 via-30% to-blue-800 to-90% select-none md:justify-between md:px-5 max-w-screen-2xl">
       <div className="flex flex-wrap items-center py-1 pr-1 space-x-2 cursor-pointer md:justify-center md:p-1 md:space-x-4">
         <Link to="/career" className="">
           <div className={`flex items-center justify-center hover:text-customHover pl-2 text-white md:pl-3 md:w-full 
@@ -151,7 +149,7 @@ const Header = ({ lang }) => {
 
       <div className="flex items-center justify-center space-x-4 md:flex">
       <div className='relative hidden md:flex' onClick={handleSearchIconClick}> 
-          <FaSearch className='w-4 h-4 text-white md:ml-30' />
+          <FaSearch className='w-4 h-4 text-white md:ml-30 search-icon' />
           </div>
          
             {/* Main div with white background */}
