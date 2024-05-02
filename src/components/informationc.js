@@ -5,12 +5,12 @@ import { useTranslation } from 'react-i18next';
 const Informationc = () => {
   const [t, i18n] = useTranslation('global')
 const services = [
-  { id: 1, message: t('services1.message') ,link: '/service1'},
-  { id: 2, message: t('services2.message') ,link: '/service2'},
-  { id: 3, message: t('services3.message') ,link: '/service3'},
-  { id: 4, message: t('services4.message') ,link: '/service4'},
-  { id: 5, message: t('services5.message') ,link: '/service5'},
-  { id: 6, message: t('services6.message') ,link: '/service6'}
+  { id: 1, message: t('services1.message') ,link: '/services/bankingservices'},
+  { id: 2, message: t('services2.message') ,link: '/services/smsservices'},
+  { id: 3, message: t('services3.message') ,link: '/services/mobilebankingservices'},
+  { id: 4, message: t('services4.message') ,link: '/services/internetservices'},
+  { id: 5, message: t('services5.message') ,link: '/services/remmittanceservices'},
+  { id: 6, message: t('services6.message') ,link: '/services/healthservices'}
 ];
 
 const cooperativeContent = {

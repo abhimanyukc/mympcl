@@ -6,7 +6,7 @@ const Healthservicec = () => {
     <div className='mx-auto bg-white cursor-pointer select-none max-w-screen-2xl'>
     <div className='p-8 '>
 
-     <div className='flex items-center mb-2 md:justify-center'>
+     <div className='flex items-center mb-4 md:ml-4 md:justify-center'>
       <div className=''><img
         src={require('../../images/health-services.png')}
         alt='365 banking service'
@@ -21,7 +21,7 @@ const Healthservicec = () => {
          गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing banking Health related services.
          गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing banking Health related services.
          गाउसहर बहुउदेस्यिय सहकारि सस्था has been providing banking Health related services.</div>
-      <div className='flex justify-center pt-16 mb-1 font-semibold text-black text-nowrap'>Other Services</div>
+      <div className='flex justify-center pt-16 mb-1 font-semibold text-black text-nowrap md:ml-8'>Other Services</div>
    
 
       <div className='flex flex-col flex-wrap md:flex-row'>

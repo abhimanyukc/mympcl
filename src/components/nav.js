@@ -147,14 +147,14 @@ const handleToggleNavbar = () => {
         >
     
       <Link to="/home" className="" >
-      <div className='py-1 text-white transition duration-300 md:pl-2 md:p-2' >
+      <div className='py-1 text-white transition duration-300 md:pl-5 md:p-2' >
          <div className='hover:text-customHover'>{t('nav10.message')}</div>
       </div>
       </Link>
        
 
         <div
-          className='relative flex items-center py-2 text-white text-nowrap pl-9 hover:text-customHover md:p-2 md:pl-4 '
+          className='relative flex items-center py-2 text-white text-nowrap pl-9 hover:text-customHover md:py-2 md:pl-4 '
           onClick={toggleDropdown} 
           ref={dropdownRef}
         >
@@ -211,7 +211,7 @@ const handleToggleNavbar = () => {
         </div>
         </Link> */}
 
-       <div> <div className='relative flex items-center py-2 pl-8 text-white hover:text-customHover md:p-2 md:pl-4'
+       <div> <div className='relative flex items-center py-2 pl-8 text-white hover:text-customHover md:pl-4'
         
         // 'p-1 text-white md:p-2 md:mr-4 {useLocation().pathname == }
            onClick={toggleDropdown3}
@@ -303,7 +303,7 @@ const handleToggleNavbar = () => {
         </Link>
 
         <Link to="/notice" >
-        <div className={`md:m-2 md:pl-0 ml-3 my-2 hover:text-customHover ${location.pathname === '/notice' || location.pathname === '/notice/' ? 'text-active' : 'text-white'} `}
+        <div className={`md:m-2 md:pl-4 ml-3 my-2 hover:text-customHover ${location.pathname === '/notice' || location.pathname === '/notice/' ? 'text-active' : 'text-white'} `}
         // 'p-1 text-white md:p-2 md:mr-4'
           >
                {t('nav15.message')}
@@ -327,7 +327,7 @@ const handleToggleNavbar = () => {
         </Link>
 
         <Link to="/remittance" >
-        <div className={`md:m-2 md:pl-0 mr-2 pl-12 my-2 hover:text-customHover ${location.pathname === '/remittance' || location.pathname === '/remittance/' ? 'text-active' : 'text-white'} `}
+        <div className={`md:m-2 md:pl-3 mr-2 pl-12 my-2 hover:text-customHover ${location.pathname === '/remittance' || location.pathname === '/remittance/' ? 'text-active' : 'text-white'} `}
         // 'p-1 text-white md:p-2 md:mr-4'
           >
              {t('nav18.message')}
