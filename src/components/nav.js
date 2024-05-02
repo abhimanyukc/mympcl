@@ -147,7 +147,7 @@ const handleToggleNavbar = () => {
         >
     
       <Link to="/home" className="" >
-      <div className='py-1 text-white transition duration-300 md:pl-1 md:p-2' >
+      <div className='py-1 text-white transition duration-300 md:pl-2 md:p-2' >
          <div className='hover:text-customHover'>{t('nav10.message')}</div>
       </div>
       </Link>
@@ -303,7 +303,7 @@ const handleToggleNavbar = () => {
         </Link>
 
         <Link to="/notice" >
-        <div className={`md:m-2 md:pl-4 ml-3 my-2 hover:text-customHover ${location.pathname === '/notice' || location.pathname === '/notice/' ? 'text-active' : 'text-white'} `}
+        <div className={`md:m-2 md:pl-0 ml-3 my-2 hover:text-customHover ${location.pathname === '/notice' || location.pathname === '/notice/' ? 'text-active' : 'text-white'} `}
         // 'p-1 text-white md:p-2 md:mr-4'
           >
                {t('nav15.message')}
@@ -319,7 +319,7 @@ const handleToggleNavbar = () => {
         </Link>
 
         <Link to="/emicalculator" >
-        <div className={`md:m-2 md:pl-4 mr-2 my-2   hover:text-customHover ${location.pathname === '/emi' || location.pathname === '/emi/' ? 'text-active' : 'text-white'} `}
+        <div className={`md:m-2 md:pl-4 mr-3 my-2   hover:text-customHover ${location.pathname === '/emi' || location.pathname === '/emi/' ? 'text-active' : 'text-white'} `}
         // 'p-1 text-white md:p-2 md:mr-4'
           >
              {t('nav17.message')}
@@ -327,7 +327,7 @@ const handleToggleNavbar = () => {
         </Link>
 
         <Link to="/remittance" >
-        <div className={`md:m-2 md:pl-4 mr-2 pl-12 my-2 hover:text-customHover ${location.pathname === '/remittance' || location.pathname === '/remittance/' ? 'text-active' : 'text-white'} `}
+        <div className={`md:m-2 md:pl-0 mr-2 pl-12 my-2 hover:text-customHover ${location.pathname === '/remittance' || location.pathname === '/remittance/' ? 'text-active' : 'text-white'} `}
         // 'p-1 text-white md:p-2 md:mr-4'
           >
              {t('nav18.message')}
