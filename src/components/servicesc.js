@@ -8,7 +8,7 @@ import { FaAngleRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import '../App.css';
-import axios from 'axios';
+
 
 const PrevArrow = ({ onClick}) => (
   <FaChevronLeft
@@ -23,6 +23,7 @@ const NextArrow = ({ onClick}) => (
     className="absolute right-0 invisible p-1 text-2xl text-indigo-800 transform -translate-y-1/2 border border-indigo-800 cursor-pointer z-5 top-1/2 md:right-20 hover:bg-indigo-800 hover:text-white"
   />
 );
+
 
 
 
@@ -63,6 +64,64 @@ console.log('hello world');
 const Servicesc = () => {
 
    const [t, i18n] = useTranslation("global");
+   const slidesData = [
+    {
+      image: require('../images/365bankingservice.png'),
+      title: t("services1.message"),
+      description: t("services11.message"),
+      link: "/services/bankingservices"
+    },
+    {
+      image: require('../images/sms-banking.png'),
+      title: t("services2.message"),
+      description: "The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center, Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center, Other Service Center will be closed at public holiday",
+      link: "/services/smsservices"
+    },
+    {
+      image: require('../images/mobile-banking.png'),
+      title: t("services3.message"),
+      description: " The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center, Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,Other Service Center will be closed at public holiday",
+      link: "/services/mobilebankingservices"
+    },
+    {
+      image: require('../images/internet-banking2.png'),
+      title: t("services4.message"),
+      description: "The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center, Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,  Other Service Center will be closed at public holiday",
+      link: "/services/internetservices"
+    },
+    {
+      image: require('../images/remittance.png'),
+      title: t("services5.message"),
+      description: "The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center, Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center, Other Service Center will be closed at public holiday",
+      link: "/services/remmittanceservices"
+    },
+    {
+      image: require('../images/health-services.png'),
+      title: t("services6.message"),
+      description: "The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center, Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center, Other Service Center will be closed at public holiday",
+      link: "/services/healthservices"
+    },
+    {
+      image: require('../images/microfinance.png'),
+      title: t("services7.message"),
+      description: "The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center, Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center, Other Service Center will be closed at public holiday",
+      link: "/services/microfinanceservices"
+    },
+    {
+      image: require('../images/appservices.png'),
+      title: t("services8.message"),
+      description: "The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center, Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center, Other Service Center will be closed at public holiday",
+      link: "/services/appservices"
+    },
+    {
+      image: require('../images/otherservices.png'),
+      title: t("services9.message"),
+      description: "The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center, Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center, Other Service Center will be closed at public holiday",
+      link: "/services/otherbankingservices"
+    },
+     
+  ];
+  
   return (
 
 
@@ -72,203 +131,30 @@ const Servicesc = () => {
     <div className='mx-auto font-sans bg-white select-none z-5 pt-44 max-w-screen-2xl md:px-8 md:pt-10'>
       <div className=''>
            <div className='px-24 font-sans text-2xl font-semibold tracking-normal text-center md:pb-2 '> {t("services.message")}</div>
-      <Slider {...settings}>
-
-        
-
-        
-        <div className='flex flex-col items-center justify-center py-0 mb-8 md:py-12 md:mb-0'>
-          <div className='flex flex-col items-center justify-center w-full px-8 bg-white h-120 md:h-60 md:px-40'>
-          <div>  <img
-            src={require('../images/365bankingservice.png')}
-            alt='365 banking service'
+           <Slider {...settings}>
+  {slidesData.map((slide, index) => (
+    <div key={index} className='flex flex-col items-center justify-center py-0 mb-8 md:py-12 md:mb-0'>
+      <div className='flex flex-col items-center justify-center w-full px-8 bg-white h-120 md:h-60 md:px-40'>
+        <div>
+          <img
+            src={slide.image}
+            alt={slide.title}
             className='object-cover w-8 h-8 p-1 m-2'
-          /></div>
-          <div className='font-semibold' > {t("services1.message")}</div>
-          <div className=''> {t("services11.message")}</div>
-          <Link to="/services/bankingservices">
+          />
+        </div>
+        <div className='font-semibold'>{slide.title}</div>
+        <div className=''>{slide.description}</div>
+        <Link to={slide.link}>
           <div className='flex flex-row items-center text-green-800'>
             <div>{t("services10.message")}</div>
             <div><FaAngleRight/></div>
           </div>
-          </Link>
-          </div>
-        </div>
+        </Link>
+      </div>
+    </div>
+  ))}
+</Slider>
 
-        <div className='flex flex-col items-center justify-center py-0 md:py-12'>
-          <div className='flex flex-col items-center justify-center w-full px-8 bg-white h-120 md:h-60 md:px-40'>
-          <div>  <img
-            src={require('../images/sms-banking.png')}
-            alt='sms banking service'
-            className='w-8 h-8 p-1 m-2'
-          /></div>
-          <div className='font-semibold' > {t("services2.message")}</div>
-          <div className=''> The The GauSahar Multipurpose cooperation limited has been providing sms banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
-           Other Service Center will be closed at public holiday.The The GauSahar Multipurpose cooperation limited has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
-           Other Service Center will be closed at public holiday</div>
-          <Link to="/services/smsservices">
-          <div className='flex flex-row items-center text-green-800'>
-            <div>{t("services10.message")}</div>
-            <div><FaAngleRight/></div>
-          </div>
-          </Link>
-          </div>
-        </div>
-
-
-        <div className='flex flex-col items-center justify-center py-0 md:py-12'>
-          <div className='flex flex-col items-center justify-center w-full px-8 bg-white h-120 md:h-60 md:px-40'>
-          <div>  <img
-            src={require('../images/mobile-banking.png')}
-            alt='mobile banking service'
-            className='w-8 h-8 p-1 m-2'
-          /></div>
-          <div className='font-semibold' > {t("services3.message")}</div>
-          <div className=''> The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
-           Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
-           Other Service Center will be closed at public holiday</div>
-          <Link to="/services/mobilebankingservices">
-          <div className='flex flex-row items-center text-green-800'>
-            <div>{t("services10.message")}</div>
-            <div><FaAngleRight/></div>
-          </div>
-          </Link>
-          </div>
-        </div>
-
-
-
-        <div className='flex flex-col items-center justify-center py-0 md:py-12'>
-          <div className='flex flex-col items-center justify-center w-full px-8 bg-white h-120 md:h-60 md:px-40'>
-          <div>  <img
-            src={require('../images/internet-banking2.png')}
-            alt='internet banking service'
-            className='w-8 h-8 p-1 m-2'
-          /></div>
-          <div className='font-semibold' > {t("services4.message")}</div>
-          <div className=''> The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
-           Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
-           Other Service Center will be closed at public holiday</div>
-          <Link to="/services/internetservices">
-          <div className='flex flex-row items-center text-green-800'>
-            <div>{t("services10.message")}</div>
-            <div><FaAngleRight/></div>
-          </div>
-          </Link>
-          </div>
-        </div>
-
-
-
-        <div className='flex flex-col items-center justify-center py-0 md:py-12'>
-          <div className='flex flex-col items-center justify-center w-full px-8 bg-white h-120 md:h-60 md:px-40'>
-          <div>  <img
-            src={require('../images/remittance.png')}
-            alt='Remittance banking service'
-            className='w-8 h-8 p-1 m-2'
-          /></div>
-          <div className='font-semibold' > {t("services5.message")}</div>
-          <div className=''> The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
-           Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
-           Other Service Center will be closed at public holiday</div>
-          <Link to="/services/remmittanceservices">
-          <div className='flex flex-row items-center text-green-800'>
-            <div>{t("services10.message")}</div>
-            <div><FaAngleRight/></div>
-          </div>
-          </Link>
-          </div>
-        </div>
-
-
-
-        <div className='flex flex-col items-center justify-center py-0 md:py-12'>
-          <div className='flex flex-col items-center justify-center w-full px-8 bg-white h-120 md:h-60 md:px-40'>
-          <div>  <img
-            src={require('../images/health-services.png')}
-            alt='Health service'
-            className='w-8 h-8 p-1 m-2'
-          /></div>
-          <div className='font-semibold' >  {t("services6.message")}</div>
-          <div className=''> The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
-           Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
-           Other Service Center will be closed at public holiday</div>
-          <Link to="/services/healthservices">
-          <div className='flex flex-row items-center text-green-800'>
-            <div>{t("services10.message")}</div>
-            <div><FaAngleRight/></div>
-          </div>
-          </Link>
-          </div>
-        </div>
-
-
-        <div className='flex flex-col items-center justify-center py-0 md:py-12'>
-          <div className='flex flex-col items-center justify-center w-full px-8 bg-white h-120 md:h-60 md:px-40'>
-          <div>  <img
-            src={require('../images/microfinance.png')}
-            alt='microfinance service'
-            className='w-8 h-8 p-1 m-2'
-          /></div>
-          <div className='font-semibold' > {t("services7.message")}</div>
-          <div className=''> The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
-           Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
-           Other Service Center will be closed at public holiday</div>
-          <Link to="/services/microfinanceservices">
-          <div className='flex flex-row items-center text-green-800'>
-            <div>{t("services10.message")}</div>
-            <div><FaAngleRight/></div>
-          </div>
-          </Link>
-          </div>
-        </div>
-
-
-       
-
-
-        <div className='flex flex-col items-center justify-center py-0 md:py-12'>
-          <div className='flex flex-col items-center justify-center w-full px-8 bg-white h-120 md:h-60 md:px-40'>
-          <div>  <img
-            src={require('../images/appservices.png')}
-            alt='App service'
-            className='w-8 h-8 p-1 m-2'
-          /></div>
-          <div className='font-semibold' > {t("services8.message")}</div>
-          <div className=''> The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
-           Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
-           Other Service Center will be closed at public holiday</div>
-          <Link to="/services/appservices">
-          <div className='flex flex-row items-center text-green-800'>
-            <div>{t("services10.message")}</div>
-            <div><FaAngleRight/></div>
-          </div>
-          </Link>
-          </div>
-        </div>
-
-        <div className='flex flex-col items-center justify-center py-0 md:py-12'>
-          <div className='flex flex-col items-center justify-center w-full px-8 bg-white h-120 md:h-60 md:px-40'>
-          <div>  <img
-            src={require('../images/otherservices.png')}
-            alt='other banking service'
-            className='w-8 h-8 p-1 m-2'
-          /></div>
-          <div className='font-semibold' > {t("services9.message")}</div>
-          <div className=''> The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
-           Other Service Center will be closed at public holiday.The GANESHJAL has been providing 365 days banking facilities. In public holiday the GANESHJAL  will be open from 10 am to 1:00pm but now these facilities also available only in Head Office, Khajura Service Center,
-           Other Service Center will be closed at public holiday</div>
-          <Link to="/services/otherbankingservices">
-          <div className='flex flex-row items-center text-green-800'>
-            <div> {t("services10.message")}</div>
-            <div><FaAngleRight/></div>
-          </div>
-          </Link>
-          </div>
-        </div>
-
-
-      </Slider>
       </div>
     </div>
   );
