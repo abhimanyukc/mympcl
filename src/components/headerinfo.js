@@ -24,7 +24,7 @@ const Headerinfo = () => {
       <header className='flex flex-wrap mb-2 '>
         <div className='md:flex'>
       <div className='flex md:mr-1'>
-      <div className='pl-6 mt-0 transition duration-300 md:pl-0 md:mt-0 ' >
+      <div className='pl-6 mt-0 transition duration-300 md:pl-1 md:mt-0 ' >
        <img
             src={require('../images/logosahakari.jpeg')}
             alt='Sahakarilogo'
@@ -32,9 +32,9 @@ const Headerinfo = () => {
           /> 
       </div>
 
-      <div className='flex flex-col mt-2 md:mt-2 '>
+      <div className='flex flex-col mt-4 md:mt-2 '>
       <div className='font-semibold text-green-500 md:mt-0'>गाउसहर बहुउदेस्यिय सहकारि सस्था लि.</div>
-      <div className='w-full text-lg font-extrabold truncate md:text-2xl md:w-96 text-wrap text-secondary'>{t('headerInfo1.message')}</div>
+      <div className='w-full font-extrabold truncate text-md md:text-2xl md:w-96 text-wrap text-secondary'>{t('headerInfo1.message')}</div>
       </div>
       </div>
         <div className='md:mt-1 md:mr-4 md:ml-12 '>
@@ -52,7 +52,7 @@ const Headerinfo = () => {
         </div>
         </div>
 
-        <div className='pl-8 md:mt-0 md:ml-12'>
+        <div className='pl-8 md:pl-2 md:mt-0'>
 
         <div className='flex items-center '>
                 <FaMailBulk className='mr-1 text-secondary'/>
@@ -73,7 +73,7 @@ const Headerinfo = () => {
            <div className='flex items-center'>
             <FaHome className='mr-1 text-primary'/> <div className=' text-primary'>{t('headerInfo19.message')},{t('headerInfo9.message')}</div>
            </div>
-           <div className='flex ml-6'>
+           <div className='flex ml-9'>
            <div className='mr-1 text-primary'> &#9742; </div> <div className=' text-primary text-nowrap'>{t('headerInfo17.message')}</div>
            </div>
            </div>
