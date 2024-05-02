@@ -9,6 +9,7 @@ import '../App.css';
 
 
 const ImageSlider = () => {
+ 
   const images = [image1,   image4]; // Import images here
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -33,6 +34,8 @@ useEffect(() => {
     // Clear the interval when the component unmounts
     return () => clearInterval(interval);
   }, [currentImageIndex]);
+
+ 
 
   return (
     <div className="relative mx-auto bg-white select-none max-w-screen-2xl">

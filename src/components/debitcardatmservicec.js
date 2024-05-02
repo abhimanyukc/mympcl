@@ -2,6 +2,8 @@ import React from 'react'
 import { MdDateRange } from 'react-icons/md';
 
 const Debitcardatmservicec = ({ title, subtopics }) => {
+    
+
   return (
     <div className="px-4 mx-auto max-w-screen-2xl md:px-8">
       <div className='flex flex-col md:flex-row'>
