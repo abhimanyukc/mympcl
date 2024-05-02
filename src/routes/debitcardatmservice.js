@@ -8,9 +8,11 @@ import LoaderAnimate from '../components/loader';
 const Debitcardatmservice = () => {
 
     const subtopics = [
-        { date: '2024-04-07', text: 'Hospital Affiliation' },
-        { date: '2024-04-08', text: 'सुत्केरी पोषण' },
-        { date: '2024-04-09', text: 'Senior Citizen Health Care' }
+        { date: '2024-04-07', text: 'Free Mobile Banking Service' },
+        { date: '2024-04-08', text: 'Sms Service' },
+        { date: '2024-04-09', text: 'ABBS Service' },
+        { date: '2024-04-09', text: 'Kramik Bachat' },
+        { date: '2024-04-09', text: 'GauSahar Double Dhamaka Bachat' }
     ];
 
     const [isLoading, setIsLoading] = useState(true); // Set initial loading state

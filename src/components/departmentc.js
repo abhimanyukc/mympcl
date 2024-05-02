@@ -44,8 +44,8 @@ export default function Departmentc() {
             <div className='flex justify-center mb-6 text-lg font-bold '> {t('dep12.message')}</div>
 
             <div className="grid gap-2 px-8 lg:grid-cols-4">
-                {posts.map((items, key) => (
-                    <div className="w-full mb-8 transition transform rounded-lg shadow-md lg:max-w-sm hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none" key={key}>
+                {posts.map((items, index) => (
+                    <div className="w-full mb-8 transition transform rounded-lg shadow-md lg:max-w-sm hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none" index={index}>
                         <img
                             className="object-fill w-full h-48"
                             src={items.img}
