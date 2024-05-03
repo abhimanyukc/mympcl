@@ -69,10 +69,10 @@ import RiskAnalystRoute from './routes/riskanalyst';
 import ComplianceOfficerRoute from './routes/complianceofficer';
 import Branchmanager from './routes/branchmanager';
 import InvestmentAdvisorRoute from './routes/investmentmanager';
-import MortgageSpecialist from './routes/mortgagespecialist';
+
 import TechnologySpecialistRoute from './routes/technologyspecialist';
 import MortgageSpecialistRoute from './routes/mortgagespecialist';
-import Loader from './components/loader';
+
 import Login from './routes/login';
 import Signup from './routes/signup';
 import Resetpasswordc from './components/resetpasswordc';
