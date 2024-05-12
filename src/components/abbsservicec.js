@@ -12,7 +12,7 @@ const Abbsservicec = ({title, subtopics}) => {
               <div>
                 <img
                   src="https://i.pinimg.com/564x/2a/30/27/2a30274cf6bee5e6661d79063e178a8b.jpg"
-                  alt="anybranchbankingservice"
+                  alt="anyBranchBankingService"
                   className="object-contain w-full rounded-md"
                 />
               </div>
