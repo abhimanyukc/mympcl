@@ -34,9 +34,8 @@ import Headerinfo from './components/headerinfo';
 import Organization from './routes/organization';
 import Downloads from './routes/downloads';
 import Dynamiccomponentc from './components/dynamiccomponent';
-import Careertest from './components/career';
+
 import Careerstest from './routes/careertest';
-import Careercategoryr from './routes/careercategory';
 import Softwareengineer from './routes/softwareengineer';
 import Gallery from './routes/gallery';
 import Kyc from './routes/Kyc';
@@ -59,7 +58,7 @@ import Gallery1 from './routes/gallery1';
 import Gallery2 from './routes/gallery2';
 import Gallery3 from './routes/gallery3';
 import Gallery4 from './routes/gallery4';
-import Careerc from './components/careerc';
+
 import Careercategory from './components/careercategory';
 import BankTellerRoute from './routes/banktellerroute';
 import CustomerServiceRepresentativeRoute from './routes/customerservicerepresentative';
