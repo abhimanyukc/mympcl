@@ -29,7 +29,7 @@ import Remittanceservice from './routes/remittanceservice';
 import Smsbankingservice from './routes/smsbankingservice';
 import Otherbankingservice from './routes/otherbankingservice';
 import About from './routes/about';
-import Account from './components/test';
+
 import Headerinfo from './components/headerinfo';
 import Organization from './routes/organization';
 import Downloads from './routes/downloads';
@@ -160,7 +160,6 @@ function App() {
         <Route path="/home" element= {<Homee/>} />
         <Route path="/dynamiccomponent" element= {<Dynamiccomponentc/>} />
         <Route path="/downloads" element= {<Downloads/>} />
-        <Route path="/test" element= {<Account/>} />
         <Route path="/about" element= {<About/>} />
         <Route path="/loan" element={ <Loans/>} />
         <Route path="/services" element= {<Services/>} />
