@@ -80,6 +80,7 @@ import Forgetpassword from './routes/forgetpassword';
 import Remittance from './routes/remittance';
 import LoaderAnimate from './components/loader';
 import Homee from './routes/homee';
+import NoMatch from './nomatch/nomatch';
 
 
 
@@ -226,6 +227,7 @@ function App() {
         <Route path="/recovery-confirmation" element= {<Recoveryconfirmation/>} />
         <Route path="/forgot-password" element= {<Forgetpassword/>} />
         <Route path="/remittance" element= {<Remittance/>} />
+        <Route path="*" element={<NoMatch></NoMatch>}></Route>
       </Routes>
     </Router>
     )}

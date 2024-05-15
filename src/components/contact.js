@@ -28,14 +28,30 @@ const ContactC = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async  (e) => {
     e.preventDefault();
-
+   
+ 
     if (!formData.name || !formData.email || !formData.subject || !formData.message) {
       // If any field is empty, show the "Please submit the form" message
       setSubmitMessage(t('con.validationMessage'));
       return;
     }
+
+        try{
+          const response =  await fetch("http://localhost:5000/api/contact/", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData)
+          })
+          const data = await response.json(response);
+          console.log(data);
+        } catch(error) {
+          console.error(error.message);
+        }
+    
 
     // Handle form submission logic here
     // Assuming a successful submission for this example
