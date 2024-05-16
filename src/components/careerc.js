@@ -3,27 +3,32 @@ import { useTranslation } from 'react-i18next';
 
 const Careerc = () => {
   const { t } = useTranslation("global");
+
+  const formFields = [
+    { name: 'message', label: 'send message', type: 'text'},
+    { name: 'email', label: 'your email', type: 'email' },
+    { name: 'cv', label: 'cv' ,type: 'file' },
+    { name: 'coverLetter', label: 'cover Letter', type: 'file' }
+  ];
+
   const [message, setMessage] = useState('');
-  const [formData, setFormData] = useState([
-    { name: 'message', value: '' },
-    { name: 'email', value: '' },
-    { name: 'cv', value: null },
-    { name: 'coverLetter', value: null }
-  ]);
+  const [formData, setFormData] = useState({});
+
+  useEffect(() => {
+    // Initialize formData state based on formFields array
+    const initialFormData = {};
+    formFields.forEach(field => {
+      initialFormData[field.name] = field.type === 'file' ? null : '';
+    });
+    setFormData(initialFormData);
+  }, []);
 
   const handleInputChange = (e) => {
     const { name, value, files } = e.target;
-    setFormData(prevData => {
-      return prevData.map(field => {
-        if (field.name === name) {
-          return {
-            ...field,
-            value: name === 'cv' || name === 'coverLetter' ? files[0] : value
-          };
-        }
-        return field;
-      });
-    });
+    setFormData(prevData => ({
+      ...prevData,
+      [name]: name === 'cv' || name === 'coverLetter' ? files[0] : value,
+    }));
   };
 
   const handleSubmit = (e) => {
@@ -33,12 +38,11 @@ const Careerc = () => {
     // Assuming your submission is successful, show a success message
     setMessage(t('career7.message'));
     // Clear the form data
-    setFormData([
-      { name: 'message', value: '' },
-      { name: 'email', value: '' },
-      { name: 'cv', value: null },
-      { name: 'coverLetter', value: null }
-    ]);
+    const resetFormData = {};
+    Object.keys(formData).forEach(key => {
+      resetFormData[key] = formData[key] instanceof File ? null : '';
+    });
+    setFormData(resetFormData);
   };
 
   useEffect(() => {
@@ -59,32 +63,26 @@ const Careerc = () => {
         </div>
       )}
       <form onSubmit={handleSubmit}>
-        {formData.map((field, index) => (
-          <div className="mb-4" key={index}>
+        {formFields.map(field => (
+          <div className="mb-4" key={field.name}>
             <label className="block mb-2 text-sm font-bold text-gray-700">
-              {t(`career${index}.message`)}
+              {t(`${field.label}`)}
             </label>
-            {field.name === 'message' ? (
-              <textarea
+            {field.type === 'text' || field.type === 'email' ? (
+              <input
+                type={field.type}
                 name={field.name}
-                value={field.value}
+                value={formData[field.name]}
                 onChange={handleInputChange}
                 className="w-full p-2 border rounded"
-                rows="4"
-              ></textarea>
+                required={field.type === 'email'}
+              />
             ) : (
               <input
-                type={field.name === 'email' ? 'email' : 'file'}
+                type="file"
                 name={field.name}
-                value={field.value}
                 onChange={handleInputChange}
-                className="w-full p-2 border rounded"
-                accept={
-                  field.name === 'cv' || field.name === 'coverLetter'
-                    ? '.pdf, .doc, .docx, .png, .jpg, .jpeg'
-                    : undefined
-                }
-                required={field.name === 'email'}
+                className="p-2 border rounded"
               />
             )}
           </div>
