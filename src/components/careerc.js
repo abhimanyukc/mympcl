@@ -2,21 +2,28 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const Careerc = () => {
-  const {t} = useTranslation("global")
+  const { t } = useTranslation("global");
   const [message, setMessage] = useState('');
-  const [formData, setFormData] = useState({
-    message: '',
-    email: '',
-    cv: null,
-    coverLetter: null,
-  });
+  const [formData, setFormData] = useState([
+    { name: 'message', value: '' },
+    { name: 'email', value: '' },
+    { name: 'cv', value: null },
+    { name: 'coverLetter', value: null }
+  ]);
 
   const handleInputChange = (e) => {
-    const {  name, value, files } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: name === 'cv' || name === 'coverLetter' ? files[0] : value,
-    }));
+    const { name, value, files } = e.target;
+    setFormData(prevData => {
+      return prevData.map(field => {
+        if (field.name === name) {
+          return {
+            ...field,
+            value: name === 'cv' || name === 'coverLetter' ? files[0] : value
+          };
+        }
+        return field;
+      });
+    });
   };
 
   const handleSubmit = (e) => {
@@ -26,13 +33,12 @@ const Careerc = () => {
     // Assuming your submission is successful, show a success message
     setMessage(t('career7.message'));
     // Clear the form data
-    setFormData({
-      message: '',
-      email: '',
-      cv: null,
-      coverLetter: null,
-    });
-
+    setFormData([
+      { name: 'message', value: '' },
+      { name: 'email', value: '' },
+      { name: 'cv', value: null },
+      { name: 'coverLetter', value: null }
+    ]);
   };
 
   useEffect(() => {
@@ -53,65 +59,42 @@ const Careerc = () => {
         </div>
       )}
       <form onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <label className="block mb-2 text-sm font-bold text-gray-700">
-            {t('career.message')}
-          </label>
-          <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleInputChange}
-            className="w-full p-2 border rounded"
-            rows="4"
-          ></textarea>
-        </div>
-
-        <div className="mb-4">
-          <label className="block mb-2 text-sm font-bold text-gray-700">
-          {t('career1.message')}
-          </label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleInputChange}
-            className="w-full p-2 border rounded"
-            required
-          />
-        </div>
-
-        <div className="mb-4">
-          <label className="block mb-2 text-sm font-bold text-gray-700">
-          {t('career2.message')}
-          </label>
-          <input
-            type="file"
-            name="cv"
-            accept=".pdf, .doc, .docx, .png, .jpg, .jpeg"
-            onChange={handleInputChange}
-            className="p-2 border rounded"
-          />
-        </div>
-
-        <div className="mb-4">
-          <label className="block mb-2 text-sm font-bold text-gray-700">
-          {t('career3.message')}
-          </label>
-          <input
-            type="file"
-            name="coverLetter"
-            accept=".pdf, .doc, .docx, .png, .jpg, .jpeg"
-            onChange={handleInputChange}
-            className="p-2 border rounded"
-          />
-        </div>
-
+        {formData.map((field, index) => (
+          <div className="mb-4" key={index}>
+            <label className="block mb-2 text-sm font-bold text-gray-700">
+              {t(`career${index}.message`)}
+            </label>
+            {field.name === 'message' ? (
+              <textarea
+                name={field.name}
+                value={field.value}
+                onChange={handleInputChange}
+                className="w-full p-2 border rounded"
+                rows="4"
+              ></textarea>
+            ) : (
+              <input
+                type={field.name === 'email' ? 'email' : 'file'}
+                name={field.name}
+                value={field.value}
+                onChange={handleInputChange}
+                className="w-full p-2 border rounded"
+                accept={
+                  field.name === 'cv' || field.name === 'coverLetter'
+                    ? '.pdf, .doc, .docx, .png, .jpg, .jpeg'
+                    : undefined
+                }
+                required={field.name === 'email'}
+              />
+            )}
+          </div>
+        ))}
         <div className="mb-4">
           <button
             type="submit"
             className="p-2 text-white rounded bg-primary hover:bg-green-700"
           >
-           {t('career4.message')}
+            {t('career4.message')}
           </button>
         </div>
       </form>
