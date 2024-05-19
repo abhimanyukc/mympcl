@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { BsFillPersonFill } from 'react-icons/bs'; 
+import { BsFillPersonFill } from 'react-icons/bs';
+
 const Emicalculatorc = () => {
   const [loanType, setLoanType] = useState('');
   const [interestRate, setInterestRate] = useState('');
@@ -8,94 +9,61 @@ const Emicalculatorc = () => {
   const [loanAmount, setLoanAmount] = useState('');
   const [monthlyEMI, setMonthlyEMI] = useState('');
 
+  const loanData = [
+    { type: 'Agriculture Loan', interestRate: '15.00', duration: '12' },
+    { type: 'Business Loan', interestRate: '16.00', duration: '12' },
+    { type: 'Emergency Loan', interestRate: '13.00', duration: '12' },
+    { type: 'Educational Loan', interestRate: '15.00', duration: '12' },
+    { type: 'Foreign Employment Loan', interestRate: '16.00', duration: '12' },
+    { type: 'Hire Purchase Loan', interestRate: '16.00', duration: '12' },
+  ];
+
   const handleLoanTypeChange = (e) => {
     const selectedLoanType = e.target.value;
     setLoanType(selectedLoanType);
-
-    // Set interest rate and duration based on the selected loan type
-    switch (selectedLoanType) {
-      case 'Agriculture Loan':
-        setInterestRate('15.00');
-        setDuration('12');
-        break;
-      case 'Business Loan':
-        setInterestRate('16.00');
-        setDuration('12');
-        break;
-      case 'Emergency Loan':
-        setInterestRate('13.00');
-        setDuration('12');
-        break;
-      case 'Educational Loan':
-        setInterestRate('15.00');
-        setDuration('12');
-        break;
-      case 'Foreign Employment Loan':
-        setInterestRate('16.00');
-        setDuration('12');
-        break;
-      case 'Hire Purchase Loan':
-        setInterestRate('16.00');
-        setDuration('12');
-        break;
-      default:
-        setInterestRate('');
-        setDuration('');
+    
+    const selectedLoan = loanData.find(loan => loan.type === selectedLoanType);
+    if (selectedLoan) {
+      setInterestRate(selectedLoan.interestRate);
+      setDuration(selectedLoan.duration);
+    } else {
+      setInterestRate('');
+      setDuration('');
     }
   };
 
   const calculateEMI = () => {
     const principal = parseFloat(loanAmount) || 0;
     const timeInMonths = parseFloat(duration) || 0;
-    const monthlyInterestRate = parseFloat(interestRate) / 1200;
-
+    const monthlyInterestRate =  parseFloat(interestRate) / 1200;
+     //r = monthly interest rate = parseFloat(interestRate) / 1200;
+     //n = no of months
+    //powerFactor = (1+r)^n
+    //emi (p*r* (1+r)^n)/((1+r)^n-1)
     if (principal > 0 && timeInMonths > 0 && monthlyInterestRate > 0) {
       const powerFactor = Math.pow(1 + monthlyInterestRate, timeInMonths);
       const emi = (principal * monthlyInterestRate * powerFactor) / (powerFactor - 1);
+    //  the state monthlyEMI with the calculated EMI value, rounded to two decimal places using toFixed(2)
       setMonthlyEMI(emi.toFixed(2));
     } else {
       setMonthlyEMI('');
     }
   };
 
-
-  const {t} = useTranslation('global')
-
+  const { t } = useTranslation('global');
 
   return (
-    <div className='mx-auto bg-white select-none max-w-screen-2xl '>
+    <div className='mx-auto bg-white select-none max-w-screen-2xl'>
       <div className='flex flex-col justify-center md:space-x-8 md:flex-row md:px-8 md:py-10'>
         <div className='flex flex-col items-center px-8 md:px-0 md:items-start'>
-          <div className='mt-8 mb-4 text-3xl font-semibold text-black'> {t('emi.message')}</div>
-          <div className="flex flex-col items-center w-full p-5 bg-green-800 border md:flex-row md:flex-wrap ">
-            <div className='flex flex-col items-center justify-center object-cover w-40 h-32 p-4 border md:my-8 md:mx-8'>
-              <BsFillPersonFill size={30} className='text-green-400 ' />
-              <div className='text-white'>{t('emi1.message')}</div>
-            </div>
-            <div className='flex flex-col items-center justify-center object-cover w-40 h-32 p-4 border md:my-8 md:mx-8'>
-            <BsFillPersonFill size={30} className='text-green-400' />
-              <div className='text-white'>{t('emi2.message')}</div>
-            </div>
-
-            <div className='flex flex-col items-center justify-center object-cover w-40 h-32 p-4 border md:my-8 md:mx-8'>
-            <BsFillPersonFill size={30} className='text-green-400' />
-              <div className='text-white'>{t('emi3.message')}</div>
-            </div>
-
-            <div className='flex flex-col items-center justify-center object-cover w-40 h-32 p-4 border md:my-8 md:mx-8'>
-            <BsFillPersonFill size={30} className='text-green-400' />
-              <div className='text-white'>{t('emi4.message')}</div>
-            </div>
-
-            <div className='flex flex-col items-center justify-center object-cover w-40 h-32 p-4 border md:my-8 md:mx-8 '>
-            <BsFillPersonFill size={30} className='text-green-400' />
-              <div className='text-center text-white'>{t('emi5.message')}</div>
-            </div>
-
-            <div className='flex flex-col items-center justify-center object-cover w-40 h-32 p-4 border md:my-8 md:mx-8'>
-            <BsFillPersonFill size={30} className='text-green-400' />
-              <div className='text-center text-white'>{t('emi6.message')}</div>
-            </div>
+          <div className='mt-8 mb-4 text-3xl font-semibold text-black'>{t('emi.message')}</div>
+          <div className="flex flex-col items-center w-full p-5 bg-green-800 border md:flex-row md:flex-wrap">
+            {loanData.map((loan, index) => (
+              <div key={index} className='flex flex-col items-center justify-center object-cover w-40 h-32 p-4 border md:my-8 md:mx-8'>
+                <BsFillPersonFill size={30} className='text-green-400' />
+                <div className='text-center text-white '>{t(`emi${index + 1}.message`)}</div>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -103,19 +71,16 @@ const Emicalculatorc = () => {
           <div className='mb-2 text-xl font-normal text-center text-black'>{t('emi7.message')}</div>
           <div className="flex items-center p-6 mx-auto bg-green-800 w-half md:h-full md:mt-4 md:px-20">
             <div className='flex flex-col md:flex-col'>
-              <div className='text-white ' >{t('emi8.message')}</div>
-              <select className='' value={loanType} onChange={handleLoanTypeChange} >
-            <option>{t('emi9.message')}</option>
-            <option>{t('emi1.message')}</option>
-            <option>{t('emi2.message')}</option>
-            <option>{t('emi3.message')}</option>
-            <option>{t('emi4.message')}</option>
-            <option>{t('emi5.message')}</option>
-            <option>{t('emi6.message')}</option>
-          </select>
+              <div className='text-white'>{t('emi8.message')}</div>
+              <select className='' value={loanType} onChange={handleLoanTypeChange}>
+                <option value="">{t('emi9.message')}</option>
+                {loanData.map((loan, index) => (
+                  <option key={index} value={loan.type}>{t(`emi${index + 1}.message`)}</option>
+                ))}
+              </select>
 
-              <div  className='text-white '>{t('emi10.message')}</div>
-               <input
+              <div className='text-white'>{t('emi10.message')}</div>
+              <input
                 type="text"
                 className='p-1 border'
                 value={loanAmount}
@@ -123,15 +88,14 @@ const Emicalculatorc = () => {
               />
 
               <div className='text-white'>{t('emi11.message')}</div>
-          <input type='text' className='p-1 border' value={interestRate}  onChange={(e) => setInterestRate(e.target.value)} />
+              <input type='text' className='p-1 border' value={interestRate} onChange={(e) => setInterestRate(e.target.value)} />
 
-          <div className='text-white'>{t('emi12.message')}</div>
-          <input type='text' className='p-1 border' value={duration} onChange={(e) => setDuration(e.target.value)} />
+              <div className='text-white'>{t('emi12.message')}</div>
+              <input type='text' className='p-1 border' value={duration} onChange={(e) => setDuration(e.target.value)} />
 
-              <div className='text-white '>{t('emi13.message')}</div>
-               {/* Calculate and display EMI here */}
-               <button onClick={calculateEMI} className='p-2 mt-2 text-green-800 bg-white rounded-md'>
-               {t('emi14.message')}
+              <div className='text-white'>{t('emi13.message')}</div>
+              <button onClick={calculateEMI} className='p-2 mt-2 text-green-800 bg-white rounded-md'>
+                {t('emi14.message')}
               </button>
               {monthlyEMI !== '' && (
                 <div className='mt-4 text-white'>

@@ -1,88 +1,114 @@
+
+
+//careerc.js
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const Careerc = () => {
   const { t } = useTranslation("global");
-
+  const [message, setMessage] = useState('');
   const formFields = [
-    { name: 'message', label: 'send message', type: 'text'},
-    { name: 'email', label: 'your email', type: 'email' },
-    { name: 'cv', label: 'cv' ,type: 'file' },
-    { name: 'coverLetter', label: 'cover Letter', type: 'file' }
+    { name: 'message', label: 'career0.message', type: 'textarea', placeholder: 'message' },
+    { name: 'email', label: 'career1.message', type: 'email', placeholder: 'email' },
+    { name: 'cv', label: 'career2.message', type: 'file', accept: '.pdf, .doc, .docx, .png, .jpg, .jpeg' },
+    { name: 'coverLetter', label: 'career3.message', type: 'file', accept: '.pdf, .doc, .docx, .png, .jpg, .jpeg' }
   ];
 
-  const [message, setMessage] = useState('');
-  const [formData, setFormData] = useState({});
-
-  useEffect(() => {
-    // Initialize formData state based on formFields array
-    const initialFormData = {};
-    formFields.forEach(field => {
-      initialFormData[field.name] = field.type === 'file' ? null : '';
-    });
-    setFormData(initialFormData);
-  }, []);
+  const [formData, setFormData] = useState({
+    message: '',
+    email: '',
+    cv: null,
+    coverLetter: null,
+  });
 
   const handleInputChange = (e) => {
     const { name, value, files } = e.target;
-    setFormData(prevData => ({
+    setFormData((prevData) => ({
       ...prevData,
-      [name]: name === 'cv' || name === 'coverLetter' ? files[0] : value,
+      [name]: files ? files[0] : value,
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Perform your submission logic here, for example, send data to a server.
+// If any of them are empty, it sets an error message using the translation function t and returns, halting the submission process.
+    if (!formData.message || !formData.email || !formData.cv || !formData.coverLetter) {
+      setMessage(t('career7.Message'));
+      return;
+    }
 
-    // Assuming your submission is successful, show a success message
-    setMessage(t('career7.message'));
-    // Clear the form data
-    const resetFormData = {};
-    Object.keys(formData).forEach(key => {
-      resetFormData[key] = formData[key] instanceof File ? null : '';
-    });
-    setFormData(resetFormData);
+    const formDataToSend = new FormData();
+    formDataToSend.append('message', formData.message);
+    formDataToSend.append('email', formData.email);
+    formDataToSend.append('cv', formData.cv);
+    formDataToSend.append('coverLetter', formData.coverLetter);
+
+    try {
+      const response = await fetch("http://localhost:5000/api/career/ApplicationForm/", {
+        method: "POST",
+        body: formDataToSend,
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const data = await response.json();
+      console.log(data);
+      setMessage(t('con.successMessage'));
+      setFormData({
+        message: '',
+        email: '',
+        cv: null,
+        coverLetter: null,
+      });
+
+    } catch (error) {
+      console.error('Submission error:', error.message);
+    }
+
+    console.log('Form submitted:', formData);
+
   };
 
   useEffect(() => {
-    // Set a timer to clear the message after 5 seconds
     const timer = setTimeout(() => {
       setMessage('');
     }, 5000);
-
-    // Cleanup the timer on component unmount or when a new message is set
     return () => clearTimeout(timer);
   }, [message]);
 
   return (
-    <div className="container px-8 mx-auto mt-8 bg-white select-none max-w-screen-2xl md:py-2">
+    <div className="container px-8 mx-auto mt-8 bg-white select-none max-w-screen-2xl md:px-24 md:py-2">
       {message && (
         <div className="p-4 mb-4 text-white bg-primary">
           {message}
         </div>
       )}
       <form onSubmit={handleSubmit}>
-        {formFields.map(field => (
-          <div className="mb-4" key={field.name}>
+        {formFields.map(({ name, label, type, accept }) => (
+          <div className="mb-4" key={name}>
             <label className="block mb-2 text-sm font-bold text-gray-700">
-              {t(`${field.label}`)}
+              {t(label)}
             </label>
-            {field.type === 'text' || field.type === 'email' ? (
-              <input
-                type={field.type}
-                name={field.name}
-                value={formData[field.name]}
+            {type === 'textarea' ? (
+              <textarea
+                name={name}
+                value={formData[name]}
                 onChange={handleInputChange}
                 className="w-full p-2 border rounded"
-                required={field.type === 'email'}
-              />
+                rows="4"
+                placeholder={t(label)}
+              ></textarea>
             ) : (
               <input
-                type="file"
-                name={field.name}
+                type={type}
+                name={name}
                 onChange={handleInputChange}
-                className="p-2 border rounded"
+                className="w-full p-2 border rounded"
+                accept={accept}
+                placeholder={t(label)}
+                required={type !== 'file'}
               />
             )}
           </div>
