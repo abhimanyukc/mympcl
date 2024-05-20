@@ -428,7 +428,7 @@
         "message": "Duration (in month)"
     },
     "emi13":{
-        "message": "Yearly Payment (EMI)"
+        "message": "Monthly Payment (EMI)"
     },
     "emi14":{
         "message": "Calculate"
