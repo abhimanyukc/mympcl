@@ -169,12 +169,12 @@ const Kycc = () => {
   return (
     <div className="px-1 mx-auto max-w-screen-2xl md:px-8">
       <div className="flex flex-col ">
-        <form className="p-2 mt-4 border" onSubmit={handleFormSubmit}   >
-        <div className="flex mt-4">
+        <form className="p-1 mt-4 border" onSubmit={handleFormSubmit}   >
+        <div className="flex flex-wrap mt-4">
             {tabNames.map((tabItem) => (
               <div
                 key={tabItem.tab}
-                className={`flex flex-col mr-1 ${
+                className={`flex flex-col  ${
                   currentTab === tabItem.tab ? " bg-gray-100  text-green-500" : ""
                 }`}
                 onClick={() => setActiveTab(tabItem.tab)}
@@ -263,7 +263,7 @@ const Kycc = () => {
       </div>
       {/* Conditionally render popup message */}
       {isSubmitted && (
-        <div className="fixed top-0 left-0 flex items-center justify-center w-full h-full bg-gray-700 bg-opacity-50">
+        <div className="fixed top-0 left-0 flex items-center justify-center w-full h-full bg-gray-700 bg-opacity-50 z-100">
           <div className="p-4 bg-white rounded shadow-lg">
             <p className="text-lg font-semibold">KYC Form Submitted!</p>
             <p>Your KYC form has been successfully submitted.</p>
