@@ -36,8 +36,6 @@ const Kycc = () => {
     issuedFrom: "",
     issuedDate: "",
     yearlyTxnNumber: "",
-    permanentAddress: "",
-    oldAddress: "",
     ruralMunicipality: "",
     district: "",
     province: "",
@@ -69,13 +67,27 @@ const Kycc = () => {
   const [isSubmitted, setIsSubmitted] = useState(false); // State to track form submission
   
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit =  async (e) => {
     e.preventDefault();
+
+    try{
+      const response =  await fetch("http://localhost:5000/api/kyc/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData)
+      })
+      const data = await response.json(response);
+      console.log(data);
+    } catch(error) {
+      console.error(error.message);
+    }
   
     // Check if all required fields in current tab are filled
     switch (currentTab) {
         case 1:
-            if (!formData.firstName || !formData.lastName   || !formData.education   || !formData.occupation    || !formData.dob || !formData.citizenshipNo  ) {
+            if (!formData.firstName || !formData.lastName  || !formData.education   || !formData.occupation    || !formData.dob || !formData.citizenshipNo  ) {
                 alert("Please fill in all required fields in Personal Details tab.");
                 return   setCurrentTab(1);
             }
@@ -93,13 +105,13 @@ const Kycc = () => {
             }
             break;
         case 4:
-            if (!formData.incomeHead || !formData.yearlyIncomeAmount || !formData.expenseHead || !formData.expenseAmount) {
+            if (!formData.incomeHead || !formData.yearlyIncomeAmount || !formData.expenseHead ) {
                 alert("Please fill in all required fields in Yearly Income/Expense Details tab.");
                 return setCurrentTab(4);
             }
             break;
         case 5:
-            if (!formData.houseType || !formData.noOfHouse || !formData.roofType || !formData.noOfRoom || !formData.roomCost) {
+            if (!formData.houseType || !formData.roofType || !formData.noOfRoom || !formData.roomCost) {
                 alert("Please fill in all required fields in House Details tab.");
                 return setCurrentTab(5);
             }
@@ -169,12 +181,12 @@ const Kycc = () => {
   return (
     <div className="px-1 mx-auto max-w-screen-2xl md:px-8">
       <div className="flex flex-col ">
-        <form className="p-1 mt-4 border" onSubmit={handleFormSubmit}   >
-        <div className="flex flex-wrap mt-4">
+        <form className="p-2 mt-4 border" onSubmit={handleFormSubmit}   >
+        <div className="flex mt-4">
             {tabNames.map((tabItem) => (
               <div
                 key={tabItem.tab}
-                className={`flex flex-col  ${
+                className={`flex flex-col mr-1 ${
                   currentTab === tabItem.tab ? " bg-gray-100  text-green-500" : ""
                 }`}
                 onClick={() => setActiveTab(tabItem.tab)}
@@ -263,7 +275,7 @@ const Kycc = () => {
       </div>
       {/* Conditionally render popup message */}
       {isSubmitted && (
-        <div className="fixed top-0 left-0 flex items-center justify-center w-full h-full bg-gray-700 bg-opacity-50 z-100">
+        <div className="fixed top-0 left-0 flex items-center justify-center w-full h-full bg-gray-700 bg-opacity-50">
           <div className="p-4 bg-white rounded shadow-lg">
             <p className="text-lg font-semibold">KYC Form Submitted!</p>
             <p>Your KYC form has been successfully submitted.</p>
