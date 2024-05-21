@@ -332,31 +332,36 @@ const Kycc = () => {
                   />
                 </div>
 
-                <div className="mt-4 ">
-                  <div>Gender</div>
-                  <div className="">
-                    <input
-                      type="radio"
-                      id="male"
-                      name="gender"
-                      value={formData.gender}
-                      onChange={handleInputChange}
-                      className="mt-2 mr-2"
-                    />
-                    <label for="html" className="mr-4 ">
-                      Male
-                    </label>
-                    <input
-                      type="radio"
-                      id="female"
-                      name="gender"
-                      value={formData.gender}
-                      onChange={handleInputChange}
-                      className="mt-2 mr-2 "
-                    />
-                    <label for="css">Female</label>
-                  </div>
-                </div>
+                <div className="mt-4">
+  <div className="text-lg font-medium">Gender</div>
+  <div className="flex items-center mt-2">
+    <input
+      type="radio"
+      id="male"
+      name="gender"
+      value="male"
+      checked={formData.gender === 'male'}
+      onChange={handleInputChange}
+      className="w-4 h-4 ml-2 border-gray-900 form-radio"
+    />
+    <label htmlFor="male" className="ml-2 text-gray-700">
+      Male
+    </label>
+    <input
+      type="radio"
+      id="female"
+      name="gender"
+      value="female"
+      checked={formData.gender === 'female'}
+      onChange={handleInputChange}
+      className="w-4 h-4 ml-2 border-gray-900 form-radio "
+    />
+    <label htmlFor="female" className="ml-2 text-gray-700">
+      Female
+    </label>
+  </div>
+</div>
+
 
                 <div className="mt-4 ">Marital Status</div>
                 <select
