@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState} from 'react';
+import  axios from 'axios';
 import { useTranslation } from 'react-i18next';
 import { FaArrowRight, FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
@@ -7,118 +8,118 @@ const Careertest = () => {
   const [t, i18n] = useTranslation('global');
 
   // Define an array of objects containing data for each link
-  const careerData = [
-    {
-      to: '/career/softwareEngineer',
-      primaryText: t('careerTest2.message'),
-      dangerText1: t('careerTest8.message'),
-      dangerText2: t('careerTest3.message'),
-      userText1: t('careerTest4.message'),
-      userText2: t('careerTest5.message'),
-      arrowText: t('careerTest6.message'),
-    },
+  // const careerData = [
+  //   {
+  //     to: '/career/softwareEngineer',
+  //     primaryText: t('careerTest2.message'),
+  //     dangerText1: t('careerTest8.message'),
+  //     dangerText2: t('careerTest3.message'),
+  //     userText1: t('careerTest4.message'),
+  //     userText2: t('careerTest5.message'),
+  //     arrowText: t('careerTest6.message'),
+  //   },
 
 
-    {
-        to: '/career/bankTeller',
-        primaryText: t('careerTest7.message'),
-        dangerText1: t('careerTest8.message'),
-        dangerText2: t('careerTest9.message'),
-        userText1: t('careerTest10.message'),
-        userText2: t('careerTest11.message'),
-        arrowText: t('careerTest12.message'),
-      },
+  //   {
+  //       to: '/career/bankTeller',
+  //       primaryText: t('careerTest7.message'),
+  //       dangerText1: t('careerTest8.message'),
+  //       dangerText2: t('careerTest9.message'),
+  //       userText1: t('careerTest10.message'),
+  //       userText2: t('careerTest11.message'),
+  //       arrowText: t('careerTest12.message'),
+  //     },
 
 
-      {
-        to: '/career/customerServiceRepresentative',
-        primaryText: t('careerTest13.message'),
-        dangerText1: t('careerTest14.message'),
-        dangerText2: t('careerTest15.message'),
-        userText1: t('careerTest16.message'),
-        userText2: t('careerTest17.message'),
-        arrowText: t('careerTest18.message'),
-      },
+  //     {
+  //       to: '/career/customerServiceRepresentative',
+  //       primaryText: t('careerTest13.message'),
+  //       dangerText1: t('careerTest14.message'),
+  //       dangerText2: t('careerTest15.message'),
+  //       userText1: t('careerTest16.message'),
+  //       userText2: t('careerTest17.message'),
+  //       arrowText: t('careerTest18.message'),
+  //     },
 
-      {
-        to: '/career/loanOfficer',
-        primaryText: t('careerTest19.message'),
-        dangerText1: t('careerTest20.message'),
-        dangerText2: t('careerTest21.message'),
-        userText1: t('careerTest22.message'),
-        userText2: t('careerTest23.message'),
-        arrowText: t('careerTest24.message'),
-      },
+  //     {
+  //       to: '/career/loanOfficer',
+  //       primaryText: t('careerTest19.message'),
+  //       dangerText1: t('careerTest20.message'),
+  //       dangerText2: t('careerTest21.message'),
+  //       userText1: t('careerTest22.message'),
+  //       userText2: t('careerTest23.message'),
+  //       arrowText: t('careerTest24.message'),
+  //     },
 
-      {
-        to: '/career/financialAnalyst',
-        primaryText: t('careerTest25.message'),
-        dangerText1: t('careerTest26.message'),
-        dangerText2: t('careerTest27.message'),
-        userText1: t('careerTest28.message'),
-        userText2: t('careerTest29.message'),
-        arrowText: t('careerTest30.message'),
-      },
+  //     {
+  //       to: '/career/financialAnalyst',
+  //       primaryText: t('careerTest25.message'),
+  //       dangerText1: t('careerTest26.message'),
+  //       dangerText2: t('careerTest27.message'),
+  //       userText1: t('careerTest28.message'),
+  //       userText2: t('careerTest29.message'),
+  //       arrowText: t('careerTest30.message'),
+  //     },
 
-      {
-        to: '/career/riskAnalyst',
-        primaryText: t('careerTest31.message'),
-        dangerText1: t('careerTest32.message'),
-        dangerText2: t('careerTest33.message'),
-        userText1: t('careerTest34.message'),
-        userText2: t('careerTest35.message'),
-        arrowText: t('careerTest36.message'),
-      },
+  //     {
+  //       to: '/career/riskAnalyst',
+  //       primaryText: t('careerTest31.message'),
+  //       dangerText1: t('careerTest32.message'),
+  //       dangerText2: t('careerTest33.message'),
+  //       userText1: t('careerTest34.message'),
+  //       userText2: t('careerTest35.message'),
+  //       arrowText: t('careerTest36.message'),
+  //     },
 
-      {
-        to: '/career/complianceOfficer',
-        primaryText: t('careerTest37.message'),
-        dangerText1: t('careerTest38.message'),
-        dangerText2: t('careerTest39.message'),
-        userText1: t('careerTest40.message'),
-        userText2: t('careerTest41.message'),
-        arrowText: t('careerTest42.message'),
-      },
+  //     {
+  //       to: '/career/complianceOfficer',
+  //       primaryText: t('careerTest37.message'),
+  //       dangerText1: t('careerTest38.message'),
+  //       dangerText2: t('careerTest39.message'),
+  //       userText1: t('careerTest40.message'),
+  //       userText2: t('careerTest41.message'),
+  //       arrowText: t('careerTest42.message'),
+  //     },
 
-      {
-        to: '/career/branchManager',
-        primaryText: t('careerTest43.message'),
-        dangerText1: t('careerTest44.message'),
-        dangerText2: t('careerTest45.message'),
-        userText1: t('careerTest46.message'),
-        userText2: t('careerTest47.message'),
-        arrowText: t('careerTest48.message'),
-      },
+  //     {
+  //       to: '/career/branchManager',
+  //       primaryText: t('careerTest43.message'),
+  //       dangerText1: t('careerTest44.message'),
+  //       dangerText2: t('careerTest45.message'),
+  //       userText1: t('careerTest46.message'),
+  //       userText2: t('careerTest47.message'),
+  //       arrowText: t('careerTest48.message'),
+  //     },
 
-      {
-        to: '/career/investmentAdvisor',
-        primaryText: t('careerTest49.message'),
-        dangerText1: t('careerTest50.message'),
-        dangerText2: t('careerTest51.message'),
-        userText1: t('careerTest52.message'),
-        userText2: t('careerTest53.message'),
-        arrowText: t('careerTest54.message'),
-      },
+  //     {
+  //       to: '/career/investmentAdvisor',
+  //       primaryText: t('careerTest49.message'),
+  //       dangerText1: t('careerTest50.message'),
+  //       dangerText2: t('careerTest51.message'),
+  //       userText1: t('careerTest52.message'),
+  //       userText2: t('careerTest53.message'),
+  //       arrowText: t('careerTest54.message'),
+  //     },
 
-      {
-        to: '/career/mortgageSpecialist',
-        primaryText: t('careerTest55.message'),
-        dangerText1: t('careerTest56.message'),
-        dangerText2: t('careerTest57.message'),
-        userText1: t('careerTest58.message'),
-        userText2: t('careerTest59.message'),
-        arrowText: t('careerTest60.message'),
-      },
+  //     {
+  //       to: '/career/mortgageSpecialist',
+  //       primaryText: t('careerTest55.message'),
+  //       dangerText1: t('careerTest56.message'),
+  //       dangerText2: t('careerTest57.message'),
+  //       userText1: t('careerTest58.message'),
+  //       userText2: t('careerTest59.message'),
+  //       arrowText: t('careerTest60.message'),
+  //     },
 
-      {
-        to: '/career/technologySpecialist',
-        primaryText: t('careerTest61.message'),
-        dangerText1: t('careerTest62.message'),
-        dangerText2: t('careerTest63.message'),
-        userText1: t('careerTest64.message'),
-        userText2: t('careerTest65.message'),
-        arrowText: t('careerTest66.message'),
-      },
+  //     {
+  //       to: '/career/technologySpecialist',
+  //       primaryText: t('careerTest61.message'),
+  //       dangerText1: t('careerTest62.message'),
+  //       dangerText2: t('careerTest63.message'),
+  //       userText1: t('careerTest64.message'),
+  //       userText2: t('careerTest65.message'),
+  //       arrowText: t('careerTest66.message'),
+  //     },
 
 
      
@@ -126,8 +127,19 @@ const Careertest = () => {
     
     
 
-  ];
+  // ];
 
+  const [careerData, setCareerData] = useState([]);
+  
+     useEffect(() => {
+      axios.get('http://localhost:5000/api/career/')
+      .then(response => {
+           setCareerData(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching branch data:', error);
+      });
+     }, []);
   return (
     <div className='px-8 mx-auto max-w-screen-2xl '>
       <div className='mt-8 mb-4'>
