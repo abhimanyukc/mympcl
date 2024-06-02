@@ -1,5 +1,5 @@
 import React from 'react'
-import Reportsc from '../components/services/reportsc'
+import Reportsc from '../components/reportsc'
 import Combo from '../components/combo'
 import Footer from '../components/footer'
 

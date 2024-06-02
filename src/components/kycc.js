@@ -334,13 +334,12 @@ const Kycc = () => {
 
                 <div className="mt-4">
   <div className="text-lg font-medium">Gender</div>
-  <div className="flex items-center mt-2">
+  <div className="flex items-center mt-2" >
     <input
       type="radio"
       id="male"
       name="gender"
       value="male"
-      checked={formData.gender === 'male'}
       onChange={handleInputChange}
       className="w-4 h-4 ml-2 border-gray-900 form-radio"
     />
@@ -352,7 +351,6 @@ const Kycc = () => {
       id="female"
       name="gender"
       value="female"
-      checked={formData.gender === 'female'}
       onChange={handleInputChange}
       className="w-4 h-4 ml-2 border-gray-900 form-radio "
     />

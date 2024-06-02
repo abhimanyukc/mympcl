@@ -5,25 +5,25 @@ const GalleryC = () => {
   // Array of gallery items
   const galleryItems = [
     {
-      id: 1,
+      no: 1,
       title: 'kapda bitaran',
       imageUrl: 'https://pixels.com/assets/images/products/framedPrints002.jpg',
       linkUrl: '/gallery/albumi'
     },
     {
-      id: 2,
+      no: 2,
       title: '27th Agm',
       imageUrl: 'https://i.pinimg.com/564x/cc/72/fe/cc72febd5d54cf625c3523f0942423bc.jpg',
       linkUrl: '/gallery/albumii'
     },
     {
-      id: 3,
+      no: 3,
       title: 'album iii',
       imageUrl: 'https://i.pinimg.com/564x/72/cc/c4/72ccc4539d10b1dc11f44c3560917a29.jpg',
       linkUrl: '/gallery/albumiii'
     },
     {
-      id: 4,
+      no: 4,
       title: 'album iv',
       imageUrl: 'https://i.pinimg.com/564x/82/7a/e4/827ae45170f460b2000354f59b13bcfb.jpg',
       linkUrl: '/gallery/albumiv'
@@ -36,11 +36,11 @@ const GalleryC = () => {
         <div className='flex flex-wrap justify-center -mx-2'>
           {/* Map over galleryItems array to dynamically render gallery items */}
           {galleryItems.map(item => (
-            <Link key={item.id} to={item.linkUrl} className='w-full px-2 mt-4 md:w-1/2 lg:w-1/4 hover:scale-105'>
+            <Link key={item.no} to={item.linkUrl} className='w-full px-2 mt-4 md:w-1/2 lg:w-1/4 hover:scale-105'>
               <div className='flex flex-col p-2 bg-gray-100 border-b-2 shadow-lg'>
-                <img src={item.imageUrl} alt={`album${item.id}`} className='object-cover w-full h-64 m-2' />
+                <img src={item.imageUrl} alt={`album${item.no}`} className='object-cover w-full h-64 m-2' />
                 <div className='flex flex-row m-2'>
-                  <div className='mr-2 font-bold'>{item.id}</div>
+                  <div className='mr-2 font-bold'>{item.no}</div>
                   <div>{item.title}</div>
                 </div>
               </div>

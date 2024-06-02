@@ -1,39 +1,51 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import axios from 'axios';
 import { useTranslation } from 'react-i18next';
 import { BsPhone, BsMailbox } from 'react-icons/bs';
 
 const Branchesc = () => {
   const { t } = useTranslation('global');
-
+   const [branchesData, setBranchesData] = useState([]);
   // Defining an array of objects containing data for each branch
-  const branchesData = [
-    {
-      title: t('brnch1.message'),
-      address: t('brnch2.message'),
-      phone: t('brnch3.message'),
-      email: t('brnch4.message'),
-    },
-    {
-      title: t('brnch1.message'),
-      address: t('brnch5.message'),
-      phone: t('brnch6.message'),
-      email: t('brnch7.message'),
-    },
-    {
-      title: t('brnch1.message'),
-      address: t('brnch8.message'),
-      phone: t('brnch9.message'),
-      email: t('brnch10.message'),
-    },
-    {
-      title: t('brnch1.message'),
-      address: t('brnch11.message'),
-      phone: t('brnch12.message'),
-      email: t('brnch13.message'),
-    },
+  // const branchesData = [
+  //   {
+  //     title: t('brnch1.message'),
+  //     address: t('brnch2.message'),
+  //     phone: t('brnch3.message'),
+  //     email: t('brnch4.message'),
+  //   },
+  //   {
+  //     title: t('brnch1.message'),
+  //     address: t('brnch5.message'),
+  //     phone: t('brnch6.message'),
+  //     email: t('brnch7.message'),
+  //   },
+  //   {
+  //     title: t('brnch1.message'),
+  //     address: t('brnch8.message'),
+  //     phone: t('brnch9.message'),
+  //     email: t('brnch10.message'),
+  //   },
+  //   {
+  //     title: t('brnch1.message'),
+  //     address: t('brnch11.message'),
+  //     phone: t('brnch12.message'),
+  //     email: t('brnch13.message'),
+  //   },
    
-  ];
+  // ];
 
+  //fetch branch data from api
+  useEffect(() => {
+    axios.get('http://localhost:5000/api/branches/')
+    .then(response => {
+
+      setBranchesData(response.data);
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+    })
+  }, [])
   return (
     <div className="mx-auto max-w-screen-2xl">
       <div className="mx-8 mt-10 md:mt-20 ">

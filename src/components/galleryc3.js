@@ -5,96 +5,96 @@ import { MdClose } from 'react-icons/md';
 const Gallery3C = () => {
     const album3Items = [
         {
-          id: 1,
+          no: 1,
           imageUrl: 'https://i.pinimg.com/564x/72/cc/c4/72ccc4539d10b1dc11f44c3560917a29.jpg',
           altText: "album3a",
         },
         {
-          id: 2,
+          no: 2,
           imageUrl: "https://i.pinimg.com/564x/32/6a/67/326a670b17eb521f946e42535e4354e2.jpg",
           altText: "album3b",
         },
         {
-          id: 3,
+          no: 3,
           imageUrl:
             "https://i.pinimg.com/564x/e0/4a/02/e04a02305b73047bda3167423579561d.jpg",
           altText: "album3c",
         },
         {
-          id: 4,
+          no: 4,
           imageUrl:
             "https://i.pinimg.com/564x/8e/aa/11/8eaa116d384b7b84ac6790af649658e1.jpg",
           altText: "album3d",
         },
         {
-          id: 5,
+          no: 5,
           imageUrl:
             "https://i.pinimg.com/564x/22/31/75/223175d64b83558cd1cd8021e5c3bbec.jpg",
           altText: "album3e",
         },
         {
-          id: 6,
+          no: 6,
           imageUrl:
             "https://i.pinimg.com/564x/e5/88/89/e588896292f7586f7e0506417c9ddd56.jpg",
           altText: "album3f",
         },
         {
-          id: 7,
+          no: 7,
           imageUrl:
             "https://i.pinimg.com/564x/1b/47/64/1b47643c528c03a90f09746268195043.jpg",
           altText: "album3g",
         },
         {
-          id: 8,
+          no: 8,
           imageUrl:
             "https://i.pinimg.com/736x/2a/57/0d/2a570dbd8f5b225ac0227173046998c4.jpg",
           altText: "album3h",
         },
         {
-          id: 9,
+          no: 9,
           imageUrl:
             "https://i.pinimg.com/564x/e3/6d/12/e36d1212cfad7580388a3042b1b8a589.jpg",
           altText: "album3i",
         },
         {
-          id: 10,
+          no: 10,
           imageUrl:
             "https://i.pinimg.com/564x/48/35/d7/4835d738f169a5615c575d9aa39fb866.jpg",
           altText: "album3j",
         },
         {
-          id: 11,
+          no: 11,
           imageUrl:
             "https://i.pinimg.com/564x/69/de/eb/69deebe19fb836288f317a3672bcdc17.jpg",
           altText: "album3k",
         },
     
         {
-          id: 12,
+          no: 12,
           imageUrl:
             "https://i.pinimg.com/564x/85/d5/d4/85d5d4ca86e36cd83c493b5b50c154c2.jpg",
           altText: "album3l",
         },
         {
-          id: 13,
+          no: 13,
           imageUrl:
             "https://i.pinimg.com/564x/ff/58/c2/ff58c20c2dbf37ac926d3179d09be584.jpg",
           altText: "album3m",
         },
         {
-          id: 14,
+          no: 14,
           imageUrl:
             "https://i.pinimg.com/564x/aa/03/df/aa03df90bf94f719996bb610617712a8.jpg",
           altText: "album3n",
         },
         {
-          id: 15,
+          no: 15,
           imageUrl:
             "https://i.pinimg.com/564x/98/8a/61/988a6171321ac8cd6a28717ef20eded9.jpg",
           altText: "album3o",
         },
         {
-          id: 16,
+          no: 16,
           imageUrl:
             "https://i.pinimg.com/564x/6e/29/7a/6e297ab5c8a0d41d560954d93676426e.jpg",
           altText: "album3p",
@@ -131,7 +131,7 @@ const Gallery3C = () => {
         <div className='flex flex-wrap justify-center -mx-2'>
           {/* Map over album3Items array to dynamically render gallery items */}
           {album3Items.map((item, index) => (
-          <div  key={item.id} className='w-full px-2 mt-4 md:w-1/2 lg:w-1/4 hover:scale-105'>
+          <div  key={item.no} className='w-full px-2 mt-4 md:w-1/2 lg:w-1/4 hover:scale-105'>
             <div className='flex flex-col p-2 bg-gray-100 border-b-2 shadow-lg'
                onClick={() => openModal(index)}>
               <img src={item.imageUrl} alt={item.altText} className='object-cover w-full h-64 m-2' />

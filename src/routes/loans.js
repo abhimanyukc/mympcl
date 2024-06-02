@@ -30,7 +30,7 @@ const Loans = () => {
       },
     // Add more loan objects as needed
   ];
-
+  
   return (
   
     <div>

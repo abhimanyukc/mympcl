@@ -5,12 +5,12 @@ import { useTranslation } from 'react-i18next';
 const Informationc = () => {
   const [t, i18n] = useTranslation('global')
 const services = [
-  { id: 1, message: t('services1.message') ,link: '/services/bankingservices'},
-  { id: 2, message: t('services2.message') ,link: '/services/smsservices'},
-  { id: 3, message: t('services3.message') ,link: '/services/mobilebankingservices'},
-  { id: 4, message: t('services4.message') ,link: '/services/internetservices'},
-  { id: 5, message: t('services5.message') ,link: '/services/remmittanceservices'},
-  { id: 6, message: t('services6.message') ,link: '/services/healthservices'}
+  { no: 1, message: t('services1.message') ,link: '/services/bankingservices'},
+  { no: 2, message: t('services2.message') ,link: '/services/smsservices'},
+  { no: 3, message: t('services3.message') ,link: '/services/mobilebankingservices'},
+  { no: 4, message: t('services4.message') ,link: '/services/internetservices'},
+  { no: 5, message: t('services5.message') ,link: '/services/remmittanceservices'},
+  { no: 6, message: t('services6.message') ,link: '/services/healthservices'}
 ];
 
 const cooperativeContent = {
@@ -42,7 +42,7 @@ const cooperativeContent = {
         </div>
         <div className='flex flex-col mb-8 md:w-1/4'>
              {services.map(service => (
-              <div key={service.id} className='p-1 border-b-2 md:py-7 text-nowrap'>
+              <div key={service.no} className='p-1 border-b-2 md:py-7 text-nowrap'>
                 <a href={service.link}><p>{service.message}</p></a>
               </div>
           ))}

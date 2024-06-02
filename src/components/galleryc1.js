@@ -6,97 +6,97 @@ const Gallery1C = () => {
   //array of album1 items
   const album1Items = [
     {
-      id: 1,
+      no: 1,
       imageUrl: "https://pixels.com/assets/images/products/framedPrints002.jpg",
       altText: "album1a",
     },
     {
-      id: 2,
+      no: 2,
       imageUrl:
         "https://i.pinimg.com/564x/83/64/40/836440a634a8a781467f6e3c37313a56.jpg",
       altText: "album1b",
     },
     {
-      id: 3,
+      no: 3,
       imageUrl:
         "https://i.pinimg.com/564x/ed/6b/25/ed6b2564920c9022070da97570379b95.jpg",
       altText: "album1c",
     },
     {
-      id: 4,
+      no: 4,
       imageUrl:
         "https://i.pinimg.com/564x/cc/9e/ce/cc9eceb0e25954732e32cad314e93956.jpg",
       altText: "album1d",
     },
     {
-      id: 5,
+      no: 5,
       imageUrl:
         "https://i.pinimg.com/736x/61/df/89/61df8940c947dd1f812b7edef388c08b.jpg",
       altText: "album1e",
     },
     {
-      id: 6,
+      no: 6,
       imageUrl:
         "https://i.pinimg.com/564x/d7/8a/61/d78a619d187d56c2a411dfbf87b9d35e.jpg",
       altText: "album1f",
     },
     {
-      id: 7,
+      no: 7,
       imageUrl:
         "https://i.pinimg.com/564x/8a/60/31/8a6031f2865b6ebe7e392173add919ea.jpg",
       altText: "album1g",
     },
     {
-      id: 8,
+      no: 8,
       imageUrl:
         "https://i.pinimg.com/736x/ca/c1/22/cac1221322a73f81dba76b9f4d3c9ee9.jpg",
       altText: "album1h",
     },
     {
-      id: 9,
+      no: 9,
       imageUrl:
         "https://i.pinimg.com/564x/2c/c8/14/2cc8144af7e1e87ddfc8497a9cb98f9f.jpg",
       altText: "album1i",
     },
     {
-      id: 10,
+      no: 10,
       imageUrl:
         "https://i.pinimg.com/564x/83/64/40/836440a634a8a781467f6e3c37313a56.jpg",
       altText: "album1j",
     },
     {
-      id: 11,
+      no: 11,
       imageUrl:
         "https://i.pinimg.com/564x/ca/c1/22/cac1221322a73f81dba76b9f4d3c9ee9.jpg",
       altText: "album1k",
     },
 
     {
-      id: 12,
+      no: 12,
       imageUrl:
         "https://i.pinimg.com/736x/51/6f/88/516f88358ced1a7934f950d5cf87e245.jpg",
       altText: "album1l",
     },
     {
-      id: 13,
+      no: 13,
       imageUrl:
         "https://i.pinimg.com/736x/6f/1c/a7/6f1ca7e941426ab626fb95437f380323.jpg",
       altText: "album1m",
     },
     {
-      id: 14,
+      no: 14,
       imageUrl:
         "https://i.pinimg.com/564x/34/db/4f/34db4f55e10e29a7a73dff6349943421.jpg",
       altText: "album1n",
     },
     {
-      id: 15,
+      no: 15,
       imageUrl:
         "https://i.pinimg.com/564x/d7/8a/61/d78a619d187d56c2a411dfbf87b9d35e.jpg",
       altText: "album1o",
     },
     {
-      id: 16,
+      no: 16,
       imageUrl:
         "https://i.pinimg.com/564x/ae/46/af/ae46afaf2b9ea91a10a4713049b46f7f.jpg",
       altText: "album1p",
@@ -134,7 +134,7 @@ const Gallery1C = () => {
         <div className="flex flex-wrap justify-center -mx-2">
           {album1Items.map((item, index) => (
             <div
-              key={item.id}
+              key={item.no}
               className="w-full px-2 mt-4 md:w-1/2 lg:w-1/4 hover:scale-105"
             >
               <div

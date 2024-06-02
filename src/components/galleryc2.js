@@ -5,96 +5,96 @@ import { MdClose } from 'react-icons/md';
 const Gallery2C = () => {
     const album2Items = [
         {
-          id: 1,
+          no: 1,
           imageUrl: 'https://i.pinimg.com/564x/83/64/40/836440a634a8a781467f6e3c37313a56.jpg',
           altText: "album2a",
         },
         {
-          id: 2,
+          no: 2,
           imageUrl: "https://i.pinimg.com/564x/68/c9/66/68c966a44b63f7f5089ddb0b6a19bec5.jpg",
           altText: "album2b",
         },
         {
-          id: 3,
+          no: 3,
           imageUrl:
             "https://i.pinimg.com/736x/e4/09/c2/e409c2f4c6e28b0f2bde84453730e58a.jpg",
           altText: "album2c",
         },
         {
-          id: 4,
+          no: 4,
           imageUrl:
             "https://i.pinimg.com/564x/68/bb/2b/68bb2b8b1e4c80778bfba7074cbe4b02.jpg",
           altText: "album2d",
         },
         {
-          id: 5,
+          no: 5,
           imageUrl:
             "https://i.pinimg.com/564x/87/5e/3e/875e3e079d84c108f0b2f891a0718190.jpg",
           altText: "album2e",
         },
         {
-          id: 6,
+          no: 6,
           imageUrl:
             "https://i.pinimg.com/564x/d0/8d/2a/d08d2a7c19f2e2844bc3916d2924976d.jpg",
           altText: "album2f",
         },
         {
-          id: 7,
+          no: 7,
           imageUrl:
             "https://i.pinimg.com/564x/d2/74/09/d2740939d9ef5e2f433209f67806aaff.jpg",
           altText: "album2g",
         },
         {
-          id: 8,
+          no: 8,
           imageUrl:
             "https://i.pinimg.com/564x/1b/5f/ef/1b5fef94158fdbc0ac4f8b53c812c224.jpg",
           altText: "album2h",
         },
         {
-          id: 9,
+          no: 9,
           imageUrl:
             "https://i.pinimg.com/564x/5f/55/f8/5f55f8832fa1b5c91e75e65e38547649.jpg",
           altText: "album2i",
         },
         {
-          id: 10,
+          no: 10,
           imageUrl:
             "https://i.pinimg.com/564x/68/59/dc/6859dc1ceae7d11ec16414c68e307df5.jpg",
           altText: "album2j",
         },
         {
-          id: 11,
+          no: 11,
           imageUrl:
             "https://i.pinimg.com/564x/69/de/eb/69deebe19fb836288f317a3672bcdc17.jpg",
           altText: "album2k",
         },
     
         {
-          id: 12,
+          no: 12,
           imageUrl:
             "https://i.pinimg.com/564x/85/d5/d4/85d5d4ca86e36cd83c493b5b50c154c2.jpg",
           altText: "album2l",
         },
         {
-          id: 13,
+          no: 13,
           imageUrl:
             "https://i.pinimg.com/564x/ff/58/c2/ff58c20c2dbf37ac926d3179d09be584.jpg",
           altText: "album2m",
         },
         {
-          id: 14,
+          no: 14,
           imageUrl:
             "https://i.pinimg.com/564x/aa/03/df/aa03df90bf94f719996bb610617712a8.jpg",
           altText: "album2n",
         },
         {
-          id: 15,
+          no: 15,
           imageUrl:
             "https://i.pinimg.com/564x/98/8a/61/988a6171321ac8cd6a28717ef20eded9.jpg",
           altText: "album2o",
         },
         {
-          id: 16,
+          no: 16,
           imageUrl:
             "https://i.pinimg.com/564x/6e/29/7a/6e297ab5c8a0d41d560954d93676426e.jpg",
           altText: "album2p",
@@ -132,7 +132,7 @@ const Gallery2C = () => {
        {/* Map over album2Items array to dynamically render gallery items */}
        {album2Items.map((item, index) => (
       <div 
-      key={item.id} 
+      key={item.no} 
       className='w-full px-2 mt-4 md:w-1/2 lg:w-1/4 hover:scale-105'
       >
       <div 

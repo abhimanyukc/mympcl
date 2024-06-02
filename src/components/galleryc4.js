@@ -5,97 +5,97 @@ import { MdClose } from "react-icons/md";
 const Gallery4C = () => {
   const album4Items = [
     {
-      id: 1,
+      no: 1,
       imageUrl:
         "https://i.pinimg.com/564x/82/7a/e4/827ae45170f460b2000354f59b13bcfb.jpg",
       altText: "album4a",
     },
     {
-      id: 2,
+      no: 2,
       imageUrl:
         "https://images.squarespace-cdn.com/content/v1/5fa5849fc7ab3308abbdad97/47c8fe76-fcc9-4e6a-aa3d-cb5af22f96c1/Pushpa+Sahakari.jpg",
       altText: "album4b",
     },
     {
-      id: 3,
+      no: 3,
       imageUrl: "https://www.deoc.gov.np/slider/sarsafai%20pgm_1649060788.jpg",
       altText: "album4c",
     },
     {
-      id: 4,
+      no: 4,
       imageUrl:
         "https://i.pinimg.com/564x/68/bb/2b/68bb2b8b1e4c80778bfba7074cbe4b02.jpg",
       altText: "album4d",
     },
     {
-      id: 5,
+      no: 5,
       imageUrl:
         "https://i.pinimg.com/564x/87/5e/3e/875e3e079d84c108f0b2f891a0718190.jpg",
       altText: "album4e",
     },
     {
-      id: 6,
+      no: 6,
       imageUrl:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp1HRAEysPl598vO3jxMQuol7Zy9vJKrvDDmB4ItNfAw&s",
       altText: "album4f",
     },
     {
-      id: 7,
+      no: 7,
       imageUrl:
         "https://gaunsahar.com/uploads/news/images/820166910GlobalIMExGIZ..jpeg",
       altText: "album4g",
     },
     {
-      id: 8,
+      no: 8,
       imageUrl:
         "https://i.pinimg.com/564x/1b/5f/ef/1b5fef94158fdbc0ac4f8b53c812c224.jpg",
       altText: "album4h",
     },
     {
-      id: 9,
+      no: 9,
       imageUrl:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFVudBJJoHt9zj_huM6Y57fUQoRs98FAQm_toFgWkR7Q&s",
       altText: "album4i",
     },
     {
-      id: 10,
+      no: 10,
       imageUrl:
         "https://i.pinimg.com/564x/b5/d7/aa/b5d7aa81f0f972cc8c400a45476e0084.jpg",
       altText: "album4j",
     },
     {
-      id: 11,
+      no: 11,
       imageUrl:
         "https://i.pinimg.com/564x/2e/a4/d2/2ea4d2af9032e3c91a5de5dbc76aed2a.jpg",
       altText: "album4k",
     },
 
     {
-      id: 12,
+      no: 12,
       imageUrl:
         "https://i.pinimg.com/564x/67/69/5a/67695aadd691cf8642cac8c379c2f0c3.jpg",
       altText: "album4l",
     },
     {
-      id: 13,
+      no: 13,
       imageUrl:
         "https://i.pinimg.com/736x/ea/bf/8d/eabf8dd52cc24344d0e746bb1e6c5d5e.jpg",
       altText: "album4m",
     },
     {
-      id: 14,
+      no: 14,
       imageUrl:
         "https://i.pinimg.com/736x/6c/bf/0c/6cbf0ca423aa319a3965b9ca3c53401c.jpg",
       altText: "album4n",
     },
     {
-      id: 15,
+      no: 15,
       imageUrl:
         "https://i.pinimg.com/564x/8b/42/d3/8b42d3ef0c94c702a3a55dd8b07b1981.jpg",
       altText: "album4o",
     },
     {
-      id: 16,
+      no: 16,
       imageUrl:
         "https://i.pinimg.com/564x/00/34/c8/0034c831c6b1b05e044acc658bbd5c99.jpg",
       altText: "album4p",
@@ -134,7 +134,7 @@ const Gallery4C = () => {
             {/* Map over album2Items array to dynamically render gallery items */}
             {album4Items.map((item,index) => (
           <div  
-          key={item.id} 
+          key={item.no} 
           className="w-full px-2 mt-4 md:w-1/2 lg:w-1/4 hover:scale-105"
           >
             <div
