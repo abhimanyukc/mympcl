@@ -1,18 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect} from 'react';
+import axios from 'axios';
 import { FaFilePdf, FaFileDownload } from 'react-icons/fa';
-import ATMRegistrationForm from '../pdfs/atm_registration_form.pdf';
-import OnlineAccountOpeningForm from '../pdfs/online_account_opening_form.pdf';
-import DematAccountOpeningForm from '../pdfs/demat_account_opening_form.pdf';
-import DollarCardForm from '../pdfs/dollar_card_form.pdf';
+// import ATMRegistrationForm from '../pdfs/atm_registration_form.pdf';
+// import OnlineAccountOpeningForm from '../pdfs/online_account_opening_form.pdf';
+// import DematAccountOpeningForm from '../pdfs/demat_account_opening_form.pdf';
+// import DollarCardForm from '../pdfs/dollar_card_form.pdf';
 
 const Downloadsc = () => {
   // Array of form data
-  const formData = [
-    { name: 'Atm Registration Form', link: ATMRegistrationForm },
-    { name: 'Online Account Opening Form', link: OnlineAccountOpeningForm },
-    { name: 'Demat Account Opening Form', link: DematAccountOpeningForm },
-    { name: 'Dollar Card Form', link: DollarCardForm }
-  ];
+  // const formData = [
+  //   { name: 'Atm Registration Form', link: ATMRegistrationForm },
+  //   { name: 'Online Account Opening Form', link: OnlineAccountOpeningForm },
+  //   { name: 'Demat Account Opening Form', link: DematAccountOpeningForm },
+  //   { name: 'Dollar Card Form', link: DollarCardForm }
+  // ];
+
+   const [formData, setFormData] = useState([]);
+    useEffect(() => {
+      const fetchFormData = async () => {
+        try{
+          const response = await axios.get('http://localhost:5000/api/downloadForm/')
+           setFormData(response.data);
+        }
+        catch (err) {
+            console.error("failed to fetch the data:", err);
+        }
+      }
+         fetchFormData();
+    }, [])
+
 
   return (
     <div className='p-4 mx-auto max-w-screen-2xl'>
