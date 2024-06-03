@@ -1,31 +1,35 @@
-//emicalculatorc.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { BsFillPersonFill } from 'react-icons/bs';
-import axios from 'axios'; //Import axios for API calls
+import axios from 'axios';
+
 const Emicalculatorc = () => {
   const [loanType, setLoanType] = useState('');
   const [interestRate, setInterestRate] = useState('');
   const [duration, setDuration] = useState('');
   const [loanAmount, setLoanAmount] = useState('');
   const [monthlyEMI, setMonthlyEMI] = useState('');
+  const [loanData, setLoanData] = useState([]);
 
-  const loanData = [
-    { type: 'Agriculture Loan', interestRate: '15.00', duration: '12' },
-    { type: 'Business Loan', interestRate: '16.00', duration: '12' },
-    { type: 'Emergency Loan', interestRate: '13.00', duration: '12' },
-    { type: 'Educational Loan', interestRate: '15.00', duration: '12' },
-    { type: 'Foreign Employment Loan', interestRate: '16.00', duration: '12' },
-    { type: 'Hire Purchase Loan', interestRate: '16.00', duration: '12' },
-  ];
-
- 
-
+  // Fetch loan data from API when the component mounts
+  useEffect(() => {
+    const fetchLoanData = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/api/emiCalculator/'); // Adjust the URL as needed
+        setLoanData(response.data);
+      } catch (error) {
+        console.error('Error fetching loan data:', error);
+      }
+    };
+    
+    fetchLoanData();
+  }, []);
+  
   const handleLoanTypeChange = (e) => {
     const selectedLoanType = e.target.value;
     setLoanType(selectedLoanType);
-    
-    const selectedLoan = loanData.find(loan => loan.type === selectedLoanType);
+
+    const selectedLoan = loanData.find(loan => loan.loanType === selectedLoanType);
     if (selectedLoan) {
       setInterestRate(selectedLoan.interestRate);
       setDuration(selectedLoan.duration);
@@ -35,31 +39,27 @@ const Emicalculatorc = () => {
     }
   };
 
-  const calculateEMI =  async () => {
+  const calculateEMI = async () => {
     const principal = parseFloat(loanAmount) || 0;
     const timeInMonths = parseFloat(duration) || 0;
-    const monthlyInterestRate =  parseFloat(interestRate) / 1200;
-     //r = monthly interest rate = parseFloat(interestRate) / 1200;
-     //n = no of months
-    //powerFactor = (1+r)^n
-    //emi (p*r* (1+r)^n)/((1+r)^n-1)
+    const monthlyInterestRate = parseFloat(interestRate) / 1200;
+
     if (principal > 0 && timeInMonths > 0 && monthlyInterestRate > 0) {
       const powerFactor = Math.pow(1 + monthlyInterestRate, timeInMonths);
       const emi = (principal * monthlyInterestRate * powerFactor) / (powerFactor - 1);
-    //  the state monthlyEMI with the calculated EMI value, rounded to two decimal places using toFixed(2)
       setMonthlyEMI(emi.toFixed(2));
 
-      //send data to backend API
-      try{
-           await  axios.post('http://localhost:5000/api/emicalculator/', {
-                loanType,
-                loanAmount,
-                interestRate,
-                duration,
-                monthlyEMI: emi.toFixed(2)
-           })
-      }  catch (error) {
-          console.error("There was an error saving the EMI data!", error);
+      // Send data to backend API
+      try {
+        await axios.post('http://localhost:5000/api/emicalculator/', {
+          loanType,
+          loanAmount,
+          interestRate,
+          duration,
+          monthlyEMI: emi.toFixed(2)
+        });
+      } catch (error) {
+        console.error('There was an error saving the EMI data!', error);
       }
     } else {
       setMonthlyEMI('');
@@ -75,10 +75,9 @@ const Emicalculatorc = () => {
           <div className='mt-8 mb-4 text-3xl font-semibold text-black'>{t('emi.message')}</div>
           <div className="flex flex-col items-center w-full p-5 bg-green-800 border md:flex-row md:flex-wrap">
             {loanData.map((loan, index) => (
-              //The key attribute is used by React to uniquely identify each element in the list.the index of the item in the array is used as the key.
               <div key={index} className='flex flex-col items-center justify-center object-cover w-40 h-32 p-4 border md:my-8 md:mx-8'>
                 <BsFillPersonFill size={30} className='text-green-400' />
-                <div className='text-center text-white '>{t(`emi${index + 1}.message`)}</div>
+                <div className='text-center text-white '>{loan.loanType}</div>
               </div>
             ))}
           </div>
@@ -92,7 +91,7 @@ const Emicalculatorc = () => {
               <select className='' value={loanType} onChange={handleLoanTypeChange}>
                 <option value="">{t('emi9.message')}</option>
                 {loanData.map((loan, index) => (
-                  <option key={index} value={loan.type}>{t(`emi${index + 1}.message`)}</option>
+                  <option key={index} value={loan.loanType}>{loan.loanType}</option>
                 ))}
               </select>
 
@@ -105,10 +104,10 @@ const Emicalculatorc = () => {
               />
 
               <div className='text-white'>{t('emi11.message')}</div>
-              <input type='text' className='p-1 border' value={interestRate} onChange={(e) => setInterestRate(e.target.value)} />
+              <input type='text' className='p-1 border' value={interestRate} readOnly />
 
               <div className='text-white'>{t('emi12.message')}</div>
-              <input type='text' className='p-1 border' value={duration} onChange={(e) => setDuration(e.target.value)} />
+              <input type='text' className='p-1 border' value={duration} readOnly />
 
               <div className='text-white'>{t('emi13.message')}</div>
               <button onClick={calculateEMI} className='p-2 mt-2 text-green-800 bg-white rounded-md'>
