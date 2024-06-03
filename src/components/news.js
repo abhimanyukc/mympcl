@@ -1,28 +1,33 @@
-import React, { useState} from 'react';
+import React, { useState, useEffect} from 'react';
+import axios from 'axios';
 import { useTranslation } from 'react-i18next';
 
 
 
-const cardData = [
-  { id: 1, title: 'news1.message', image: 'https://www.fiscalnepal.com/wp-content/uploads/2024/01/17th-Year-of-Service-1024x682.jpeg', details: 'news2.message' },
-  { id: 2, title: 'news3.message', image: 'https://www.swifttech.com.np/blog/wp-content/uploads/2021/05/GlobalImeBank_SCT1-3.jpg', details: 'news4.message' },
-  { id: 3, title: 'news5.message', image: 'https://content.sharesansar.com/photos/02%20praisha/Companies/NewFolder%201/Prabhu.png', details: 'news6.message' },
-  { id: 4, title:'news7.message', image: 'https://risingnepaldaily.com/storage/media/38002/image_6483441-(2).jfif', details: 'news8.message' },
-  { id: 5, title: 'news9.message', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXgD0ow9jv7A1sEzFMr6t_un9mcMSQszMKQg&usqp=CAU', details: 'news10.message' },
-  { id: 6, title: 'news11.message', image: 'https://english.pardafas.com/wp-content/uploads/2023/12/chandra-dhakal-1.jpg', details: 'news12.message' },
-  { id: 7, title: 'news13.message', image: 'https://www.statebank1910.bank//wp-content/uploads/2021/01/img_1611589922431_883.png?temp=1611601426935', details: 'news14.message' },
-  { id: 8, title: 'news15.message', image: 'https://myrepublica.nagariknetwork.com/uploads/media/RemittancestoNepal__20201031160522.jpg', details: 'news16.message' },
-  { id: 9, title: 'news17.message', image: 'https://plus.unsplash.com/premium_photo-1661766200436-5103f7ca7873?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', details: 'news18.message' },
-  { id: 10, title: 'news19.message', image: 'https://myrepublica.nagariknetwork.com/uploads/media/BankSketch_20220502160413.jpg', details: 'news20.message' },
-  { id: 11, title: 'news21.message', image: 'https://english.makalukhabar.com/wp-content/uploads/2022/04/GaganKumar-Thapa-_-MK-MK.jpg', details: 'news22.message' },
-  { id: 12, title: 'news23.message', image: 'https://paytmblogcdn.paytm.com/wp-content/uploads/2021/07/ATM_6_WhatIsATMFullFormDefinition_Uses.jpg', details: 'news24.message' },
-];
+
+
 
 const cardsPerPage = {
   medium:6,
 };
 
 const Newsc = () => {
+  const [cardData, setCardData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  useEffect(() => {
+    const fetchCardData = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/api/news/');
+        setCardData(response.data);
+        setLoading(false);
+      } catch (err) {
+        setError(err.message);
+        setLoading(false);
+      }
+    }
+    fetchCardData();
+  }, []);
   const [currentPage, setCurrentPage] = useState(1);
   // const cardsToShow =  cardsPerPage.small && cardsPerPage.medium ;
   const cardsToShow =  cardsPerPage.medium ;
@@ -37,7 +42,13 @@ const Newsc = () => {
   };
 
   const {t} = useTranslation('global')
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
 
   return (
