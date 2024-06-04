@@ -1,19 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect} from 'react';
+import axios from 'axios';
 import { useTranslation } from 'react-i18next';
-import fedexLogo from '../images/fedex2.png';
-import fonepayLogo from '../images/fonepay.png';
-import esewaLogo from '../images/esewaface.jpg';
-import imepayLogo from '../images/imepay.png';
+// import fedexLogo from '../images/fedex2.png';
+// import fonepayLogo from '../images/fonepay.png';
+// import esewaLogo from '../images/esewaface.jpg';
+// import imepayLogo from '../images/imepay.png';
 
 const Remittancec = () => {
   const { t } = useTranslation("global");
 
-  const remittanceCompanies = [
-    { name: 'FedEx', image: fedexLogo, alt: 'fedexlogo' },
-    { name: 'Fonepay', image: fonepayLogo, alt: 'fonepaylogo' },
-    { name: 'eSewa', image: esewaLogo, alt: 'esewalogo' },
-    { name: 'IME Pay', image: imepayLogo, alt: 'imepaylogo'  }
-  ];
+  // const remittanceCompanies = [
+  //   { name: 'FedEx', image: fedexLogo, alt: 'fedexlogo' },
+  //   { name: 'Fonepay', image: fonepayLogo, alt: 'fonepaylogo' },
+  //   { name: 'eSewa', image: esewaLogo, alt: 'esewalogo' },
+  //   { name: 'IME Pay', image: imepayLogo, alt: 'imepaylogo'  }
+  // ];
+
+  const [remittanceCompanies, setRemittanceCompanies] = useState([]);
+  useEffect(() => {
+    const fetchRemittanceCompanies = async () => {
+        try{
+                 const response = await axios.get('http://localhost:5000/api/remittance/')
+                 setRemittanceCompanies(response.data);
+        }
+        catch(err) {
+          console.error("failed to fetch the data:", err);
+
+        }
+    }
+        fetchRemittanceCompanies();
+  }, [])
 
   return (
     <div className='mx-auto bg-white select-none max-w-screen-2xl'>
