@@ -1,11 +1,23 @@
-import React from 'react';
-
+import React , {useState, useEffect} from 'react';
+import axios from 'axios';
 const Noticec = () => {
-  const notices = [
-    { text: 'शिल्बन्दी दरभाउ पेश गर्ने सुचना २०८०/१०/११', date: 'FEB 1, 2024' },
-    { text: 'शिल्बन्दी दरभाउ पेश गर्ने सुचना २०८०/१०/१२', date: 'FEB 2, 2024' },
-    { text: 'शिल्बन्दी दरभाउ पेश गर्ने सुचना २०८०/१०/१३', date: 'FEB 3, 2024' },
-];
+//   const notices = [
+//     { text: 'शिल्बन्दी दरभाउ पेश गर्ने सुचना २०८०/१०/११', date: 'FEB 1, 2024' },
+//     { text: 'शिल्बन्दी दरभाउ पेश गर्ने सुचना २०८०/१०/१२', date: 'FEB 2, 2024' },
+//     { text: 'शिल्बन्दी दरभाउ पेश गर्ने सुचना २०८०/१०/१३', date: 'FEB 3, 2024' },
+// ];
+
+const [notices, setNotices] = useState([]);
+
+useEffect(() => {
+  axios.get('http://localhost:5000/api/notice/')
+  .then(response => {
+    setNotices(response.data);
+  })
+  .catch(error => {
+    console.error('Error fetching branch data:',error);
+  })
+})
 
   return (
     <div className='flex items-center justify-start px-8 py-10 mx-auto max-w-screen-2xl'>
