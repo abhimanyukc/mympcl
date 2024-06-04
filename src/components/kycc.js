@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from 'axios';
 import classNames from "classnames";
 const Kycc = () => {
 
@@ -6,15 +7,27 @@ const Kycc = () => {
    
 
   const [currentTab, setCurrentTab] = useState(1);
+
    // Define tab names dynamically
-   const tabNames = [
-    { tab: 1, name: "Personal Details" },
-    { tab: 2, name: "Address Details" },
-    { tab: 3, name: "Family Descriptions" },
-    { tab: 4, name: "Yearly Income/Expense Details" },
-    { tab: 5, name: "House Details" },
-    { tab: 6, name: "Done" }
-  ];
+  //  const tabNames = [
+  //   { tab: 1, name: "Personal Details" },
+  //   { tab: 2, name: "Address Details" },
+  //   { tab: 3, name: "Family Descriptions" },
+  //   { tab: 4, name: "Yearly Income/Expense Details" },
+  //   { tab: 5, name: "House Details" },
+  //   { tab: 6, name: "Done" }
+  // ];
+
+  const [tabNames, setTabNames] = useState([]);
+  useEffect(() => {
+    axios.get('http://localhost:5000/api/kycTab/')
+    .then(response => {
+         setTabNames(response.data);
+    })
+    .catch(error => {
+      console.error('Error fetching kycTab data:', error);
+    });
+   }, []);
 
   //state variable to store form data
   const [formData, setFormData] = useState({
