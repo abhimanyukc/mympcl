@@ -1,15 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-
+import axios from 'axios';
 const ContactC = () => {
   const { t } = useTranslation("global");
 
-  const formFields = [
-    { name: 'name', label: t('con.message'), type: 'text', placeholder: t('con.message') },
-    { name: 'email', label: t('con1.message'), type: 'email', placeholder: t('con1.message') },
-    { name: 'subject', label: t('con2.message'), type: 'text', placeholder: t('con2.message') },
-    { name: 'message', label: t('con3.message'), type: 'textarea', placeholder: t('con3.message') }
-  ];
+  // const formFields = [
+  //   { name: 'name', label: t('con.message'), type: 'text', placeholder: t('con.message') },
+  //   { name: 'email', label: t('con1.message'), type: 'email', placeholder: t('con1.message') },
+  //   { name: 'subject', label: t('con2.message'), type: 'text', placeholder: t('con2.message') },
+  //   { name: 'message', label: t('con3.message'), type: 'textarea', placeholder: t('con3.message') }
+  // ];
+
+  const [formFields, setFormFields] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:5000/api/career/formDetail/')
+    .then(response => {
+      setFormFields(response.data);
+    })
+    .catch(error => {
+      console.error('Error fetching branch data:', error);
+    })
+  })
+
 
   const [formData, setFormData] = useState({
     name: '',
