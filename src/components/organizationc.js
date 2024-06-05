@@ -1,5 +1,5 @@
 // Import React and necessary modules
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
 import { useTranslation } from 'react-i18next';
 
@@ -26,19 +26,36 @@ const   Organizationc = () => {
 
   ]
   
-  const imageCards = [
-    { name: 'mem3.message',position:'mem12.message', imageUrl: 'https://cdn.stocksnap.io/img-thumbs/960w/business-man_JJUUYMLKOC.jpg' },
-    { name: 'mem4.message',position:'mem12.message', imageUrl: 'https://images.pexels.com/photos/354951/pexels-photo-354951.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-    { name: 'mem5.message',position:'mem13.message', imageUrl: 'https://images.pexels.com/photos/371160/pexels-photo-371160.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-    { name: 'mem6.message',position:'mem14.message', imageUrl: 'https://plus.unsplash.com/premium_photo-1675130119373-61ada6685d63?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
-    { name: 'mem7.message',position:'mem15.message', imageUrl: 'https://images.unsplash.com/photo-1542206395-9feb3edaa68d?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
-    { name: 'mem8.message',position:'mem13.message', imageUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
-    { name: 'mem9.message',position:'mem13.message', imageUrl: 'https://images.unsplash.com/photo-1506633541287-7c7544a7a706?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
-    { name: 'mem10.message',position:'mem13.message',imageUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
-    { name: 'mem11.message',position:'mem13.message',imageUrl: 'https://cdn.stocksnap.io/img-thumbs/960w/man-reading_NEJC2MVDAZ.jpg' },
-  ];
+  // const imageCards = [
+  //   { name: 'mem3.message',position:'mem12.message', imageUrl: 'https://cdn.stocksnap.io/img-thumbs/960w/business-man_JJUUYMLKOC.jpg' },
+  //   { name: 'mem4.message',position:'mem12.message', imageUrl: 'https://images.pexels.com/photos/354951/pexels-photo-354951.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+  //   { name: 'mem5.message',position:'mem13.message', imageUrl: 'https://images.pexels.com/photos/371160/pexels-photo-371160.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+  //   { name: 'mem6.message',position:'mem14.message', imageUrl: 'https://plus.unsplash.com/premium_photo-1675130119373-61ada6685d63?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+  //   { name: 'mem7.message',position:'mem15.message', imageUrl: 'https://images.unsplash.com/photo-1542206395-9feb3edaa68d?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+  //   { name: 'mem8.message',position:'mem13.message', imageUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+  //   { name: 'mem9.message',position:'mem13.message', imageUrl: 'https://images.unsplash.com/photo-1506633541287-7c7544a7a706?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+  //   { name: 'mem10.message',position:'mem13.message',imageUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+  //   { name: 'mem11.message',position:'mem13.message',imageUrl: 'https://cdn.stocksnap.io/img-thumbs/960w/man-reading_NEJC2MVDAZ.jpg' },
+  // ];
 
+   const [imageCards, setImageCards] = useState([]);
 
+   useEffect(()=> {
+         const fetchImageCards = async () => {
+          try {
+               const response = await fetch("http://localhost:5000/api/organization/");
+               if(!response.ok) {
+                throw new Error ('response is not ok');
+               }
+               const data = await response.json();
+               setImageCards(data);
+              }
+           catch(error){
+                console.error('error in fetching organization data', error);
+           }
+         };
+         fetchImageCards(); 
+   }, [])
   
   
   return (
