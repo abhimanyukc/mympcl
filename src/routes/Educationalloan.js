@@ -38,7 +38,10 @@ const EducationalLoan = () => {
         useEffect(() => {
           axios.get("http://localhost:5000/api/loan/")
           .then(response =>{
-                  setEducationalLoans(response.data);
+                   const data = response.data;
+                   //sort the data by the route property
+                   data.sort((a,b) => a.route.localeCompare(b.route))
+                  setEducationalLoans(data);
           })
           .catch(err => {
             console.err("Error in fetching data", err);
