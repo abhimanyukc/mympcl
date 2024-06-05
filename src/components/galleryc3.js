@@ -1,106 +1,125 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 import { MdClose } from 'react-icons/md';
 
 const Gallery3C = () => {
-    const album3Items = [
-        {
-          no: 1,
-          imageUrl: 'https://i.pinimg.com/564x/72/cc/c4/72ccc4539d10b1dc11f44c3560917a29.jpg',
-          altText: "album3a",
-        },
-        {
-          no: 2,
-          imageUrl: "https://i.pinimg.com/564x/32/6a/67/326a670b17eb521f946e42535e4354e2.jpg",
-          altText: "album3b",
-        },
-        {
-          no: 3,
-          imageUrl:
-            "https://i.pinimg.com/564x/e0/4a/02/e04a02305b73047bda3167423579561d.jpg",
-          altText: "album3c",
-        },
-        {
-          no: 4,
-          imageUrl:
-            "https://i.pinimg.com/564x/8e/aa/11/8eaa116d384b7b84ac6790af649658e1.jpg",
-          altText: "album3d",
-        },
-        {
-          no: 5,
-          imageUrl:
-            "https://i.pinimg.com/564x/22/31/75/223175d64b83558cd1cd8021e5c3bbec.jpg",
-          altText: "album3e",
-        },
-        {
-          no: 6,
-          imageUrl:
-            "https://i.pinimg.com/564x/e5/88/89/e588896292f7586f7e0506417c9ddd56.jpg",
-          altText: "album3f",
-        },
-        {
-          no: 7,
-          imageUrl:
-            "https://i.pinimg.com/564x/1b/47/64/1b47643c528c03a90f09746268195043.jpg",
-          altText: "album3g",
-        },
-        {
-          no: 8,
-          imageUrl:
-            "https://i.pinimg.com/736x/2a/57/0d/2a570dbd8f5b225ac0227173046998c4.jpg",
-          altText: "album3h",
-        },
-        {
-          no: 9,
-          imageUrl:
-            "https://i.pinimg.com/564x/e3/6d/12/e36d1212cfad7580388a3042b1b8a589.jpg",
-          altText: "album3i",
-        },
-        {
-          no: 10,
-          imageUrl:
-            "https://i.pinimg.com/564x/48/35/d7/4835d738f169a5615c575d9aa39fb866.jpg",
-          altText: "album3j",
-        },
-        {
-          no: 11,
-          imageUrl:
-            "https://i.pinimg.com/564x/69/de/eb/69deebe19fb836288f317a3672bcdc17.jpg",
-          altText: "album3k",
-        },
+    // const album3Items = [
+    //     {
+    //       no: 1,
+    //       imageUrl: 'https://i.pinimg.com/564x/72/cc/c4/72ccc4539d10b1dc11f44c3560917a29.jpg',
+    //       altText: "album3a",
+    //     },
+    //     {
+    //       no: 2,
+    //       imageUrl: "https://i.pinimg.com/564x/32/6a/67/326a670b17eb521f946e42535e4354e2.jpg",
+    //       altText: "album3b",
+    //     },
+    //     {
+    //       no: 3,
+    //       imageUrl:
+    //         "https://i.pinimg.com/564x/e0/4a/02/e04a02305b73047bda3167423579561d.jpg",
+    //       altText: "album3c",
+    //     },
+    //     {
+    //       no: 4,
+    //       imageUrl:
+    //         "https://i.pinimg.com/564x/8e/aa/11/8eaa116d384b7b84ac6790af649658e1.jpg",
+    //       altText: "album3d",
+    //     },
+    //     {
+    //       no: 5,
+    //       imageUrl:
+    //         "https://i.pinimg.com/564x/22/31/75/223175d64b83558cd1cd8021e5c3bbec.jpg",
+    //       altText: "album3e",
+    //     },
+    //     {
+    //       no: 6,
+    //       imageUrl:
+    //         "https://i.pinimg.com/564x/e5/88/89/e588896292f7586f7e0506417c9ddd56.jpg",
+    //       altText: "album3f",
+    //     },
+    //     {
+    //       no: 7,
+    //       imageUrl:
+    //         "https://i.pinimg.com/564x/1b/47/64/1b47643c528c03a90f09746268195043.jpg",
+    //       altText: "album3g",
+    //     },
+    //     {
+    //       no: 8,
+    //       imageUrl:
+    //         "https://i.pinimg.com/736x/2a/57/0d/2a570dbd8f5b225ac0227173046998c4.jpg",
+    //       altText: "album3h",
+    //     },
+    //     {
+    //       no: 9,
+    //       imageUrl:
+    //         "https://i.pinimg.com/564x/e3/6d/12/e36d1212cfad7580388a3042b1b8a589.jpg",
+    //       altText: "album3i",
+    //     },
+    //     {
+    //       no: 10,
+    //       imageUrl:
+    //         "https://i.pinimg.com/564x/48/35/d7/4835d738f169a5615c575d9aa39fb866.jpg",
+    //       altText: "album3j",
+    //     },
+    //     {
+    //       no: 11,
+    //       imageUrl:
+    //         "https://i.pinimg.com/564x/69/de/eb/69deebe19fb836288f317a3672bcdc17.jpg",
+    //       altText: "album3k",
+    //     },
     
-        {
-          no: 12,
-          imageUrl:
-            "https://i.pinimg.com/564x/85/d5/d4/85d5d4ca86e36cd83c493b5b50c154c2.jpg",
-          altText: "album3l",
-        },
-        {
-          no: 13,
-          imageUrl:
-            "https://i.pinimg.com/564x/ff/58/c2/ff58c20c2dbf37ac926d3179d09be584.jpg",
-          altText: "album3m",
-        },
-        {
-          no: 14,
-          imageUrl:
-            "https://i.pinimg.com/564x/aa/03/df/aa03df90bf94f719996bb610617712a8.jpg",
-          altText: "album3n",
-        },
-        {
-          no: 15,
-          imageUrl:
-            "https://i.pinimg.com/564x/98/8a/61/988a6171321ac8cd6a28717ef20eded9.jpg",
-          altText: "album3o",
-        },
-        {
-          no: 16,
-          imageUrl:
-            "https://i.pinimg.com/564x/6e/29/7a/6e297ab5c8a0d41d560954d93676426e.jpg",
-          altText: "album3p",
-        },
-      ];
+    //     {
+    //       no: 12,
+    //       imageUrl:
+    //         "https://i.pinimg.com/564x/85/d5/d4/85d5d4ca86e36cd83c493b5b50c154c2.jpg",
+    //       altText: "album3l",
+    //     },
+    //     {
+    //       no: 13,
+    //       imageUrl:
+    //         "https://i.pinimg.com/564x/ff/58/c2/ff58c20c2dbf37ac926d3179d09be584.jpg",
+    //       altText: "album3m",
+    //     },
+    //     {
+    //       no: 14,
+    //       imageUrl:
+    //         "https://i.pinimg.com/564x/aa/03/df/aa03df90bf94f719996bb610617712a8.jpg",
+    //       altText: "album3n",
+    //     },
+    //     {
+    //       no: 15,
+    //       imageUrl:
+    //         "https://i.pinimg.com/564x/98/8a/61/988a6171321ac8cd6a28717ef20eded9.jpg",
+    //       altText: "album3o",
+    //     },
+    //     {
+    //       no: 16,
+    //       imageUrl:
+    //         "https://i.pinimg.com/564x/6e/29/7a/6e297ab5c8a0d41d560954d93676426e.jpg",
+    //       altText: "album3p",
+    //     },
+    //   ];
 
+    const [album3Items, setAlbum3Items] = useState([]);
+      useEffect(()=> {
+        fetch("http://localhost:5000/api/gallery/album3/")
+        .then(response=> {
+                if(!response.ok)
+                  {
+                       throw new Error ("Response is not ok")
+                  }
+                  return response.json();
+        })
+        .then(data=> {
+            setAlbum3Items(data);
+
+        })
+        .catch(err => {
+          console.error('error in fetching album3', err)
+        })
+        
+      }, []);
       const [currentIndex, setCurrentIndex] = useState(null);
       const [modalOpen, setModalOpen] = useState(false);
     
