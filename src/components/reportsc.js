@@ -1,34 +1,46 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+// const reportData = [
+//   {
+//     imgSrc: "https://i.pinimg.com/736x/f5/8e/b2/f58eb2633c8ae7ae87fd84131b9421b7.jpg",
+//     title: "AGM report 2080",
+//     description: "Report of Gausahar annual general meeting 2080",
+//     publishedDate: "Published on: April 18, 2023",
+//   },
+//   {
+//     imgSrc: "https://i.pinimg.com/564x/f0/fb/d1/f0fbd17474021f02239a1c4acb3e5e27.jpg",
+//     title: "AGM report 2079",
+//     description: "Report of Pratibedhan for Agm",
+//     publishedDate: "Published on: April 24, 2023",
+//   },
+//   {
+//     imgSrc: "https://i.pinimg.com/736x/2e/c2/6f/2ec26ff1ea2d902b6b67e504773572d8.jpg",
+//     title: "Annual celebration report 2080",
+//     description: "Report of Gausahar annual celebration meeting 2080",
+//     publishedDate: "Published on: April 18, 2023",
+//   },
+//   {
+//     imgSrc: "https://i.pinimg.com/564x/82/9f/80/829f80e573fc4c148e3e27924e7533fd.jpg",
+//     title: "AGM report for customer related services 2080",
+//     description: "Report of Gausahar annual meeting for customer services 2080",
+//     publishedDate: "Published on: April 18, 2023",
+//   },
+//   // Add more report objects as needed
+// ];
 
-const reportData = [
-  {
-    imgSrc: "https://i.pinimg.com/736x/f5/8e/b2/f58eb2633c8ae7ae87fd84131b9421b7.jpg",
-    title: "AGM report 2080",
-    description: "Report of Gausahar annual general meeting 2080",
-    publishedDate: "Published on: April 18, 2023",
-  },
-  {
-    imgSrc: "https://i.pinimg.com/564x/f0/fb/d1/f0fbd17474021f02239a1c4acb3e5e27.jpg",
-    title: "AGM report 2079",
-    description: "Report of Pratibedhan for Agm",
-    publishedDate: "Published on: April 24, 2023",
-  },
-  {
-    imgSrc: "https://i.pinimg.com/736x/2e/c2/6f/2ec26ff1ea2d902b6b67e504773572d8.jpg",
-    title: "Annual celebration report 2080",
-    description: "Report of Gausahar annual celebration meeting 2080",
-    publishedDate: "Published on: April 18, 2023",
-  },
-  {
-    imgSrc: "https://i.pinimg.com/564x/82/9f/80/829f80e573fc4c148e3e27924e7533fd.jpg",
-    title: "AGM report for customer related services 2080",
-    description: "Report of Gausahar annual meeting for customer services 2080",
-    publishedDate: "Published on: April 18, 2023",
-  },
-  // Add more report objects as needed
-];
 
 const Reportsc = () => {
+  const [reportData, setReportData] = useState([]);
+   useEffect(() => {
+    axios.get("http://localhost:5000/api/reports/")
+    .then( response =>{
+         const data = response.data;
+         setReportData(data)
+    })
+    .catch(err =>{
+        console.error("error in fetching reports", err);
+    })
+   })
   return (
     <div className='px-4 mx-auto max-w-screen-2xl md:px-8'>
       <div className='flex flex-wrap'>
