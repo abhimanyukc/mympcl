@@ -1,17 +1,35 @@
-import React from 'react';
+import React , {useState, useEffect} from 'react';
 import { useTranslation } from 'react-i18next';
 
 
 const Informationc = () => {
   const [t, i18n] = useTranslation('global')
-const services = [
-  { no: 1, message: t('services1.message') ,link: '/services/bankingservices'},
-  { no: 2, message: t('services2.message') ,link: '/services/smsservices'},
-  { no: 3, message: t('services3.message') ,link: '/services/mobilebankingservices'},
-  { no: 4, message: t('services4.message') ,link: '/services/internetservices'},
-  { no: 5, message: t('services5.message') ,link: '/services/remmittanceservices'},
-  { no: 6, message: t('services6.message') ,link: '/services/healthservices'}
-];
+// const services = [
+//   { no: 1, message: t('services1.message') ,link: '/services/bankingservices'},
+//   { no: 2, message: t('services2.message') ,link: '/services/smsservices'},
+//   { no: 3, message: t('services3.message') ,link: '/services/mobilebankingservices'},
+//   { no: 4, message: t('services4.message') ,link: '/services/internetservices'},
+//   { no: 5, message: t('services5.message') ,link: '/services/remmittanceservices'},
+//   { no: 6, message: t('services6.message') ,link: '/services/healthservices'}
+// ];
+
+const [services,setServices]=useState([]);
+useEffect(()=> {
+   fetch('http://localhost:5000/api/information/')
+   .then(response  =>{
+        if(!response.ok)
+          {
+            throw new Error ('response is not ok');
+          }
+           return response.json();
+   })
+   .then(data => {
+       setServices(data);
+   })
+   .catch(err => {
+             console.error('error in fetching information services', err);
+   })
+}, []);
 
 const cooperativeContent = {
   content: "The GauSahar Multipurpose Cooperative was established in Bs. 02/07/2064. It was registered in District Cooperative Office in Pokhara by 4 people in Srijana chowk. The cooperative had been working in the agricultural sector since it was founded but the services diversified from 2073 when the functional committee was changed and headed by present Chairperson Mr. Prem Kumar BC.",

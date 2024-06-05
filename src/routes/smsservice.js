@@ -6,14 +6,34 @@ import LoaderAnimate from '../components/loader';
 
 const Smsservice = () => {
   
-  const subtopics = [
-    { date: '2024-04-07', text: 'Debit Card(Atm Service)' },
-    { date: '2024-04-08', text: 'Free Mobile Banking Service' },
-    { date: '2024-04-09', text: 'ABBS SERVICE' },
-    { date: '2024-04-09', text: 'KRAMIK BACHAT' },
-    { date: '2024-04-09', text: 'SAHARA DOUBLE DHAMAKA BACHAT' },
-];
-
+//   const subtopics = [
+//     { date: '2024-04-07', text: 'Debit Card(Atm Service)' },
+//     { date: '2024-04-08', text: 'Free Mobile Banking Service' },
+//     { date: '2024-04-09', text: 'ABBS SERVICE' },
+//     { date: '2024-04-09', text: 'KRAMIK BACHAT' },
+//     { date: '2024-04-09', text: 'SAHARA DOUBLE DHAMAKA BACHAT' },
+// ];
+const [subtopics, setSubtopics] = useState([]);
+useEffect(() => {
+  // Fetch data from the API
+  fetch('http://localhost:5000/api/service/')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      // Filter out sms service  data
+      const filteredData = data.filter(item => item.text !== "Sms Service");
+      setSubtopics(filteredData);
+      setIsLoading(false); // Set loading state to false after data is loaded
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+      setIsLoading(false); // Ensure loading state is set to false in case of error
+    });
+}, []); // Empty dependency array to run only once on mount
 const [isLoading, setIsLoading] = useState(true); // Set initial loading state
 useEffect(() => {
     // Simulate loading data (replace with your actual data fetching logic)
