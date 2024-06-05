@@ -1,41 +1,63 @@
 
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { useTranslation } from 'react-i18next';
 
 export default function Departmentc() {
     const { t } = useTranslation('global');
-    const posts = [
-        {
-            title: "dep.message",
-            img: "https://cdn.pixabay.com/photo/2016/06/01/08/40/money-1428594_1280.jpg",
-            content: "dep1.message"
-        },
-        {
-            title: "dep2.message",
-            img: "https://cdn.pixabay.com/photo/2017/06/24/22/33/credit-card-2439141_1280.jpg",
-            content: "dep3.message"
-        },
-        {
-            title: "dep4.message",
-            img: "https://cdn.pixabay.com/photo/2018/02/22/23/06/security-camera-3174223_1280.jpg",
-            content: "dep5.message"
-        },
-        {
-            title: "dep6.message",
-            img: "https://cdn.pixabay.com/photo/2018/01/06/07/53/social-3064515_1280.jpg",
-            content: "dep7.message"
-        },
-        {
-          title: "dep8.message",
-          img: "https://cdn.pixabay.com/photo/2022/07/20/03/21/society-7333314_1280.png",
-          content: "dep9.message"
-      },
-      {
-        title: "dep10.message",
-        img: "https://cdn.pixabay.com/photo/2015/10/30/10/04/share-price-1013626_1280.jpg",
-        content: "dep11.message"
-    },
-    ];
+    // const posts = [
+    //     {
+    //         title: "dep.message",
+    //         img: "https://cdn.pixabay.com/photo/2016/06/01/08/40/money-1428594_1280.jpg",
+    //         content: "dep1.message"
+    //     },
+    //     {
+    //         title: "dep2.message",
+    //         img: "https://cdn.pixabay.com/photo/2017/06/24/22/33/credit-card-2439141_1280.jpg",
+    //         content: "dep3.message"
+    //     },
+    //     {
+    //         title: "dep4.message",
+    //         img: "https://cdn.pixabay.com/photo/2018/02/22/23/06/security-camera-3174223_1280.jpg",
+    //         content: "dep5.message"
+    //     },
+    //     {
+    //         title: "dep6.message",
+    //         img: "https://cdn.pixabay.com/photo/2018/01/06/07/53/social-3064515_1280.jpg",
+    //         content: "dep7.message"
+    //     },
+    //     {
+    //       title: "dep8.message",
+    //       img: "https://cdn.pixabay.com/photo/2022/07/20/03/21/society-7333314_1280.png",
+    //       content: "dep9.message"
+    //   },
+    //   {
+    //     title: "dep10.message",
+    //     img: "https://cdn.pixabay.com/photo/2015/10/30/10/04/share-price-1013626_1280.jpg",
+    //     content: "dep11.message"
+    // },
+    // ];
+       const [posts , setPosts]= useState([]);
+                useEffect(()=> {
+                    const fetchPosts = async () => {
+                        try{
+                         const response =  await fetch('http://localhost:5000/api/department/')
+                           if(!response.ok) {
+                                throw new Error ('network response is not ok');
+                           } 
+                           const data = await response.json();
+                           setPosts(data);  
+                        }
+                       
+                        catch(error)
+                        {
+                           console.error('error in fetching', error);
+                        }
+                            
+                }
+                    fetchPosts();
+                }, [])
+              
+
     return (
         <>
         <div className='mx-auto max-w-screen-2xl '>
