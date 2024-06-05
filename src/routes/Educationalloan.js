@@ -5,7 +5,7 @@ import EducationalLoanc from '../components/educationalloan'
 import Combo from '../components/combo';
 import Footer from '../components/footer';
 import LoaderAnimate from '../components/loader';
-
+import { useLocation } from 'react-router-dom';
 
 const EducationalLoan = () => {
 
@@ -34,19 +34,33 @@ const EducationalLoan = () => {
         //    ]
 
         const [educationalLoans, setEducationalLoans] = useState([]);
+        const location =useLocation();
 
         useEffect(() => {
           axios.get("http://localhost:5000/api/loan/")
           .then(response =>{
                    const data = response.data;
-                   //sort the data by the route property
-                   data.sort((a,b) => a.route.localeCompare(b.route))
+
+                   //get the current route and the specific part for sorting
+                   const currentRoute = location.pathname;
+                   const targetRoute = currentRoute.split('/').pop();
+                   //his line of code processes the currentRoute to extract the last segment of the path.
+                   //currentRoute.split('/') splits the pathname string into an array of substrings, using the forward slash (/) as the delimiter. 
+                   //.pop() is then called on the array, which removes and returns the last element of the array. In the example, this would be "settings".
+
+                   
+                // Sort the data to prioritize the specific loan type based on the route
+                data.sort((a, b) => {
+                  if (a.route.includes(targetRoute)) return -1;
+                  if (b.route.includes(targetRoute)) return 1;
+                  return a.route.localeCompare(b.route);
+              });
                   setEducationalLoans(data);
           })
           .catch(err => {
             console.err("Error in fetching data", err);
           })
-        }, []);
+        }, [location.pathname]);
 
            const [isLoading, setIsLoading] = useState(true); // Set initial loading state
            useEffect(() => {
