@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,  useEffect} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../images/logosahakari.jpeg"; // your bank logo
 
@@ -18,29 +18,59 @@ function SignupC() {
   const [loading, setLoading] = useState(false);
  
   // handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
       // Save input fields to local storage
-      localStorage.setItem("name", name);
-      localStorage.setItem("email", email);
-      localStorage.setItem("password", password);
-      localStorage.setItem("confirmPassword", confirmPassword);
-      localStorage.setItem("phone", phone);
-      localStorage.setItem("address", address);
-      localStorage.setItem("accountType", accountType);
-      localStorage.setItem("accountNumber", accountNumber);
+      // localStorage.setItem("name", name);
+      // localStorage.setItem("email", email);
+      // localStorage.setItem("password", password);
+      // localStorage.setItem("confirmPassword", confirmPassword);
+      // localStorage.setItem("phone", phone);
+      // localStorage.setItem("address", address);
+      // localStorage.setItem("accountType", accountType);
+      // localStorage.setItem("accountNumber", accountNumber);
+      
+      setLoading(true);
+
+      const requestData = {
+        name,
+        email,
+        password,
+        confirmPassword,
+        phone,
+        address,
+        accountType,
+        accountNumber
+      }
+
+      try {
+        const response = await fetch("http://localhost:5000/api/SignUp/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(requestData),
+        });
   
-
-    // Simulate an API call delay with a loader
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-
-      // Redirect to login page after signup
-      navigate("/login"); // Use navigate instead of history.push
-    }, 5000); // 5000 milliseconds (5 seconds) for the loader
-  };
+        if (response.ok) {
+          const data = await response.json();
+          console.log("Sign up successful:", data);
+  
+          // Redirect to login page after successful signup
+          navigate("/login");
+        } else {
+          const errorData = await response.json();
+          console.error("Error during sign up:", errorData);
+        }
+      } catch (error) {
+        console.error("Network error:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+  
+    
   return (
     <div className="mx-auto max-w-screen-2xl">
     <div className="flex items-center justify-center min-h-screen px-4 py-12 bg-gray-50 sm:px-6 lg:px-8">
