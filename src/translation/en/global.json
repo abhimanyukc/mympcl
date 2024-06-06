@@ -26,6 +26,10 @@
     "header8":{
         "message": "Login"
     },
+    "header8out":{
+      "message": "Logout"
+  },
+
     "header9":{
         "message": "Search"
     },

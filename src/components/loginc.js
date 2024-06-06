@@ -17,7 +17,7 @@ function LoginC() {
       const response = await axios.post("http://localhost:5000/api/login/", { email, password });
       setLoading(false);
       if (response.status === 200) {
-        navigate("/");
+        navigate("/home");
       }
     } catch (error) {
       setLoading(false);
