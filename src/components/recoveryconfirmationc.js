@@ -1,63 +1,64 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-function RecoveryConfirmationc() {
+function RecoveryConfirmation() {
   const navigate = useNavigate();
   const [countdown, setCountdown] = useState(60);
   const [recoveryCode, setRecoveryCode] = useState("");
   const [generatedCode, setGeneratedCode] = useState("");
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
 
   useEffect(() => {
     const timer = setInterval(() => {
-      if (countdown > 0) {
-        setCountdown((prevCountdown) => prevCountdown - 1);
-      } else {
-        clearInterval(timer);
-        // Handle expiration or implement a resend option
-      }
+      setCountdown((prevCountdown) => (prevCountdown > 0 ? prevCountdown - 1 : 0));
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [countdown]);
+  }, []);
 
-  const generateRandomCode = () => {
-    return Math.floor(100000 + Math.random() * 900000).toString();
-  };
+  const generateRandomCode = () => Math.floor(100000 + Math.random() * 900000).toString();
 
   useEffect(() => {
-    const code = generateRandomCode();
-    setGeneratedCode(code);
-    // Open user's default email client with recovery code pre-filled in the body
-    const emailLink = `mailto:?subject=Recovery%20Code&body=Your%20recovery%20code%20is%3A%20${code}`;
-    window.location.href = emailLink;
+    setGeneratedCode(generateRandomCode());
   }, []);
 
   const handleResendCode = () => {
-    const newCode = generateRandomCode();
-    setGeneratedCode(newCode);
+    setGeneratedCode(generateRandomCode());
     setCountdown(60);
-    // Open user's default email client with new recovery code pre-filled in the body
-    const emailLink = `mailto:?subject=Recovery%20Code&body=Your%20recovery%20code%20is%3A%20${newCode}`;
-    window.location.href = emailLink;
   };
 
   const handleCodeChange = (e) => {
     setRecoveryCode(e.target.value);
   };
 
-  const handleNext = () => {
-    if (recoveryCode === generatedCode) {
-      navigate("/reset-password");
-    } else {
-      console.error("Invalid recovery code");
+  const handleNext = async () => {
+    try {
+      const response = await fetch("http://localhost:5000/api/verify-recovery-code", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ recoveryCode }),
+      });
+  
+      if (response.ok) {
+        navigate("/reset-password");
+      } else {
+        const errorData = await response.json();
+        setError(errorData.error || "Invalid recovery code");
+      }
+    } catch (error) {
+      setError("Network error");
     }
   };
+  
 
   return (
-    <div className="max-w-md p-6 mx-auto mt-10 bg-white rounded-md shadow-md">
-      <h2 className="mb-4 text-2xl font-semibold">Recovery Confirmation</h2>
+    <div className="flex flex-col items-center justify-center h-screen">
+      <h2 className="mb-8 text-3xl font-bold">Recovery Confirmation</h2>
       <p className="mb-4 text-gray-600">
-        We have sent a recovery code to your email client. Please check your default email application.
+        We have sent a recovery code to your email. Please check your email.
       </p>
       <div className="mb-4">
         <label htmlFor="recoveryCode" className="block text-sm text-gray-600">
@@ -72,6 +73,7 @@ function RecoveryConfirmationc() {
           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-indigo-500"
         />
       </div>
+      {error && <p className="mb-4 text-red-600">{error}</p>}
       <p className="mb-4 text-gray-600">
         Time remaining: {countdown} seconds{" "}
         <button
@@ -83,7 +85,7 @@ function RecoveryConfirmationc() {
       </p>
       <button
         onClick={handleNext}
-        className="inline-block px-4 py-2 text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring focus:border-indigo-500"
+        className="px-6 py-3 text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring focus:border-indigo-500"
       >
         Next
       </button>
@@ -91,4 +93,4 @@ function RecoveryConfirmationc() {
   );
 }
 
-export default RecoveryConfirmationc;
+export default RecoveryConfirmation;

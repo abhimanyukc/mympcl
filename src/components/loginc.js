@@ -12,19 +12,21 @@ function LoginC() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-
+  
     try {
       const response = await axios.post("http://localhost:5000/api/login/", { email, password });
       setLoading(false);
       if (response.status === 200) {
         navigate("/home");
+      } else {
+        alert("Invalid email or password");
       }
     } catch (error) {
       setLoading(false);
       alert("Invalid email or password");
     }
   };
-
+  
   return (
     <div className="mx-auto max-w-screen-2xl">
       <div className="flex items-center justify-center min-h-screen px-4 py-12 bg-gray-50 sm:px-6 lg:px-8">

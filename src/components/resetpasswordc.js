@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
+import { useNavigate, useParams } from 'react-router-dom';
 
-const ResetPasswordc = () => {
+const ResetPassword = () => {
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
+  const { token } = useParams();
 
   const handleChangeNewPassword = (e) => {
     setNewPassword(e.target.value);
@@ -15,27 +16,33 @@ const ResetPasswordc = () => {
     setConfirmPassword(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Submitting form...');
-    // Check if new password matches the confirm password
+
     if (newPassword !== confirmPassword) {
       setError("Passwords don't match");
       return;
     }
-    // Implement logic to change the password here
-    // For demonstration, just log the new password
-    console.log('New password:', newPassword);
-    // Reset form fields
-    setNewPassword('');
-    setConfirmPassword('');
-    setError('');
-    
-    // Redirect to login page after password change
-    console.log('Navigating to login page...');
-    navigate('/login'); // Use navigate instead of history.push
+
+    try {
+      const response = await fetch(`http://localhost:5000/api/auth/reset-password/${token}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ newPassword }),
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        navigate("/login");
+      } else {
+        setError(data.error);
+      }
+    } catch (error) {
+      setError("Network error");
+    }
   };
-  
 
   return (
     <div className="max-w-md p-6 mx-auto mt-10 bg-white rounded-md shadow-md">
@@ -83,4 +90,4 @@ const ResetPasswordc = () => {
   );
 };
 
-export default ResetPasswordc;
+export default ResetPassword;

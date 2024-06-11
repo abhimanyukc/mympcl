@@ -6,9 +6,7 @@ import Footer from '../components/footer'
 const Forgetpassword = () => {
   return (
     <div>
-      <Combo/>
          <ForgotPasswordC/>
-         <Footer/>
     </div>
   )
 }
