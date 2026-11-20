@@ -3,7 +3,7 @@ import { MdDateRange } from 'react-icons/md'
 import { useTranslation } from 'react-i18next'
 
 const Abbsservicec = ({title, subtopics}) => {
-      const [t, i18n] = useTranslation("global");
+     const { t } = useTranslation();
       
     return (
         <div className="px-4 mx-auto max-w-screen-2xl md:px-8">

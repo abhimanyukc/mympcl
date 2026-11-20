@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next'
 import { FaMailBulk } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 const BranchManager = () => {
-    const [t, i18n] = useTranslation("global");
+    const [t] = useTranslation("global");
   return (
     <div className='px-8 mx-auto max-w-screen-2xl '>
       <div className='md:px-20 '>

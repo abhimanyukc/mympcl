@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 const Marque = () => {
-  const [t, i18n] = useTranslation("global");
+  const [t] = useTranslation("global");
   return (
     
     <div className='p-1 px-8 mx-auto bg-white select-none max-w-screen-2xl '>

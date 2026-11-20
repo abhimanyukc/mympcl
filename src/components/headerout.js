@@ -13,7 +13,7 @@ import { useTranslation } from "react-i18next";
 import NepaliDate from "nepali-date-converter";
 
 const Header = ({ lang, email }) => {
-  const [t, i18n] = useTranslation("global");
+  const [t] = useTranslation("global");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [currentDate, setCurrentDate] = useState(new Date());

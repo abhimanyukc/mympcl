@@ -5,7 +5,7 @@ import { FaArrowRight, FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Careertest = () => {
-  const [t, i18n] = useTranslation('global');
+  const [t] = useTranslation('global');
 
   // Define an array of objects containing data for each link
   // const careerData = [

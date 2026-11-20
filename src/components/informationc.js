@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 
 const Informationc = () => {
-  const [t, i18n] = useTranslation('global')
+  const [t] = useTranslation('global')
 // const services = [
 //   { no: 1, message: t('services1.message') ,link: '/services/bankingservices'},
 //   { no: 2, message: t('services2.message') ,link: '/services/smsservices'},

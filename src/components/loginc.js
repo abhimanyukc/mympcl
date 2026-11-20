@@ -2,33 +2,32 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import logo from "../images/logosahakari.jpeg";
-
 function LoginC() {
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [loading, setLoading] = useState(false);
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
-
+        console.log("Email:", email);  // Debugging log
+        console.log("Password:", password);  // Debugging log
         try {
             const response = await axios.post("http://localhost:5000/api/login/", { email, password });
             setLoading(false);
+            console.log("Login successful:", response.data);  // Debugging log
             if (response.status === 200) {
                 navigate("/home");
             } else {
                 console.error("Invalid email or password");
                 alert("Invalid email or password");
             }
-        } catch (error) {
+          } catch (error) {
             setLoading(false);
             console.error("Login error:", error.message);
-            alert("Invalid email or password");
+            alert("Network error occurred. Please try again later.");
         }
     };
-
     return (
         <div className="mx-auto max-w-screen-2xl">
             <div className="flex items-center justify-center min-h-screen px-4 py-12 bg-gray-50 sm:px-6 lg:px-8">
@@ -75,7 +74,6 @@ function LoginC() {
                                 />
                             </div>
                         </div>
-
                         <div className="flex items-center justify-between">
                             <div className="flex items-center">
                                 <input
@@ -91,7 +89,6 @@ function LoginC() {
                                     Remember me
                                 </label>
                             </div>
-
                             <div className="text-sm">
                                 <Link
                                     to="/forgot-password"
@@ -101,7 +98,6 @@ function LoginC() {
                                 </Link>
                             </div>
                         </div>
-
                         <div className="flex flex-col space-y-4">
                             <button
                                 type="submit"
@@ -123,5 +119,4 @@ function LoginC() {
         </div>
     );
 }
-
 export default LoginC;

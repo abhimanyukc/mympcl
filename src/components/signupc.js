@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../images/logosahakari.jpeg"; // your bank logo
-
 function SignupC() {
   const navigate = useNavigate();
   const [name, setName] = useState("");
@@ -14,20 +13,15 @@ function SignupC() {
   const [accountNumber, setAccountNumber] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(null);
-
     if (password !== confirmPassword) {
       setError("Passwords do not match");
       return;
     }
-
     const requestData = { name, email, password, confirmPassword, phone, address, accountType, accountNumber };
-
     setLoading(true);
-
     try {
       const response = await fetch("http://localhost:5000/api/signUp/", {
         method: "POST",
@@ -51,7 +45,6 @@ function SignupC() {
       setLoading(false);
     }
 };
-
   return (
     <div className="mx-auto max-w-screen-2xl">
       <div className="flex items-center justify-center min-h-screen px-4 py-12 bg-gray-50 sm:px-6 lg:px-8">
@@ -192,5 +185,4 @@ function SignupC() {
     </div>
   );
 }
-
 export default SignupC;

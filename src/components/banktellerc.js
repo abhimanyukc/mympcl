@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next'
 import { FaMailBulk } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 const BankTeller = () => {
-    const [t, i18n] = useTranslation("global")
+    const [t] = useTranslation("global")
   return (
     <div className='px-8 mx-auto max-w-screen-2xl '>
       <div className=''>
@@ -115,7 +115,7 @@ const BankTeller = () => {
          </div>
 
          <div className='mt-6 '>{t('bankTeller47.message')}
-        <div className='inline  text-nowrap'> {t('bankTeller49.message')} </div>  <span className='font-semibold underline text-secondary text-nowrap'>{t('bankTeller50.message')}</span>{t('bankTeller51.message')}</div>
+        <div className='inline text-nowrap'> {t('bankTeller49.message')} </div>  <span className='font-semibold underline text-secondary text-nowrap'>{t('bankTeller50.message')}</span>{t('bankTeller51.message')}</div>
     </div>
     </div>
   )
